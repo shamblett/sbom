@@ -19,3 +19,8 @@ doc/api/
 *.js_
 *.js.deps
 *.js.map
+
+# Local other
+.idea
+.DS_Store
+.directory
