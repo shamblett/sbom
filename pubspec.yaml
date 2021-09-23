@@ -11,6 +11,9 @@ dependencies:
  meta: '^1.7.0'
  args: '^2.3.0'
 
+executables:
+ sbom:
+
 dev_dependencies:
  lints: ^1.0.1
 

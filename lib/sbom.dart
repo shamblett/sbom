@@ -10,6 +10,9 @@ library sbom;
 import 'dart:collection';
 import 'dart:io';
 
+import 'package:args/args.dart';
 import 'package:path/path.dart';
 
 part 'src/sbom.dart';
+part 'src/sbom_constants.dart';
+part 'src/sbom_configuration.dart';
