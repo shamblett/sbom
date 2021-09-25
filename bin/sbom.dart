@@ -9,6 +9,8 @@ import 'package:sbom/sbom.dart';
 
 /// SBOM
 int main(List<String> args) {
+  // Announce
+  print('SBOM generator for Dart packages');
   // Construct the SBOM configuration
   final configuration = SbomConfiguration(args);
 
@@ -19,5 +21,7 @@ int main(List<String> args) {
     return 0;
   }
 
+  // Finish
+  print('SBOM generation complete');
   return 0;
 }

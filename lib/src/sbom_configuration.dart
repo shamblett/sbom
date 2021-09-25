@@ -24,38 +24,38 @@ class SbomConfiguration {
     // Parse the arguments
     final argParser = ArgParser();
     argParser.addFlag('help', abbr: 'h', negatable: false);
-    argParser.addFlag('verbose',
-        abbr: 'l',
-        help: 'Verbose: section processing indication',
-        negatable: false);
-    argParser.addFlag('veryverbose',
+    argParser.addFlag('loud',
+        abbr: 'l', help: 'Loud: section processing output', negatable: false);
+    argParser.addFlag('louder',
         abbr: 'L',
-        help: 'Detailed verbose: detailed section processing indication',
+        help: 'Louder: detailed section processing output',
         negatable: false);
 
     late ArgResults results;
     try {
       results = argParser.parse(args);
-    } on FormatException catch (e) {
+    } on ArgParserException catch (e) {
       print(e.message);
+      return;
     }
 
     // Help
     if (results['help']) {
-      print('Usage: sbom -v(v)');
+      print('Usage: sbom -l -L');
       print('');
       print(argParser.usage);
+      return;
     }
 
     // Verbose
-    if (results['verbose']) {
-      verbosity = SbomConstants.verbose;
-      valid = true;
+    if (results['loud']) {
+      verbosity = SbomConstants.loud;
     }
 
-    if (results['veryverbose']) {
-      verbosity = SbomConstants.veryVerbose;
-      valid = true;
+    if (results['louder']) {
+      verbosity = SbomConstants.louder;
     }
+
+    valid = true;
   }
 }

@@ -12,7 +12,7 @@ class SbomConstants {
   /// General off/none indicator for integers
   static const int off = 0;
 
-  /// Verbosity
-  static const int verbose = 1;
-  static const int veryVerbose = 2;
+  /// Verbosity(Loudness)
+  static const int loud = 1;
+  static const int louder = 2;
 }
