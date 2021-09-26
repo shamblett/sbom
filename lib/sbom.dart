@@ -11,7 +11,7 @@ import 'dart:collection';
 import 'dart:io';
 
 import 'package:args/args.dart';
-import 'package:path/path.dart';
+import 'package:path/path.dart' as path;
 
 part 'src/sbom.dart';
 part 'src/sbom_constants.dart';

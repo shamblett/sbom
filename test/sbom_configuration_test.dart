@@ -25,6 +25,11 @@ void main() {
       expect(config.valid, isTrue);
       expect(config.verbosity, SbomConstants.louder);
     });
+    test('Absolute path', () {
+      final config = SbomConfiguration(['-P /absolute/path']);
+      expect(config.valid, isTrue);
+      expect(config.packageTopLevel, '/absolute/path');
+    });
     test('Help', () {
       final config = SbomConfiguration(['-h']);
       expect(config.valid, isFalse);

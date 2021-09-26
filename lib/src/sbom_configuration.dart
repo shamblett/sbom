@@ -17,8 +17,17 @@ class SbomConfiguration {
   /// Configuration valid
   bool valid = false;
 
-  /// Verbosity
+  /// Verbosity(Loudness)
   int verbosity = SbomConstants.off;
+
+  /// Top level package path.
+  /// This must be a standard Dart package directory with pubspec.yaml,
+  /// the standard package directory structure and an sbom.yaml file
+  /// if needed.
+  /// If not supplied on the command line this is defaulted to where
+  /// sbom was invoked.
+  /// Note this is always an absolute path.
+  String packageTopLevel = path.current;
 
   void _buildConfiguration(args) {
     // Parse the arguments
@@ -29,6 +38,15 @@ class SbomConfiguration {
     argParser.addFlag('louder',
         abbr: 'L',
         help: 'Louder: detailed section processing output',
+        negatable: false);
+    argParser.addOption(
+      'abspath',
+      abbr: 'P',
+      help: 'The absolute path of the package top level directory',
+    );
+    argParser.addFlag('relpath',
+        abbr: 'p',
+        help: 'Relative package top level directory path',
         negatable: false);
 
     late ArgResults results;
@@ -44,6 +62,7 @@ class SbomConfiguration {
       print('Usage: sbom -l -L');
       print('');
       print(argParser.usage);
+      valid = false;
       return;
     }
 
@@ -56,6 +75,9 @@ class SbomConfiguration {
       verbosity = SbomConstants.louder;
     }
 
-    valid = true;
+    // Package path
+    if (results['abspath']) {
+      packageTopLevel = results['abspath'];
+    }
   }
 }
