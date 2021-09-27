@@ -44,10 +44,11 @@ class SbomConfiguration {
       abbr: 'P',
       help: 'The absolute path of the package top level directory',
     );
-    argParser.addFlag('relpath',
-        abbr: 'p',
-        help: 'Relative package top level directory path',
-        negatable: false);
+    argParser.addOption(
+      'relpath',
+      abbr: 'p',
+      help: 'The relative path to the package top level directory',
+    );
 
     late ArgResults results;
     try {
@@ -75,9 +76,19 @@ class SbomConfiguration {
       verbosity = SbomConstants.louder;
     }
 
-    // Package path
-    if (results['abspath']) {
+    // Package absolute path
+    if (results['abspath'] != null && results['abspath'].isNotEmpty) {
       packageTopLevel = results['abspath'];
     }
+
+    // Package relative path
+    if (results['relpath'] != null && results['relpath'].isNotEmpty) {
+      packageTopLevel = _getAbsolutePath(results['relpath']);
+    }
+    valid = true;
   }
+
+  /// Get the absolute path to the package top level if a relative one is supplied.
+  String _getAbsolutePath(String relativePath) =>
+      path.join(path.current, relativePath);
 }

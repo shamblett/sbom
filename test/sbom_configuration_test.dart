@@ -6,6 +6,7 @@
  */
 import 'package:sbom/sbom.dart';
 import 'package:test/test.dart';
+import 'package:path/path.dart' as path;
 
 @TestOn('VM')
 void main() {
@@ -26,12 +27,24 @@ void main() {
       expect(config.verbosity, SbomConstants.louder);
     });
     test('Absolute path', () {
-      final config = SbomConfiguration(['-P /absolute/path']);
+      final config = SbomConfiguration(['-P', '/absolute/path']);
       expect(config.valid, isTrue);
       expect(config.packageTopLevel, '/absolute/path');
+      expect(config.verbosity, SbomConstants.off);
     });
-    test('Help', () {
+    test('Relative path', () {
+      final config = SbomConfiguration(['-p', '/relative/path']);
+      expect(config.valid, isTrue);
+      expect(config.packageTopLevel, path.join(path.current, '/relative/path'));
+      expect(config.verbosity, SbomConstants.off);
+    });
+    test('Help - Single', () {
       final config = SbomConfiguration(['-h']);
+      expect(config.valid, isFalse);
+      expect(config.verbosity, SbomConstants.off);
+    });
+    test('Help- Mixed', () {
+      final config = SbomConfiguration(['-l', '-h']);
       expect(config.valid, isFalse);
       expect(config.verbosity, SbomConstants.off);
     });
@@ -44,6 +57,12 @@ void main() {
       final config = SbomConfiguration(['-l -l']);
       expect(config.valid, isFalse);
       expect(config.verbosity, SbomConstants.off);
+    });
+    test('Multiple', () {
+      final config = SbomConfiguration(['-p', '/relative/path', '-l']);
+      expect(config.valid, isTrue);
+      expect(config.packageTopLevel, path.join(path.current, '/relative/path'));
+      expect(config.verbosity, SbomConstants.loud);
     });
   });
 }
