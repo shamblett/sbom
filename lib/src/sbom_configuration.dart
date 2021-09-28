@@ -17,9 +17,6 @@ class SbomConfiguration {
   /// Configuration valid
   bool valid = false;
 
-  /// Verbosity(Loudness)
-  int verbosity = SbomConstants.off;
-
   /// Top level package path.
   /// This must be a standard Dart package directory with pubspec.yaml,
   /// the standard package directory structure and an sbom.yaml file
@@ -69,11 +66,11 @@ class SbomConfiguration {
 
     // Verbose
     if (results['loud']) {
-      verbosity = SbomConstants.loud;
+      SbomUtilities.verbosity = SbomConstants.loud;
     }
 
     if (results['louder']) {
-      verbosity = SbomConstants.louder;
+      SbomUtilities.verbosity = SbomConstants.louder;
     }
 
     // Package absolute path

@@ -15,4 +15,5 @@ import 'package:path/path.dart' as path;
 
 part 'src/sbom.dart';
 part 'src/sbom_constants.dart';
+part 'src/sbom_utilities.dart';
 part 'src/sbom_configuration.dart';
