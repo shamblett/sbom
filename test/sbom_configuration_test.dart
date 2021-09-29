@@ -74,4 +74,57 @@ void main() {
       expect(SbomUtilities.verbosity, SbomConstants.loud);
     });
   });
+  group('SBOM Configuration File', () {
+    test('Valid file', () {
+      final config =
+          SbomConfiguration(['-p', 'test/sbom/configuration/validfile']);
+      config.parseSbomFile();
+      expect(config.valid, isTrue);
+      expect(config.outputType, SbomType.spdx);
+      expect(config.sbomConfigurationContents.isNotEmpty, isTrue);
+      expect(SbomUtilities.last, '');
+    });
+    test('Invalid path', () {
+      final config = SbomConfiguration(['-p', 'sbom/configuration']);
+      config.parseSbomFile();
+      expect(config.valid, isFalse);
+      expect(config.outputType, SbomType.none);
+      expect(config.sbomConfigurationContents.isEmpty, isTrue);
+      expect(
+          SbomUtilities.last
+              .contains('ERROR: Cannot read SBOM configuration file'),
+          isTrue);
+    });
+    test('Empty', () {
+      final config = SbomConfiguration(['-p', 'test/sbom/configuration/empty']);
+      config.parseSbomFile();
+      expect(config.valid, isFalse);
+      expect(config.outputType, SbomType.none);
+      expect(config.sbomConfigurationContents.isEmpty, isTrue);
+      expect(
+          SbomUtilities.last
+              .contains('ERROR: SBOM configuration file is empty'),
+          isTrue);
+    });
+    test('No type', () {
+      final config =
+          SbomConfiguration(['-p', 'test/sbom/configuration/notype']);
+      config.parseSbomFile();
+      expect(config.valid, isFalse);
+      expect(config.outputType, SbomType.none);
+      expect(config.sbomConfigurationContents.isEmpty, isTrue);
+      expect(SbomUtilities.last,
+          'ERROR: No type specified in SBOM configuration file, cannot continue');
+    });
+    test('No valid type', () {
+      final config =
+          SbomConfiguration(['-p', 'test/sbom/configuration/notype']);
+      config.parseSbomFile();
+      expect(config.valid, isFalse);
+      expect(config.outputType, SbomType.none);
+      expect(config.sbomConfigurationContents.isEmpty, isTrue);
+      expect(SbomUtilities.last,
+          'ERROR: No type specified in SBOM configuration file, cannot continue');
+    });
+  });
 }

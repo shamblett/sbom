@@ -19,4 +19,14 @@ class SbomConstants {
   /// Terminal colours
   static const String yellow = '\u001b[33m';
   static const String red = '\u001b[31m';
+
+  /// File names
+  static const String sbomConfigurationFile = 'sbom.yaml';
+  static const String pubspecFile = 'pubspec.yaml';
+
+  /// SBOM Configuration file fields
+  static const String sbomType = 'type';
+
+  /// SBOM Configuration file values.
+  static const String sbomSpdx = 'spdx';
 }

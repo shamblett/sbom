@@ -21,6 +21,12 @@ int main(List<String> args) {
     return 0;
   }
 
+  // Parse the SBOM configuration file
+  configuration.parseSbomFile();
+  if (!configuration.valid) {
+    return -1;
+  }
+
   // Finish
   print('SBOM generation complete');
   return 0;
