@@ -14,12 +14,12 @@ void main() {
     test('Error', () {
       SbomUtilities.verbosity = SbomConstants.off;
       SbomUtilities.error('Error Text');
-      expect(SbomUtilities.last, '\u001b[31mERROR: Error Text');
+      expect(SbomUtilities.last, 'ERROR: Error Text');
     });
     test('Warning', () {
       SbomUtilities.verbosity = SbomConstants.off;
       SbomUtilities.warning('Warning Text');
-      expect(SbomUtilities.last, '\u001b[33mWARN: Warning Text');
+      expect(SbomUtilities.last, 'WARN: Warning Text');
     });
     test('Verbosity - Off', () {
       SbomUtilities.verbosity = SbomConstants.off;
@@ -33,6 +33,9 @@ void main() {
       SbomUtilities.verbosity = SbomConstants.loud;
       SbomUtilities.loud('Loud Text');
       expect(SbomUtilities.last, 'Loud Text');
+      SbomUtilities.verbosity = SbomConstants.louder;
+      SbomUtilities.loud('Loud Text');
+      expect(SbomUtilities.last, 'Loud Text');
     });
     test('Verbosity - Louder', () {
       SbomUtilities.verbosity = SbomConstants.louder;
@@ -41,7 +44,7 @@ void main() {
       SbomUtilities.last = '';
       SbomUtilities.verbosity = SbomConstants.loud;
       SbomUtilities.louder('Loud Text');
-      expect(SbomUtilities.last, 'Loud Text');
+      expect(SbomUtilities.last, '');
     });
   });
 }

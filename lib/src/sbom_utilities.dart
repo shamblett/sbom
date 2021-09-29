@@ -14,7 +14,7 @@ class SbomUtilities {
 
   /// Loud verbosity logging.
   static void loud(String text) {
-    if (verbosity == SbomConstants.loud) {
+    if (verbosity >= SbomConstants.loud) {
       print(text);
       last = text;
     }
@@ -22,7 +22,7 @@ class SbomUtilities {
 
   /// Louder verbosity logging.
   static void louder(String text) {
-    if (verbosity >= SbomConstants.loud) {
+    if (verbosity >= SbomConstants.louder) {
       print(text);
       last = text;
     }
@@ -30,15 +30,15 @@ class SbomUtilities {
 
   /// Warning
   static void warning(String text) {
-    final out = '\u001b[33mWARN: $text';
-    print(out);
+    final out = 'WARN: $text';
+    print('${SbomConstants.yellow}$out');
     last = out;
   }
 
   /// Error
   static void error(String text) {
-    final out = '\u001b[31mERROR: $text';
-    print(out);
+    final out = 'ERROR: $text';
+    print('${SbomConstants.red}$out');
     last = out;
   }
 

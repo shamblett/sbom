@@ -15,4 +15,8 @@ class SbomConstants {
   /// Verbosity(Loudness)
   static const int loud = 1;
   static const int louder = 2;
+
+  /// Terminal colours
+  static const String yellow = '\u001b[33m';
+  static const String red = '\u001b[31m';
 }
