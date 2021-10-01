@@ -10,11 +10,14 @@ part of sbom;
 /// SPDX tag class
 class SbomSpdxTag {
   /// Construction
-  SbomSpdxTag(this.name, this.section);
+  SbomSpdxTag(this.type, this.name, this.section, this.position);
 
-  SbomSpdxTag.mandatory(this.name, this.section) {
+  SbomSpdxTag.mandatory(this.type, this.name, this.section, this.position) {
     _mandatory = true;
   }
+
+  /// Type
+  final SbomSpdxTagType type;
 
   /// Name.
   final String name;
@@ -24,8 +27,13 @@ class SbomSpdxTag {
   bool get mandatory => _mandatory;
 
   /// Value.
-  String value = '';
+  final List<String> _value = <String>[];
+  List<String> get values => _value;
+  set value(String text) => _value.add(text);
 
   /// Document section.
-  final String section;
+  final SbomSpdxSection section;
+
+  /// Thr position in the document section.
+  final int position;
 }

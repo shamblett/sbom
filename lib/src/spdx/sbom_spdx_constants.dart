@@ -7,8 +7,15 @@
 
 part of sbom;
 
+/// SPDX sections
+enum SbomSpdxSection { documentCreation }
+
 /// SPDX constants
-class SbomSPDXConstants {
+class SbomSpdxConstants {
+  // Specification constants.
+  static const String spdxVersion = 'SPDX-2.2';
+  static const String spdxLicense = 'CC0-1.0';
+
   /// Output Format
   static const String spdxOutputFormatDirective = 'SPDXFormat';
   static const String spdxOutputTagValue = 'tagvalue';
@@ -16,7 +23,4 @@ class SbomSPDXConstants {
 
   /// Format specific
   static const String spdxTagValueSeparator = ':';
-
-  /// Sections.
-
 }
