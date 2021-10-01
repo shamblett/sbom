@@ -16,4 +16,7 @@ class SbomSPDXConstants {
 
   /// Format specific
   static const String spdxTagValueSeparator = ':';
+
+  /// Sections.
+
 }
