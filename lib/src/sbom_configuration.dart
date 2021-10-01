@@ -35,6 +35,9 @@ class SbomConfiguration {
   /// SBOM configuration file contents as parsed by the YAML package
   var sbomConfigurationContents = YamlMap();
 
+  /// Package pubspec file contents as parsed by the YAML package
+  var sbomPubspecContents = YamlMap();
+
   void _buildConfiguration(args) {
     // Parse the arguments
     final argParser = ArgParser();
@@ -99,7 +102,7 @@ class SbomConfiguration {
       path.join(path.current, relativePath);
 
   /// Parse the SBOM configuration file.
-  void parseSbomFile() {
+  void parseConfigurationFile() {
     final sbomFilepath =
         path.join(packageTopLevel, SbomConstants.sbomConfigurationFile);
     var sbomConfiguration = '';
@@ -111,14 +114,14 @@ class SbomConfiguration {
           'Cannot read SBOM configuration file, path is $sbomFilepath,  cannot continue');
       return;
     }
-    final contents = loadYaml(sbomConfiguration);
+    var contents = loadYaml(sbomConfiguration);
     if (contents == null || contents.isEmpty) {
       valid = false;
       SbomUtilities.error(
           'SBOM configuration file is empty, path is $sbomFilepath,  cannot continue');
       return;
     }
-    if (contents[SbomConstants.sbomType] == null) {
+    if (!contents.containsKey(SbomConstants.sbomType)) {
       valid = false;
       SbomUtilities.error(
           'No type specified in SBOM configuration file, cannot continue');
@@ -126,6 +129,37 @@ class SbomConfiguration {
     }
     _setType(contents[SbomConstants.sbomType]);
     sbomConfigurationContents = contents;
+  }
+
+  /// Parse the package pubspec file.
+  void parsePubspecFile() {
+    // Parse the package pubspec file
+    final pubspecFilepath =
+        path.join(packageTopLevel, SbomConstants.sbomPubspecFile);
+    var sbomPubspec = '';
+    try {
+      sbomPubspec = File(pubspecFilepath).readAsStringSync();
+    } on FileSystemException {
+      valid = false;
+      SbomUtilities.error(
+          'Cannot read package pubspec file, path is $pubspecFilepath,  cannot continue');
+      return;
+    }
+
+    var contents = loadYaml(sbomPubspec);
+    if (contents == null || contents.isEmpty) {
+      valid = false;
+      SbomUtilities.error(
+          'Package pubspec file is empty, path is $pubspecFilepath,  cannot continue');
+      return;
+    }
+    sbomPubspecContents = contents;
+  }
+
+  /// Parse the SBOM configuration file and the package pubspec file.
+  void parseSbomFiles() {
+    parseConfigurationFile();
+    parsePubspecFile();
   }
 
   /// Set the SBOM type.

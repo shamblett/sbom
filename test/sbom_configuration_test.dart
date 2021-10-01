@@ -78,7 +78,7 @@ void main() {
     test('Valid file', () {
       final config =
           SbomConfiguration(['-p', 'test/sbom/configuration/validfile']);
-      config.parseSbomFile();
+      config.parseConfigurationFile();
       expect(config.valid, isTrue);
       expect(config.outputType, SbomType.spdx);
       expect(config.sbomConfigurationContents.isNotEmpty, isTrue);
@@ -86,7 +86,7 @@ void main() {
     });
     test('Invalid path', () {
       final config = SbomConfiguration(['-p', 'sbom/configuration']);
-      config.parseSbomFile();
+      config.parseConfigurationFile();
       expect(config.valid, isFalse);
       expect(config.outputType, SbomType.none);
       expect(config.sbomConfigurationContents.isEmpty, isTrue);
@@ -97,7 +97,7 @@ void main() {
     });
     test('Empty', () {
       final config = SbomConfiguration(['-p', 'test/sbom/configuration/empty']);
-      config.parseSbomFile();
+      config.parseConfigurationFile();
       expect(config.valid, isFalse);
       expect(config.outputType, SbomType.none);
       expect(config.sbomConfigurationContents.isEmpty, isTrue);
@@ -109,7 +109,7 @@ void main() {
     test('No type', () {
       final config =
           SbomConfiguration(['-p', 'test/sbom/configuration/notype']);
-      config.parseSbomFile();
+      config.parseConfigurationFile();
       expect(config.valid, isFalse);
       expect(config.outputType, SbomType.none);
       expect(config.sbomConfigurationContents.isEmpty, isTrue);
@@ -119,12 +119,43 @@ void main() {
     test('No valid type', () {
       final config =
           SbomConfiguration(['-p', 'test/sbom/configuration/notype']);
-      config.parseSbomFile();
+      config.parseConfigurationFile();
       expect(config.valid, isFalse);
       expect(config.outputType, SbomType.none);
       expect(config.sbomConfigurationContents.isEmpty, isTrue);
       expect(SbomUtilities.last,
           'ERROR: No type specified in SBOM configuration file, cannot continue');
+    });
+  });
+
+  group('Pubspec File', () {
+    test('Valid file', () {
+      SbomUtilities.last = '';
+      final config =
+          SbomConfiguration(['-p', 'test/sbom/configuration/validfile']);
+      config.parsePubspecFile();
+      expect(config.valid, isTrue);
+      expect(config.sbomPubspecContents.isNotEmpty, isTrue);
+      expect(SbomUtilities.last, '');
+    });
+    test('Invalid path', () {
+      final config = SbomConfiguration(['-p', 'sbom/configuration']);
+      config.parsePubspecFile();
+      expect(config.valid, isFalse);
+      expect(config.sbomPubspecContents.isEmpty, isTrue);
+      expect(
+          SbomUtilities.last
+              .contains('ERROR: Cannot read package pubspec file'),
+          isTrue);
+    });
+    test('Empty', () {
+      final config = SbomConfiguration(['-p', 'test/sbom/configuration/empty']);
+      config.parsePubspecFile();
+      expect(config.valid, isFalse);
+      expect(config.sbomPubspecContents.isEmpty, isTrue);
+      expect(
+          SbomUtilities.last.contains('ERROR: Package pubspec file is empty'),
+          isTrue);
     });
   });
 }

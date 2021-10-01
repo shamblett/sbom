@@ -22,7 +22,7 @@ int main(List<String> args) {
   }
 
   // Parse the SBOM configuration file
-  configuration.parseSbomFile();
+  configuration.parseSbomFiles();
   if (!configuration.valid) {
     return -1;
   }
