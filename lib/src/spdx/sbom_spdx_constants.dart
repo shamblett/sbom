@@ -8,7 +8,13 @@
 part of sbom;
 
 /// SPDX sections
-enum SbomSpdxSection { documentCreation }
+enum SbomSpdxSection {
+  documentCreation,
+  package,
+  file,
+  snippet,
+  otherLicensing,
+}
 
 /// SPDX constants
 class SbomSpdxConstants {
