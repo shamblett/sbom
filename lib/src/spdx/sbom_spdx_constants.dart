@@ -20,7 +20,9 @@ enum SbomSpdxSection {
 enum SbomSpdxTagType {
   // Document creation
   version,
-  license
+  dataLicense,
+  identifier,
+  documentName
 }
 
 /// SPDX constants

@@ -10,19 +10,29 @@ part of sbom;
 /// SPDX tag builder.
 /// Builds the SPDX tags as per the specification.
 class SbomSpdxTagBuilder {
+  final List<SbomSpdxTag> _tags = <SbomSpdxTag>[];
+
   /// Build the database.
   List<SbomSpdxTag> build() {
-    final List<SbomSpdxTag> tags = <SbomSpdxTag>[];
     // Document creation
-    tags.add(SbomSpdxTag.mandatory(SbomSpdxTagType.version, 'SPDXVersion',
+    _add(SbomSpdxTag.mandatory(SbomSpdxTagType.version, 'SPDXVersion',
         SbomSpdxSection.documentCreation, 1));
     // Version is pre defined.
-    tags[0].value = SbomSpdxConstants.spdxVersion;
-    tags.add(SbomSpdxTag.mandatory(SbomSpdxTagType.license, 'DataLicense',
+    _tags[0].value = SbomSpdxConstants.spdxVersion;
+    _add(SbomSpdxTag.mandatory(SbomSpdxTagType.dataLicense, 'DataLicense',
         SbomSpdxSection.documentCreation, 2));
     // License is predefined
-    tags[1].value = SbomSpdxConstants.spdxLicense;
+    _tags[1].value = SbomSpdxConstants.spdxLicense;
 
-    return tags;
+    return _tags;
+  }
+
+  /// Add a tag, checking the tag type is not already present.
+  void _add(SbomSpdxTag tag) {
+    if (_tags.where((e) => e.type == tag.type).isNotEmpty) {
+      throw Exception(
+          'SpdxTagBuilder: ERROR duplicate tag type found ${tag.type.toString().split('.')[1]}');
+    }
+    _tags.add(tag);
   }
 }
