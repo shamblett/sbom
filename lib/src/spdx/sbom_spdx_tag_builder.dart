@@ -7,13 +7,6 @@
 
 part of sbom;
 
-/// SPDX tag type.
-enum SbomSpdxTagType {
-  // Document creation
-  version,
-  license
-}
-
 /// SPDX tag builder.
 /// Builds the SPDX tags as per the specification.
 class SbomSpdxTagBuilder {

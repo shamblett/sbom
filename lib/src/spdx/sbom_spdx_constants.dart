@@ -16,6 +16,13 @@ enum SbomSpdxSection {
   otherLicensing,
 }
 
+/// SPDX tag type.
+enum SbomSpdxTagType {
+  // Document creation
+  version,
+  license
+}
+
 /// SPDX constants
 class SbomSpdxConstants {
   // Specification constants.

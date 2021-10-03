@@ -11,8 +11,8 @@ import 'package:test/test.dart';
 void main() {
   group('SPDX', () {
     test('Tag by type', () {
-      final tags = SbomSpdxTags();
-      tags.tags.clear();
+      //final tags = SbomSpdxTags();
+      //tags.tags.clear();
     });
   });
 }
