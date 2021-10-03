@@ -10,9 +10,10 @@ import 'package:test/test.dart';
 @TestOn('VM')
 void main() {
   group('SPDX', () {
+    final builder = SbomSpdxTagBuilder();
     test('Tag by type', () {
-      //final tags = SbomSpdxTags();
-      //tags.tags.clear();
+      final tags = SbomSpdxTags(builder);
+      expect(tags.tags.length, 2);
     });
   });
 }

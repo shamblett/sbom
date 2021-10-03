@@ -17,7 +17,7 @@ abstract class SbomTags<T, S, B, Y> {
   SbomTags(this.builder);
 
   /// The tag database.
-  final List<T> tags = <T>[];
+  List<T> tags = <T>[];
 
   /// The tag builder.
   B builder;

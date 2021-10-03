@@ -12,7 +12,7 @@ class SbomSpdxTags extends SbomTags<SbomSpdxTag, SbomSpdxSection,
     SbomSpdxTagBuilder, SbomSpdxTagType> {
   /// Construction
   SbomSpdxTags(builder) : super(builder) {
-    builder.build();
+    tags = builder.build();
   }
 
   /// Get all tags for a specified section in section position order.
