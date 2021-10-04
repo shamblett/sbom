@@ -42,12 +42,14 @@ void main() {
       tags.tags.clear();
       tags.tags.add(SbomSpdxTag.mandatory(SbomSpdxTagType.version,
           'SPDXVersion', SbomSpdxSection.documentCreation, 1));
+      tags.tags[0].value = SbomSpdxConstants.spdxVersion;
       tags.tags.add(SbomSpdxTag.mandatory(SbomSpdxTagType.dataLicense,
           'DataLicense', SbomSpdxSection.documentCreation, 2));
       expect(tags.tags.length, 2);
       final valid = tags.sectionValid(SbomSpdxSection.documentCreation);
       expect(valid.isEmpty, isFalse);
-      expect(valid.length, 2);
+      expect(valid.length, 1);
+      expect(valid[0].type, SbomSpdxTagType.dataLicense);
     });
     test('Section valid - valid', () {
       final builder = SbomSpdxTagBuilder();
