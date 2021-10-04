@@ -9,10 +9,11 @@ part of sbom;
 
 /// SPDX tag builder.
 /// Builds the SPDX tags as per the specification.
-class SbomSpdxTagBuilder {
+class SbomSpdxTagBuilder extends SbomITagBuilder {
   final List<SbomSpdxTag> _tags = <SbomSpdxTag>[];
 
   /// Build the database.
+  @override
   List<SbomSpdxTag> build() {
     // Document creation
     _add(SbomSpdxTag.mandatory(SbomSpdxTagType.version, 'SPDXVersion',

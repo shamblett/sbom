@@ -18,6 +18,7 @@ part 'src/sbom_constants.dart';
 part 'src/sbom_utilities.dart';
 part 'src/sbom_tag.dart';
 part 'src/sbom_tags.dart';
+part 'src/sbom_itag_builder.dart';
 part 'src/sbom_configuration.dart';
 part 'src/generation/sbom_generator.dart';
 part 'src/generation/sbom_ioutput_generator.dart';
