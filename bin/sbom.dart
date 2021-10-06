@@ -27,6 +27,13 @@ int main(List<String> args) {
     return -1;
   }
 
+  // Generate the Sbom
+  final generator = SbomGenerator(configuration);
+  generator.generate();
+  if (!generator.valid) {
+    return -1;
+  }
+
   // Finish
   print('SBOM generation complete');
   return 0;

@@ -12,14 +12,24 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
   /// Construction
   SbomSpdxOutputGenerator(this.spdx);
 
-  /// The SPDX class
-  final SbomSpdx spdx;
+  /// SBOM configuration.
+  final SbomConfiguration spdx;
 
   /// Build
   @override
-  void build() {}
+  bool build() {
+    return false;
+  }
+
+  /// Validate
+  @override
+  bool validate() {
+    return false;
+  }
 
   /// Generate
   @override
-  void generate() {}
+  bool generate() {
+    return false;
+  }
 }

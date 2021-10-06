@@ -10,8 +10,11 @@ part of sbom;
 /// The SBOM output generator interface class.
 abstract class SbomIOutputGenerator {
   /// Build
-  void build();
+  bool build();
+
+  /// Validate
+  bool validate();
 
   /// Generate
-  void generate();
+  bool generate();
 }
