@@ -26,7 +26,9 @@ enum SbomSpdxTagType {
   documentNamespace,
   externalDocumentRefs,
   licenseListVersion,
-  creator
+  creator,
+  created,
+  creatorComment
 }
 
 /// SPDX constants

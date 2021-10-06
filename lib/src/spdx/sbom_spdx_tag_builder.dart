@@ -43,6 +43,10 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
     _tags[6].value = SbomSpdxConstants.licenseListVersion;
     _add(SbomSpdxTag.mandatory(SbomSpdxTagType.creator, 'Creator',
         SbomSpdxSection.documentCreation, 8));
+    _add(SbomSpdxTag.mandatory(SbomSpdxTagType.created, 'Created',
+        SbomSpdxSection.documentCreation, 9));
+    _add(SbomSpdxTag(SbomSpdxTagType.creatorComment, 'CreatorComment',
+        SbomSpdxSection.documentCreation, 10));
   }
 
   /// Add a tag, checking the tag type and position is not already present.
