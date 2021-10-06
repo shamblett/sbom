@@ -42,7 +42,7 @@ void main() {
       tags.tags.clear();
       tags.tags.add(SbomSpdxTag.mandatory(SbomSpdxTagType.version,
           'SPDXVersion', SbomSpdxSection.documentCreation, 1));
-      tags.tags[0].value = SbomSpdxConstants.spdxVersion;
+      tags.tags[0].value = SbomSpdxConstants.version;
       tags.tags.add(SbomSpdxTag.mandatory(SbomSpdxTagType.dataLicense,
           'DataLicense', SbomSpdxSection.documentCreation, 2));
       expect(tags.tags.length, 2);
@@ -57,10 +57,10 @@ void main() {
       tags.tags.clear();
       tags.tags.add(SbomSpdxTag.mandatory(SbomSpdxTagType.version,
           'SPDXVersion', SbomSpdxSection.documentCreation, 1));
-      tags.tags[0].value = SbomSpdxConstants.spdxVersion;
+      tags.tags[0].value = SbomSpdxConstants.version;
       tags.tags.add(SbomSpdxTag.mandatory(SbomSpdxTagType.dataLicense,
           'DataLicense', SbomSpdxSection.documentCreation, 2));
-      tags.tags[1].value = SbomSpdxConstants.spdxLicense;
+      tags.tags[1].value = SbomSpdxConstants.license;
       expect(tags.tags.length, 2);
       final valid = tags.sectionValid(SbomSpdxSection.documentCreation);
       expect(valid.isEmpty, isTrue);

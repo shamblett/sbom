@@ -22,14 +22,19 @@ enum SbomSpdxTagType {
   version,
   dataLicense,
   identifier,
-  documentName
+  documentName,
+  documentNamespace,
+  externalDocumentRefs,
+  licenseListVersion
 }
 
 /// SPDX constants
 class SbomSpdxConstants {
-  // Specification constants.
-  static const String spdxVersion = 'SPDX-2.2';
-  static const String spdxLicense = 'CC0-1.0';
+  // Specification tag value constants.
+  static const String version = 'SPDX-2.2';
+  static const String license = 'CC0-1.0';
+  static const String idReference = 'SPDXRef-DOCUMENT';
+  static const String licenseListVersion = '3.8';
 
   /// Output Format
   static const String spdxOutputFormatDirective = 'SPDXFormat';

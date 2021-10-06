@@ -15,17 +15,32 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
   /// Build the database.
   @override
   List<SbomSpdxTag> build() {
-    // Document creation
+    _documentCreation();
+    return _tags;
+  }
+
+  /// Document creation section.
+  void _documentCreation() {
     _add(SbomSpdxTag.mandatory(SbomSpdxTagType.version, 'SPDXVersion',
         SbomSpdxSection.documentCreation, 1));
     // Version is pre defined.
-    _tags[0].value = SbomSpdxConstants.spdxVersion;
+    _tags[0].value = SbomSpdxConstants.version;
     _add(SbomSpdxTag.mandatory(SbomSpdxTagType.dataLicense, 'DataLicense',
         SbomSpdxSection.documentCreation, 2));
     // License is predefined
-    _tags[1].value = SbomSpdxConstants.spdxLicense;
-
-    return _tags;
+    _tags[1].value = SbomSpdxConstants.license;
+    _add(SbomSpdxTag.mandatory(SbomSpdxTagType.documentName, 'SPDXID',
+        SbomSpdxSection.documentCreation, 3));
+    _add(SbomSpdxTag.mandatory(SbomSpdxTagType.documentName, 'DocumentName',
+        SbomSpdxSection.documentCreation, 4));
+    _add(SbomSpdxTag.mandatory(SbomSpdxTagType.documentNamespace,
+        'DocumentNamespace', SbomSpdxSection.documentCreation, 5));
+    _add(SbomSpdxTag(SbomSpdxTagType.externalDocumentRefs,
+        'ExternalDocumentRef', SbomSpdxSection.documentCreation, 6));
+    _add(SbomSpdxTag(SbomSpdxTagType.licenseListVersion, 'LicenseListVersion',
+        SbomSpdxSection.documentCreation, 7));
+    // License list version is predefined
+    _tags[6].value = SbomSpdxConstants.licenseListVersion;
   }
 
   /// Add a tag, checking the tag type is not already present.
