@@ -28,7 +28,8 @@ enum SbomSpdxTagType {
   licenseListVersion,
   creator,
   created,
-  creatorComment
+  creatorComment,
+  documentComment
 }
 
 /// SPDX constants

@@ -47,6 +47,8 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
         SbomSpdxSection.documentCreation, 9));
     _add(SbomSpdxTag(SbomSpdxTagType.creatorComment, 'CreatorComment',
         SbomSpdxSection.documentCreation, 10));
+    _add(SbomSpdxTag(SbomSpdxTagType.documentComment, 'DocumentComment:',
+        SbomSpdxSection.documentCreation, 11));
   }
 
   /// Add a tag, checking the tag type and position is not already present.
