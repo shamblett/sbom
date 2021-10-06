@@ -25,7 +25,8 @@ enum SbomSpdxTagType {
   documentName,
   documentNamespace,
   externalDocumentRefs,
-  licenseListVersion
+  licenseListVersion,
+  creator
 }
 
 /// SPDX constants
@@ -35,6 +36,8 @@ class SbomSpdxConstants {
   static const String license = 'CC0-1.0';
   static const String idReference = 'SPDXRef-DOCUMENT';
   static const String licenseListVersion = '3.8';
+  // Needs the version of sbom appending
+  static const String creatorTool = 'Tool: sbom-';
 
   /// Output Format
   static const String spdxOutputFormatDirective = 'SPDXFormat';

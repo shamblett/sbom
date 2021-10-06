@@ -29,7 +29,7 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
         SbomSpdxSection.documentCreation, 2));
     // License is predefined
     _tags[1].value = SbomSpdxConstants.license;
-    _add(SbomSpdxTag.mandatory(SbomSpdxTagType.documentName, 'SPDXID',
+    _add(SbomSpdxTag.mandatory(SbomSpdxTagType.identifier, 'SPDXID',
         SbomSpdxSection.documentCreation, 3));
     _add(SbomSpdxTag.mandatory(SbomSpdxTagType.documentName, 'DocumentName',
         SbomSpdxSection.documentCreation, 4));
@@ -41,13 +41,21 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
         SbomSpdxSection.documentCreation, 7));
     // License list version is predefined
     _tags[6].value = SbomSpdxConstants.licenseListVersion;
+    _add(SbomSpdxTag.mandatory(SbomSpdxTagType.creator, 'Creator',
+        SbomSpdxSection.documentCreation, 8));
   }
 
-  /// Add a tag, checking the tag type is not already present.
+  /// Add a tag, checking the tag type and position is not already present.
   void _add(SbomSpdxTag tag) {
     if (_tags.where((e) => e.type == tag.type).isNotEmpty) {
       throw Exception(
           'SpdxTagBuilder: ERROR duplicate tag type found ${tag.type.toString().split('.')[1]}');
+    }
+    if (_tags
+        .where((e) => e.section == tag.section && e.position == tag.position)
+        .isNotEmpty) {
+      throw Exception(
+          'SpdxTagBuilder: ERROR duplicate position found ${tag.position} in section ${tag.section.toString().split('.')[1]}');
     }
     _tags.add(tag);
   }
