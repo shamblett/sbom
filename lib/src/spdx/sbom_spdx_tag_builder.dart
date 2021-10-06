@@ -21,34 +21,52 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
 
   /// Document creation section.
   void _documentCreation() {
-    _add(SbomSpdxTag.mandatory(SbomSpdxTagType.version, 'SPDXVersion',
-        SbomSpdxSection.documentCreation, 1));
+    _add(SbomSpdxTag.mandatory(SbomSpdxTagType.version,
+        SbomSpdxConstants.tagVersion, SbomSpdxSection.documentCreation, 1));
     // Version is pre defined.
     _tags[0].value = SbomSpdxConstants.version;
-    _add(SbomSpdxTag.mandatory(SbomSpdxTagType.dataLicense, 'DataLicense',
-        SbomSpdxSection.documentCreation, 2));
+    _add(SbomSpdxTag.mandatory(SbomSpdxTagType.dataLicense,
+        SbomSpdxConstants.tagDataLicense, SbomSpdxSection.documentCreation, 2));
     // License is predefined
     _tags[1].value = SbomSpdxConstants.license;
-    _add(SbomSpdxTag.mandatory(SbomSpdxTagType.identifier, 'SPDXID',
-        SbomSpdxSection.documentCreation, 3));
-    _add(SbomSpdxTag.mandatory(SbomSpdxTagType.documentName, 'DocumentName',
-        SbomSpdxSection.documentCreation, 4));
-    _add(SbomSpdxTag.mandatory(SbomSpdxTagType.documentNamespace,
-        'DocumentNamespace', SbomSpdxSection.documentCreation, 5));
-    _add(SbomSpdxTag(SbomSpdxTagType.externalDocumentRefs,
-        'ExternalDocumentRef', SbomSpdxSection.documentCreation, 6));
-    _add(SbomSpdxTag(SbomSpdxTagType.licenseListVersion, 'LicenseListVersion',
-        SbomSpdxSection.documentCreation, 7));
+    _add(SbomSpdxTag.mandatory(SbomSpdxTagType.identifier,
+        SbomSpdxConstants.tagIdentifier, SbomSpdxSection.documentCreation, 3));
+    _add(SbomSpdxTag.mandatory(
+        SbomSpdxTagType.documentName,
+        SbomSpdxConstants.tagDocumentName,
+        SbomSpdxSection.documentCreation,
+        4));
+    _add(SbomSpdxTag.mandatory(
+        SbomSpdxTagType.documentNamespace,
+        SbomSpdxConstants.tagDocumentNamespace,
+        SbomSpdxSection.documentCreation,
+        5));
+    _add(SbomSpdxTag(
+        SbomSpdxTagType.externalDocumentRefs,
+        SbomSpdxConstants.tagExternalDocumentRefs,
+        SbomSpdxSection.documentCreation,
+        6));
+    _add(SbomSpdxTag(
+        SbomSpdxTagType.licenseListVersion,
+        SbomSpdxConstants.tagLicenseListVersion,
+        SbomSpdxSection.documentCreation,
+        7));
     // License list version is predefined
     _tags[6].value = SbomSpdxConstants.licenseListVersion;
-    _add(SbomSpdxTag.mandatory(SbomSpdxTagType.creator, 'Creator',
-        SbomSpdxSection.documentCreation, 8));
-    _add(SbomSpdxTag.mandatory(SbomSpdxTagType.created, 'Created',
-        SbomSpdxSection.documentCreation, 9));
-    _add(SbomSpdxTag(SbomSpdxTagType.creatorComment, 'CreatorComment',
-        SbomSpdxSection.documentCreation, 10));
-    _add(SbomSpdxTag(SbomSpdxTagType.documentComment, 'DocumentComment:',
-        SbomSpdxSection.documentCreation, 11));
+    _add(SbomSpdxTag.mandatory(SbomSpdxTagType.creator,
+        SbomSpdxConstants.tagCreator, SbomSpdxSection.documentCreation, 8));
+    _add(SbomSpdxTag.mandatory(SbomSpdxTagType.created,
+        SbomSpdxConstants.tagCreated, SbomSpdxSection.documentCreation, 9));
+    _add(SbomSpdxTag(
+        SbomSpdxTagType.creatorComment,
+        SbomSpdxConstants.tagCreatorComment,
+        SbomSpdxSection.documentCreation,
+        10));
+    _add(SbomSpdxTag(
+        SbomSpdxTagType.documentComment,
+        SbomSpdxConstants.tagDocumentComment,
+        SbomSpdxSection.documentCreation,
+        11));
   }
 
   /// Add a tag, checking the tag type and position is not already present.

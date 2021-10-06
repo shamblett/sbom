@@ -15,10 +15,28 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
   /// SBOM configuration.
   final SbomConfiguration spdx;
 
+  /// SPDX tags.
+  final spdxTags = SbomSpdxTags(SbomSpdxTagBuilder());
+
+  /// Document creation
+  bool _documentCreation() {
+    // SPDX version and data licence are preset.
+    // SPDX Id
+    if ( spdx.sbomConfigurationContents.containsKey('SPDXID')) {
+      //spdxTags.tagByType(SbomSpdxTagType.identifier).value(spdx.sbomConfigurationContents['SPDXID']);
+    }
+    return false;
+  }
+
   /// Build
   @override
   bool build() {
-    return false;
+    bool result = _documentCreation();
+    if (!result) {
+      SbomUtilities.error('Failed to build SPDX Document Creation section.');
+      return false;
+    }
+    return true;
   }
 
   /// Validate
