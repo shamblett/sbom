@@ -36,7 +36,7 @@ class SbomGenerator {
         }
     }
     var result = output.build();
-    if ( !result) {
+    if (!result) {
       SbomUtilities.error('Failed to build SBOM for type SPDX.');
       valid = false;
       return;

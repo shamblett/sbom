@@ -31,7 +31,7 @@ abstract class SbomTag<T, S> {
   /// Value.
   final List<String> _value = <String>[];
   List<String> get values => _value;
-  set value(String text) => _value.add(text);
+  void value(String text) => _value.add(text);
 
   /// Document section.
   final S section;
