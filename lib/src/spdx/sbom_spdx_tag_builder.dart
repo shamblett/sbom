@@ -24,11 +24,11 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
     _add(SbomSpdxTag.mandatory(SbomSpdxTagType.version,
         SbomSpdxConstants.tagVersion, SbomSpdxSection.documentCreation, 1));
     // Version is pre defined.
-    _tags[0].value(SbomSpdxConstants.version);
+    _tags[0].value = SbomSpdxConstants.version;
     _add(SbomSpdxTag.mandatory(SbomSpdxTagType.dataLicense,
         SbomSpdxConstants.tagDataLicense, SbomSpdxSection.documentCreation, 2));
     // License is predefined
-    _tags[1].value(SbomSpdxConstants.license);
+    _tags[1].value = SbomSpdxConstants.license;
     _add(SbomSpdxTag.mandatory(SbomSpdxTagType.identifier,
         SbomSpdxConstants.tagIdentifier, SbomSpdxSection.documentCreation, 3));
     _add(SbomSpdxTag.mandatory(
@@ -52,7 +52,7 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
         SbomSpdxSection.documentCreation,
         7));
     // License list version is predefined
-    _tags[6].value(SbomSpdxConstants.licenseListVersion);
+    _tags[6].value = SbomSpdxConstants.licenseListVersion;
     _add(SbomSpdxTag.mandatory(SbomSpdxTagType.creator,
         SbomSpdxConstants.tagCreator, SbomSpdxSection.documentCreation, 8));
     _add(SbomSpdxTag.mandatory(SbomSpdxTagType.created,

@@ -24,8 +24,8 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     // SPDX Id
     if (spdx.sbomConfigurationContents
         .containsKey(SbomSpdxConstants.tagIdentifier)) {
-      spdxTags.tagByType(SbomSpdxTagType.identifier).value(
-          spdx.sbomConfigurationContents[SbomSpdxConstants.tagIdentifier]);
+      spdxTags.tagByType(SbomSpdxTagType.identifier).value =
+          spdx.sbomConfigurationContents[SbomSpdxConstants.tagIdentifier];
     }
     return false;
   }
