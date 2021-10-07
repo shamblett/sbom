@@ -1,0 +1,8 @@
+type: spdx
+
+spdx:
+  SPDXFormat: 'tagvalue'
+
+  # Document Creation
+  documentcreation:
+    SPDXID: 'SPDX Identifier'

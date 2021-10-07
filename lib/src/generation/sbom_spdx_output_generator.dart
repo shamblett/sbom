@@ -21,8 +21,9 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
   /// Document creation
   bool _documentCreation() {
     // SPDX version and data licence are preset.
+
     // SPDX Id
-    if (spdx.sbomConfigurationContents
+    if (spdx.sbomConfigurationContents[spdx]
         .containsKey(SbomSpdxConstants.tagIdentifier)) {
       spdxTags.tagByType(SbomSpdxTagType.identifier).value =
           spdx.sbomConfigurationContents[SbomSpdxConstants.tagIdentifier];
