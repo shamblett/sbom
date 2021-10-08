@@ -10,10 +10,10 @@ part of sbom;
 /// The SBOM SPDX output generator class.
 class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
   /// Construction
-  SbomSpdxOutputGenerator(this.spdx);
+  SbomSpdxOutputGenerator(this.configuration);
 
   /// SBOM configuration.
-  final SbomConfiguration spdx;
+  final SbomConfiguration configuration;
 
   /// SPDX tags.
   final spdxTags = SbomSpdxTags(SbomSpdxTagBuilder());
@@ -21,13 +21,20 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
   /// Document creation.
   bool _documentCreation() {
     SbomUtilities.louder('Building SPDX Document Creation section');
-    // SPDX version and data licence are preset.
-    // SPDX Id
-    if (spdx.sbomConfigurationContents[spdx]
-        .containsKey(SbomSpdxConstants.tagIdentifier)) {
-      spdxTags.tagByType(SbomSpdxTagType.identifier).value =
-          spdx.sbomConfigurationContents[SbomSpdxConstants.tagIdentifier];
+    if (configuration.sbomConfigurationContents[SbomConstants.sbomSpdx]
+        .containsKey(SbomSpdxUtilities.sectionToString(
+            SbomSpdxSection.documentCreation))) {
+      final section =
+          configuration.sbomConfigurationContents[SbomConstants.sbomSpdx]
+              [SbomSpdxSection.documentCreation.toString().split('.')[1]];
+      // SPDX Id
+      if (section.containsKey(SbomSpdxConstants.tagIdentifier)) {
+        spdxTags.tagByType(SbomSpdxTagType.identifier).value = configuration
+            .sbomConfigurationContents[SbomSpdxConstants.tagIdentifier];
+      }
     }
+    // SPDX version and data licence are preset.
+
     return false;
   }
 
@@ -35,6 +42,12 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
   @override
   bool build() {
     SbomUtilities.loud('Building SPDX sections');
+    if (!configuration.sbomConfigurationContents
+        .containsKey(SbomConstants.sbomSpdx)) {
+      SbomUtilities.error(
+          'Cannot build SPDX sections, no spdx tag in SBOM configuration file');
+      return false;
+    }
     bool result = _documentCreation();
     if (!result) {
       SbomUtilities.error('Failed to build SPDX Document Creation section.');

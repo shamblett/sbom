@@ -26,4 +26,5 @@ part 'src/generation/sbom_spdx_output_generator.dart';
 part 'src/spdx/sbom_spdx_tag.dart';
 part 'src/spdx/sbom_spdx_tags.dart';
 part 'src/spdx/sbom_spdx_constants.dart';
+part 'src/spdx/sbom_spdx_utilities.dart';
 part 'src/spdx/sbom_spdx_tag_builder.dart';

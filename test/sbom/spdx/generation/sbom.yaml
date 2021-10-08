@@ -4,5 +4,5 @@ spdx:
   SPDXFormat: 'tagvalue'
 
   # Document Creation
-  documentcreation:
+  documentCreation:
     SPDXID: 'SPDX Identifier'
