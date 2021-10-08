@@ -3,6 +3,6 @@ type: spdx
 spdx:
   SPDXFormat: 'tagvalue'
 
-  # Document Creation
+  # Document Creation section
   documentCreation:
     SPDXID: 'SPDX Identifier'

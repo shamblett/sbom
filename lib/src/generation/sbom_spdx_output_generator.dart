@@ -21,12 +21,13 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
   /// Document creation.
   bool _documentCreation() {
     SbomUtilities.louder('Building SPDX Document Creation section');
+    // If we have a document creation section in the SBOM configuration process it
     if (configuration.sbomConfigurationContents[SbomConstants.sbomSpdx]
         .containsKey(SbomSpdxUtilities.sectionToString(
             SbomSpdxSection.documentCreation))) {
       final section =
           configuration.sbomConfigurationContents[SbomConstants.sbomSpdx]
-              [SbomSpdxSection.documentCreation.toString().split('.')[1]];
+              [SbomSpdxUtilities.sectionToString(SbomSpdxSection.documentCreation)];
       // SPDX Id
       if (section.containsKey(SbomSpdxConstants.tagIdentifier)) {
         spdxTags.tagByType(SbomSpdxTagType.identifier).value = configuration
