@@ -17,6 +17,7 @@ int main(List<String> args) {
   // Check validity, if not valid then return.
   // The user may have just asked for usage or some other
   // error occurred.
+  print('Parsing SBOM configuration file');
   if (!configuration.valid) {
     return 0;
   }
@@ -28,6 +29,7 @@ int main(List<String> args) {
   }
 
   // Generate the Sbom
+  print('Generating the SBOM');
   final generator = SbomGenerator(configuration);
   generator.generate();
   if (!generator.valid) {

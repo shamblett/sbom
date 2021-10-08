@@ -18,10 +18,10 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
   /// SPDX tags.
   final spdxTags = SbomSpdxTags(SbomSpdxTagBuilder());
 
-  /// Document creation
+  /// Document creation.
   bool _documentCreation() {
+    SbomUtilities.louder('Building SPDX Document Creation section');
     // SPDX version and data licence are preset.
-
     // SPDX Id
     if (spdx.sbomConfigurationContents[spdx]
         .containsKey(SbomSpdxConstants.tagIdentifier)) {
@@ -34,6 +34,7 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
   /// Build
   @override
   bool build() {
+    SbomUtilities.loud('Building SPDX sections');
     bool result = _documentCreation();
     if (!result) {
       SbomUtilities.error('Failed to build SPDX Document Creation section.');
@@ -45,12 +46,14 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
   /// Validate
   @override
   bool validate() {
+    SbomUtilities.loud('Validating SPDX sections');
     return false;
   }
 
   /// Generate
   @override
   bool generate() {
+    SbomUtilities.loud('Generating SPDX SBOM');
     return false;
   }
 }

@@ -26,6 +26,7 @@ class SbomGenerator {
       case SbomType.spdx:
         {
           output = SbomSpdxOutputGenerator(configuration);
+          print('SBOM type is SPDX');
         }
         break;
       default:
