@@ -11,8 +11,8 @@ import 'package:test/test.dart';
 void main() {
   group('Document creation section', () {
     test('Valid file', () {
-      final config =
-          SbomConfiguration(['-p', 'test/sbom/spdx/generation']);
+      final config = SbomConfiguration(
+          ['-p', 'test/sbom/spdx/generation/documentcreation']);
       config.parseConfigurationFile();
       expect(config.valid, isTrue);
       expect(config.outputType, SbomType.spdx);

@@ -5,4 +5,4 @@ spdx:
 
   # Document Creation section
   documentCreation:
-    SPDXID: 'SPDX Identifier'
+    SPDXID: 'SPDX Identifier from configuration'

@@ -25,13 +25,13 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     if (configuration.sbomConfigurationContents[SbomConstants.sbomSpdx]
         .containsKey(SbomSpdxUtilities.sectionToString(
             SbomSpdxSection.documentCreation))) {
-      final section =
-          configuration.sbomConfigurationContents[SbomConstants.sbomSpdx]
-              [SbomSpdxUtilities.sectionToString(SbomSpdxSection.documentCreation)];
+      final section = configuration
+              .sbomConfigurationContents[SbomConstants.sbomSpdx]
+          [SbomSpdxUtilities.sectionToString(SbomSpdxSection.documentCreation)];
       // SPDX Id
       if (section.containsKey(SbomSpdxConstants.tagIdentifier)) {
-        spdxTags.tagByType(SbomSpdxTagType.identifier).value = configuration
-            .sbomConfigurationContents[SbomSpdxConstants.tagIdentifier];
+        spdxTags.tagByType(SbomSpdxTagType.identifier).value =
+            section[SbomSpdxConstants.tagIdentifier];
       }
     }
     // SPDX version and data licence are preset.
