@@ -14,12 +14,12 @@ void main() {
       final builder = SbomSpdxTagBuilder();
       final tags = SbomSpdxTags(builder);
       tags.tags.clear();
-      tags.tags.add(SbomSpdxTag.mandatory(SbomSpdxTagType.version,
-          'SPDXVersion', SbomSpdxSection.documentCreation, 1));
-      tags.tags.add(SbomSpdxTag.mandatory(SbomSpdxTagType.dataLicense,
-          'DataLicense', SbomSpdxSection.documentCreation, 2));
+      tags.tags.add(SbomSpdxTag.mandatory(
+          'SPDXVersion', SbomSpdxSectionNames.documentCreation, 1));
+      tags.tags.add(SbomSpdxTag.mandatory(
+          'DataLicense', SbomSpdxSectionNames.documentCreation, 2));
       expect(tags.tags.length, 2);
-      final tag = tags.tagByType(SbomSpdxTagType.dataLicense);
+      final tag = tags.tagByName(SbomSpdxTagType.dataLicense);
       expect(tag, isNotNull);
       expect(tag.type, SbomSpdxTagType.dataLicense);
     });

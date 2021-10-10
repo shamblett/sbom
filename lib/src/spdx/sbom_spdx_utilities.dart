@@ -9,7 +9,5 @@ part of sbom;
 
 /// SPDX utilities
 class SbomSpdxUtilities {
-  /// Enum helpers
-  static String sectionToString(SbomSpdxSection value) =>
-      value.toString().split('.')[1];
+
 }

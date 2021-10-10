@@ -7,48 +7,8 @@
 
 part of sbom;
 
-/// SPDX sections
-enum SbomSpdxSection {
-  documentCreation,
-  package,
-  file,
-  snippet,
-  otherLicensing,
-  relationships,
-  annotations
-}
-
-/// SPDX tag type.
-enum SbomSpdxTagType {
-  // Document creation
-  version,
-  dataLicense,
-  identifier,
-  documentName,
-  documentNamespace,
-  externalDocumentRefs,
-  licenseListVersion,
-  creator,
-  created,
-  creatorComment,
-  documentComment
-}
-
 /// SPDX constants
 class SbomSpdxConstants {
-  // Specification tag names
-  // Document creation
-  static const String tagVersion = 'SPDXVersion';
-  static const String tagDataLicense = 'DataLicense';
-  static const String tagIdentifier = 'SPDXID';
-  static const String tagDocumentName = 'DocumentName';
-  static const String tagDocumentNamespace = 'DocumentNamespace';
-  static const String tagExternalDocumentRefs = 'ExternalDocumentRef';
-  static const String tagLicenseListVersion = 'LicenseListVersion';
-  static const String tagCreator = 'Creator';
-  static const String tagCreated = 'Created';
-  static const String tagCreatorComment = 'CreatorComment';
-  static const String tagDocumentComment = 'DocumentComment';
 
   // Specification tag value constants.
   static const String version = 'SPDX-2.2';

@@ -8,18 +8,14 @@
 part of sbom;
 
 /// SBOM tag class.
-/// T Type
 /// S Section
-abstract class SbomTag<T, S> {
+abstract class SbomTag<S> {
   /// Construction
-  SbomTag(this.type, this.name, this.section, this.position);
+  SbomTag(this.name, this.section, this.position);
 
-  SbomTag.mandatory(this.type, this.name, this.section, this.position) {
+  SbomTag.mandatory(this.name, this.section, this.position) {
     _mandatory = true;
   }
-
-  /// Type
-  final T type;
 
   /// Name.
   final String name;

@@ -21,65 +21,59 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
 
   /// Document creation section.
   void _documentCreation() {
-    _add(SbomSpdxTag.mandatory(SbomSpdxTagType.version,
-        SbomSpdxConstants.tagVersion, SbomSpdxSection.documentCreation, 1));
+    _add(SbomSpdxTag.mandatory(
+        SbomSpdxTagNames.version, SbomSpdxSectionNames.documentCreation, 1));
     // Version is pre defined.
     _tags[0].value = SbomSpdxConstants.version;
-    _add(SbomSpdxTag.mandatory(SbomSpdxTagType.dataLicense,
-        SbomSpdxConstants.tagDataLicense, SbomSpdxSection.documentCreation, 2));
+    _add(SbomSpdxTag.mandatory(
+        SbomSpdxTagNames.dataLicense, SbomSpdxSectionNames.documentCreation, 2));
     // License is predefined
     _tags[1].value = SbomSpdxConstants.license;
-    _add(SbomSpdxTag.mandatory(SbomSpdxTagType.identifier,
-        SbomSpdxConstants.tagIdentifier, SbomSpdxSection.documentCreation, 3));
     _add(SbomSpdxTag.mandatory(
-        SbomSpdxTagType.documentName,
-        SbomSpdxConstants.tagDocumentName,
-        SbomSpdxSection.documentCreation,
+        SbomSpdxTagNames.identifier, SbomSpdxSectionNames.documentCreation, 3));
+    _add(SbomSpdxTag.mandatory(
+        SbomSpdxTagNames.documentName,
+        SbomSpdxSectionNames.documentCreation,
         4));
     _add(SbomSpdxTag.mandatory(
-        SbomSpdxTagType.documentNamespace,
-        SbomSpdxConstants.tagDocumentNamespace,
-        SbomSpdxSection.documentCreation,
+        SbomSpdxTagNames.documentNamespace,
+        SbomSpdxSectionNames.documentCreation,
         5));
     _add(SbomSpdxTag(
-        SbomSpdxTagType.externalDocumentRefs,
-        SbomSpdxConstants.tagExternalDocumentRefs,
-        SbomSpdxSection.documentCreation,
+        SbomSpdxTagNames.externalDocumentRefs,
+        SbomSpdxSectionNames.documentCreation,
         6));
     _add(SbomSpdxTag(
-        SbomSpdxTagType.licenseListVersion,
-        SbomSpdxConstants.tagLicenseListVersion,
-        SbomSpdxSection.documentCreation,
+        SbomSpdxTagNames.licenseListVersion,
+        SbomSpdxSectionNames.documentCreation,
         7));
     // License list version is predefined
     _tags[6].value = SbomSpdxConstants.licenseListVersion;
-    _add(SbomSpdxTag.mandatory(SbomSpdxTagType.creator,
-        SbomSpdxConstants.tagCreator, SbomSpdxSection.documentCreation, 8));
-    _add(SbomSpdxTag.mandatory(SbomSpdxTagType.created,
-        SbomSpdxConstants.tagCreated, SbomSpdxSection.documentCreation, 9));
+    _add(SbomSpdxTag.mandatory(
+        SbomSpdxTagNames.creator, SbomSpdxSectionNames.documentCreation, 8));
+    _add(SbomSpdxTag.mandatory(
+        SbomSpdxTagNames.created, SbomSpdxSectionNames.documentCreation, 9));
     _add(SbomSpdxTag(
-        SbomSpdxTagType.creatorComment,
-        SbomSpdxConstants.tagCreatorComment,
-        SbomSpdxSection.documentCreation,
+        SbomSpdxTagNames.creatorComment,
+        SbomSpdxSectionNames.documentCreation,
         10));
     _add(SbomSpdxTag(
-        SbomSpdxTagType.documentComment,
-        SbomSpdxConstants.tagDocumentComment,
-        SbomSpdxSection.documentCreation,
+        SbomSpdxTagNames.documentComment,
+        SbomSpdxSectionNames.documentCreation,
         11));
   }
 
   /// Add a tag, checking the tag type and position is not already present.
   void _add(SbomSpdxTag tag) {
-    if (_tags.where((e) => e.type == tag.type).isNotEmpty) {
+    if (_tags.where((e) => e.name == tag.name).isNotEmpty) {
       throw Exception(
-          'SpdxTagBuilder: ERROR duplicate tag type found ${tag.type.toString().split('.')[1]}');
+          'SpdxTagBuilder: ERROR duplicate tag type found ${tag.name}');
     }
     if (_tags
         .where((e) => e.section == tag.section && e.position == tag.position)
         .isNotEmpty) {
       throw Exception(
-          'SpdxTagBuilder: ERROR duplicate position found ${tag.position} in section ${tag.section.toString().split('.')[1]}');
+          'SpdxTagBuilder: ERROR duplicate position found ${tag.position} in section ${tag.section}');
     }
     _tags.add(tag);
   }

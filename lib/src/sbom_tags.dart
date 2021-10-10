@@ -9,10 +9,9 @@ part of sbom;
 
 /// Tags database.
 /// T, tag,
-/// Y tag type
 /// S, tag section
 /// B, tag builder.
-abstract class SbomTags<T, S, B, Y> {
+abstract class SbomTags<T, S, B> {
   /// Construction
   SbomTags(this.builder);
 
@@ -24,9 +23,6 @@ abstract class SbomTags<T, S, B, Y> {
 
   /// Get all tags for a specified section in section position order.
   List<T> sectionTags(S section);
-
-  /// Get a tag by its type.
-  T tagByType(Y type);
 
   /// Get a tag by its name
   T tagByName(String name);
