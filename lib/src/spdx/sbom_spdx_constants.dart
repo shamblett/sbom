@@ -14,6 +14,8 @@ enum SbomSpdxSection {
   file,
   snippet,
   otherLicensing,
+  relationships,
+  annotations
 }
 
 /// SPDX tag type.
