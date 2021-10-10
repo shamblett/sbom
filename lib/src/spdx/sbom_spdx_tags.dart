@@ -8,8 +8,7 @@
 part of sbom;
 
 /// Main SPDX tag class
-class SbomSpdxTags extends SbomTags<SbomSpdxTag, String,
-    SbomSpdxTagBuilder> {
+class SbomSpdxTags extends SbomTags<SbomSpdxTag, String, SbomSpdxTagBuilder> {
   /// Construction
   SbomSpdxTags(builder) : super(builder) {
     tags = builder.build();
@@ -32,8 +31,7 @@ class SbomSpdxTags extends SbomTags<SbomSpdxTag, String,
   /// Returns a list of mandatory tags that do not have values, empty
   /// indicating the section is valid.
   @override
-  List<SbomSpdxTag> sectionValid(String section) =>
-      sectionTags(section)
-          .where((e) => e.mandatory && e.values.isEmpty)
-          .toList();
+  List<SbomSpdxTag> sectionValid(String section) => sectionTags(section)
+      .where((e) => e.mandatory && e.values.isEmpty)
+      .toList();
 }

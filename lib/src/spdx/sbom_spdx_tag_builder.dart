@@ -25,42 +25,30 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
         SbomSpdxTagNames.version, SbomSpdxSectionNames.documentCreation, 1));
     // Version is pre defined.
     _tags[0].value = SbomSpdxConstants.version;
-    _add(SbomSpdxTag.mandatory(
-        SbomSpdxTagNames.dataLicense, SbomSpdxSectionNames.documentCreation, 2));
+    _add(SbomSpdxTag.mandatory(SbomSpdxTagNames.dataLicense,
+        SbomSpdxSectionNames.documentCreation, 2));
     // License is predefined
     _tags[1].value = SbomSpdxConstants.license;
     _add(SbomSpdxTag.mandatory(
         SbomSpdxTagNames.identifier, SbomSpdxSectionNames.documentCreation, 3));
-    _add(SbomSpdxTag.mandatory(
-        SbomSpdxTagNames.documentName,
-        SbomSpdxSectionNames.documentCreation,
-        4));
-    _add(SbomSpdxTag.mandatory(
-        SbomSpdxTagNames.documentNamespace,
-        SbomSpdxSectionNames.documentCreation,
-        5));
-    _add(SbomSpdxTag(
-        SbomSpdxTagNames.externalDocumentRefs,
-        SbomSpdxSectionNames.documentCreation,
-        6));
-    _add(SbomSpdxTag(
-        SbomSpdxTagNames.licenseListVersion,
-        SbomSpdxSectionNames.documentCreation,
-        7));
+    _add(SbomSpdxTag.mandatory(SbomSpdxTagNames.documentName,
+        SbomSpdxSectionNames.documentCreation, 4));
+    _add(SbomSpdxTag.mandatory(SbomSpdxTagNames.documentNamespace,
+        SbomSpdxSectionNames.documentCreation, 5));
+    _add(SbomSpdxTag(SbomSpdxTagNames.externalDocumentRefs,
+        SbomSpdxSectionNames.documentCreation, 6));
+    _add(SbomSpdxTag(SbomSpdxTagNames.licenseListVersion,
+        SbomSpdxSectionNames.documentCreation, 7));
     // License list version is predefined
     _tags[6].value = SbomSpdxConstants.licenseListVersion;
     _add(SbomSpdxTag.mandatory(
         SbomSpdxTagNames.creator, SbomSpdxSectionNames.documentCreation, 8));
     _add(SbomSpdxTag.mandatory(
         SbomSpdxTagNames.created, SbomSpdxSectionNames.documentCreation, 9));
-    _add(SbomSpdxTag(
-        SbomSpdxTagNames.creatorComment,
-        SbomSpdxSectionNames.documentCreation,
-        10));
-    _add(SbomSpdxTag(
-        SbomSpdxTagNames.documentComment,
-        SbomSpdxSectionNames.documentCreation,
-        11));
+    _add(SbomSpdxTag(SbomSpdxTagNames.creatorComment,
+        SbomSpdxSectionNames.documentCreation, 10));
+    _add(SbomSpdxTag(SbomSpdxTagNames.documentComment,
+        SbomSpdxSectionNames.documentCreation, 11));
   }
 
   /// Add a tag, checking the tag type and position is not already present.

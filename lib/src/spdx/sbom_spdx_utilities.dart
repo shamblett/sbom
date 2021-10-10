@@ -8,6 +8,4 @@
 part of sbom;
 
 /// SPDX utilities
-class SbomSpdxUtilities {
-
-}
+class SbomSpdxUtilities {}

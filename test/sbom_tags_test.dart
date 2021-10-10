@@ -10,7 +10,7 @@ import 'package:test/test.dart';
 @TestOn('VM')
 void main() {
   group('SPDX', () {
-    test('Tag by type', () {
+    test('Tag by name', () {
       final builder = SbomSpdxTagBuilder();
       final tags = SbomSpdxTags(builder);
       tags.tags.clear();
@@ -18,19 +18,6 @@ void main() {
           'SPDXVersion', SbomSpdxSectionNames.documentCreation, 1));
       tags.tags.add(SbomSpdxTag.mandatory(
           'DataLicense', SbomSpdxSectionNames.documentCreation, 2));
-      expect(tags.tags.length, 2);
-      final tag = tags.tagByName(SbomSpdxTagType.dataLicense);
-      expect(tag, isNotNull);
-      expect(tag.type, SbomSpdxTagType.dataLicense);
-    });
-    test('Tag by name', () {
-      final builder = SbomSpdxTagBuilder();
-      final tags = SbomSpdxTags(builder);
-      tags.tags.clear();
-      tags.tags.add(SbomSpdxTag.mandatory(SbomSpdxTagType.version,
-          'SPDXVersion', SbomSpdxSection.documentCreation, 1));
-      tags.tags.add(SbomSpdxTag.mandatory(SbomSpdxTagType.dataLicense,
-          'DataLicense', SbomSpdxSection.documentCreation, 2));
       expect(tags.tags.length, 2);
       final tag = tags.tagByName('SPDXVersion');
       expect(tag, isNotNull);
@@ -40,45 +27,45 @@ void main() {
       final builder = SbomSpdxTagBuilder();
       final tags = SbomSpdxTags(builder);
       tags.tags.clear();
-      tags.tags.add(SbomSpdxTag.mandatory(SbomSpdxTagType.version,
-          'SPDXVersion', SbomSpdxSection.documentCreation, 1));
+      tags.tags.add(SbomSpdxTag.mandatory(
+          'SPDXVersion', SbomSpdxSectionNames.documentCreation, 1));
       tags.tags[0].value = SbomSpdxConstants.version;
-      tags.tags.add(SbomSpdxTag.mandatory(SbomSpdxTagType.dataLicense,
-          'DataLicense', SbomSpdxSection.documentCreation, 2));
+      tags.tags.add(SbomSpdxTag.mandatory(
+          'DataLicense', SbomSpdxSectionNames.documentCreation, 2));
       expect(tags.tags.length, 2);
-      final valid = tags.sectionValid(SbomSpdxSection.documentCreation);
+      final valid = tags.sectionValid(SbomSpdxSectionNames.documentCreation);
       expect(valid.isEmpty, isFalse);
       expect(valid.length, 1);
-      expect(valid[0].type, SbomSpdxTagType.dataLicense);
+      expect(valid[0].name, SbomSpdxTagNames.dataLicense);
     });
     test('Section valid - valid', () {
       final builder = SbomSpdxTagBuilder();
       final tags = SbomSpdxTags(builder);
       tags.tags.clear();
-      tags.tags.add(SbomSpdxTag.mandatory(SbomSpdxTagType.version,
-          'SPDXVersion', SbomSpdxSection.documentCreation, 1));
+      tags.tags.add(SbomSpdxTag.mandatory(
+          'SPDXVersion', SbomSpdxSectionNames.documentCreation, 1));
       tags.tags[0].value = SbomSpdxConstants.version;
-      tags.tags.add(SbomSpdxTag.mandatory(SbomSpdxTagType.dataLicense,
-          'DataLicense', SbomSpdxSection.documentCreation, 2));
+      tags.tags.add(SbomSpdxTag.mandatory(
+          'DataLicense', SbomSpdxSectionNames.documentCreation, 2));
       tags.tags[1].value = SbomSpdxConstants.license;
       expect(tags.tags.length, 2);
-      final valid = tags.sectionValid(SbomSpdxSection.documentCreation);
+      final valid = tags.sectionValid(SbomSpdxSectionNames.documentCreation);
       expect(valid.isEmpty, isTrue);
     });
     test('Section tags', () {
       final builder = SbomSpdxTagBuilder();
       final tags = SbomSpdxTags(builder);
       tags.tags.clear();
-      tags.tags.add(SbomSpdxTag.mandatory(SbomSpdxTagType.version,
-          'SPDXVersion', SbomSpdxSection.documentCreation, 1));
-      tags.tags.add(SbomSpdxTag.mandatory(SbomSpdxTagType.documentName, 'sbom',
-          SbomSpdxSection.documentCreation, 4));
-      tags.tags.add(SbomSpdxTag.mandatory(SbomSpdxTagType.identifier,
-          'SPDXRef-DOCUMENT', SbomSpdxSection.documentCreation, 3));
-      tags.tags.add(SbomSpdxTag.mandatory(SbomSpdxTagType.dataLicense,
-          'DataLicense', SbomSpdxSection.documentCreation, 2));
+      tags.tags.add(SbomSpdxTag.mandatory(
+          'SPDXVersion', SbomSpdxSectionNames.documentCreation, 1));
+      tags.tags.add(SbomSpdxTag.mandatory(
+          'sbom', SbomSpdxSectionNames.documentCreation, 4));
+      tags.tags.add(SbomSpdxTag.mandatory(
+          'SPDXRef-DOCUMENT', SbomSpdxSectionNames.documentCreation, 3));
+      tags.tags.add(SbomSpdxTag.mandatory(
+          'DataLicense', SbomSpdxSectionNames.documentCreation, 2));
       expect(tags.tags.length, 4);
-      final section = tags.sectionTags(SbomSpdxSection.documentCreation);
+      final section = tags.sectionTags(SbomSpdxSectionNames.documentCreation);
       expect(section.isEmpty, isFalse);
       expect(section.length, 4);
       expect(section[0].position, 1);

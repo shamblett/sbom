@@ -9,7 +9,6 @@ part of sbom;
 
 /// SPDX constants
 class SbomSpdxConstants {
-
   // Specification tag value constants.
   static const String version = 'SPDX-2.2';
   static const String license = 'CC0-1.0';

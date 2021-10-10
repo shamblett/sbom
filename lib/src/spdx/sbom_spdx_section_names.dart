@@ -9,12 +9,10 @@ part of sbom;
 
 /// SPDX section names from the SPDX specification.
 class SbomSpdxSectionNames {
-
   static const String documentCreation = 'documentCreation';
   static const String package = 'package';
   static const String file = 'file';
   static const String snippet = 'snippet';
   static const String otherLicensing = 'otherLicensing';
   static const String annotations = 'annotations';
-
 }

@@ -9,7 +9,6 @@ part of sbom;
 
 /// SPDX tag names as defined by the SPDX specification.
 class SbomSpdxTagNames {
-
   // Document creation
   static const String version = 'SPDXVersion';
   static const String dataLicense = 'DataLicense';
@@ -22,5 +21,4 @@ class SbomSpdxTagNames {
   static const String created = 'Created';
   static const String creatorComment = 'CreatorComment';
   static const String documentComment = 'DocumentComment';
-
 }
