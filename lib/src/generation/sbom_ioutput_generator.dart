@@ -9,6 +9,9 @@ part of sbom;
 
 /// The SBOM output generator interface class.
 abstract class SbomIOutputGenerator {
+  /// The generated tags
+  late SbomTags tags;
+
   /// Build
   bool build();
 

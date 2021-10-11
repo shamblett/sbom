@@ -5,4 +5,6 @@ spdx:
 
   # Document Creation section
   documentCreation:
+    Version: 'Invalid tag'
+    SPDXVersion: 'Cant be overridden'
     SPDXID: 'SPDX Identifier from configuration'

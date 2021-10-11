@@ -19,6 +19,8 @@ void main() {
       final generator = SbomGenerator(config);
       generator.generate();
       expect(generator.valid, isTrue);
+      expect(generator.tags.tagByName('SPDXID').values[0],
+          'SPDX Identifier from configuration');
     });
   });
 }

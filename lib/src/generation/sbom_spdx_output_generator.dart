@@ -16,12 +16,12 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
   final SbomConfiguration configuration;
 
   /// SPDX tags.
-  final spdxTags = SbomSpdxTags(SbomSpdxTagBuilder());
+  final tags = SbomSpdxTags(SbomSpdxTagBuilder());
 
   /// Update a tags value from a list.
   void _updateTagListValue(YamlMap section, String key) {
     for (final val in section[key]) {
-      spdxTags.tagByName(key).value = val;
+      tags.tagByName(key).value = val;
     }
   }
 
@@ -36,26 +36,26 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
               [SbomSpdxSectionNames.documentCreation];
       // Process each tag found in the section
       for (final key in section.keys) {
-        if (spdxTags.exists(key)) {
+        if (tags.exists(key)) {
           // If the tag value is set by the tag builder it cannot be overridden by the configuration
-          if (spdxTags.tagByName(key).isSet()) {
+          if (tags.tagByName(key).isSet()) {
             SbomUtilities.warning(
                 'SPDX tag $key cannot be overridden by configuration');
           } else {
             // Update the tag value from configuration, checking for list values
-            if (section.key is YamlList) {
+            if (section[key] is YamlList) {
               _updateTagListValue(section, key);
             } else {
-              spdxTags.tagByName(key).value = section[key];
+              tags.tagByName(key).value = section[key];
             }
           }
         } else {
           SbomUtilities.warning(
-              'SPDX document creation tag ${section[key]} is not a valid SPDX tag name - not processing');
+              'SPDX document creation tag $key is not a valid SPDX tag name - not processing');
         }
       }
     }
-    return false;
+    return true;
   }
 
   /// Build

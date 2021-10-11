@@ -18,10 +18,16 @@ class SbomGenerator {
   /// Validity
   bool valid = false;
 
+  /// Output generator
+  late SbomIOutputGenerator output;
+
+  /// The generated tags.
+  SbomTags get tags => output.tags;
+
   /// Generate.
   void generate() {
     // Generate according to type
-    SbomIOutputGenerator output;
+
     switch (configuration.outputType) {
       case SbomType.spdx:
         {
@@ -42,5 +48,7 @@ class SbomGenerator {
       valid = false;
       return;
     }
+
+    valid = true;
   }
 }
