@@ -27,7 +27,14 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
       final section =
           configuration.sbomConfigurationContents[SbomConstants.sbomSpdx]
               [SbomSpdxSectionNames.documentCreation];
-      // SPDX Id
+      // Process each tag found in the section
+      for (final key in section.keys) {
+        if (spdxTags.exists(key)) {
+        } else {
+          SbomUtilities.warning(
+              'SPDX document creation tag ${section[key]} is not a valid SPDX tag name - not processing');
+        }
+      }
       if (section.containsKey(SbomSpdxTagNames.identifier)) {
         spdxTags.tagByName(SbomSpdxTagNames.identifier).value =
             section[SbomSpdxTagNames.identifier];

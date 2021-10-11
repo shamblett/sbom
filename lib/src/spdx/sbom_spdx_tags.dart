@@ -27,6 +27,10 @@ class SbomSpdxTags extends SbomTags<SbomSpdxTag, String, SbomSpdxTagBuilder> {
   SbomSpdxTag tagByName(String name) =>
       tags.where((e) => e.name == name).single;
 
+  /// Exists.
+  @override
+  bool exists(String name) => tags.where((e) => e.name == name).isNotEmpty;
+
   /// Check if a section is valid, i.e all its mandatory tags have values.
   /// Returns a list of mandatory tags that do not have values, empty
   /// indicating the section is valid.

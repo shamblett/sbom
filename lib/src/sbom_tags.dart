@@ -27,6 +27,9 @@ abstract class SbomTags<T, S, B> {
   /// Get a tag by its name
   T tagByName(String name);
 
+  /// Exists.
+  bool exists(String name);
+
   /// Check if a section is valid, i.e all its mandatory tags have values.
   /// Returns a list of mandatory tags that do not have values, empty
   /// indicating the section is valid.
