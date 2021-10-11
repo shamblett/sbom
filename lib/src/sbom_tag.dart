@@ -29,6 +29,9 @@ abstract class SbomTag<S> {
   List<String> get values => _value;
   set value(String text) => _value.add(text);
 
+  /// Value is set.
+  bool isSet() => _value.isNotEmpty;
+
   /// Document section.
   final S section;
 
