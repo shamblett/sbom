@@ -34,17 +34,17 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
     // Identifier is predefined
     _tags[2].value = '${SbomSpdxConstants.idReference}DOCUMENT';
     _add(SbomSpdxTag.mandatory(SbomSpdxTagNames.documentName,
-        SbomSpdxSectionNames.documentCreation, 4));
+        SbomSpdxSectionNames.documentCreation, 4, true));
     _add(SbomSpdxTag.mandatory(SbomSpdxTagNames.documentNamespace,
-        SbomSpdxSectionNames.documentCreation, 5));
+        SbomSpdxSectionNames.documentCreation, 5, true));
     _add(SbomSpdxTag(SbomSpdxTagNames.externalDocumentRefs,
-        SbomSpdxSectionNames.documentCreation, 6));
+        SbomSpdxSectionNames.documentCreation, 6, true));
     _add(SbomSpdxTag(SbomSpdxTagNames.licenseListVersion,
         SbomSpdxSectionNames.documentCreation, 7));
     // License list version is predefined
     _tags[6].value = SbomSpdxConstants.licenseListVersion;
-    _add(SbomSpdxTag.mandatory(
-        SbomSpdxTagNames.creator, SbomSpdxSectionNames.documentCreation, 8));
+    _add(SbomSpdxTag.mandatory(SbomSpdxTagNames.creator,
+        SbomSpdxSectionNames.documentCreation, 8, true));
     // Tool creator is predefined
     _tags[7].value =
         '${SbomSpdxConstants.creatorTool}${SbomSpdxConstants.pubUrl}${SbomConstants.package}';
@@ -53,9 +53,9 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
     // Created time is predefined
     _tags[8].value = SbomSpdxUtilities.createdAt();
     _add(SbomSpdxTag(SbomSpdxTagNames.creatorComment,
-        SbomSpdxSectionNames.documentCreation, 10));
+        SbomSpdxSectionNames.documentCreation, 10, true));
     _add(SbomSpdxTag(SbomSpdxTagNames.documentComment,
-        SbomSpdxSectionNames.documentCreation, 11));
+        SbomSpdxSectionNames.documentCreation, 11, true));
   }
 
   /// Add a tag, checking the tag type and position is not already present.

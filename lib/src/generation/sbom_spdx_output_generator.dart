@@ -35,7 +35,8 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
       for (final key in section.keys) {
         if (tags.exists(key)) {
           // If the tag value is set by the tag builder it cannot be overridden by the configuration
-          if (tags.tagByName(key).isSet()) {
+          // unless this option is specified
+          if (!tags.tagByName(key).canBeOverridden) {
             SbomUtilities.warning(
                 'SPDX tag $key cannot be overridden by configuration');
           } else {
