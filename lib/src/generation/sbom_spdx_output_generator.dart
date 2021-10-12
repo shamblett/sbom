@@ -15,9 +15,6 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
   /// SBOM configuration.
   final SbomConfiguration configuration;
 
-  /// SPDX tags.
-  final tags = SbomSpdxTags(SbomSpdxTagBuilder());
-
   /// Update a tags value from a list.
   void _updateTagListValue(YamlMap section, String key) {
     for (final val in section[key]) {
@@ -68,6 +65,8 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
           'Cannot build SPDX sections, no spdx tag in SBOM configuration file');
       return false;
     }
+    // Build the tag list
+    tags = SbomSpdxTags(SbomSpdxTagBuilder());
     bool result = _documentCreation();
     if (!result) {
       SbomUtilities.error('Failed to build SPDX Document Creation section.');

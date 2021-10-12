@@ -31,6 +31,8 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
     _tags[1].value = SbomSpdxConstants.license;
     _add(SbomSpdxTag.mandatory(
         SbomSpdxTagNames.identifier, SbomSpdxSectionNames.documentCreation, 3));
+    // Identifier is predefined
+    _tags[2].value = '${SbomSpdxConstants.idReference}DOCUMENT';
     _add(SbomSpdxTag.mandatory(SbomSpdxTagNames.documentName,
         SbomSpdxSectionNames.documentCreation, 4));
     _add(SbomSpdxTag.mandatory(SbomSpdxTagNames.documentNamespace,

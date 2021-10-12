@@ -12,10 +12,10 @@ class SbomSpdxConstants {
   // Specification tag value constants.
   static const String version = 'SPDX-2.2';
   static const String license = 'CC0-1.0';
-  static const String idReference = 'SPDXRef-DOCUMENT';
+  static const String idReference = 'SPDXRef-';
   static const String licenseListVersion = '3.8';
-  // Needs the version of sbom appending
-  static const String creatorTool = 'Tool: sbom-';
+  static const String creatorPerson = 'Person: ';
+  static const String creatorTool = 'Tool: ';
 
   /// Output Format
   static const String spdxOutputFormatDirective = 'SPDXFormat';

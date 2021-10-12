@@ -23,7 +23,7 @@ void main() {
       expect(generator.tags.tagByName('SPDXVersion').values[0], 'SPDX-2.2');
       expect(generator.tags.tagByName('DataLicense').values[0], 'CC0-1.0');
       expect(generator.tags.tagByName('SPDXID').values[0],
-          'SPDX Identifier from configuration');
+          'SPDXRef-DOCUMENT');
       expect(generator.tags.tagByName('DocumentName').values[0],
           'Document name from configuration');
       expect(generator.tags.tagByName('DocumentNamespace').values[0],
