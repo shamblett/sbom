@@ -53,6 +53,15 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
         }
       }
     }
+    // Generate the environment tags
+    // Document name and namespace
+    if ( configuration.sbomPubspecContents.containsKey(SbomConstants.pubspecName) ) {
+      final name = configuration.sbomPubspecContents[SbomConstants.pubspecName];
+      tags.tagByName(SbomSpdxTagNames.documentName).value = name;
+      tags.tagByName(SbomSpdxTagNames.documentNamespace).value = '${SbomConstants.pubUrl}$name';
+    }
+
+
     return true;
   }
 

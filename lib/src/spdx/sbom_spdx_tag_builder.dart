@@ -47,7 +47,7 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
         SbomSpdxSectionNames.documentCreation, 8, true));
     // Tool creator is predefined
     _tags[7].value =
-        '${SbomSpdxConstants.creatorTool}${SbomSpdxConstants.pubUrl}${SbomConstants.package}';
+        '${SbomSpdxConstants.creatorTool}${SbomConstants.pubUrl}${SbomConstants.package}';
     _add(SbomSpdxTag.mandatory(
         SbomSpdxTagNames.created, SbomSpdxSectionNames.documentCreation, 9));
     // Created time is predefined

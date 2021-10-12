@@ -32,4 +32,10 @@ class SbomConstants {
 
   /// This package name
   static const String package = 'sbom';
+
+  /// Pubspec names.
+  static const String pubspecName = 'name';
+
+  /// Site names.
+  static const String pubUrl = 'https://pub.dev/packages/';
 }
