@@ -48,6 +48,12 @@ class SbomGenerator {
       valid = false;
       return;
     }
+    result = output.validate();
+    if (!result) {
+      SbomUtilities.error('Failed to validate SBOM for type SPDX.');
+      valid = false;
+      return;
+    }
 
     valid = true;
   }

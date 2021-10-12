@@ -55,12 +55,13 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     }
     // Generate the environment tags
     // Document name and namespace
-    if ( configuration.sbomPubspecContents.containsKey(SbomConstants.pubspecName) ) {
+    if (configuration.sbomPubspecContents
+        .containsKey(SbomConstants.pubspecName)) {
       final name = configuration.sbomPubspecContents[SbomConstants.pubspecName];
       tags.tagByName(SbomSpdxTagNames.documentName).value = name;
-      tags.tagByName(SbomSpdxTagNames.documentNamespace).value = '${SbomConstants.pubUrl}$name';
+      tags.tagByName(SbomSpdxTagNames.documentNamespace).value =
+          '${SbomConstants.pubUrl}$name';
     }
-
 
     return true;
   }
@@ -89,7 +90,14 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
   @override
   bool validate() {
     SbomUtilities.loud('Validating SPDX sections');
-    return false;
+    SbomUtilities.louder('Validating SPDX Document Creation section');
+    final result = tags.sectionValid(SbomSpdxSectionNames.documentCreation);
+    if (result.isNotEmpty) {
+      SbomUtilities.error(
+          'Failed to validate SPDX Document Creation section, failed tags are ${SbomUtilities.tagsToString(result)}');
+      return false;
+    }
+    return true;
   }
 
   /// Generate

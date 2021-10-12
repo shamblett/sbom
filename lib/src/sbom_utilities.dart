@@ -44,4 +44,13 @@ class SbomUtilities {
 
   /// Last output, for testing.
   static String last = '';
+
+  /// Tag names to string for logging.
+  static String tagsToString(List tags) {
+    var output = '';
+    for (final tag in tags) {
+      output += '${tag.name},';
+    }
+    return output.substring(0, output.length - 1);
+  }
 }

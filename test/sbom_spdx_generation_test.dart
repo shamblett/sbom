@@ -46,8 +46,11 @@ void main() {
       expect(generator.tags.sectionValid('documentCreation').isEmpty, isTrue);
     });
     test('Environment', () {
-      final config = SbomConfiguration(
-          ['-p', 'test/sbom/spdx/generation/documentcreation/environment', '-L']);
+      final config = SbomConfiguration([
+        '-p',
+        'test/sbom/spdx/generation/documentcreation/environment',
+        '-L'
+      ]);
       config.parseConfigurationFile();
       config.parsePubspecFile();
       expect(config.valid, isTrue);
@@ -59,8 +62,7 @@ void main() {
       expect(generator.tags.tagByName('SPDXVersion').values[0], 'SPDX-2.2');
       expect(generator.tags.tagByName('DataLicense').values[0], 'CC0-1.0');
       expect(generator.tags.tagByName('SPDXID').values[0], 'SPDXRef-DOCUMENT');
-      expect(generator.tags.tagByName('DocumentName').values[0],
-          'sbom');
+      expect(generator.tags.tagByName('DocumentName').values[0], 'sbom');
       expect(generator.tags.tagByName('DocumentNamespace').values[0],
           'https://pub.dev/packages/sbom');
       expect(generator.tags.tagByName('ExternalDocumentRef').values.length, 2);
@@ -80,6 +82,22 @@ void main() {
       expect(generator.tags.tagByName('DocumentComment').values[0],
           'Document comment from configuration');
       expect(generator.tags.sectionValid('documentCreation').isEmpty, isTrue);
+    });
+    test('Validation fail', () {
+      final config = SbomConfiguration([
+        '-p',
+        'test/sbom/spdx/generation/documentcreation/environmentinvalid',
+        '-L'
+      ]);
+      config.parseConfigurationFile();
+      config.parsePubspecFile();
+      expect(config.valid, isTrue);
+      expect(config.outputType, SbomType.spdx);
+      final generator = SbomGenerator(config);
+      generator.generate();
+      expect(generator.valid, isFalse);
+      expect(generator.tags.tagByName('DocumentName').isSet(), isFalse);
+      expect(generator.tags.tagByName('DocumentNamespace').isSet(), isFalse);
     });
   });
 }
