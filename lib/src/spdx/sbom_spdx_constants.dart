@@ -16,6 +16,7 @@ class SbomSpdxConstants {
   static const String licenseListVersion = '3.8';
   static const String creatorPerson = 'Person: ';
   static const String creatorTool = 'Tool: ';
+  static const String pubUrl = 'https://pub.dev/packages/';
 
   /// Output Format
   static const String spdxOutputFormatDirective = 'SPDXFormat';

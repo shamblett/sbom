@@ -7,14 +7,11 @@ spdx:
   documentCreation:
     Version: 'Invalid tag'
     SPDXVersion: 'Cant be overridden'
-    SPDXID: 'SPDX Identifier from configuration'
     DocumentName: 'Document name from configuration'
     DocumentNamespace: 'Document name space from configuration'
     ExternalDocumentRef :
      - 'External Doc Ref 1'
      - 'External Doc Ref 2'
-    Creator: 'SJH'
-    Created: '2021-10-12T14:00:00Z'
     CreatorComment: 'Creator comment from configuration'
     DocumentComment: 'Document comment from configuration'
 

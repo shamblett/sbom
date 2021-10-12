@@ -8,4 +8,8 @@
 part of sbom;
 
 /// SPDX utilities
-class SbomSpdxUtilities {}
+class SbomSpdxUtilities {
+  /// Created time in SPDX format.
+  static String createdAt() =>
+      '${DateTime.now().toIso8601String().split('.')[0]}Z';
+}

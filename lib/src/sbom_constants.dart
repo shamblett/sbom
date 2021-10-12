@@ -29,4 +29,7 @@ class SbomConstants {
 
   /// SBOM Configuration file values.
   static const String sbomSpdx = 'spdx';
+
+  /// This package name
+  static const String package = 'sbom';
 }

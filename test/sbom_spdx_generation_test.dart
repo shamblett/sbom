@@ -22,8 +22,7 @@ void main() {
       expect(generator.tags.tags.length, 11);
       expect(generator.tags.tagByName('SPDXVersion').values[0], 'SPDX-2.2');
       expect(generator.tags.tagByName('DataLicense').values[0], 'CC0-1.0');
-      expect(generator.tags.tagByName('SPDXID').values[0],
-          'SPDXRef-DOCUMENT');
+      expect(generator.tags.tagByName('SPDXID').values[0], 'SPDXRef-DOCUMENT');
       expect(generator.tags.tagByName('DocumentName').values[0],
           'Document name from configuration');
       expect(generator.tags.tagByName('DocumentNamespace').values[0],
@@ -34,9 +33,10 @@ void main() {
       expect(generator.tags.tagByName('ExternalDocumentRef').values[1],
           'External Doc Ref 2');
       expect(generator.tags.tagByName('LicenseListVersion').values[0], '3.8');
-      expect(generator.tags.tagByName('Creator').values[0], 'SJH');
-      expect(generator.tags.tagByName('Created').values[0],
-          '2021-10-12T14:00:00Z');
+      expect(generator.tags.tagByName('Creator').values[0],
+          'Tool: https://pub.dev/packages/sbom');
+      expect(
+          generator.tags.tagByName('Created').values[0].endsWith('Z'), isTrue);
       expect(generator.tags.tagByName('CreatorComment').values[0],
           'Creator comment from configuration');
       expect(generator.tags.tagByName('DocumentComment').values[0],
