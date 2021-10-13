@@ -172,6 +172,8 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
           'SPDX SBOM generation - unable to generate ethe document creation section in file at $outputFileName - aborting generation');
       return false;
     }
+    sbomFilePath = outputFileName;
+
     return true;
   }
 }

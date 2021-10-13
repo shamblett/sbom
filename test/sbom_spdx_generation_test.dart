@@ -4,6 +4,9 @@
  * Date   : 25/09/2021
  * Copyright :  S.Hamblett
  */
+
+import 'dart:io';
+
 import 'package:sbom/sbom.dart';
 import 'package:test/test.dart';
 
@@ -46,6 +49,8 @@ void main() {
       expect(generator.tags.tagByName('DocumentComment').values[0],
           'Document comment from configuration');
       expect(generator.tags.sectionValid('documentCreation').isEmpty, isTrue);
+      final sbom = File(generator.sbomFilePath);
+      expect(sbom.existsSync(), isTrue);
     });
     test('Environment', () {
       final config = SbomConfiguration([
@@ -84,6 +89,8 @@ void main() {
       expect(generator.tags.tagByName('DocumentComment').values[0],
           'Document comment from configuration');
       expect(generator.tags.sectionValid('documentCreation').isEmpty, isTrue);
+      final sbom = File(generator.sbomFilePath);
+      expect(sbom.existsSync(), isTrue);
     });
     test('Validation fail', () {
       final config = SbomConfiguration([
@@ -100,6 +107,7 @@ void main() {
       expect(generator.valid, isFalse);
       expect(generator.tags.tagByName('DocumentName').isSet(), isFalse);
       expect(generator.tags.tagByName('DocumentNamespace').isSet(), isFalse);
+      expect(generator.sbomFilePath.isEmpty, isTrue);
     });
   });
 }

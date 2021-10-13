@@ -12,6 +12,10 @@ abstract class SbomIOutputGenerator {
   /// The generated tags
   late SbomTags tags;
 
+  /// Path(absolute) to the generated SBOM file.
+  /// Set on successful generation.
+  String sbomFilePath = '';
+
   /// Build
   bool build();
 

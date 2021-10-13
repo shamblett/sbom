@@ -24,6 +24,10 @@ class SbomGenerator {
   /// The generated tags.
   SbomTags get tags => output.tags;
 
+  /// Path(absolute) to the generated SBOM file.
+  /// Set on successful generation.
+  String sbomFilePath = '';
+
   /// Generate.
   void generate() {
     // Generate according to type
@@ -60,6 +64,7 @@ class SbomGenerator {
       valid = false;
       return;
     }
+    sbomFilePath = output.sbomFilePath;
     valid = true;
   }
 }
