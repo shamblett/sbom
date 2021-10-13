@@ -123,7 +123,19 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
 
   /// Generate the document creation section.
   bool _generateDocumentCreation(File outputFile) {
-    try {} on FileSystemException {
+    try {
+      final sectionTags =
+          tags.sectionTags(SbomSpdxSectionNames.documentCreation);
+      for (final tag in sectionTags) {
+        if (tag.isSet()) {
+          for (final value in tag.values) {
+            final str =
+                '${tag.name}${SbomSpdxConstants.spdxTagValueSeparator}$value\n';
+            outputFile.writeAsStringSync(str, mode: FileMode.append);
+          }
+        }
+      }
+    } on FileSystemException {
       return false;
     }
     return true;
@@ -160,6 +172,6 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
           'SPDX SBOM generation - unable to generate ethe document creation section in file at $outputFileName - aborting generation');
       return false;
     }
-    return false;
+    return true;
   }
 }

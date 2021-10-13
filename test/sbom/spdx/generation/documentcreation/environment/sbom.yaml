@@ -8,7 +8,7 @@ spdx:
     ExternalDocumentRef :
      - 'External Doc Ref 1'
      - 'External Doc Ref 2'
-    Creator : 'Person: Steve Hamblett <steve.hamblett@linux.com'
+    Creator : 'Person: Steve Hamblett <steve.hamblett@linux.com>'
     CreatorComment: 'Creator comment from configuration'
     DocumentComment: 'Document comment from configuration'
 
