@@ -130,7 +130,7 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
         if (tag.isSet()) {
           for (final value in tag.values) {
             final str =
-                '${tag.name}${SbomSpdxConstants.spdxTagValueSeparator}$value\n';
+                '${tag.name}${SbomSpdxConstants.spdxTagValueSeparator}$value\r';
             outputFile.writeAsStringSync(str, mode: FileMode.append);
           }
         }

@@ -76,7 +76,7 @@ void main() {
       expect(generator.tags.tagByName('Creator').values[0],
           'Tool: https://pub.dev/packages/sbom');
       expect(generator.tags.tagByName('Creator').values[1],
-          'Person: Steve Hamblett <steve.hamblett@linux.com');
+          'Person: Steve Hamblett <steve.hamblett@linux.com>');
       expect(
           generator.tags.tagByName('Created').values[0].endsWith('Z'), isTrue);
       expect(generator.tags.tagByName('CreatorComment').values[0],
