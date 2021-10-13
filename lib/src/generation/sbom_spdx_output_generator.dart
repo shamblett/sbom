@@ -22,8 +22,8 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     }
   }
 
-  /// Document creation.
-  bool _documentCreation() {
+  /// Build the document creation section.
+  bool _buildDocumentCreation() {
     SbomUtilities.louder('Building SPDX Document Creation section');
     // If we have a document creation section in the SBOM configuration process it
     if (configuration.sbomConfigurationContents[SbomConstants.sbomSpdx]
@@ -78,10 +78,33 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     }
     // Build the tag list
     tags = SbomSpdxTags(SbomSpdxTagBuilder());
-    bool result = _documentCreation();
+    bool result = _buildDocumentCreation();
     if (!result) {
       SbomUtilities.error('Failed to build SPDX Document Creation section.');
       return false;
+    }
+    return true;
+  }
+
+  /// Validate the document creation section.
+  /// True indicates validation succeeded.
+  bool _validateDocumentCreation() {
+    final result = tags.sectionValid(SbomSpdxSectionNames.documentCreation);
+    if (result.isNotEmpty) {
+      SbomUtilities.error(
+          'Failed to validate SPDX Document Creation section, failed tags are ${SbomUtilities.tagsToString(result)}');
+      return false;
+    }
+    // Check for any potential specification violations, only warn these.
+    // Document creator
+    final tag = tags.tagByName(SbomSpdxTagNames.creator);
+    for (final value in tag.values) {
+      if (!value.contains(SbomSpdxConstants.creatorTool) &&
+          !value.contains(SbomSpdxConstants.creatorPerson) &&
+          !value.contains(SbomSpdxConstants.creatorOrganisation)) {
+        SbomUtilities.warning(
+            'SPDX document creation section has invalid creator tag values - "$value"');
+      }
     }
     return true;
   }
@@ -91,10 +114,8 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
   bool validate() {
     SbomUtilities.loud('Validating SPDX sections');
     SbomUtilities.louder('Validating SPDX Document Creation section');
-    final result = tags.sectionValid(SbomSpdxSectionNames.documentCreation);
-    if (result.isNotEmpty) {
-      SbomUtilities.error(
-          'Failed to validate SPDX Document Creation section, failed tags are ${SbomUtilities.tagsToString(result)}');
+    final result = _validateDocumentCreation();
+    if (!result) {
       return false;
     }
     return true;
