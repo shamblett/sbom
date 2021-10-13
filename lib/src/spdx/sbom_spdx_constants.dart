@@ -25,4 +25,7 @@ class SbomSpdxConstants {
 
   /// Format specific
   static const String spdxTagValueSeparator = ':';
+
+  /// SPDX sbom file name
+  static const String outputFileName = 'sbom.spdx';
 }

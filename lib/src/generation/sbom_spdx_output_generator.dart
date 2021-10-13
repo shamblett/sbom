@@ -121,10 +121,45 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     return true;
   }
 
+  /// Generate the document creation section.
+  bool _generateDocumentCreation(File outputFile) {
+    try {} on FileSystemException {
+      return false;
+    }
+    return true;
+  }
+
   /// Generate
   @override
   bool generate() {
     SbomUtilities.loud('Generating SPDX SBOM');
+    // Create the sbom output file
+    final outputFileName = path.join(
+        configuration.packageTopLevel, SbomSpdxConstants.outputFileName);
+    final outputFile = File(outputFileName);
+    if (outputFile.existsSync()) {
+      try {
+        outputFile.deleteSync();
+      } on Exception {
+        SbomUtilities.error(
+            'SPDX SBOM generation - unable to delete existing sbom file at $outputFileName - aborting generation');
+        return false;
+      }
+    }
+    try {
+      outputFile.createSync();
+    } on FileSystemException {
+      SbomUtilities.error(
+          'SPDX SBOM generation - unable to create output sbom file at $outputFileName - aborting generation');
+      return false;
+    }
+    SbomUtilities.louder('Generating SPDX Document Creation section');
+    var result = _generateDocumentCreation(outputFile);
+    if (!result) {
+      SbomUtilities.error(
+          'SPDX SBOM generation - unable to generate ethe document creation section in file at $outputFileName - aborting generation');
+      return false;
+    }
     return false;
   }
 }
