@@ -38,4 +38,7 @@ class SbomConstants {
 
   /// Site names.
   static const String pubUrl = 'https://pub.dev/packages/';
+
+  /// Default package name we are generating for.
+  static const String defaultPackageName = 'ERROR - name not set';
 }

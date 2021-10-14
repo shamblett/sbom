@@ -38,6 +38,9 @@ class SbomConfiguration {
   /// Package pubspec file contents as parsed by the YAML package
   var sbomPubspecContents = YamlMap();
 
+  /// The name of the package being analysed from the pubspec.
+  String packageName = SbomConstants.defaultPackageName;
+
   void _buildConfiguration(args) {
     // Parse the arguments
     final argParser = ArgParser();
@@ -152,6 +155,13 @@ class SbomConfiguration {
       SbomUtilities.error(
           'Package pubspec file is empty, path is $pubspecFilepath,  cannot continue');
       return;
+    }
+    // Package name
+    if (contents.containsKey(SbomConstants.pubspecName)) {
+      packageName = contents[SbomConstants.pubspecName];
+    } else {
+      SbomUtilities.warning(
+          'Package name not found in pubspec.yaml file, using default - your SBOM will not validate correctly');
     }
     sbomPubspecContents = contents;
   }
