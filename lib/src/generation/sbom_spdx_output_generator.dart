@@ -57,7 +57,7 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
         }
       }
     }
-    // Generate the environment tags
+    // Build the environment tags
     // Document name and namespace, only if we have a package name
     if (configuration.packageName != SbomConstants.defaultPackageName) {
       tags.tagByName(SbomSpdxTagNames.documentName).value =
@@ -135,7 +135,7 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
             // Remove the prepended section identifier from the tag name constant to get the tag
             // name
             final str =
-                '${tag.name.split('-')[1]}${SbomSpdxConstants.spdxTagValueSeparator}$value\r';
+                '${SbomSpdxUtilities.getSpecTagName(tag.name)}${SbomSpdxConstants.spdxTagValueSeparator}$value\r';
             outputFile.writeAsStringSync(str, mode: FileMode.append);
           }
         }
