@@ -16,9 +16,10 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
   final SbomConfiguration configuration;
 
   /// Update a tags value from a list.
-  void _updateTagListValue(YamlMap section, String key) {
-    for (final val in section[key]) {
-      tags.tagByName(key).value = val;
+  void _updateTagListValue(
+      YamlMap section, String sectionKey, String sectionId) {
+    for (final val in section[sectionKey]) {
+      tags.tagByName('$sectionId$sectionKey').value = val;
     }
   }
 
@@ -32,7 +33,9 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
           configuration.sbomConfigurationContents[SbomConstants.sbomSpdx]
               [SbomSpdxSectionNames.documentCreation];
       // Process each tag found in the section
-      for (final key in section.keys) {
+      for (final sectionKey in section.keys) {
+        // Prepend the section identifier
+        final key = 'DC-$sectionKey';
         if (tags.exists(key)) {
           // If the tag value is set by the tag builder it cannot be overridden by the configuration
           // unless this option is specified
@@ -41,10 +44,11 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
                 'SPDX tag $key cannot be overridden by configuration');
           } else {
             // Update the tag value from configuration, checking for list values
-            if (section[key] is YamlList) {
-              _updateTagListValue(section, key);
+            if (section[sectionKey] is YamlList) {
+              _updateTagListValue(section, sectionKey,
+                  SbomSpdxTagNames.documentCreationSectionId);
             } else {
-              tags.tagByName(key).value = section[key];
+              tags.tagByName(key).value = section[sectionKey];
             }
           }
         } else {
@@ -128,8 +132,10 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
       for (final tag in sectionTags) {
         if (tag.isSet()) {
           for (final value in tag.values) {
+            // Remove the prepended section identifier from the tag name constant to get the tag
+            // name
             final str =
-                '${tag.name}${SbomSpdxConstants.spdxTagValueSeparator}$value\r';
+                '${tag.name.split('-')[1]}${SbomSpdxConstants.spdxTagValueSeparator}$value\r';
             outputFile.writeAsStringSync(str, mode: FileMode.append);
           }
         }

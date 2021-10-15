@@ -8,45 +8,63 @@
 part of sbom;
 
 /// SPDX tag names as defined by the SPDX specification.
+/// A shortened version of the document section name is prepended to
+/// ensure uniqueness.
 class SbomSpdxTagNames {
-
-  // Common
-  static const String identifier = 'SPDXID';
+  static const String documentCreationSectionId = 'DC-';
+  static const String packageSectionId = 'P-';
 
   // Document creation
-  static const String version = 'SPDXVersion';
-  static const String dataLicense = 'DataLicense';
-  static const String documentName = 'DocumentName';
-  static const String documentNamespace = 'DocumentNamespace';
-  static const String externalDocumentRefs = 'ExternalDocumentRef';
-  static const String licenseListVersion = 'LicenseListVersion';
-  static const String creator = 'Creator';
-  static const String created = 'Created';
-  static const String creatorComment = 'CreatorComment';
-  static const String documentComment = 'DocumentComment';
+  static const String version = documentCreationSectionId + 'SPDXVersion';
+  static const String dataLicense = documentCreationSectionId + 'DataLicense';
+  static const String identifier = documentCreationSectionId + 'SPDXID';
+  static const String documentName = documentCreationSectionId + 'DocumentName';
+  static const String documentNamespace =
+      documentCreationSectionId + 'DocumentNamespace';
+  static const String externalDocumentRefs =
+      documentCreationSectionId + 'ExternalDocumentRef';
+  static const String licenseListVersion =
+      documentCreationSectionId + 'LicenseListVersion';
+  static const String creator = documentCreationSectionId + 'Creator';
+  static const String created = documentCreationSectionId + 'Created';
+  static const String creatorComment =
+      documentCreationSectionId + 'CreatorComment';
+  static const String documentComment =
+      documentCreationSectionId + 'DocumentComment';
 
   // Package
-  static const String packageName = 'PackageName';
-  static const String packageVersion = 'PackageVersion';
-  static const String packageFileName = 'PackageFileName';
-  static const String packageSupplier = 'PackageSupplier';
-  static const String packageOriginator = 'PackageOriginator';
-  static const String packageDownloadLocation = 'PackageDownloadLocation';
-  static const String packageFilesAnalyzed = 'FilesAnalyzed';
-  static const String packageVerificationCode = 'PackageVerificationCode';
-  static const String packageChecksum = 'PackageChecksum';
-  static const String packageHomePage = 'PackageHomePage';
-  static const String packageSourceInfo = 'PackageSourceInfo';
-  static const String packageLicenseConcluded = 'PackageLicenseConcluded';
-  static const String packageLicenseInfoFromFiles = 'PackageLicenseInfoFromFiles';
-  static const String packageLicenseDeclared = 'PackageLicenseDeclared';
-  static const String packageLicenseComments = 'PackageLicenseComments';
-  static const String packageCopyrightText = 'PackageCopyrightText';
-  static const String packageSummary = 'PackageSummary';
+  static const String packageName = packageSectionId + 'PackageName';
+  static const String packageIdentifier = packageSectionId + 'SPDXID';
+  static const String packageVersion = packageSectionId + 'PackageVersion';
+  static const String packageFileName = packageSectionId + 'PackageFileName';
+  static const String packageSupplier = packageSectionId + 'PackageSupplier';
+  static const String packageOriginator =
+      packageSectionId + 'PackageOriginator';
+  static const String packageDownloadLocation =
+      packageSectionId + 'PackageDownloadLocation';
+  static const String packageFilesAnalyzed = packageSectionId + 'FilesAnalyzed';
+  static const String packageVerificationCode =
+      packageSectionId + 'PackageVerificationCode';
+  static const String packageChecksum = packageSectionId + 'PackageChecksum';
+  static const String packageHomePage = packageSectionId + 'PackageHomePage';
+  static const String packageSourceInfo =
+      packageSectionId + 'PackageSourceInfo';
+  static const String packageLicenseConcluded =
+      packageSectionId + 'PackageLicenseConcluded';
+  static const String packageLicenseInfoFromFiles =
+      packageSectionId + 'PackageLicenseInfoFromFiles';
+  static const String packageLicenseDeclared =
+      packageSectionId + 'PackageLicenseDeclared';
+  static const String packageLicenseComments =
+      packageSectionId + 'PackageLicenseComments';
+  static const String packageCopyrightText =
+      packageSectionId + 'PackageCopyrightText';
+  static const String packageSummary = packageSectionId + 'PackageSummary';
   static const String packageDescription = 'PackageDescription';
-  static const String packageComment = 'PackageComment';
-  static const String packageExternalRef = 'ExternalRef';
-  static const String packageExternalRefComment = 'ExternalRefComment';
-  static const String packageAttributionText = 'PackageAttributionText';
-
+  static const String packageComment = packageSectionId + 'PackageComment';
+  static const String packageExternalRef = packageSectionId + 'ExternalRef';
+  static const String packageExternalRefComment =
+      packageSectionId + 'ExternalRefComment';
+  static const String packageAttributionText =
+      packageSectionId + 'PackageAttributionText';
 }
