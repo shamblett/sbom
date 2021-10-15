@@ -22,7 +22,11 @@ void main() {
       final generator = SbomGenerator(config);
       generator.generate();
       expect(generator.valid, isTrue);
-      expect(generator.tags.tags.length, 11);
+      expect(
+          generator.tags
+              .sectionTags(SbomSpdxSectionNames.documentCreation)
+              .length,
+          11);
       expect(generator.tags.tagByName('DC-SPDXVersion').values[0], 'SPDX-2.2');
       expect(generator.tags.tagByName('DC-DataLicense').values[0], 'CC0-1.0');
       expect(
@@ -115,6 +119,18 @@ void main() {
       expect(generator.tags.tagByName('DC-DocumentName').isSet(), isFalse);
       expect(generator.tags.tagByName('DC-DocumentNamespace').isSet(), isFalse);
       expect(generator.sbomFilePath.isEmpty, isTrue);
+    });
+  });
+  group('Package Section', () {
+    test('Configuration', () {
+      final config = SbomConfiguration(
+          ['-p', 'test/sbom/spdx/generation/package/configuration']);
+      config.parseConfigurationFile();
+      expect(config.valid, isTrue);
+      expect(config.outputType, SbomType.spdx);
+      final generator = SbomGenerator(config);
+      generator.generate();
+      expect(generator.valid, isTrue);
     });
   });
 }

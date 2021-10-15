@@ -53,7 +53,7 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
           }
         } else {
           SbomUtilities.warning(
-              'SPDX document creation tag $key is not a valid SPDX tag name - not processing');
+              'SPDX document creation tag "${SbomSpdxUtilities.getSpecTagName(key)}" is not a valid SPDX tag name - not processing');
         }
       }
     }

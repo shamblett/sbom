@@ -16,6 +16,7 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
   @override
   List<SbomSpdxTag> build() {
     _documentCreation();
+    _package();
     return _tags;
   }
 
@@ -56,6 +57,56 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
         SbomSpdxSectionNames.documentCreation, 10, true));
     _add(SbomSpdxTag(SbomSpdxTagNames.documentComment,
         SbomSpdxSectionNames.documentCreation, 11, true));
+  }
+
+  /// Package section
+  void _package() {
+    _add(SbomSpdxTag.mandatory(
+        SbomSpdxTagNames.packageName, SbomSpdxSectionNames.package, 1));
+    _add(SbomSpdxTag.mandatory(
+        SbomSpdxTagNames.packageIdentifier, SbomSpdxSectionNames.package, 2));
+    _add(SbomSpdxTag(
+        SbomSpdxTagNames.packageVersion, SbomSpdxSectionNames.package, 3));
+    _add(SbomSpdxTag(SbomSpdxTagNames.packageFileName,
+        SbomSpdxSectionNames.package, 4, true));
+    _add(SbomSpdxTag(SbomSpdxTagNames.packageSupplier,
+        SbomSpdxSectionNames.package, 5, true));
+    _add(SbomSpdxTag(SbomSpdxTagNames.packageOriginator,
+        SbomSpdxSectionNames.package, 6, true));
+    _add(SbomSpdxTag.mandatory(SbomSpdxTagNames.packageDownloadLocation,
+        SbomSpdxSectionNames.package, 7));
+    _add(SbomSpdxTag(SbomSpdxTagNames.packageFilesAnalyzed,
+        SbomSpdxSectionNames.package, 8));
+    _add(SbomSpdxTag.mandatory(SbomSpdxTagNames.packageVerificationCode,
+        SbomSpdxSectionNames.package, 9));
+    _add(SbomSpdxTag(SbomSpdxTagNames.packageChecksum,
+        SbomSpdxSectionNames.package, 10, true));
+    _add(SbomSpdxTag(SbomSpdxTagNames.packageHomePage,
+        SbomSpdxSectionNames.package, 11, true));
+    _add(SbomSpdxTag(SbomSpdxTagNames.packageSourceInfo,
+        SbomSpdxSectionNames.package, 12, true));
+    _add(SbomSpdxTag.mandatory(SbomSpdxTagNames.packageLicenseConcluded,
+        SbomSpdxSectionNames.package, 13, true));
+    _add(SbomSpdxTag.mandatory(SbomSpdxTagNames.packageLicenseInfoFromFiles,
+        SbomSpdxSectionNames.package, 14, true));
+    _add(SbomSpdxTag.mandatory(SbomSpdxTagNames.packageLicenseDeclared,
+        SbomSpdxSectionNames.package, 15, true));
+    _add(SbomSpdxTag(SbomSpdxTagNames.packageLicenseComments,
+        SbomSpdxSectionNames.package, 16, true));
+    _add(SbomSpdxTag.mandatory(SbomSpdxTagNames.packageCopyrightText,
+        SbomSpdxSectionNames.package, 17, true));
+    _add(SbomSpdxTag(SbomSpdxTagNames.packageSummary,
+        SbomSpdxSectionNames.package, 18, true));
+    _add(SbomSpdxTag(SbomSpdxTagNames.packageDescription,
+        SbomSpdxSectionNames.package, 19, true));
+    _add(SbomSpdxTag(SbomSpdxTagNames.packageComment,
+        SbomSpdxSectionNames.package, 20, true));
+    _add(SbomSpdxTag(SbomSpdxTagNames.packageExternalRef,
+        SbomSpdxSectionNames.package, 21, true));
+    _add(SbomSpdxTag(SbomSpdxTagNames.packageExternalRefComment,
+        SbomSpdxSectionNames.package, 22, true));
+    _add(SbomSpdxTag(SbomSpdxTagNames.packageAttributionText,
+        SbomSpdxSectionNames.package, 23, true));
   }
 
   /// Add a tag, checking the tag type and position is not already present.

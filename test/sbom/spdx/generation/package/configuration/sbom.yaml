@@ -1,0 +1,23 @@
+type: spdx
+
+spdx:
+  SPDXFormat: 'tagvalue'
+  # Document Creation section
+  documentCreation:
+    Version: 'Invalid tag'
+    SPDXVersion: 'Cant be overridden'
+    DocumentName: 'Document name from configuration'
+    DocumentNamespace: 'Document name space from configuration'
+    ExternalDocumentRef :
+      - 'External Doc Ref 1'
+      - 'External Doc Ref 2'
+    Creator :
+      - 'Person: Steve Hamblett <steve.hamblett@linux.com'
+      - 'Not a real creator value'
+    CreatorComment: 'Creator comment from configuration'
+    DocumentComment: 'Document comment from configuration'
+
+  # Package section
+  package:
+
+
