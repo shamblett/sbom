@@ -15,6 +15,9 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
   /// SBOM configuration.
   final SbomConfiguration configuration;
 
+  /// SPDX fomatter type, default is tag/value.
+  String formatType = SbomSpdxConstants.spdxOutputTagValue;
+
   /// Update a tags value from a list.
   void _updateTagListValue(
       YamlMap section, String sectionKey, String sectionId) {
@@ -124,28 +127,6 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     return true;
   }
 
-  /// Generate the document creation section.
-  bool _generateDocumentCreation(File outputFile) {
-    try {
-      final sectionTags =
-          tags.sectionTags(SbomSpdxSectionNames.documentCreation);
-      for (final tag in sectionTags) {
-        if (tag.isSet()) {
-          for (final value in tag.values) {
-            // Remove the prepended section identifier from the tag name constant to get the tag
-            // name
-            final str =
-                '${SbomSpdxUtilities.getSpecTagName(tag.name)}${SbomSpdxConstants.spdxTagValueSeparator}$value\r';
-            outputFile.writeAsStringSync(str, mode: FileMode.append);
-          }
-        }
-      }
-    } on FileSystemException {
-      return false;
-    }
-    return true;
-  }
-
   /// Generate
   @override
   bool generate() {
@@ -170,11 +151,26 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
           'SPDX SBOM generation - unable to create output sbom file at $outputFileName - aborting generation');
       return false;
     }
-    SbomUtilities.louder('Generating SPDX Document Creation section');
-    var result = _generateDocumentCreation(outputFile);
+
+    // Create the formatter
+    late SbomSpdxIOutputFormatter formatter;
+    formatType = configuration.sbomConfigurationContents[SbomConstants.sbomSpdx]
+        [SbomSpdxConstants.spdxOutputFormatDirective];
+    SbomUtilities.loud('SPDX format type is tag/value');
+    switch (formatType) {
+      case SbomSpdxConstants.spdxOutputTagValue:
+        {
+          formatter = SbomSpdxOutputTagvalueFormatter(outputFile, tags);
+        }
+        break;
+      default:
+        formatter = SbomSpdxOutputTagvalueFormatter(outputFile, tags);
+    }
+
+    var result = formatter.format();
     if (!result) {
       SbomUtilities.error(
-          'SPDX SBOM generation - unable to generate ethe document creation section in file at $outputFileName - aborting generation');
+          'SPDX SBOM generation - unable to generate a formatted SPDX file at $outputFileName - aborting generation');
       return false;
     }
     sbomFilePath = outputFileName;
