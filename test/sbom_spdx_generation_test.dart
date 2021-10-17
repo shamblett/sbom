@@ -73,7 +73,11 @@ void main() {
       final generator = SbomGenerator(config);
       generator.generate();
       expect(generator.valid, isTrue);
-      expect(generator.tags.tags.length, 11);
+      expect(
+          generator.tags
+              .sectionTags(SbomSpdxSectionNames.documentCreation)
+              .length,
+          11);
       expect(generator.tags.tagByName('DC-SPDXVersion').values[0], 'SPDX-2.2');
       expect(generator.tags.tagByName('DC-DataLicense').values[0], 'CC0-1.0');
       expect(
