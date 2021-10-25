@@ -26,6 +26,13 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     }
   }
 
+  /// Build the package section.
+  bool _buildPackage() {
+    SbomUtilities.louder('Building SPDX Package section');
+
+    return true;
+  }
+
   /// Build the document creation section.
   bool _buildDocumentCreation() {
     SbomUtilities.louder('Building SPDX Document Creation section');
@@ -87,6 +94,11 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     bool result = _buildDocumentCreation();
     if (!result) {
       SbomUtilities.error('Failed to build SPDX Document Creation section.');
+      return false;
+    }
+    result = _buildPackage();
+    if (!result) {
+      SbomUtilities.error('Failed to build SPDX Package section.');
       return false;
     }
     return true;
