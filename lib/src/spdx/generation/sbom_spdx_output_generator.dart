@@ -58,13 +58,13 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
   /// Build the package section.
   bool _buildPackage() {
     SbomUtilities.louder('Building SPDX Package section');
-// If we have a document creation section in the SBOM configuration process it
+    // If we have a package section in the SBOM configuration process it
     if (configuration.sbomConfigurationContents[SbomConstants.sbomSpdx]
-        .containsKey(SbomSpdxSectionNames.documentCreation)) {
+        .containsKey(SbomSpdxSectionNames.package)) {
       final section =
           configuration.sbomConfigurationContents[SbomConstants.sbomSpdx]
-              [SbomSpdxSectionNames.documentCreation];
-      _processSectionTags(section, SbomSpdxTagNames.documentCreationSectionId);
+              [SbomSpdxSectionNames.package];
+      _processSectionTags(section, SbomSpdxTagNames.packageSectionId);
     }
     return true;
   }
