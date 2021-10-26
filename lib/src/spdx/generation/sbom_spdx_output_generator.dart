@@ -15,7 +15,7 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
   /// SBOM configuration.
   final SbomConfiguration configuration;
 
-  /// SPDX fomatter type, default is tag/value.
+  /// SPDX formatter type, default is tag/value.
   String formatType = SbomSpdxConstants.spdxOutputTagValue;
 
   /// Update a tags value from a list.
@@ -26,10 +26,46 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     }
   }
 
+  /// Process tags from the section configuration, tags already set by
+  /// the tag builder cannot be overridden by configuration unless
+  /// specified.
+  void _processSectionTags(dynamic section, String sectionId) {
+    // Process each tag found in the section
+    for (final sectionKey in section.keys) {
+      // Prepend the section identifier
+      final key = '$sectionId$sectionKey';
+      if (tags.exists(key)) {
+        // If the tag value is set by the tag builder it cannot be overridden by the configuration
+        // unless this option is specified
+        if (!tags.tagByName(key).canBeOverridden) {
+          SbomUtilities.warning(
+              'SPDX tag $key cannot be overridden by configuration');
+        } else {
+          // Update the tag value from configuration, checking for list values
+          if (section[sectionKey] is YamlList) {
+            _updateTagListValue(section, sectionKey, sectionId);
+          } else {
+            tags.tagByName(key).value = section[sectionKey];
+          }
+        }
+      } else {
+        SbomUtilities.warning(
+            'SPDX document creation tag "${SbomSpdxUtilities.getSpecTagName(key)}" is not a valid SPDX tag name - not processing');
+      }
+    }
+  }
+
   /// Build the package section.
   bool _buildPackage() {
     SbomUtilities.louder('Building SPDX Package section');
-
+// If we have a document creation section in the SBOM configuration process it
+    if (configuration.sbomConfigurationContents[SbomConstants.sbomSpdx]
+        .containsKey(SbomSpdxSectionNames.documentCreation)) {
+      final section =
+          configuration.sbomConfigurationContents[SbomConstants.sbomSpdx]
+              [SbomSpdxSectionNames.documentCreation];
+      _processSectionTags(section, SbomSpdxTagNames.documentCreationSectionId);
+    }
     return true;
   }
 
@@ -42,30 +78,7 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
       final section =
           configuration.sbomConfigurationContents[SbomConstants.sbomSpdx]
               [SbomSpdxSectionNames.documentCreation];
-      // Process each tag found in the section
-      for (final sectionKey in section.keys) {
-        // Prepend the section identifier
-        final key = 'DC-$sectionKey';
-        if (tags.exists(key)) {
-          // If the tag value is set by the tag builder it cannot be overridden by the configuration
-          // unless this option is specified
-          if (!tags.tagByName(key).canBeOverridden) {
-            SbomUtilities.warning(
-                'SPDX tag $key cannot be overridden by configuration');
-          } else {
-            // Update the tag value from configuration, checking for list values
-            if (section[sectionKey] is YamlList) {
-              _updateTagListValue(section, sectionKey,
-                  SbomSpdxTagNames.documentCreationSectionId);
-            } else {
-              tags.tagByName(key).value = section[sectionKey];
-            }
-          }
-        } else {
-          SbomUtilities.warning(
-              'SPDX document creation tag "${SbomSpdxUtilities.getSpecTagName(key)}" is not a valid SPDX tag name - not processing');
-        }
-      }
+      _processSectionTags(section, SbomSpdxTagNames.documentCreationSectionId);
     }
     // Build the environment tags
     // Document name and namespace, only if we have a package name
@@ -75,7 +88,6 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
       tags.tagByName(SbomSpdxTagNames.documentNamespace).value =
           '${SbomConstants.pubUrl}${configuration.packageName}';
     }
-
     return true;
   }
 
