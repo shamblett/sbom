@@ -44,6 +44,9 @@ class SbomSpdxOutputTagvalueFormatter extends SbomSpdxIOutputFormatter {
     } on FileSystemException {
       return false;
     }
+    // Blank line at the end of the section
+    outputFile.writeAsStringSync('', mode: FileMode.append);
+
     return true;
   }
 }
