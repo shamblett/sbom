@@ -30,6 +30,9 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
   /// the tag builder cannot be overridden by configuration unless
   /// specified.
   void _processSectionTags(dynamic section, String sectionId) {
+    if (section == null) {
+      return;
+    }
     // Process each tag found in the section
     for (final sectionKey in section.keys) {
       // Prepend the section identifier
@@ -66,6 +69,9 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
               [SbomSpdxSectionNames.package];
       _processSectionTags(section, SbomSpdxTagNames.packageSectionId);
     }
+    // Package name
+    tags.tagByName(SbomSpdxTagNames.packageName).value =
+        configuration.packageName;
     return true;
   }
 

@@ -19,5 +19,6 @@ spdx:
 
   # Package section
   package:
+    PackageName: 'Cant be overridden'
 
 

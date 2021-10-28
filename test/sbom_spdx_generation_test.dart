@@ -130,6 +130,7 @@ void main() {
       final config = SbomConfiguration(
           ['-p', 'test/sbom/spdx/generation/package/configuration']);
       config.parseConfigurationFile();
+      config.parsePubspecFile();
       expect(config.valid, isTrue);
       expect(config.outputType, SbomType.spdx);
       final generator = SbomGenerator(config);
@@ -137,6 +138,7 @@ void main() {
       expect(generator.valid, isTrue);
       expect(
           generator.tags.sectionTags(SbomSpdxSectionNames.package).length, 23);
+      expect(generator.tags.tagByName('P-PackageName').values[0], 'sbom');
     });
   });
 }
