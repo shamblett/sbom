@@ -20,5 +20,7 @@ spdx:
   # Package section
   package:
     PackageName: 'Cant be overridden'
+    PackageFileName: 'The package filename'
+    PackageSupplier: 'The package supplier'
 
 

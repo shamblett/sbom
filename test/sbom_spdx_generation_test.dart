@@ -17,6 +17,7 @@ void main() {
       final config = SbomConfiguration(
           ['-p', 'test/sbom/spdx/generation/documentcreation/configuration']);
       config.parseConfigurationFile();
+      config.parsePubspecFile();
       expect(config.valid, isTrue);
       expect(config.outputType, SbomType.spdx);
       final generator = SbomGenerator(config);
@@ -139,6 +140,13 @@ void main() {
       expect(
           generator.tags.sectionTags(SbomSpdxSectionNames.package).length, 23);
       expect(generator.tags.tagByName('P-PackageName').values[0], 'sbom');
+      expect(generator.tags.tagByName('P-SPDXID').values[0],
+          'SPDXRef-Package-sbom');
+      expect(generator.tags.tagByName('P-PackageVersion').values[0], '1.0.0');
+      expect(generator.tags.tagByName('P-PackageFileName').values[0],
+          'The package filename');
+      expect(generator.tags.tagByName('P-PackageSupplier').values[0],
+          'The package supplier');
     });
   });
 }

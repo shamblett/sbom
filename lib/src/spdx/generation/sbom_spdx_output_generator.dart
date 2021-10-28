@@ -72,6 +72,19 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     // Package name
     tags.tagByName(SbomSpdxTagNames.packageName).value =
         configuration.packageName;
+    // SPDXID
+    tags.tagByName(SbomSpdxTagNames.packageIdentifier).value =
+        '${SbomSpdxConstants.idReference}Package-${configuration.packageName}';
+    // Version
+    if (configuration.sbomPubspecContents
+        .containsKey(SbomConstants.pubspecVersion)) {
+      tags.tagByName(SbomSpdxTagNames.packageVersion).value =
+          configuration.sbomPubspecContents[SbomConstants.pubspecVersion];
+    } else {
+      SbomUtilities.error(
+          'Version key not found in pubspec.yaml - cannot continue');
+      return false;
+    }
     return true;
   }
 
