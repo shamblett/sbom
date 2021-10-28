@@ -65,7 +65,7 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
         SbomSpdxTagNames.packageName, SbomSpdxSectionNames.package, 1));
     _add(SbomSpdxTag.mandatory(
         SbomSpdxTagNames.packageIdentifier, SbomSpdxSectionNames.package, 2));
-    _add(SbomSpdxTag(
+    _add(SbomSpdxTag.mandatory(
         SbomSpdxTagNames.packageVersion, SbomSpdxSectionNames.package, 3));
     _add(SbomSpdxTag(SbomSpdxTagNames.packageFileName,
         SbomSpdxSectionNames.package, 4, true));

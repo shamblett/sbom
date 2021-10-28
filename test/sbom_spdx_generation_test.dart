@@ -147,6 +147,10 @@ void main() {
           'The package filename');
       expect(generator.tags.tagByName('P-PackageSupplier').values[0],
           'The package supplier');
+      expect(generator.tags.tagByName('P-PackageOriginator').values[0],
+          'The package originator');
+      expect(generator.tags.tagByName('P-PackageDownloadLocation').values[0],
+          'https://pub.dev/packages/sbom');
     });
   });
 }

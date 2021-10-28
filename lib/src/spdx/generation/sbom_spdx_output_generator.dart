@@ -85,6 +85,9 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
           'Version key not found in pubspec.yaml - cannot continue');
       return false;
     }
+    // Download location
+    tags.tagByName(SbomSpdxTagNames.packageDownloadLocation).value =
+        '${SbomConstants.pubUrl}${configuration.packageName}';
     return true;
   }
 
