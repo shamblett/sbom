@@ -10,10 +10,15 @@ part of sbom;
 /// The SBOM SPDX output generator class.
 class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
   /// Construction
-  SbomSpdxOutputGenerator(this.configuration);
+  SbomSpdxOutputGenerator(this.configuration) {
+    fileSupport = SbomFileSupport(configuration.packageTopLevel);
+  }
 
   /// SBOM configuration.
   final SbomConfiguration configuration;
+
+  /// File support
+  late SbomFileSupport fileSupport;
 
   /// SPDX formatter type, default is tag/value.
   String formatType = SbomSpdxConstants.spdxOutputTagValue;

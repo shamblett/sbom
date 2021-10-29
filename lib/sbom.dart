@@ -12,9 +12,11 @@ import 'dart:io';
 import 'package:args/args.dart';
 import 'package:path/path.dart' as path;
 import 'package:yaml/yaml.dart';
+import 'package:crypto/crypto.dart';
 
 part 'src/sbom.dart';
 part 'src/sbom_constants.dart';
+part 'src/sbom_file_support.dart';
 part 'src/sbom_utilities.dart';
 part 'src/sbom_tag.dart';
 part 'src/sbom_tags.dart';
