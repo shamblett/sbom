@@ -77,6 +77,8 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
         SbomSpdxSectionNames.package, 7));
     _add(SbomSpdxTag(SbomSpdxTagNames.packageFilesAnalyzed,
         SbomSpdxSectionNames.package, 8));
+    // Files are always analyzed
+    _tags[18].value = 'true';
     _add(SbomSpdxTag.mandatory(SbomSpdxTagNames.packageVerificationCode,
         SbomSpdxSectionNames.package, 9));
     _add(SbomSpdxTag(SbomSpdxTagNames.packageChecksum,
