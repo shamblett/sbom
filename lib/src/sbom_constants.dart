@@ -40,6 +40,13 @@ class SbomConstants {
   /// Site names.
   static const String pubUrl = 'https://pub.dev/packages/';
 
+  /// Package directories
+  static const libDir = 'lib';
+  static const binDir = 'bin';
+
+  /// Dart file type
+  static const dartFiletype = '.dart';
+
   /// Default package name we are generating for.
   static const String defaultPackageName = 'ERROR - name not set';
 }
