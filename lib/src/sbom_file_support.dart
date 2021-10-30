@@ -8,7 +8,7 @@
 part of sbom;
 
 /// The SBOM file support class.
-/// Provides convenience methods for file listings, SHA1 generation etc.
+/// Provides convenience methods for file listings, SHA1 generation of file contents etc.
 class SbomFileSupport {
   /// Construction
   SbomFileSupport(this._topLevelPath);
@@ -18,7 +18,7 @@ class SbomFileSupport {
 
   /// Gets a list of Dart files in a package directory from the lib and
   /// bin directories.
-  /// Returns a list of absolute file paths or null if none found or
+  /// Returns a list of absolute file paths, empty if none found or
   /// an exception is raised.
   List<String> getPackageDartFiles() {
     var output = <String>[];

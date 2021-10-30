@@ -5,7 +5,6 @@
  * Copyright :  S.Hamblett
  */
 
-
 /// SPDX utilities
 class SbomSpdxUtilities {
   /// Created time in SPDX format.

@@ -9,9 +9,23 @@ import 'package:test/test.dart';
 
 @TestOn('VM')
 void main() {
-    test('Package Dart files', () {
-      final config = SbomConfiguration([]);
-      expect(config.valid, isTrue);
-      expect(SbomUtilities.verbosity, SbomConstants.off);
-    });
+  test('Package Dart files - no files', () {
+    final config = SbomConfiguration(['-p', 'test/sbom/filesupport/nofiles']);
+    config.parseConfigurationFile();
+    expect(config.valid, isTrue);
+    final fileSupport = SbomFileSupport(config.packageTopLevel);
+    final files = fileSupport.getPackageDartFiles();
+    expect(files.isEmpty, isTrue);
+  });
+  test('Package Dart files - valid', () {
+    final config = SbomConfiguration(['-p', 'test/sbom/filesupport/valid']);
+    config.parseConfigurationFile();
+    expect(config.valid, isTrue);
+    final fileSupport = SbomFileSupport(config.packageTopLevel);
+    final files = fileSupport.getPackageDartFiles();
+    expect(files.length, 6);
+    for (final file in files) {
+      expect(file.contains('dummy'), isFalse);
+    }
+  });
 }

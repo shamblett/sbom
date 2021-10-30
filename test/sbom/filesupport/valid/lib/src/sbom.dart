@@ -5,7 +5,6 @@
  * Copyright :  S.Hamblett
  */
 
-
 /// The main sbom class
 class Sbom {
   /// Construction
