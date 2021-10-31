@@ -20,7 +20,7 @@ class SbomFileSupport {
   /// bin directories.
   /// Returns a list of absolute file paths, empty if none found or
   /// an exception is raised.
-  List<String> getPackageDartFiles() {
+  List<String> packageDartFiles() {
     var output = <String>[];
     try {
       // Lib
@@ -48,7 +48,21 @@ class SbomFileSupport {
     } catch (e) {
       SbomUtilities.error(
           'File Support - exception $e thrown getting package files, the SBOM generation will be incorrect');
-      return output;
+    }
+    return output;
+  }
+
+  /// Get the SHA1 digest of a supplied absolute file path.
+  /// Returns the digest or empty if it could not be calculated.
+  String sha1Digest(String path) {
+    var output = '';
+    try {
+      final file = File(path);
+      final bytes = file.readAsBytesSync();
+      output = sha1.convert(bytes).toString();
+    } catch (e) {
+      SbomUtilities.warning(
+          'File Support - exception $e thrown generating sha1 digest for $path, the SBOM generation will be incorrect');
     }
     return output;
   }
