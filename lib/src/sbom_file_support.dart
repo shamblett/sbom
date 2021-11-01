@@ -82,10 +82,10 @@ class SbomFileSupport {
 
   /// Get the combined SHA1 digest of a list of SHA1 digests.
   /// Returns the digest as a String which may be empty.
-  String combinedDigest(List<String> digests) {
+  String combinedDigest(List<Digest> digests) {
     final bytes = <int>[];
     for (final digest in digests) {
-      bytes.addAll(digest.codeUnits);
+      bytes.addAll(digest.bytes);
     }
     return sha1.convert(bytes).toString();
   }
@@ -98,21 +98,21 @@ class SbomFileSupport {
   String packageVerificationCode() {
     // Get the Dart files SHA1 digests
     final dartFiles = packageDartFiles();
-    final packageFileDigests = <String>[];
+    final packageFileDigests = <Digest>[];
     for (final file in dartFiles) {
-      final digest = sha1DigestAsString(file);
-      if (digest.isNotEmpty) {
+      final digest = _sha1Digest(file);
+      if (digest != null) {
         packageFileDigests.add(digest);
       }
     }
     // Get the pubspec.yaml digest
     final pubspecPath = path.join(_topLevelPath, SbomConstants.pubspecName);
-    final digest = sha1DigestAsString(pubspecPath);
-    if (digest.isNotEmpty) {
+    final digest = _sha1Digest(pubspecPath);
+    if (digest != null) {
       packageFileDigests.add(digest);
     }
     // Sort the digests ascending
-    packageFileDigests.sort();
+    packageFileDigests.sort((a, b) => a.toString().compareTo(b.toString()));
     return combinedDigest(packageFileDigests);
   }
 }
