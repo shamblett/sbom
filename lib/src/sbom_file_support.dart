@@ -106,7 +106,7 @@ class SbomFileSupport {
       }
     }
     // Get the pubspec.yaml digest
-    final pubspecPath = path.join(_topLevelPath, SbomConstants.pubspecName);
+    final pubspecPath = path.join(_topLevelPath, SbomConstants.sbomPubspecFile);
     final digest = _sha1Digest(pubspecPath);
     if (digest != null) {
       packageFileDigests.add(digest);

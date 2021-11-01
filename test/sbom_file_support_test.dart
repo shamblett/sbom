@@ -117,4 +117,12 @@ void main() {
       131
     ]);
   });
+  test('Package verification code', () {
+    final config = SbomConfiguration(['-p', 'test/sbom/filesupport/valid']);
+    config.parseConfigurationFile();
+    expect(config.valid, isTrue);
+    final fileSupport = SbomFileSupport(config.packageTopLevel);
+    expect(fileSupport.packageVerificationCode(),
+        '96ccbe02e55ceaab52873b6322a1e2142e6a45fc');
+  });
 }
