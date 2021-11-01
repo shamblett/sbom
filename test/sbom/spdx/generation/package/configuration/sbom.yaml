@@ -23,6 +23,8 @@ spdx:
     PackageFileName: 'The package filename'
     PackageSupplier: 'The package supplier'
     PackageOriginator: 'The package originator'
+    PackageChecksum: 'The package checksum'
+    PackageSourceInfo: 'The package source info'
 
 
 

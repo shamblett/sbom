@@ -96,6 +96,9 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     // Package verification code
     tags.tagByName(SbomSpdxTagNames.packageVerificationCode).value =
         fileSupport.packageVerificationCode();
+    // Package home page
+    tags.tagByName(SbomSpdxTagNames.packageHomePage).value =
+        '${SbomConstants.pubUrl}${configuration.packageName}';
     return true;
   }
 
