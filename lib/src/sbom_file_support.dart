@@ -25,6 +25,7 @@ class SbomFileSupport {
     try {
       // Lib
       final libDir = Directory(path.join(_topLevelPath, SbomConstants.libDir));
+      // Lib directory must exist
       final libFiles = libDir.listSync(recursive: true);
       for (final entity in libFiles) {
         if (entity is File) {
@@ -36,12 +37,15 @@ class SbomFileSupport {
       }
       // Bin
       final binDir = Directory(path.join(_topLevelPath, SbomConstants.binDir));
-      final binFiles = binDir.listSync(recursive: true);
-      for (final entity in binFiles) {
-        if (entity is File) {
-          var file = entity.absolute;
-          if (path.extension(file.path) == SbomConstants.dartFiletype) {
-            output.add(file.path);
+      // Bin directory may not exist
+      if (binDir.existsSync()) {
+        final binFiles = binDir.listSync(recursive: true);
+        for (final entity in binFiles) {
+          if (entity is File) {
+            var file = entity.absolute;
+            if (path.extension(file.path) == SbomConstants.dartFiletype) {
+              output.add(file.path);
+            }
           }
         }
       }

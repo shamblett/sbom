@@ -152,6 +152,8 @@ void main() {
       expect(generator.tags.tagByName('P-PackageDownloadLocation').values[0],
           'https://pub.dev/packages/sbom');
       expect(generator.tags.tagByName('P-FilesAnalyzed').values[0], 'true');
+      expect(generator.tags.tagByName('P-PackageVerificationCode').values[0],
+          'c631e8fe0fc5bf681007106cfc736112a7dd087f');
     });
   });
 }
