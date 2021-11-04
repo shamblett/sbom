@@ -119,4 +119,25 @@ class SbomFileSupport {
     packageFileDigests.sort((a, b) => a.toString().compareTo(b.toString()));
     return combinedDigest(packageFileDigests);
   }
+
+  /// Get the package licence file contents.
+  /// Returns the licence file contents or empty if no licence file
+  /// is found or an error occurs.
+  String licenceFileContents() {
+    var contents = '';
+    try {
+      final file =
+          File(path.join(_topLevelPath, SbomConstants.sbomLicenseFile));
+      if (file.existsSync()) {
+        contents = file.readAsStringSync();
+      } else {
+        SbomUtilities.warning(
+            'File Support - license file not found - license information cannot be extracted');
+      }
+    } catch (e) {
+      SbomUtilities.warning(
+          'File Support - error processing license file - license information cannot be extracted');
+    }
+    return contents;
+  }
 }

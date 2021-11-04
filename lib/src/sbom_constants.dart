@@ -23,6 +23,7 @@ class SbomConstants {
   /// File names
   static const String sbomConfigurationFile = 'sbom.yaml';
   static const String sbomPubspecFile = 'pubspec.yaml';
+  static const String sbomLicenseFile = 'LICENSE';
 
   /// SBOM Configuration file fields
   static const String sbomType = 'type';
