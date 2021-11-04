@@ -36,7 +36,7 @@ void main() {
       final valid = tags.sectionValid(SbomSpdxSectionNames.documentCreation);
       expect(valid.isEmpty, isFalse);
       expect(valid.length, 1);
-      expect(valid[0].name, SbomSpdxTagNames.dataLicense);
+      expect(valid[0].name, SbomSpdxTagNames.dataLicense.split('-')[1]);
     });
     test('Section valid - valid', () {
       final builder = SbomSpdxTagBuilder();

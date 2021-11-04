@@ -37,11 +37,11 @@ void main() {
     final files = fileSupport.packageDartFiles();
     expect(files.length, 6);
     expect(fileSupport.sha1DigestAsString(files[0]),
-        'fc4b3c6ec9c2708401b1f8dd8a9b781ab016373b');
+        '6b7afa3b0510fd07df5565208107bb4294eba8d4');
     expect(fileSupport.sha1DigestAsString(files[2]),
-        '2281882324d5ae54dd2073e0a627402fa332a6c7');
+        'e53e74ca097d763f86e10402f1ae0e3798be8a76');
     expect(fileSupport.sha1DigestAsString(files[5]),
-        'f2ed8ee3c7eda2c419ef837dcad7fab298983183');
+        'a392811c4acfe246df84eef651963df8ca767e25');
   });
   test('SHA1 Digest - As bytes', () {
     final config = SbomConfiguration(['-p', 'test/sbom/filesupport/valid']);
@@ -51,70 +51,70 @@ void main() {
     final files = fileSupport.packageDartFiles();
     expect(files.length, 6);
     expect(fileSupport.sha1DigestAsBytes(files[0]), [
-      252,
-      75,
-      60,
-      110,
-      201,
-      194,
-      112,
-      132,
-      1,
-      177,
-      248,
-      221,
-      138,
-      155,
-      120,
-      26,
-      176,
-      22,
-      55,
-      59
+      107,
+      122,
+      250,
+      59,
+      5,
+      16,
+      253,
+      7,
+      223,
+      85,
+      101,
+      32,
+      129,
+      7,
+      187,
+      66,
+      148,
+      235,
+      168,
+      212
     ]);
     expect(fileSupport.sha1DigestAsBytes(files[2]), [
-      34,
-      129,
-      136,
-      35,
-      36,
-      213,
+      229,
+      62,
+      116,
+      202,
+      9,
+      125,
+      118,
+      63,
+      134,
+      225,
+      4,
+      2,
+      241,
       174,
-      84,
-      221,
-      32,
-      115,
-      224,
-      166,
-      39,
-      64,
-      47,
-      163,
-      50,
-      166,
-      199
+      14,
+      55,
+      152,
+      190,
+      138,
+      118
     ]);
     expect(fileSupport.sha1DigestAsBytes(files[5]), [
-      242,
-      237,
-      142,
-      227,
-      199,
-      237,
-      162,
-      196,
-      25,
-      239,
-      131,
-      125,
+      163,
+      146,
+      129,
+      28,
+      74,
+      207,
+      226,
+      70,
+      223,
+      132,
+      238,
+      246,
+      81,
+      150,
+      61,
+      248,
       202,
-      215,
-      250,
-      178,
-      152,
-      152,
-      49,
-      131
+      118,
+      126,
+      37
     ]);
   });
   test('Package verification code', () {
