@@ -13,6 +13,7 @@ import 'package:args/args.dart';
 import 'package:path/path.dart' as path;
 import 'package:yaml/yaml.dart';
 import 'package:crypto/crypto.dart';
+import 'package:spdx_licenses/spdx_licenses.dart';
 
 part 'src/sbom.dart';
 part 'src/sbom_constants.dart';
