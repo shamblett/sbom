@@ -6,6 +6,7 @@
  */
 import 'package:sbom/sbom.dart';
 import 'package:test/test.dart';
+import 'package:spdx_licenses/spdx_licenses.dart';
 
 @TestOn('VM')
 void main() {
@@ -125,4 +126,18 @@ void main() {
     expect(fileSupport.packageVerificationCode(),
         '96ccbe02e55ceaab52873b6322a1e2142e6a45fc');
   });
+
+  test('License generation', () async
+  {
+    final config = SbomConfiguration(['-p', 'test/sbom/filesupport/valid']);
+    config.parseConfigurationFile();
+    expect(config.valid, isTrue);
+    final fileSupport = SbomFileSupport(config.packageTopLevel);
+    final license = fileSupport.licenceFileContents();
+    expect(license.isNotEmpty, isTrue);
+    final details = await SPDXLicenseDetails.readLicenseDetails(license);
+    print(details.licenseId);
+
+});
+
 }

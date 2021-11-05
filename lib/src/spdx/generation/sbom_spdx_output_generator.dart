@@ -64,7 +64,7 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
   }
 
   /// Build the package section.
-  bool _buildPackage() {
+  bool _buildPackage()  {
     SbomUtilities.louder('Building SPDX Package section');
     // If we have a package section in the SBOM configuration process it
     if (configuration.sbomConfigurationContents[SbomConstants.sbomSpdx]
@@ -99,6 +99,14 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     // Package home page
     tags.tagByName(SbomSpdxTagNames.packageHomePage).value =
         '${SbomConstants.pubUrl}${configuration.packageName}';
+    // Concluded license
+    // final license = fileSupport.licenceFileContents();
+    // if ( license.isNotEmpty) {
+    //   SPDXLicenseDetails.readLicenseDetails(license).then((final details) {
+    //     tags.tagByName(SbomSpdxTagNames.packageLicenseConcluded).value =
+    //         details.licenseId;
+    //   });
+    //}
     return true;
   }
 
