@@ -34,5 +34,6 @@ part 'src/spdx/sbom_spdx_tags.dart';
 part 'src/spdx/sbom_spdx_constants.dart';
 part 'src/spdx/sbom_spdx_utilities.dart';
 part 'src/spdx/sbom_spdx_tag_builder.dart';
+part 'src/spdx/sbom_spdx_license.dart';
 part 'src/spdx/generation/sbom_spdx_ioutput_formatter.dart';
 part 'src/spdx/generation/sbom_spdx_tagvalue_output_formatter.dart';
