@@ -54,6 +54,7 @@ class SbomSpdxLicense {
   /// Licence details
   late Map<String, SbomSpdxLicenseDetails> licenses;
 
+  /// Build the license list
   void _licenseList() {
     final licenseDirectoryPath =
         path.join(path.current, SbomSpdxConstants.licenceDirectory);
@@ -64,5 +65,18 @@ class SbomSpdxLicense {
       final details = SbomSpdxLicenseDetails.fromJson(json.decode(contents));
       licenses[details.name] = details;
     }
+  }
+
+  /// Get the license identifier of a package license.
+  /// Returns the SPDX license id as defined in the SPDX Specification Appendix V
+  /// or NOASSERTION if the license cannot be determined.
+  String licenseId(String text) {
+    var output = SbomSpdxConstants.licenseNoAssertion;
+    final details =
+        licenses.keys.firstWhere((e) => text.contains(e), orElse: () => '');
+    if (details.isNotEmpty) {
+      output = licenses[details]!.licenseId;
+    }
+    return output;
   }
 }
