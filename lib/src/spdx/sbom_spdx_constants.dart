@@ -28,4 +28,18 @@ class SbomSpdxConstants {
 
   /// SPDX sbom file name
   static const String outputFileName = 'sbom.spdx';
+
+  /// License
+  static const licenseIsDeprecatedId = 'isDeprecatedLicenseId';
+  static const licenseIsFsfLibre = 'isFsfLibre';
+  static const licenseText = 'licenseText';
+  static const licenseStandardHeaderTemplate = 'standardLicenseHeaderTemplate';
+  static const licenseStandardTemplate = 'standardLicenseTemplate';
+  static const licenseName = 'name';
+  static const licenseComments = 'licenseComments';
+  static const licenseId = 'licenseId';
+  static const licenseStandardHeader = 'standardLicenseHeader';
+  static const licenseSeeAlso = 'seeAlso';
+  static const licenseIsOsiApproved = 'isOsiApproved';
+  static const licenceDirectory = 'licences';
 }

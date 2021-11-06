@@ -8,6 +8,7 @@
 library sbom;
 
 import 'dart:io';
+import 'dart:convert';
 
 import 'package:args/args.dart';
 import 'package:path/path.dart' as path;

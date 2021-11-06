@@ -11,6 +11,24 @@ part of sbom;
 
 /// License details class
 class SbomSpdxLicenseDetails {
+  SbomSpdxLicenseDetails();
+
+  SbomSpdxLicenseDetails.fromJson(Map<String, dynamic> json) {
+    isDeprecatedLicenseId = json[SbomSpdxConstants.licenseIsDeprecatedId];
+    isFsfLibre = json[SbomSpdxConstants.licenseIsFsfLibre];
+    licenseText = json[SbomSpdxConstants.licenseText];
+    standardLicenseHeaderTemplate =
+        json[SbomSpdxConstants.licenseStandardHeaderTemplate];
+    standardLicenseTemplate = json[SbomSpdxConstants.licenseStandardTemplate];
+    name = json[SbomSpdxConstants.licenseName];
+    licenseComments = json[SbomSpdxConstants.licenseComments];
+    licenseId = json[SbomSpdxConstants.licenseId];
+    standardLicenseHeader = json[SbomSpdxConstants.licenseStandardHeader];
+    seeAlso = json[SbomSpdxConstants.licenseSeeAlso].cast<String>();
+    isOsiApproved = json[SbomSpdxConstants.licenseIsOsiApproved];
+  }
+
+  /// License description fields
   late bool isDeprecatedLicenseId;
   late bool isFsfLibre;
   late String licenseText;
@@ -22,33 +40,29 @@ class SbomSpdxLicenseDetails {
   late String standardLicenseHeader;
   late List<String> seeAlso;
   late bool isOsiApproved;
-
-  SbomSpdxLicenseDetails();
-
-  SbomSpdxLicenseDetails.fromJson(Map<String, dynamic> json) {
-    isDeprecatedLicenseId = json['isDeprecatedLicenseId'];
-    isFsfLibre = json['isFsfLibre'];
-    licenseText = json['licenseText'];
-    standardLicenseHeaderTemplate = json['standardLicenseHeaderTemplate'];
-    standardLicenseTemplate = json['standardLicenseTemplate'];
-    name = json['name'];
-    licenseComments = json['licenseComments'];
-    licenseId = json['licenseId'];
-    standardLicenseHeader = json['standardLicenseHeader'];
-    seeAlso = json['seeAlso'].cast<String>();
-    isOsiApproved = json['isOsiApproved'];
-  }
 }
 
 /// Main license class
 class SbomSpdxLicense {
-  SbomSpdxLicense();
+  SbomSpdxLicense() {
+    _licenseList();
+  }
 
   /// Current version of the license list
   String licenseListVersion = SbomSpdxConstants.licenseListVersion;
 
   /// Licence details
-  late Map<String,SbomSpdxLicenseDetails> licenses;
+  late Map<String, SbomSpdxLicenseDetails> licenses;
 
-  _licenseList() {}
+  void _licenseList() {
+    final licenseDirectoryPath =
+        path.join(path.current, SbomSpdxConstants.licenceDirectory);
+    final licenseDir = Directory(licenseDirectoryPath);
+    final files = licenseDir.listSync();
+    for (final file in files) {
+      final contents = File(file.path).readAsStringSync();
+      final details = SbomSpdxLicenseDetails.fromJson(json.decode(contents));
+      licenses[details.name] = details;
+    }
+  }
 }
