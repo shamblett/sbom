@@ -126,7 +126,7 @@ void main() {
         '96ccbe02e55ceaab52873b6322a1e2142e6a45fc');
   });
 
-  test('License generation', () async {
+  test('License generation - valid MIT', () async {
     final config = SbomConfiguration(['-p', 'test/sbom/filesupport/valid']);
     config.parseConfigurationFile();
     expect(config.valid, isTrue);
@@ -136,5 +136,16 @@ void main() {
     final spdxLicense = SbomSpdxLicense();
     final id = spdxLicense.licenseId(license);
     expect(id, 'MIT');
+  });
+  test('License generation - NOASSERTION', () async {
+    final config = SbomConfiguration(['-p', 'test/sbom/filesupport/nofiles']);
+    config.parseConfigurationFile();
+    expect(config.valid, isTrue);
+    final fileSupport = SbomFileSupport(config.packageTopLevel);
+    final license = fileSupport.licenceFileContents();
+    expect(license.isNotEmpty, isTrue);
+    final spdxLicense = SbomSpdxLicense();
+    final id = spdxLicense.licenseId(license);
+    expect(id, 'NOASSERTION');
   });
 }
