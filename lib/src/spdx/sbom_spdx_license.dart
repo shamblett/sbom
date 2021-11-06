@@ -14,32 +14,44 @@ class SbomSpdxLicenseDetails {
   SbomSpdxLicenseDetails();
 
   SbomSpdxLicenseDetails.fromJson(Map<String, dynamic> json) {
-    isDeprecatedLicenseId = json[SbomSpdxConstants.licenseIsDeprecatedId];
-    isFsfLibre = json[SbomSpdxConstants.licenseIsFsfLibre];
+    isDeprecatedLicenseId =
+        json.containsKey(SbomSpdxConstants.licenseIsDeprecatedId)
+            ? json[SbomSpdxConstants.licenseIsDeprecatedId]
+            : false;
+    isFsfLibre = json.containsKey(SbomSpdxConstants.licenseIsFsfLibre)
+        ? json[SbomSpdxConstants.licenseIsFsfLibre]
+        : false;
     licenseText = json[SbomSpdxConstants.licenseText];
     standardLicenseHeaderTemplate =
-        json[SbomSpdxConstants.licenseStandardHeaderTemplate];
+        json.containsKey(SbomSpdxConstants.licenseStandardHeaderTemplate)
+            ? json[SbomSpdxConstants.licenseStandardHeaderTemplate]
+            : '';
     standardLicenseTemplate = json[SbomSpdxConstants.licenseStandardTemplate];
     name = json[SbomSpdxConstants.licenseName];
-    licenseComments = json[SbomSpdxConstants.licenseComments];
+    licenseComments = json.containsKey(SbomSpdxConstants.licenseComments)
+        ? json[SbomSpdxConstants.licenseComments]
+        : '';
     licenseId = json[SbomSpdxConstants.licenseId];
-    standardLicenseHeader = json[SbomSpdxConstants.licenseStandardHeader];
+    standardLicenseHeader =
+        json.containsKey(SbomSpdxConstants.licenseStandardHeader)
+            ? json[SbomSpdxConstants.licenseStandardHeader]
+            : '';
     seeAlso = json[SbomSpdxConstants.licenseSeeAlso].cast<String>();
     isOsiApproved = json[SbomSpdxConstants.licenseIsOsiApproved];
   }
 
   /// License description fields
-  late bool isDeprecatedLicenseId;
-  late bool isFsfLibre;
-  late String licenseText;
-  late String standardLicenseHeaderTemplate;
-  late String standardLicenseTemplate;
-  late String name;
-  late String licenseComments;
-  late String licenseId;
-  late String standardLicenseHeader;
-  late List<String> seeAlso;
-  late bool isOsiApproved;
+  bool isDeprecatedLicenseId = false;
+  bool isFsfLibre = false;
+  String licenseText = '';
+  String standardLicenseHeaderTemplate = '';
+  String standardLicenseTemplate = '';
+  String name = '';
+  String licenseComments = '';
+  String licenseId = '';
+  String standardLicenseHeader = '';
+  List<String> seeAlso = <String>[];
+  bool isOsiApproved = false;
 }
 
 /// Main license class
@@ -52,7 +64,8 @@ class SbomSpdxLicense {
   String licenseListVersion = SbomSpdxConstants.licenseListVersion;
 
   /// Licence details
-  late Map<String, SbomSpdxLicenseDetails> licenses;
+  late Map<String, SbomSpdxLicenseDetails> licenses =
+      <String, SbomSpdxLicenseDetails>{};
 
   /// Build the license list
   void _licenseList() {

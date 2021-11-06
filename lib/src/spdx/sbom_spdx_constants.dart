@@ -41,6 +41,6 @@ class SbomSpdxConstants {
   static const licenseStandardHeader = 'standardLicenseHeader';
   static const licenseSeeAlso = 'seeAlso';
   static const licenseIsOsiApproved = 'isOsiApproved';
-  static const licenceDirectory = 'licences';
+  static const licenceDirectory = 'lib/src/spdx/licences';
   static const licenseNoAssertion = 'NOASSERTION';
 }
