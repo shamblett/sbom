@@ -152,14 +152,20 @@ void main() {
       expect(generator.tags.tagByName('P-PackageDownloadLocation').values[0],
           'https://pub.dev/packages/sbom');
       expect(generator.tags.tagByName('P-FilesAnalyzed').values[0], 'true');
-      expect(generator.tags.tagByName('P-PackageVerificationCode').values[0],
-          'c631e8fe0fc5bf681007106cfc736112a7dd087f');
+      expect(
+          generator.tags
+              .tagByName('P-PackageVerificationCode')
+              .values[0]
+              .length,
+          40);
       expect(generator.tags.tagByName('P-PackageChecksum').values[0],
           'The package checksum');
       expect(generator.tags.tagByName('P-PackageHomePage').values[0],
           'https://pub.dev/packages/sbom');
       expect(generator.tags.tagByName('P-PackageSourceInfo').values[0],
           'The package source info');
+      expect(generator.tags.tagByName('P-PackageLicenseConcluded').values[0],
+          'MIT');
     });
   });
 }
