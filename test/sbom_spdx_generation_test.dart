@@ -169,6 +169,8 @@ void main() {
       expect(
           generator.tags.tagByName('P-PackageLicenseInfoFromFiles').values[0],
           'NOASSERTION');
+      expect(generator.tags.tagByName('P-PackageLicenseDeclared').values[0],
+          'NOASSERTION');
     });
   });
 }

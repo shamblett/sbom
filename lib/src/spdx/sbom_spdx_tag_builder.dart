@@ -94,7 +94,9 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
     // Package license Info from files is always NOASSERTION
     _tags[24].value = SbomSpdxConstants.licenseNoAssertion;
     _add(SbomSpdxTag.mandatory(SbomSpdxTagNames.packageLicenseDeclared,
-        SbomSpdxSectionNames.package, 15, true));
+        SbomSpdxSectionNames.package, 15));
+    // Package license declared is always NOASSERTION
+    _tags[25].value = SbomSpdxConstants.licenseNoAssertion;
     _add(SbomSpdxTag(SbomSpdxTagNames.packageLicenseComments,
         SbomSpdxSectionNames.package, 16, true));
     _add(SbomSpdxTag.mandatory(SbomSpdxTagNames.packageCopyrightText,
