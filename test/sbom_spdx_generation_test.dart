@@ -166,6 +166,9 @@ void main() {
           'The package source info');
       expect(generator.tags.tagByName('P-PackageLicenseConcluded').values[0],
           'MIT');
+      expect(
+          generator.tags.tagByName('P-PackageLicenseInfoFromFiles').values[0],
+          'NOASSERTION');
     });
   });
 }
