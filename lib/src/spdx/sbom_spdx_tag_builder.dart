@@ -100,7 +100,9 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
     _add(SbomSpdxTag(SbomSpdxTagNames.packageLicenseComments,
         SbomSpdxSectionNames.package, 16, true));
     _add(SbomSpdxTag.mandatory(SbomSpdxTagNames.packageCopyrightText,
-        SbomSpdxSectionNames.package, 17, true));
+        SbomSpdxSectionNames.package, 17));
+    // Package copyright text is always NOASSERTION
+    _tags[27].value = SbomSpdxConstants.licenseNoAssertion;
     _add(SbomSpdxTag(SbomSpdxTagNames.packageSummary,
         SbomSpdxSectionNames.package, 18, true));
     _add(SbomSpdxTag(SbomSpdxTagNames.packageDescription,

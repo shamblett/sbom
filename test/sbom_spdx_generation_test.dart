@@ -171,6 +171,10 @@ void main() {
           'NOASSERTION');
       expect(generator.tags.tagByName('P-PackageLicenseDeclared').values[0],
           'NOASSERTION');
+      expect(generator.tags.tagByName('P-PackageLicenseComments').values[0],
+          'The package license comments');
+      expect(generator.tags.tagByName('P-PackageCopyrightText').values[0],
+          'NOASSERTION');
     });
   });
 }
