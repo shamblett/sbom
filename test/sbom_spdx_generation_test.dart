@@ -177,6 +177,8 @@ void main() {
           'NOASSERTION');
       expect(generator.tags.tagByName('P-PackageSummary').values[0],
           'A Software Bill of Materials generator for Dart packages.');
+      expect(generator.tags.tagByName('P-PackageComment').values[0],
+          'The package comment');
     });
   });
 }

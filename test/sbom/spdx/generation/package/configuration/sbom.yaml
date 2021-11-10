@@ -26,6 +26,8 @@ spdx:
     PackageChecksum: 'The package checksum'
     PackageSourceInfo: 'The package source info'
     PackageLicenseComments: 'The package license comments'
+    #PackageDescription:
+    PackageComment: 'The package comment'
 
 
 
