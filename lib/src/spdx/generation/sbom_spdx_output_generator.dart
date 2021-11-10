@@ -103,7 +103,15 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     final license = fileSupport.licenceFileContents();
     tags.tagByName(SbomSpdxTagNames.packageLicenseConcluded).value =
         SbomSpdxLicense().licenseId(license);
-
+    // Summary description
+    if (!tags.tagByName(SbomSpdxTagNames.packageSummary).isSet()) {
+      // Get the package description from the pubspec if present
+      if (configuration.sbomPubspecContents
+          .containsKey(SbomConstants.pubspecDescription)) {
+        tags.tagByName(SbomSpdxTagNames.packageSummary).value =
+            configuration.sbomPubspecContents[SbomConstants.pubspecDescription];
+      }
+    }
     return true;
   }
 

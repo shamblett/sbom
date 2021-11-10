@@ -37,6 +37,7 @@ class SbomConstants {
   /// Pubspec names.
   static const String pubspecName = 'name';
   static const String pubspecVersion = 'version';
+  static const String pubspecDescription = 'description';
 
   /// Site names.
   static const String pubUrl = 'https://pub.dev/packages/';
