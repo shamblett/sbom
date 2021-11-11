@@ -185,12 +185,31 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     return true;
   }
 
+  /// Validate the package section.
+  /// True indicates validation succeeded.
+  bool _validatePackage() {
+    final result = tags.sectionValid(SbomSpdxSectionNames.package);
+    if (result.isNotEmpty) {
+      SbomUtilities.error(
+          'Failed to validate SPDX Package section, failed tags are ${SbomUtilities.tagsToString(result)}');
+      return false;
+    }
+    // Check for any potential specification violations, only warn these.
+
+    return true;
+  }
+
   /// Validate
   @override
   bool validate() {
     SbomUtilities.loud('Validating SPDX sections');
     SbomUtilities.louder('Validating SPDX Document Creation section');
-    final result = _validateDocumentCreation();
+    var result = _validateDocumentCreation();
+    if (!result) {
+      return false;
+    }
+    SbomUtilities.louder('Validating SPDX Package section');
+    result = _validatePackage();
     if (!result) {
       return false;
     }
