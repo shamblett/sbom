@@ -28,6 +28,9 @@ spdx:
     PackageLicenseComments: 'The package license comments'
     #PackageDescription:
     PackageComment: 'The package comment'
+    ExternalRef: 'The package external ref'
+    ExternalRefComment: 'The package external ref comment'
+    PackageAttributionText: 'The package attribution text'
 
 
 

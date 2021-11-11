@@ -179,6 +179,12 @@ void main() {
           'A Software Bill of Materials generator for Dart packages.');
       expect(generator.tags.tagByName('P-PackageComment').values[0],
           'The package comment');
+      expect(generator.tags.tagByName('P-ExternalRef').values[0],
+          'The package external ref');
+      expect(generator.tags.tagByName('P-ExternalRefComment').values[0],
+          'The package external ref comment');
+      expect(generator.tags.tagByName('P-PackageAttributionText').values[0],
+          'The package attribution text');
     });
   });
 }
