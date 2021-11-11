@@ -15,21 +15,26 @@ class SbomSpdxOutputTagvalueFormatter extends SbomSpdxIOutputFormatter {
   /// The formatting processor.
   @override
   bool format() {
-    bool result = _generateDocumentCreation();
+    bool result = _generateSection(SbomSpdxSectionNames.documentCreation);
     if (!result) {
       SbomUtilities.error(
           'SPDX SBOM Formatting - unable to generate a formatted SPDX document creation section in file $outputFile');
+      return false;
+    }
+    result = _generateSection(SbomSpdxSectionNames.package);
+    if (!result) {
+      SbomUtilities.error(
+          'SPDX SBOM Formatting - unable to generate a formatted SPDX package section in file $outputFile');
       return false;
     }
     return true;
   }
 
   /// Format and generate the document creation section.
-  bool _generateDocumentCreation() {
-    SbomUtilities.louder('Generating SPDX Document Creation section');
+  bool _generateSection(String section) {
+    SbomUtilities.louder('Generating SPDX $section section');
     try {
-      final sectionTags =
-          tags.sectionTags(SbomSpdxSectionNames.documentCreation);
+      final sectionTags = tags.sectionTags(section);
       for (final tag in sectionTags) {
         if (tag.isSet()) {
           for (final value in tag.values) {
@@ -45,7 +50,7 @@ class SbomSpdxOutputTagvalueFormatter extends SbomSpdxIOutputFormatter {
       return false;
     }
     // Blank line at the end of the section
-    outputFile.writeAsStringSync('', mode: FileMode.append);
+    outputFile.writeAsStringSync('\n\n', mode: FileMode.append);
 
     return true;
   }

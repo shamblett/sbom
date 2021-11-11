@@ -13,7 +13,7 @@ import 'package:test/test.dart';
 @TestOn('VM')
 void main() {
   group('Document creation section', () {
-    test('Configuration', () {
+    test('Document Configuration', () {
       final config = SbomConfiguration(
           ['-p', 'test/sbom/spdx/generation/documentcreation/configuration']);
       config.parseConfigurationFile();
@@ -127,7 +127,7 @@ void main() {
     });
   });
   group('Package Section', () {
-    test('Configuration', () {
+    test('Package Configuration', () {
       final config = SbomConfiguration(
           ['-p', 'test/sbom/spdx/generation/package/configuration']);
       config.parseConfigurationFile();
