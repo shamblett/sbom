@@ -58,7 +58,7 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
         }
       } else {
         SbomUtilities.warning(
-            'SPDX document creation tag "${SbomSpdxUtilities.getSpecTagName(key)}" is not a valid SPDX tag name - not processing');
+            'SPDX $sectionId tag "${SbomSpdxUtilities.getSpecTagName(key)}" is not a valid SPDX tag name - not processing');
       }
     }
   }
@@ -89,6 +89,16 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
       SbomUtilities.error(
           'Version key not found in pubspec.yaml - cannot continue');
       return false;
+    }
+    // Package file name
+    if (!tags.tagByName(SbomSpdxTagNames.packageFileName).isSet()) {
+      tags.tagByName(SbomSpdxTagNames.packageFileName).value =
+          configuration.packageName;
+    }
+    // Package supplier
+    if (!tags.tagByName(SbomSpdxTagNames.packageSupplier).isSet()) {
+      tags.tagByName(SbomSpdxTagNames.packageSupplier).value =
+          SbomSpdxConstants.licenseNoAssertion;
     }
     // Download location
     tags.tagByName(SbomSpdxTagNames.packageDownloadLocation).value =
@@ -195,7 +205,21 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
       return false;
     }
     // Check for any potential specification violations, only warn these.
-
+    // Package supplier
+    if ((!tags
+            .tagByName(SbomSpdxTagNames.packageSupplier)
+            .value
+            .contains(SbomSpdxConstants.creatorOrganisation)) &&
+        (!tags
+            .tagByName(SbomSpdxTagNames.packageSupplier)
+            .value
+            .contains(SbomSpdxConstants.creatorPerson)) &&
+        (!tags.tagByName(SbomSpdxTagNames.packageSupplier).value as String !=
+            SbomSpdxConstants.licenseNoAssertion)) {
+      SbomUtilities.warning(
+          'Invalid tag value found in configuration for Package section tag name '
+          '${SbomSpdxUtilities.getSpecTagName(SbomSpdxTagNames.packageSupplier)} - SBOM may not pass validation');
+    }
     return true;
   }
 
