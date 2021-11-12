@@ -100,6 +100,11 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
       tags.tagByName(SbomSpdxTagNames.packageSupplier).value =
           SbomSpdxConstants.licenseNoAssertion;
     }
+    // Package originator
+    if (!tags.tagByName(SbomSpdxTagNames.packageOriginator).isSet()) {
+      tags.tagByName(SbomSpdxTagNames.packageOriginator).value =
+          SbomSpdxConstants.licenseNoAssertion;
+    }
     // Download location
     tags.tagByName(SbomSpdxTagNames.packageDownloadLocation).value =
         '${SbomConstants.pubUrl}${configuration.packageName}';
@@ -219,6 +224,21 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
       SbomUtilities.warning(
           'Invalid tag value found in configuration for Package section tag name '
           '${SbomSpdxUtilities.getSpecTagName(SbomSpdxTagNames.packageSupplier)} - SBOM may not pass validation');
+    }
+    // Package originator
+    if ((!tags
+            .tagByName(SbomSpdxTagNames.packageOriginator)
+            .value
+            .contains(SbomSpdxConstants.creatorOrganisation)) &&
+        (!tags
+            .tagByName(SbomSpdxTagNames.packageOriginator)
+            .value
+            .contains(SbomSpdxConstants.creatorPerson)) &&
+        (!tags.tagByName(SbomSpdxTagNames.packageOriginator).value as String !=
+            SbomSpdxConstants.licenseNoAssertion)) {
+      SbomUtilities.warning(
+          'Invalid tag value found in configuration for Package section tag name '
+          '${SbomSpdxUtilities.getSpecTagName(SbomSpdxTagNames.packageOriginator)} - SBOM may not pass validation');
     }
     return true;
   }
