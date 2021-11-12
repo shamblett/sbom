@@ -211,34 +211,26 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     }
     // Check for any potential specification violations, only warn these.
     // Package supplier
-    if ((!tags
-            .tagByName(SbomSpdxTagNames.packageSupplier)
-            .value
-            .contains(SbomSpdxConstants.creatorOrganisation)) &&
-        (!tags
-            .tagByName(SbomSpdxTagNames.packageSupplier)
-            .value
-            .contains(SbomSpdxConstants.creatorPerson)) &&
-        (!tags.tagByName(SbomSpdxTagNames.packageSupplier).value as String !=
-            SbomSpdxConstants.licenseNoAssertion)) {
-      SbomUtilities.warning(
-          'Invalid tag value found in configuration for Package section tag name '
-          '${SbomSpdxUtilities.getSpecTagName(SbomSpdxTagNames.packageSupplier)} - SBOM may not pass validation');
+    var tag = tags.tagByName(SbomSpdxTagNames.packageSupplier);
+    for (final value in tag.values) {
+      if ((!value.contains(SbomSpdxConstants.creatorOrganisation)) &&
+          (!value.contains(SbomSpdxConstants.creatorPerson)) &&
+          (value as String != SbomSpdxConstants.licenseNoAssertion)) {
+        SbomUtilities.warning(
+            'Invalid tag value found in configuration for Package section, tag name '
+            '${SbomSpdxUtilities.getSpecTagName(SbomSpdxTagNames.packageSupplier)} - SBOM may not pass validation');
+      }
     }
     // Package originator
-    if ((!tags
-            .tagByName(SbomSpdxTagNames.packageOriginator)
-            .value
-            .contains(SbomSpdxConstants.creatorOrganisation)) &&
-        (!tags
-            .tagByName(SbomSpdxTagNames.packageOriginator)
-            .value
-            .contains(SbomSpdxConstants.creatorPerson)) &&
-        (!tags.tagByName(SbomSpdxTagNames.packageOriginator).value as String !=
-            SbomSpdxConstants.licenseNoAssertion)) {
-      SbomUtilities.warning(
-          'Invalid tag value found in configuration for Package section tag name '
-          '${SbomSpdxUtilities.getSpecTagName(SbomSpdxTagNames.packageOriginator)} - SBOM may not pass validation');
+    tag = tags.tagByName(SbomSpdxTagNames.packageOriginator);
+    for (final value in tag.values) {
+      if ((!value.contains(SbomSpdxConstants.creatorOrganisation)) &&
+          (!value.contains(SbomSpdxConstants.creatorPerson)) &&
+          (value as String != SbomSpdxConstants.licenseNoAssertion)) {
+        SbomUtilities.warning(
+            'Invalid tag value found in configuration for Package section, tag name '
+            '${SbomSpdxUtilities.getSpecTagName(SbomSpdxTagNames.packageOriginator)} - SBOM may not pass validation');
+      }
     }
     return true;
   }
