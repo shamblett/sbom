@@ -20,6 +20,22 @@ class SbomSpdxConstants {
   static const String textStart = '<text>';
   static const String textEnd = '</text>';
 
+  // External reference category
+  static const String externalRefCategorySecurity = 'SECURITY';
+  static const String externalRefCategoryPm = 'PACKAGE-MANAGER';
+  static const String externalRefCategoryPersistent = 'PERSISTENT-ID';
+  static const String externalRefCategoryOther = 'OTHER';
+
+  // External reference type
+  static const String externalRefTypeCpe22 = 'cpe22Type';
+  static const String externalRefTypeCpe23 = 'cpe23Type';
+  static const String externalRefTypeMaven = 'maven-central';
+  static const String externalRefTypeNpm = 'npm';
+  static const String externalRefTypeNuget = 'nuget';
+  static const String externalRefTypeBower = 'bower';
+  static const String externalRefTypePurl = 'purl';
+  static const String externalRefTypeSwh = 'swh';
+
   /// Output Format
   static const String spdxOutputFormatDirective = 'SPDXFormat';
   static const String spdxOutputTagValue = 'tagvalue';
