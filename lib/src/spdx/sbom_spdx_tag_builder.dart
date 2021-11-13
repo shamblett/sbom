@@ -84,7 +84,7 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
     _add(SbomSpdxTag(SbomSpdxTagNames.packageChecksum,
         SbomSpdxSectionNames.package, 10, true));
     _add(SbomSpdxTag(SbomSpdxTagNames.packageHomePage,
-        SbomSpdxSectionNames.package, 11, true));
+        SbomSpdxSectionNames.package, 11));
     _add(SbomSpdxTag(SbomSpdxTagNames.packageSourceInfo,
         SbomSpdxSectionNames.package, 12, true));
     _add(SbomSpdxTag.mandatory(SbomSpdxTagNames.packageLicenseConcluded,

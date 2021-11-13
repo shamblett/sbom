@@ -172,13 +172,15 @@ void main() {
       expect(generator.tags.tagByName('P-PackageLicenseDeclared').values[0],
           'NOASSERTION');
       expect(generator.tags.tagByName('P-PackageLicenseComments').values[0],
-          'The package license comments');
+          '<text>The package license comments</text>');
       expect(generator.tags.tagByName('P-PackageCopyrightText').values[0],
           'NOASSERTION');
       expect(generator.tags.tagByName('P-PackageSummary').values[0],
-          'A Software Bill of Materials generator for Dart packages.');
+          '<text>A Software Bill of Materials generator for Dart packages.</text>');
+      expect(generator.tags.tagByName('P-PackageDescription').values[0],
+          '<text>The package description.</text>');
       expect(generator.tags.tagByName('P-PackageComment').values[0],
-          'The package comment');
+          '<text>The package comment</text>');
       expect(generator.tags.tagByName('P-ExternalRef').values[0],
           'The package external ref');
       expect(generator.tags.tagByName('P-ExternalRefComment').values[0],

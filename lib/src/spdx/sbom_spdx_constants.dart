@@ -17,6 +17,8 @@ class SbomSpdxConstants {
   static const String creatorPerson = 'Person: ';
   static const String creatorTool = 'Tool: ';
   static const String creatorOrganisation = 'Organisation: ';
+  static const String textStart = '<text>';
+  static const String textEnd = '</text>';
 
   /// Output Format
   static const String spdxOutputFormatDirective = 'SPDXFormat';

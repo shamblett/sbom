@@ -124,7 +124,7 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
       if (configuration.sbomPubspecContents
           .containsKey(SbomConstants.pubspecDescription)) {
         tags.tagByName(SbomSpdxTagNames.packageSummary).value =
-            configuration.sbomPubspecContents[SbomConstants.pubspecDescription];
+            '${SbomSpdxConstants.textStart}${configuration.sbomPubspecContents[SbomConstants.pubspecDescription]}${SbomSpdxConstants.textEnd}';
       }
     }
     return true;
@@ -232,6 +232,47 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
             '${SbomSpdxUtilities.getSpecTagName(SbomSpdxTagNames.packageOriginator)} - SBOM may not pass validation');
       }
     }
+    // Comments on license
+    tag = tags.tagByName(SbomSpdxTagNames.packageLicenseComments);
+    for (final value in tag.values) {
+      if ((!value.startsWith(SbomSpdxConstants.textStart)) &&
+          (!value.endsWith(SbomSpdxConstants.textEnd))) {
+        SbomUtilities.warning(
+            'Invalid tag value found in configuration for Package section, tag name '
+            '${SbomSpdxUtilities.getSpecTagName(SbomSpdxTagNames.packageLicenseConcluded)} - SBOM may not pass validation');
+      }
+    }
+    // Package summary
+    tag = tags.tagByName(SbomSpdxTagNames.packageSummary);
+    for (final value in tag.values) {
+      if ((!value.startsWith(SbomSpdxConstants.textStart)) &&
+          (!value.endsWith(SbomSpdxConstants.textEnd))) {
+        SbomUtilities.warning(
+            'Invalid tag value found in configuration for Package section, tag name '
+            '${SbomSpdxUtilities.getSpecTagName(SbomSpdxTagNames.packageSummary)} - SBOM may not pass validation');
+      }
+    }
+    // Package description
+    tag = tags.tagByName(SbomSpdxTagNames.packageDescription);
+    for (final value in tag.values) {
+      if ((!value.startsWith(SbomSpdxConstants.textStart)) &&
+          (!value.endsWith(SbomSpdxConstants.textEnd))) {
+        SbomUtilities.warning(
+            'Invalid tag value found in configuration for Package section, tag name '
+            '${SbomSpdxUtilities.getSpecTagName(SbomSpdxTagNames.packageDescription)} - SBOM may not pass validation');
+      }
+    }
+    // Package comment
+    tag = tags.tagByName(SbomSpdxTagNames.packageComment);
+    for (final value in tag.values) {
+      if ((!value.startsWith(SbomSpdxConstants.textStart)) &&
+          (!value.endsWith(SbomSpdxConstants.textEnd))) {
+        SbomUtilities.warning(
+            'Invalid tag value found in configuration for Package section, tag name '
+            '${SbomSpdxUtilities.getSpecTagName(SbomSpdxTagNames.packageComment)} - SBOM may not pass validation');
+      }
+    }
+
     return true;
   }
 

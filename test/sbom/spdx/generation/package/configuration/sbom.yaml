@@ -25,9 +25,10 @@ spdx:
     PackageOriginator: 'The package originator'
     PackageChecksum: 'The package checksum'
     PackageSourceInfo: 'The package source info'
-    PackageLicenseComments: 'The package license comments'
-    #PackageDescription:
-    PackageComment: 'The package comment'
+    PackageLicenseComments: '<text>The package license comments</text>'
+    #PackageSummary:<text>...</text>
+    PackageDescription: '<text>The package description.</text>'
+    PackageComment: '<text>The package comment</text>'
     ExternalRef: 'The package external ref'
     ExternalRefComment: 'The package external ref comment'
     PackageAttributionText: 'The package attribution text'

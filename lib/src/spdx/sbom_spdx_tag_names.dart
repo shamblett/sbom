@@ -60,7 +60,7 @@ class SbomSpdxTagNames {
   static const String packageCopyrightText =
       packageSectionId + 'PackageCopyrightText';
   static const String packageSummary = packageSectionId + 'PackageSummary';
-  static const String packageDescription = 'PackageDescription';
+  static const String packageDescription = packageSectionId + 'PackageDescription';
   static const String packageComment = packageSectionId + 'PackageComment';
   static const String packageExternalRef = packageSectionId + 'ExternalRef';
   static const String packageExternalRefComment =
