@@ -21,10 +21,10 @@ spdx:
   package:
     PackageName: 'Cant be overridden'
     PackageFileName: 'The package filename'
-    PackageSupplier: 'The package supplier'
-    PackageOriginator: 'The package originator'
+    PackageSupplier: 'Organization: The package supplier'
+    PackageOriginator: 'Person: The package originator'
     PackageChecksum: 'The package checksum'
-    PackageSourceInfo: 'The package source info'
+    PackageSourceInfo: '<text>The package source info</text>'
     PackageLicenseComments: '<text>The package license comments</text>'
     #PackageSummary:<text>...</text>
     PackageDescription: '<text>The package description.</text>'

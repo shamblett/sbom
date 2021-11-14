@@ -16,7 +16,7 @@ class SbomSpdxConstants {
   static const String licenseListVersion = '3.8';
   static const String creatorPerson = 'Person: ';
   static const String creatorTool = 'Tool: ';
-  static const String creatorOrganisation = 'Organisation: ';
+  static const String creatorOrganisation = 'Organization: ';
   static const String textStart = '<text>';
   static const String textEnd = '</text>';
 
@@ -67,7 +67,8 @@ class SbomSpdxConstants {
     SbomSpdxTagNames.packageLicenseComments,
     SbomSpdxTagNames.packageSummary,
     SbomSpdxTagNames.packageDescription,
-    SbomSpdxTagNames.packageComment
+    SbomSpdxTagNames.packageComment,
+    SbomSpdxTagNames.packageSourceInfo
   ];
 
   static const List<String> documentTextTags = [

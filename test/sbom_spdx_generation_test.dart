@@ -146,9 +146,9 @@ void main() {
       expect(generator.tags.tagByName('P-PackageFileName').values[0],
           'The package filename');
       expect(generator.tags.tagByName('P-PackageSupplier').values[0],
-          'The package supplier');
+          'Organization: The package supplier');
       expect(generator.tags.tagByName('P-PackageOriginator').values[0],
-          'The package originator');
+          'Person: The package originator');
       expect(generator.tags.tagByName('P-PackageDownloadLocation').values[0],
           'https://pub.dev/packages/sbom');
       expect(generator.tags.tagByName('P-FilesAnalyzed').values[0], 'true');
@@ -163,7 +163,7 @@ void main() {
       expect(generator.tags.tagByName('P-PackageHomePage').values[0],
           'https://pub.dev/packages/sbom');
       expect(generator.tags.tagByName('P-PackageSourceInfo').values[0],
-          'The package source info');
+          '<text>The package source info</text>');
       expect(generator.tags.tagByName('P-PackageLicenseConcluded').values[0],
           'MIT');
       expect(
