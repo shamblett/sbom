@@ -61,4 +61,12 @@ class SbomSpdxConstants {
   static const licenseIsOsiApproved = 'isOsiApproved';
   static const licenceDirectory = 'lib/src/spdx/licences';
   static const licenseNoAssertion = 'NOASSERTION';
+
+  /// Tag value Validation
+  static const List<String> packageTextTags = [
+    SbomSpdxTagNames.packageLicenseComments,
+    SbomSpdxTagNames.packageSummary,
+    SbomSpdxTagNames.packageDescription,
+    SbomSpdxTagNames.packageComment
+  ];
 }
