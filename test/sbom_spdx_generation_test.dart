@@ -61,7 +61,7 @@ void main() {
       final sbom = File(generator.sbomFilePath);
       expect(sbom.existsSync(), isTrue);
     });
-    test('Environment', () {
+    test('Document Environment', () {
       final config = SbomConfiguration([
         '-p',
         'test/sbom/spdx/generation/documentcreation/environment',
@@ -101,14 +101,14 @@ void main() {
       expect(generator.tags.tagByName('DC-Created').values[0].endsWith('Z'),
           isTrue);
       expect(generator.tags.tagByName('DC-CreatorComment').values[0],
-          'Creator comment from configuration');
+          '<text>Creator comment from configuration</text>');
       expect(generator.tags.tagByName('DC-DocumentComment').values[0],
-          'Document comment from configuration');
+          '<text>Document comment from configuration</text>');
       expect(generator.tags.sectionValid('documentCreation').isEmpty, isTrue);
       final sbom = File(generator.sbomFilePath);
       expect(sbom.existsSync(), isTrue);
     });
-    test('Validation fail', () {
+    test('Document Validation fail', () {
       final config = SbomConfiguration([
         '-p',
         'test/sbom/spdx/generation/documentcreation/environmentinvalid',

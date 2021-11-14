@@ -197,6 +197,18 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
             'SPDX document creation section has invalid creator tag values - "$value"');
       }
     }
+    // Tag value field text validation
+    for (final name in SbomSpdxConstants.documentTextTags) {
+      var tag = tags.tagByName(name);
+      for (final value in tag.values) {
+        if ((!value.startsWith(SbomSpdxConstants.textStart)) &&
+            (!value.endsWith(SbomSpdxConstants.textEnd))) {
+          SbomUtilities.warning(
+              'Invalid tag value found in configuration for DocumentCreation section, tag name '
+              '${SbomSpdxUtilities.getSpecTagName(name)} - SBOM may not pass validation');
+        }
+      }
+    }
     return true;
   }
 

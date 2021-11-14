@@ -69,4 +69,9 @@ class SbomSpdxConstants {
     SbomSpdxTagNames.packageDescription,
     SbomSpdxTagNames.packageComment
   ];
+
+  static const List<String> documentTextTags = [
+    SbomSpdxTagNames.creatorComment,
+    SbomSpdxTagNames.documentComment
+  ];
 }
