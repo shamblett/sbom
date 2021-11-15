@@ -200,14 +200,7 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     // Tag value field text validation
     for (final name in SbomSpdxConstants.documentTextTags) {
       var tag = tags.tagByName(name);
-      for (final value in tag.values) {
-        if ((!value.startsWith(SbomSpdxConstants.textStart)) &&
-            (!value.endsWith(SbomSpdxConstants.textEnd))) {
-          SbomUtilities.warning(
-              'Invalid tag value found in configuration for DocumentCreation section, tag name '
-              '${SbomSpdxUtilities.getSpecTagName(name)} - SBOM may not pass validation');
-        }
-      }
+      SbomSpdxUtilities.checkTagValueTextFields(tag, 'Document Creation');
     }
     return true;
   }
@@ -248,14 +241,7 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     // Tag value field text validation
     for (final name in SbomSpdxConstants.packageTextTags) {
       var tag = tags.tagByName(name);
-      for (final value in tag.values) {
-        if ((!value.startsWith(SbomSpdxConstants.textStart)) &&
-            (!value.endsWith(SbomSpdxConstants.textEnd))) {
-          SbomUtilities.warning(
-              'Invalid tag value found in configuration for Package section, tag name '
-              '${SbomSpdxUtilities.getSpecTagName(name)} - SBOM may not pass validation');
-        }
-      }
+      SbomSpdxUtilities.checkTagValueTextFields(tag, 'Package');
     }
 
     return true;
