@@ -75,4 +75,17 @@ class SbomSpdxConstants {
     SbomSpdxTagNames.creatorComment,
     SbomSpdxTagNames.documentComment
   ];
+
+  static const Map<String, List<String>> packageExternalRefTag = {
+    externalRefCategorySecurity: [externalRefTypeCpe22, externalRefTypeCpe23],
+    externalRefCategoryPm: [
+      externalRefTypeMaven,
+      externalRefTypeNpm,
+      externalRefTypeNuget,
+      externalRefTypeBower,
+      externalRefTypePurl
+    ],
+    externalRefCategoryPersistent: [externalRefTypeSwh],
+    externalRefCategoryOther: []
+  };
 }

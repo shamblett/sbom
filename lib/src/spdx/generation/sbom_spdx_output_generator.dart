@@ -244,6 +244,29 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
       SbomSpdxUtilities.checkTagValueTextFields(tag, 'Package');
     }
 
+    // External reference value validation
+    var ok = false;
+    tag = tags.tagByName(SbomSpdxTagNames.packageExternalRef);
+    FINISH:
+    for (final category in SbomSpdxConstants.packageExternalRefTag.keys) {
+      for (final value in tag.values) {
+        if (value.startsWith(category)) {
+          final types = SbomSpdxConstants.packageExternalRefTag[category];
+          for (final type in types!) {
+            if (value.contains(type)) {
+              ok = true;
+              break FINISH;
+            }
+          }
+        }
+      }
+    }
+    if (!ok) {
+      SbomUtilities.warning(
+          'Invalid tag value found in configuration for Package section, tag name '
+          '${SbomSpdxUtilities.getSpecTagName(SbomSpdxTagNames.packageExternalRef)} - SBOM may not pass validation');
+    }
+
     return true;
   }
 
