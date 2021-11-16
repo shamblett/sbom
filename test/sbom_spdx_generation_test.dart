@@ -186,7 +186,7 @@ void main() {
       expect(generator.tags.tagByName('P-ExternalRefComment').values[0],
           '<text>The package external ref comment<text>');
       expect(generator.tags.tagByName('P-PackageAttributionText').values[0],
-          'The package attribution text');
+          '<text>The package attribution text</text>');
     });
   });
 }
