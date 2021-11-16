@@ -184,7 +184,7 @@ void main() {
       expect(generator.tags.tagByName('P-ExternalRef').values[0],
           'SECURITY cpe23Type The package external ref');
       expect(generator.tags.tagByName('P-ExternalRefComment').values[0],
-          'The package external ref comment');
+          '<text>The package external ref comment<text>');
       expect(generator.tags.tagByName('P-PackageAttributionText').values[0],
           'The package attribution text');
     });

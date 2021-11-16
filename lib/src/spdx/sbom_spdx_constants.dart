@@ -68,7 +68,8 @@ class SbomSpdxConstants {
     SbomSpdxTagNames.packageSummary,
     SbomSpdxTagNames.packageDescription,
     SbomSpdxTagNames.packageComment,
-    SbomSpdxTagNames.packageSourceInfo
+    SbomSpdxTagNames.packageSourceInfo,
+    SbomSpdxTagNames.packageExternalRefComment
   ];
 
   static const List<String> documentTextTags = [

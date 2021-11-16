@@ -30,7 +30,7 @@ spdx:
     PackageDescription: '<text>The package description.</text>'
     PackageComment: '<text>The package comment</text>'
     ExternalRef: 'SECURITY cpe23Type The package external ref'
-    ExternalRefComment: 'The package external ref comment'
+    ExternalRefComment: '<text>The package external ref comment<text>'
     PackageAttributionText: 'The package attribution text'
 
 
