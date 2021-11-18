@@ -16,6 +16,16 @@ class SbomFileSupport {
   /// Package top level
   final String _topLevelPath;
 
+  /// The package Dart files.
+  final _dartFiles = <File>[];
+  List<File> get dartFiles => _dartFiles;
+
+  /// The package file digests.
+  /// These are the Dart file digests in order from [dartFiles] plus
+  /// the digest of the pubspec.yaml file at the end.
+  final _digests = <Digest>[];
+  List<Digest> get digests => _digests;
+
   /// Gets a list of Dart files in a package directory from the lib and
   /// bin directories.
   /// Returns a list of absolute file paths, empty if none found or
@@ -42,6 +52,7 @@ class SbomFileSupport {
         final binFiles = binDir.listSync(recursive: true);
         for (final entity in binFiles) {
           if (entity is File) {
+            _dartFiles.add(entity);
             var file = entity.absolute;
             if (path.extension(file.path) == SbomConstants.dartFiletype) {
               output.add(file.path);
@@ -115,6 +126,9 @@ class SbomFileSupport {
     if (digest != null) {
       packageFileDigests.add(digest);
     }
+    // Update the file digests
+    _digests.addAll(packageFileDigests);
+
     // Sort the digests ascending
     packageFileDigests.sort((a, b) => a.toString().compareTo(b.toString()));
     return combinedDigest(packageFileDigests);

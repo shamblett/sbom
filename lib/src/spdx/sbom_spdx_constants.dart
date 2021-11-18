@@ -9,7 +9,7 @@ part of sbom;
 
 /// SPDX constants
 class SbomSpdxConstants {
-  // Specification tag value constants.
+  /// Specification tag value constants.
   static const String version = 'SPDX-2.2';
   static const String license = 'CC0-1.0';
   static const String idReference = 'SPDXRef-';
@@ -19,14 +19,16 @@ class SbomSpdxConstants {
   static const String creatorOrganisation = 'Organization: ';
   static const String textStart = '<text>';
   static const String textEnd = '</text>';
+  static const fileSourceType = 'SOURCE';
+  static const fileTextType = 'TEXT';
 
-  // External reference category
+  /// External reference category
   static const String externalRefCategorySecurity = 'SECURITY';
   static const String externalRefCategoryPm = 'PACKAGE-MANAGER';
   static const String externalRefCategoryPersistent = 'PERSISTENT-ID';
   static const String externalRefCategoryOther = 'OTHER';
 
-  // External reference type
+  /// External reference type
   static const String externalRefTypeCpe22 = 'cpe22Type';
   static const String externalRefTypeCpe23 = 'cpe23Type';
   static const String externalRefTypeMaven = 'maven-central';

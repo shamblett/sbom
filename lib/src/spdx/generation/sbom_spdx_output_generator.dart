@@ -152,6 +152,17 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     return true;
   }
 
+  /// Build the file section.
+  bool _buildFile() {
+    SbomUtilities.louder('Building SPDX File section');
+    // Get the Dart files and the digests from file support.
+    // These will already be available as they are built by the packaging section.
+    var files = fileSupport.dartFiles;
+    var digests = fileSupport.digests;
+
+    return true;
+  }
+
   /// Build
   @override
   bool build() {
@@ -172,6 +183,11 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     result = _buildPackage();
     if (!result) {
       SbomUtilities.error('Failed to build SPDX Package section.');
+      return false;
+    }
+    result = _buildFile();
+    if (!result) {
+      SbomUtilities.error('Failed to build SPDX File section.');
       return false;
     }
     return true;

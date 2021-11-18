@@ -13,8 +13,9 @@ part of sbom;
 class SbomSpdxTagNames {
   static const String documentCreationSectionId = 'DC-';
   static const String packageSectionId = 'P-';
+  static const String fileSectionId = 'F-';
 
-  // Document creation
+  /// Document creation
   static const String version = documentCreationSectionId + 'SPDXVersion';
   static const String dataLicense = documentCreationSectionId + 'DataLicense';
   static const String identifier = documentCreationSectionId + 'SPDXID';
@@ -32,7 +33,7 @@ class SbomSpdxTagNames {
   static const String documentComment =
       documentCreationSectionId + 'DocumentComment';
 
-  // Package
+  /// Package
   static const String packageName = packageSectionId + 'PackageName';
   static const String packageIdentifier = packageSectionId + 'SPDXID';
   static const String packageVersion = packageSectionId + 'PackageVersion';
@@ -60,11 +61,23 @@ class SbomSpdxTagNames {
   static const String packageCopyrightText =
       packageSectionId + 'PackageCopyrightText';
   static const String packageSummary = packageSectionId + 'PackageSummary';
-  static const String packageDescription = packageSectionId + 'PackageDescription';
+  static const String packageDescription =
+      packageSectionId + 'PackageDescription';
   static const String packageComment = packageSectionId + 'PackageComment';
   static const String packageExternalRef = packageSectionId + 'ExternalRef';
   static const String packageExternalRefComment =
       packageSectionId + 'ExternalRefComment';
   static const String packageAttributionText =
       packageSectionId + 'PackageAttributionText';
+
+  /// File
+  static const String fileFileName = fileSectionId + 'FileName';
+  static const String filePackageIdentifier = fileSectionId + 'SPDXID';
+  static const String fileFileType = fileSectionId + 'FileType';
+  static const String fileFileChecksum = fileSectionId + 'FileChecksum';
+  static const String fileLicenceConcluded = fileSectionId + 'LicenseConcluded';
+  static const String fileLicenseInfoInFile =
+      fileSectionId + 'LicenseInfoInFile';
+  static const String fileLicenseComments = fileSectionId + 'LicenseComments';
+  static const String fileCopyrightText = fileSectionId + 'FileCopyrightText';
 }
