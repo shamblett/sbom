@@ -189,4 +189,17 @@ void main() {
           '<text>The package attribution text</text>');
     });
   });
+  group('File Section', () {
+    test('File tags', () {
+      final config = SbomConfiguration(
+          ['-p', 'test/sbom/spdx/generation/file/configuration']);
+      config.parseConfigurationFile();
+      config.parsePubspecFile();
+      expect(config.valid, isTrue);
+      expect(config.outputType, SbomType.spdx);
+      final generator = SbomGenerator(config);
+      generator.generate();
+      expect(generator.valid, isTrue);
+    });
+  });
 }

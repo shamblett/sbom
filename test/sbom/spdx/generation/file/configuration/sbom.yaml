@@ -1,0 +1,37 @@
+type: spdx
+
+spdx:
+  SPDXFormat: 'tagvalue'
+  # Document Creation section
+  documentCreation:
+    Version: 'Invalid tag'
+    SPDXVersion: 'Cant be overridden'
+    DocumentName: 'Document name from configuration'
+    DocumentNamespace: 'Document name space from configuration'
+    ExternalDocumentRef :
+      - 'External Doc Ref 1'
+      - 'External Doc Ref 2'
+    Creator :
+      - 'Person: Steve Hamblett <steve.hamblett@linux.com'
+      - 'Not a real creator value'
+    CreatorComment: 'Creator comment from configuration'
+    DocumentComment: 'Document comment from configuration'
+
+  # Package section
+  package:
+    PackageName: 'Cant be overridden'
+    PackageFileName: 'The package filename'
+    PackageSupplier: 'Organization: The package supplier'
+    PackageOriginator: 'Person: The package originator'
+    PackageChecksum: 'The package checksum'
+    PackageSourceInfo: '<text>The package source info</text>'
+    PackageLicenseComments: '<text>The package license comments</text>'
+    #PackageSummary:<text>...</text>
+    PackageDescription: '<text>The package description.</text>'
+    PackageComment: '<text>The package comment</text>'
+    ExternalRef: 'SECURITY cpe23Type The package external ref'
+    ExternalRefComment: '<text>The package external ref comment<text>'
+    PackageAttributionText: '<text>The package attribution text</text>'
+
+
+

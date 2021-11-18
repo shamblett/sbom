@@ -159,6 +159,18 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     // These will already be available as they are built by the packaging section.
     var files = fileSupport.dartFiles;
     var digests = fileSupport.digests;
+    final fileCount = files.length;
+    final existingTagCount = tags.tags.length;
+    var tagCount = existingTagCount;
+    var position = 1;
+
+    // Create the tags for the Dart files.
+    for (var i = 0; i <= fileCount; i++) {
+      // Name
+      tags.tags.add(SbomSpdxTag.mandatory('${SbomSpdxTagNames.fileFileName}-$i',
+          SbomSpdxSectionNames.file, position++));
+      tags.tags[tagCount++].value = files[i].path;
+    }
 
     return true;
   }
