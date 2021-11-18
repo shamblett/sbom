@@ -42,6 +42,7 @@ class SbomFileSupport {
           var file = entity.absolute;
           if (path.extension(file.path) == SbomConstants.dartFiletype) {
             output.add(file.path);
+            _dartFiles.add(entity);
           }
         }
       }
@@ -52,10 +53,10 @@ class SbomFileSupport {
         final binFiles = binDir.listSync(recursive: true);
         for (final entity in binFiles) {
           if (entity is File) {
-            _dartFiles.add(entity);
             var file = entity.absolute;
             if (path.extension(file.path) == SbomConstants.dartFiletype) {
               output.add(file.path);
+              _dartFiles.add(entity);
             }
           }
         }

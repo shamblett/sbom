@@ -158,6 +158,11 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     // Get the Dart files and the digests from file support.
     // These will already be available as they are built by the packaging section.
     var files = fileSupport.dartFiles;
+    if (files.isEmpty) {
+      SbomUtilities.warning(
+          'No package files available - SBOM will not be complete');
+      return false;
+    }
     var digests = fileSupport.digests;
     final fileCount = files.length;
     final existingTagCount = tags.tags.length;
@@ -165,11 +170,11 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     var position = 1;
 
     // Create the tags for the Dart files.
-    for (var i = 0; i <= fileCount; i++) {
+    for (var i = 0; i < fileCount; i++) {
       // Name
       tags.tags.add(SbomSpdxTag.mandatory('${SbomSpdxTagNames.fileFileName}-$i',
           SbomSpdxSectionNames.file, position++));
-      tags.tags[tagCount++].value = files[i].path;
+      tags.tags[tagCount++].value = path.normalize(path.relative(files[i].path, from : configuration.packageTopLevel));
     }
 
     return true;
