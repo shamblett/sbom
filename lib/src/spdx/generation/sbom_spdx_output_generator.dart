@@ -183,6 +183,9 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
           position++));
       tags.tags[tagCount++].value =
           '${SbomSpdxConstants.idReference}${path.basenameWithoutExtension(name)}-$i';
+      tags.tags.add(SbomSpdxTag.mandatory('${SbomSpdxTagNames.fileFileType}-$i',
+          SbomSpdxSectionNames.file, position++));
+      tags.tags[tagCount++].value = SbomSpdxConstants.fileSourceType;
     }
 
     return true;

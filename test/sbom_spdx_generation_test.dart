@@ -203,7 +203,11 @@ void main() {
       expect(
           generator.tags.tagByName('F-FileName-0').values[0], '/lib/sbom.dart');
       expect(
+          generator.tags.tagByName('F-FileName-0').position, 1);
+      expect(
           generator.tags.tagByName('F-SPDXID-0').values[0], 'SPDXRef-sbom-0');
+      expect(
+          generator.tags.tagByName('F-FileType-0').values[0], 'SOURCE');
     });
   });
 }

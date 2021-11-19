@@ -19,8 +19,8 @@ class SbomSpdxConstants {
   static const String creatorOrganisation = 'Organization: ';
   static const String textStart = '<text>';
   static const String textEnd = '</text>';
-  static const fileSourceType = 'SOURCE';
-  static const fileTextType = 'TEXT';
+  static const String fileSourceType = 'SOURCE';
+  static const String fileTextType = 'TEXT';
 
   /// External reference category
   static const String externalRefCategorySecurity = 'SECURITY';
