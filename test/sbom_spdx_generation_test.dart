@@ -192,7 +192,7 @@ void main() {
   group('File Section', () {
     test('File tags', () {
       final config = SbomConfiguration(
-          ['-p', 'test/sbom/spdx/generation/file/configuration','-L']);
+          ['-p', 'test/sbom/spdx/generation/file/configuration', '-L']);
       config.parseConfigurationFile();
       config.parsePubspecFile();
       expect(config.valid, isTrue);
@@ -202,6 +202,8 @@ void main() {
       expect(generator.valid, isTrue);
       expect(
           generator.tags.tagByName('F-FileName-0').values[0], '/lib/sbom.dart');
+      expect(
+          generator.tags.tagByName('F-SPDXID-0').values[0], 'SPDXRef-sbom-0');
     });
   });
 }
