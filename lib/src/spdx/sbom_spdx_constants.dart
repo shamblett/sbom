@@ -21,6 +21,7 @@ class SbomSpdxConstants {
   static const String textEnd = '</text>';
   static const String fileSourceType = 'SOURCE';
   static const String fileTextType = 'TEXT';
+  static const String sha1Tag = 'SHA1';
 
   /// External reference category
   static const String externalRefCategorySecurity = 'SECURITY';
@@ -50,19 +51,20 @@ class SbomSpdxConstants {
   static const String outputFileName = 'sbom.spdx';
 
   /// License
-  static const licenseIsDeprecatedId = 'isDeprecatedLicenseId';
-  static const licenseIsFsfLibre = 'isFsfLibre';
-  static const licenseText = 'licenseText';
-  static const licenseStandardHeaderTemplate = 'standardLicenseHeaderTemplate';
-  static const licenseStandardTemplate = 'standardLicenseTemplate';
-  static const licenseName = 'name';
-  static const licenseComments = 'licenseComments';
-  static const licenseId = 'licenseId';
-  static const licenseStandardHeader = 'standardLicenseHeader';
-  static const licenseSeeAlso = 'seeAlso';
-  static const licenseIsOsiApproved = 'isOsiApproved';
-  static const licenceDirectory = 'lib/src/spdx/licences';
-  static const licenseNoAssertion = 'NOASSERTION';
+  static const String licenseIsDeprecatedId = 'isDeprecatedLicenseId';
+  static const String licenseIsFsfLibre = 'isFsfLibre';
+  static const String licenseText = 'licenseText';
+  static const String licenseStandardHeaderTemplate =
+      'standardLicenseHeaderTemplate';
+  static const String licenseStandardTemplate = 'standardLicenseTemplate';
+  static const String licenseName = 'name';
+  static const String licenseComments = 'licenseComments';
+  static const String licenseId = 'licenseId';
+  static const String licenseStandardHeader = 'standardLicenseHeader';
+  static const String licenseSeeAlso = 'seeAlso';
+  static const String licenseIsOsiApproved = 'isOsiApproved';
+  static const String licenceDirectory = 'lib/src/spdx/licences';
+  static const String licenseNoAssertion = 'NOASSERTION';
 
   /// Tag value Validation
   static const List<String> packageTextTags = [

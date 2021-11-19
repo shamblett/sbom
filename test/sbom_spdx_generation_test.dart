@@ -202,12 +202,17 @@ void main() {
       expect(generator.valid, isTrue);
       expect(
           generator.tags.tagByName('F-FileName-0').values[0], '/lib/sbom.dart');
-      expect(
-          generator.tags.tagByName('F-FileName-0').position, 1);
+      expect(generator.tags.tagByName('F-FileName-0').position, 1);
       expect(
           generator.tags.tagByName('F-SPDXID-0').values[0], 'SPDXRef-sbom-0');
+      expect(generator.tags.tagByName('F-FileType-0').values[0], 'SOURCE');
       expect(
-          generator.tags.tagByName('F-FileType-0').values[0], 'SOURCE');
+          generator.tags
+              .tagByName('F-FileChecksum-0')
+              .values[0]
+              .contains('SHA1: '),
+          isTrue);
+      expect(generator.tags.tagByName('F-FileChecksum-0').values[0].length, 46);
     });
   });
 }
