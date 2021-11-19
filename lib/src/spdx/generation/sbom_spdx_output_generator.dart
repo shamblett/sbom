@@ -174,7 +174,9 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
       // Name
       tags.tags.add(SbomSpdxTag.mandatory('${SbomSpdxTagNames.fileFileName}-$i',
           SbomSpdxSectionNames.file, position++));
-      tags.tags[tagCount++].value = path.normalize(path.relative(files[i].path, from : configuration.packageTopLevel));
+      final name = path.relative(path.normalize(files[i].path),
+          from: configuration.packageTopLevel);
+      tags.tags[tagCount++].value = SbomSpdxUtilities.formatFilePath(name);
     }
 
     return true;

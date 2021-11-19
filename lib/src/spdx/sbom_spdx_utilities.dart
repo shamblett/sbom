@@ -27,4 +27,11 @@ class SbomSpdxUtilities {
       }
     }
   }
+
+  /// Format a file path.
+  static String formatFilePath(String path) {
+    path = path.replaceAll('\\\\', '/');
+    path = path.replaceAll('\\', '/');
+    return '/$path';
+  }
 }
