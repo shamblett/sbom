@@ -213,6 +213,50 @@ void main() {
               .contains('SHA1: '),
           isTrue);
       expect(generator.tags.tagByName('F-FileChecksum-0').values[0].length, 46);
+      expect(generator.tags.tagByName('F-LicenseConcluded-0').values[0],
+          'NOASSERTION');
+      expect(generator.tags.tagByName('F-LicenseInfoInFile-0').values[0],
+          'NOASSERTION');
+      expect(generator.tags.tagByName('F-FileCopyrightText-0').values[0],
+          'NOASSERTION');
+      expect(generator.tags.tagByName('F-FileName-2').values[0],
+          '/lib/src/sbom.dart');
+      expect(generator.tags.tagByName('F-FileName-2').position, 15);
+      expect(
+          generator.tags.tagByName('F-SPDXID-2').values[0], 'SPDXRef-sbom-2');
+      expect(generator.tags.tagByName('F-FileType-2').values[0], 'SOURCE');
+      expect(
+          generator.tags
+              .tagByName('F-FileChecksum-2')
+              .values[0]
+              .contains('SHA1: '),
+          isTrue);
+      expect(generator.tags.tagByName('F-FileChecksum-2').values[0].length, 46);
+      expect(generator.tags.tagByName('F-LicenseConcluded-2').values[0],
+          'NOASSERTION');
+      expect(generator.tags.tagByName('F-LicenseInfoInFile-2').values[0],
+          'NOASSERTION');
+      expect(generator.tags.tagByName('F-FileCopyrightText-2').values[0],
+          'NOASSERTION');
+      expect(generator.tags.tagByName('F-FileName-4').values[0],
+          '/lib/src/sbom_constants.dart');
+      expect(generator.tags.tagByName('F-FileName-4').position, 29);
+      expect(generator.tags.tagByName('F-SPDXID-4').values[0],
+          'SPDXRef-sbom_constants-4');
+      expect(generator.tags.tagByName('F-FileType-4').values[0], 'SOURCE');
+      expect(
+          generator.tags
+              .tagByName('F-FileChecksum-4')
+              .values[0]
+              .contains('SHA1: '),
+          isTrue);
+      expect(generator.tags.tagByName('F-FileChecksum-4').values[0].length, 46);
+      expect(generator.tags.tagByName('F-LicenseConcluded-4').values[0],
+          'NOASSERTION');
+      expect(generator.tags.tagByName('F-LicenseInfoInFile-4').values[0],
+          'NOASSERTION');
+      expect(generator.tags.tagByName('F-FileCopyrightText-4').values[0],
+          'NOASSERTION');
     });
   });
 }

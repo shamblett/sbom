@@ -192,6 +192,21 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
           position++));
       tags.tags[tagCount++].value =
           '${SbomSpdxConstants.sha1Tag}: ${digests[i].toString()}';
+      tags.tags.add(SbomSpdxTag.mandatory(
+          '${SbomSpdxTagNames.fileLicenceConcluded}-$i',
+          SbomSpdxSectionNames.file,
+          position++));
+      tags.tags[tagCount++].value = SbomSpdxConstants.licenseNoAssertion;
+      tags.tags.add(SbomSpdxTag.mandatory(
+          '${SbomSpdxTagNames.fileLicenseInfoInFile}-$i',
+          SbomSpdxSectionNames.file,
+          position++));
+      tags.tags[tagCount++].value = SbomSpdxConstants.licenseNoAssertion;
+      tags.tags.add(SbomSpdxTag.mandatory(
+          '${SbomSpdxTagNames.fileCopyrightText}-$i',
+          SbomSpdxSectionNames.file,
+          position++));
+      tags.tags[tagCount++].value = SbomSpdxConstants.licenseNoAssertion;
     }
 
     return true;
