@@ -163,6 +163,11 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
           'No package files available - SBOM will not be complete');
       return false;
     }
+    // Add the pubspec.yaml
+    final pubspecPath =
+        path.join(configuration.packageTopLevel, SbomConstants.sbomPubspecFile);
+    files.add(File(pubspecPath));
+
     var digests = fileSupport.digests;
     final fileCount = files.length;
     final existingTagCount = tags.tags.length;
@@ -185,7 +190,12 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
           '${SbomSpdxConstants.idReference}${path.basenameWithoutExtension(name)}-$i';
       tags.tags.add(SbomSpdxTag('${SbomSpdxTagNames.fileFileType}-$i',
           SbomSpdxSectionNames.file, position++));
-      tags.tags[tagCount++].value = SbomSpdxConstants.fileSourceType;
+      // Last file is the pubspec which is a text file
+      if (i == fileCount - 1) {
+        tags.tags[tagCount++].value = SbomSpdxConstants.fileTextType;
+      } else {
+        tags.tags[tagCount++].value = SbomSpdxConstants.fileSourceType;
+      }
       tags.tags.add(SbomSpdxTag.mandatory(
           '${SbomSpdxTagNames.fileFileChecksum}-$i',
           SbomSpdxSectionNames.file,

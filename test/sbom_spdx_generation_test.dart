@@ -257,6 +257,25 @@ void main() {
           'NOASSERTION');
       expect(generator.tags.tagByName('F-FileCopyrightText-4').values[0],
           'NOASSERTION');
+      expect(
+          generator.tags.tagByName('F-FileName-5').values[0], '/pubspec.yaml');
+      expect(generator.tags.tagByName('F-FileName-5').position, 36);
+      expect(generator.tags.tagByName('F-SPDXID-5').values[0],
+          'SPDXRef-pubspec-5');
+      expect(generator.tags.tagByName('F-FileType-5').values[0], 'TEXT');
+      expect(
+          generator.tags
+              .tagByName('F-FileChecksum-5')
+              .values[0]
+              .contains('SHA1: '),
+          isTrue);
+      expect(generator.tags.tagByName('F-FileChecksum-5').values[0].length, 46);
+      expect(generator.tags.tagByName('F-LicenseConcluded-5').values[0],
+          'NOASSERTION');
+      expect(generator.tags.tagByName('F-LicenseInfoInFile-5').values[0],
+          'NOASSERTION');
+      expect(generator.tags.tagByName('F-FileCopyrightText-5').values[0],
+          'NOASSERTION');
     });
   });
 }
