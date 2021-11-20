@@ -45,7 +45,8 @@ class SbomSpdxConstants {
   static const String spdxOutputJson = 'json';
 
   /// Format specific
-  static const String spdxTagValueSeparator = ': ';
+  static const String tagValueSeparator = ': ';
+  static const int numberOfFileTags = 7;
 
   /// SPDX sbom file name
   static const String outputFileName = 'sbom.spdx';
