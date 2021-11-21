@@ -14,5 +14,6 @@ class SbomSpdxSectionNames {
   static const String file = 'file';
   static const String snippet = 'snippet';
   static const String otherLicensing = 'otherLicensing';
+  static const String relationship = 'relationship';
   static const String annotations = 'annotations';
 }

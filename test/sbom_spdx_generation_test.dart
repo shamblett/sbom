@@ -278,4 +278,19 @@ void main() {
           'NOASSERTION');
     });
   });
+  group('Relationship Section', () {
+    test('Relationship tags', () {
+      final config = SbomConfiguration(
+          ['-p', 'test/sbom/spdx/generation/file/configuration', '-L']);
+      config.parseConfigurationFile();
+      config.parsePubspecFile();
+      expect(config.valid, isTrue);
+      expect(config.outputType, SbomType.spdx);
+      final generator = SbomGenerator(config);
+      generator.generate();
+      expect(generator.valid, isTrue);
+      expect(generator.tags.tagByName('R-Relationship').values[0],
+          'SPDXRef-pubspec-5 DEPENDENCY_MANIFEST_OF SPDXRef-Package-sbom');
+    });
+  });
 }

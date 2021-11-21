@@ -84,7 +84,7 @@ class SbomSpdxLicense {
   /// Returns the SPDX license id as defined in the SPDX Specification Appendix V
   /// or NOASSERTION if the license cannot be determined.
   String licenseId(String text) {
-    var output = SbomSpdxConstants.licenseNoAssertion;
+    var output = SbomSpdxConstants.noAssertion;
     final details =
         licenses.keys.firstWhere((e) => text.contains(e), orElse: () => '');
     if (details.isNotEmpty) {

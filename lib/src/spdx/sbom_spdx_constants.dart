@@ -22,6 +22,8 @@ class SbomSpdxConstants {
   static const String fileSourceType = 'SOURCE';
   static const String fileTextType = 'TEXT';
   static const String sha1Tag = 'SHA1';
+  static const String noAssertion = 'NOASSERTION';
+  static const String dependencyManifest = 'DEPENDENCY_MANIFEST_OF';
 
   /// External reference category
   static const String externalRefCategorySecurity = 'SECURITY';
@@ -65,7 +67,6 @@ class SbomSpdxConstants {
   static const String licenseSeeAlso = 'seeAlso';
   static const String licenseIsOsiApproved = 'isOsiApproved';
   static const String licenceDirectory = 'lib/src/spdx/licences';
-  static const String licenseNoAssertion = 'NOASSERTION';
 
   /// Tag value Validation
   static const List<String> packageTextTags = [

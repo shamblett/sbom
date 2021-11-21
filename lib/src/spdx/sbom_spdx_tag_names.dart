@@ -14,6 +14,7 @@ class SbomSpdxTagNames {
   static const String documentCreationSectionId = 'DC-';
   static const String packageSectionId = 'P-';
   static const String fileSectionId = 'F-';
+  static const String relationshipId = 'R-';
 
   /// Document creation
   static const String version = documentCreationSectionId + 'SPDXVersion';
@@ -80,4 +81,7 @@ class SbomSpdxTagNames {
       fileSectionId + 'LicenseInfoInFile';
   static const String fileLicenseComments = fileSectionId + 'LicenseComments';
   static const String fileCopyrightText = fileSectionId + 'FileCopyrightText';
+
+  /// Relationship
+  static const String relationship = relationshipId + 'Relationship';
 }

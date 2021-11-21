@@ -98,12 +98,12 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     // Package supplier
     if (!tags.tagByName(SbomSpdxTagNames.packageSupplier).isSet()) {
       tags.tagByName(SbomSpdxTagNames.packageSupplier).value =
-          SbomSpdxConstants.licenseNoAssertion;
+          SbomSpdxConstants.noAssertion;
     }
     // Package originator
     if (!tags.tagByName(SbomSpdxTagNames.packageOriginator).isSet()) {
       tags.tagByName(SbomSpdxTagNames.packageOriginator).value =
-          SbomSpdxConstants.licenseNoAssertion;
+          SbomSpdxConstants.noAssertion;
     }
     // Download location
     tags.tagByName(SbomSpdxTagNames.packageDownloadLocation).value =
@@ -206,19 +206,33 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
           '${SbomSpdxTagNames.fileLicenceConcluded}-$i',
           SbomSpdxSectionNames.file,
           position++));
-      tags.tags[tagCount++].value = SbomSpdxConstants.licenseNoAssertion;
+      tags.tags[tagCount++].value = SbomSpdxConstants.noAssertion;
       tags.tags.add(SbomSpdxTag.mandatory(
           '${SbomSpdxTagNames.fileLicenseInfoInFile}-$i',
           SbomSpdxSectionNames.file,
           position++));
-      tags.tags[tagCount++].value = SbomSpdxConstants.licenseNoAssertion;
+      tags.tags[tagCount++].value = SbomSpdxConstants.noAssertion;
       tags.tags.add(SbomSpdxTag.mandatory(
           '${SbomSpdxTagNames.fileCopyrightText}-$i',
           SbomSpdxSectionNames.file,
           position++));
-      tags.tags[tagCount++].value = SbomSpdxConstants.licenseNoAssertion;
+      tags.tags[tagCount++].value = SbomSpdxConstants.noAssertion;
     }
 
+    return true;
+  }
+
+  /// Build the relationship section.
+  bool _buildRelationship() {
+    SbomUtilities.louder('Building SPDX relationship section');
+    // The only relationship is that between the pubspec.yaml and the package itself.
+    final packageRef =
+        tags.tagByName(SbomSpdxTagNames.packageIdentifier).values[0];
+    final pubspecRef = tags.tags[tags.tags.length - 6].values[0];
+    tags.tags.add(SbomSpdxTag(
+        SbomSpdxTagNames.relationship, SbomSpdxSectionNames.relationship, 1));
+    tags.tags[tags.tags.length - 1].value =
+        '$pubspecRef ${SbomSpdxConstants.dependencyManifest} $packageRef';
     return true;
   }
 
@@ -247,6 +261,11 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     result = _buildFile();
     if (!result) {
       SbomUtilities.error('Failed to build SPDX File section.');
+      return false;
+    }
+    result = _buildRelationship();
+    if (!result) {
+      SbomUtilities.error('Failed to build SPDX Relationship section.');
       return false;
     }
     return true;
@@ -295,7 +314,7 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     for (final value in tag.values) {
       if ((!value.contains(SbomSpdxConstants.creatorOrganisation)) &&
           (!value.contains(SbomSpdxConstants.creatorPerson)) &&
-          (value as String != SbomSpdxConstants.licenseNoAssertion)) {
+          (value as String != SbomSpdxConstants.noAssertion)) {
         SbomUtilities.warning(
             'Invalid tag value found in configuration for Package section, tag name '
             '${SbomSpdxUtilities.getSpecTagName(SbomSpdxTagNames.packageSupplier)} - SBOM may not pass validation');
@@ -306,7 +325,7 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     for (final value in tag.values) {
       if ((!value.contains(SbomSpdxConstants.creatorOrganisation)) &&
           (!value.contains(SbomSpdxConstants.creatorPerson)) &&
-          (value as String != SbomSpdxConstants.licenseNoAssertion)) {
+          (value as String != SbomSpdxConstants.noAssertion)) {
         SbomUtilities.warning(
             'Invalid tag value found in configuration for Package section, tag name '
             '${SbomSpdxUtilities.getSpecTagName(SbomSpdxTagNames.packageOriginator)} - SBOM may not pass validation');
