@@ -37,9 +37,9 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
     _add(SbomSpdxTag.mandatory(SbomSpdxTagNames.documentName,
         SbomSpdxSectionNames.documentCreation, 4, true));
     _add(SbomSpdxTag.mandatory(SbomSpdxTagNames.documentNamespace,
-        SbomSpdxSectionNames.documentCreation, 5, true));
+        SbomSpdxSectionNames.documentCreation, 5, false));
     _add(SbomSpdxTag(SbomSpdxTagNames.externalDocumentRefs,
-        SbomSpdxSectionNames.documentCreation, 6, true));
+        SbomSpdxSectionNames.documentCreation, 6));
     _add(SbomSpdxTag(SbomSpdxTagNames.licenseListVersion,
         SbomSpdxSectionNames.documentCreation, 7));
     // License list version is predefined
@@ -82,7 +82,7 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
     _add(SbomSpdxTag.mandatory(SbomSpdxTagNames.packageVerificationCode,
         SbomSpdxSectionNames.package, 9));
     _add(SbomSpdxTag(SbomSpdxTagNames.packageChecksum,
-        SbomSpdxSectionNames.package, 10, true));
+        SbomSpdxSectionNames.package, 10));
     _add(SbomSpdxTag(
         SbomSpdxTagNames.packageHomePage, SbomSpdxSectionNames.package, 11));
     _add(SbomSpdxTag(SbomSpdxTagNames.packageSourceInfo,
