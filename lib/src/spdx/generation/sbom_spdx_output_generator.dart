@@ -187,7 +187,8 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
           SbomSpdxSectionNames.file,
           position++));
       tags.tags[tagCount++].value =
-          '${SbomSpdxConstants.idReference}${path.basenameWithoutExtension(name)}-$i';
+          '${SbomSpdxConstants.idReference}${path.basenameWithoutExtension(name)}-$i'
+              .replaceAll('_', '-');
       tags.tags.add(SbomSpdxTag('${SbomSpdxTagNames.fileFileType}-$i',
           SbomSpdxSectionNames.file, position++));
       // Last file is the pubspec which is a text file
