@@ -35,13 +35,9 @@ void main() {
       expect(generator.tags.tagByName('DC-DocumentName').values[0],
           'Document name from configuration');
       expect(generator.tags.tagByName('DC-DocumentNamespace').values[0],
-          'Document name space from configuration');
+          'https://pub.dev/packages/sbom');
       expect(
-          generator.tags.tagByName('DC-ExternalDocumentRef').values.length, 2);
-      expect(generator.tags.tagByName('DC-ExternalDocumentRef').values[0],
-          'External Doc Ref 1');
-      expect(generator.tags.tagByName('DC-ExternalDocumentRef').values[1],
-          'External Doc Ref 2');
+          generator.tags.tagByName('DC-ExternalDocumentRef').values.length, 0);
       expect(
           generator.tags.tagByName('DC-LicenseListVersion').values[0], '3.8');
       expect(generator.tags.tagByName('DC-Creator').values[0],
@@ -87,11 +83,7 @@ void main() {
       expect(generator.tags.tagByName('DC-DocumentNamespace').values[0],
           'https://pub.dev/packages/sbom');
       expect(
-          generator.tags.tagByName('DC-ExternalDocumentRef').values.length, 2);
-      expect(generator.tags.tagByName('DC-ExternalDocumentRef').values[0],
-          'External Doc Ref 1');
-      expect(generator.tags.tagByName('DC-ExternalDocumentRef').values[1],
-          'External Doc Ref 2');
+          generator.tags.tagByName('DC-ExternalDocumentRef').values.length, 0);
       expect(
           generator.tags.tagByName('DC-LicenseListVersion').values[0], '3.8');
       expect(generator.tags.tagByName('DC-Creator').values[0],
@@ -158,8 +150,6 @@ void main() {
               .values[0]
               .length,
           40);
-      expect(generator.tags.tagByName('P-PackageChecksum').values[0],
-          'The package checksum');
       expect(generator.tags.tagByName('P-PackageHomePage').values[0],
           'https://pub.dev/packages/sbom');
       expect(generator.tags.tagByName('P-PackageSourceInfo').values[0],
@@ -242,7 +232,7 @@ void main() {
           '/lib/src/sbom_constants.dart');
       expect(generator.tags.tagByName('F-FileName-4').position, 29);
       expect(generator.tags.tagByName('F-SPDXID-4').values[0],
-          'SPDXRef-sbom_constants-4');
+          'SPDXRef-sbom-constants-4');
       expect(generator.tags.tagByName('F-FileType-4').values[0], 'SOURCE');
       expect(
           generator.tags

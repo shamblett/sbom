@@ -160,8 +160,7 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     var files = fileSupport.dartFiles;
     if (files.isEmpty) {
       SbomUtilities.warning(
-          'No package files available - SBOM will not be complete');
-      return false;
+          'No package Dart files available - SBOM will contain only the pubspec.yaml');
     }
     // Add the pubspec.yaml
     final pubspecPath =
