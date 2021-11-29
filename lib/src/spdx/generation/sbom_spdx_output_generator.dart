@@ -339,7 +339,7 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     }
 
     // External reference value validation
-    var ok = false;
+    var ok = true;
     tag = tags.tagByName(SbomSpdxTagNames.packageExternalRef);
     FINISH:
     for (final category in SbomSpdxConstants.packageExternalRefTag.keys) {
@@ -348,7 +348,7 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
           final types = SbomSpdxConstants.packageExternalRefTag[category];
           for (final type in types!) {
             if (value.contains(type)) {
-              ok = true;
+              ok = false;
               break FINISH;
             }
           }
