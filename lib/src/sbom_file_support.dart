@@ -65,6 +65,10 @@ class SbomFileSupport {
       SbomUtilities.error(
           'File Support - exception $e thrown getting package files, the SBOM generation will be incorrect');
     }
+    for ( final entity in _dartFiles) {
+      print(entity.path);
+    }
+
     return output;
   }
 
