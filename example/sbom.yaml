@@ -1,0 +1,11 @@
+#
+# An example of a mininmal sbom.yaml file for the generation of a tag value formatted SPDX SBOM
+#
+
+# Type is mandatory
+type: spdx
+
+# This is the generation control section for type specified and is mandatory.
+spdx:
+  # The output format must be supplied for an SPDX file.
+  SPDXFormat: 'tagvalue'

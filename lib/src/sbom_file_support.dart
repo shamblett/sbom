@@ -68,9 +68,6 @@ class SbomFileSupport {
 
     // Sort the dart files
     _dartFiles.sort((a, b) => a.path.compareTo(b.path));
-    for ( final entity in _dartFiles) {
-      print(entity.path);
-    }
     return output;
   }
 

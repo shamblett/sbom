@@ -1,0 +1,72 @@
+#
+# An example of a sbom.yaml file for the generation of a tag value formatted SPDX SBOM
+# showing all SPDX fields that can be set by the user.
+#
+# The field names in the sections are taken from the SPDX specification 2.2, please read this in
+# conjunction with this document.
+#
+
+# Type is mandatory
+type: spdx
+
+# This is the generation control section for type specified and is mandatory.
+spdx:
+
+  # The output format must be supplied for an SPDX file.
+  SPDXFormat: 'tagvalue'
+
+  # Document Creation section, starts with the section identifier
+  documentCreation:
+
+    # The document name if you want to set this, otherwise it will be the package name
+    DocumentName: 'My document name'
+
+    # Additional creator fields can be set, see the SPDX specification for the format of this field
+    Creator :
+      - 'Person: Steve Hamblett <steve.hamblett@linux.com'
+
+    # Creator comment can be set
+    CreatorComment: 'Creator comment from configuration'
+
+    # Document comment can be set
+    DocumentComment: 'Document comment from configuration'
+
+  # Package section
+  package:
+
+    # The package file name can be set, otherwise it will be the package name.
+    PackageFileName: 'The package filename'
+
+    # Package supplier can be set, see the SPDX specification for the format of this field
+    PackageSupplier: 'Organization: The package supplier'
+
+    # Package originator can be set, see the SPDX specification for the format of this field
+    PackageOriginator: 'Person: The package originator'
+
+    # Package source information can be set
+    # Note the <text></text> delimiters, if these are not present a warning will be generated and the SBOM
+    # will not pass validation. This applies to other fields below also.
+    PackageSourceInfo: '<text>The package source info</text>'
+
+    # Package license information can be set
+    PackageLicenseComments: '<text>The package license comments</text>'
+
+    # Package description can be set
+    PackageDescription: '<text>The package description.</text>'
+
+    # Package comment can be set
+    PackageComment: '<text>The package comment</text>'
+
+    # Package external reference can be set
+    # Note that the first two fields are validated, the third field is not.
+    # See the SPDX specification for the format of this field
+    ExternalRef: 'SECURITY cpe23Type locator'
+
+    # Package external reference comment can be set
+    ExternalRefComment: '<text>The package external ref comment</text>'
+
+    # Package attribution text can be set
+    PackageAttributionText: '<text>The package attribution text</text>'
+
+
+
