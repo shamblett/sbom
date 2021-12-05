@@ -15,5 +15,8 @@ This file can be validated using this [online validator](https://tools.spdx.org/
 Note that if any warnings are output during the generation then the sbom.spdx file may not pass validation, the warnings should 
 inform you of what the problem may be.
 
+The package verification code is generated from the SHA1 digests of a combination of all the Dart files in the 
+package with that of the pubspec.yaml file.  The algorithm used is from section 3.9.4 of the SPDX 2.2 specification.
+
 
 

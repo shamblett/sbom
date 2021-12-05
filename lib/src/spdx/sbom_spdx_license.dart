@@ -69,8 +69,18 @@ class SbomSpdxLicense {
 
   /// Build the license list
   void _licenseList() {
-    final licenseDirectoryPath =
+    // Get the path to the license file directory
+    // If we can't find the installed package use top level as a default
+    var licenseDirectoryPath =
         path.join(path.current, SbomSpdxConstants.licenceDirectory);
+    final pubCache = PubCache();
+    final sbomPackageRef = pubCache.getLatestVersion(SbomConstants.package);
+    if (sbomPackageRef != null) {
+      final sbomPackage = sbomPackageRef.resolve();
+      licenseDirectoryPath = path.join(
+          sbomPackage!.location.path, SbomSpdxConstants.licenceDirectory);
+    }
+    // Read the license information
     final licenseDir = Directory(licenseDirectoryPath);
     final files = licenseDir.listSync();
     for (final file in files) {
