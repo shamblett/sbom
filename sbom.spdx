@@ -1,6 +1,6 @@
-SPDXVersion: SPDX-2.2DataLicense: CC0-1.0SPDXID: SPDXRef-DOCUMENTDocumentName: sbomDocumentNamespace: https://pub.dev/packages/sbomLicenseListVersion: 3.8Creator: Tool: https://pub.dev/packages/sbomCreated: 2021-12-06T11:18:16Z
+SPDXVersion: SPDX-2.2DataLicense: CC0-1.0SPDXID: SPDXRef-DOCUMENTDocumentName: sbomDocumentNamespace: https://pub.dev/packages/sbomLicenseListVersion: 3.8Creator: Tool: https://pub.dev/packages/sbomCreated: 2021-12-06T11:42:06Z
 
-PackageName: sbomSPDXID: SPDXRef-Package-sbomPackageVersion: 1.0.0PackageFileName: sbomPackageSupplier: NOASSERTIONPackageOriginator: NOASSERTIONPackageDownloadLocation: https://pub.dev/packages/sbomFilesAnalyzed: truePackageVerificationCode: 2d59a13ae665cdab1407a6884facf034dc748fe0PackageHomePage: https://pub.dev/packages/sbomPackageLicenseConcluded: MITPackageLicenseInfoFromFiles: NOASSERTIONPackageLicenseDeclared: NOASSERTIONPackageCopyrightText: NOASSERTIONPackageSummary: <text>A Software Bill of Materials generator specifically for Dart packages.</text>
+PackageName: sbomSPDXID: SPDXRef-Package-sbomPackageVersion: 1.0.0PackageFileName: sbomPackageSupplier: NOASSERTIONPackageOriginator: NOASSERTIONPackageDownloadLocation: https://pub.dev/packages/sbomFilesAnalyzed: truePackageVerificationCode: c39335e94e8a71e6e7a19b39f1cbaf68dfb3ab85PackageHomePage: https://pub.dev/packages/sbomPackageLicenseConcluded: MITPackageLicenseInfoFromFiles: NOASSERTIONPackageLicenseDeclared: NOASSERTIONPackageCopyrightText: NOASSERTIONPackageSummary: <text>A Software Bill of Materials generator specifically for Dart packages.</text>
 
 FileName: /bin/sbom.dartSPDXID: SPDXRef-sbom-0FileType: SOURCEFileChecksum: SHA1: d60919a468d55d90d97ad9b04a107468a5e8a285LicenseConcluded: NOASSERTIONLicenseInfoInFile: NOASSERTIONFileCopyrightText: NOASSERTION
 
@@ -16,7 +16,7 @@ FileName: /lib/src/sbom_configuration.dartSPDXID: SPDXRef-sbom-configuration-5
 
 FileName: /lib/src/sbom_constants.dartSPDXID: SPDXRef-sbom-constants-6FileType: SOURCEFileChecksum: SHA1: 13b276dfb4e1e87b6356616565a671bbd7c6e6f3LicenseConcluded: NOASSERTIONLicenseInfoInFile: NOASSERTIONFileCopyrightText: NOASSERTION
 
-FileName: /lib/src/sbom_file_support.dartSPDXID: SPDXRef-sbom-file-support-7FileType: SOURCEFileChecksum: SHA1: 24d5b46a5ed1188551b56d131020102148eb91adLicenseConcluded: NOASSERTIONLicenseInfoInFile: NOASSERTIONFileCopyrightText: NOASSERTION
+FileName: /lib/src/sbom_file_support.dartSPDXID: SPDXRef-sbom-file-support-7FileType: SOURCEFileChecksum: SHA1: 9690e8af52aeb5f9567085508b9d805cc1f2fe65LicenseConcluded: NOASSERTIONLicenseInfoInFile: NOASSERTIONFileCopyrightText: NOASSERTION
 
 FileName: /lib/src/sbom_itag_builder.dartSPDXID: SPDXRef-sbom-itag-builder-8FileType: SOURCEFileChecksum: SHA1: 3da6ca76b18cd564cc009374d7c2eacea0033c38LicenseConcluded: NOASSERTIONLicenseInfoInFile: NOASSERTIONFileCopyrightText: NOASSERTION
 
@@ -32,17 +32,17 @@ FileName: /lib/src/spdx/generation/sbom_spdx_output_generator.dartSPDXID: SPDXR
 
 FileName: /lib/src/spdx/generation/sbom_spdx_tagvalue_output_formatter.dartSPDXID: SPDXRef-sbom-spdx-tagvalue-output-formatter-14FileType: SOURCEFileChecksum: SHA1: 8e7968abf3dd81ef3062901c618fd2f8332205d4LicenseConcluded: NOASSERTIONLicenseInfoInFile: NOASSERTIONFileCopyrightText: NOASSERTION
 
-FileName: /lib/src/spdx/sbom_spdx_constants.dartSPDXID: SPDXRef-sbom-spdx-constants-15FileType: SOURCEFileChecksum: SHA1: d4cb9668ba67e5e53e895d973bdb0e96b3185ef8LicenseConcluded: NOASSERTIONLicenseInfoInFile: NOASSERTIONFileCopyrightText: NOASSERTION
+FileName: /lib/src/spdx/sbom_spdx_constants.dartSPDXID: SPDXRef-sbom-spdx-constants-15FileType: SOURCEFileChecksum: SHA1: 984cc557f6fc8dbdc5bd392c2b7937eff6d173a2LicenseConcluded: NOASSERTIONLicenseInfoInFile: NOASSERTIONFileCopyrightText: NOASSERTION
 
-FileName: /lib/src/spdx/sbom_spdx_license.dartSPDXID: SPDXRef-sbom-spdx-license-16FileType: SOURCEFileChecksum: SHA1: 984cc557f6fc8dbdc5bd392c2b7937eff6d173a2LicenseConcluded: NOASSERTIONLicenseInfoInFile: NOASSERTIONFileCopyrightText: NOASSERTION
+FileName: /lib/src/spdx/sbom_spdx_license.dartSPDXID: SPDXRef-sbom-spdx-license-16FileType: SOURCEFileChecksum: SHA1: 53573d0363061c19629d79c5b91321e50e6ca9f9LicenseConcluded: NOASSERTIONLicenseInfoInFile: NOASSERTIONFileCopyrightText: NOASSERTION
 
-FileName: /lib/src/spdx/sbom_spdx_section_names.dartSPDXID: SPDXRef-sbom-spdx-section-names-17FileType: SOURCEFileChecksum: SHA1: 53573d0363061c19629d79c5b91321e50e6ca9f9LicenseConcluded: NOASSERTIONLicenseInfoInFile: NOASSERTIONFileCopyrightText: NOASSERTION
+FileName: /lib/src/spdx/sbom_spdx_section_names.dartSPDXID: SPDXRef-sbom-spdx-section-names-17FileType: SOURCEFileChecksum: SHA1: 56201833e6d79f7e105b7798ccebff45a5d2c40eLicenseConcluded: NOASSERTIONLicenseInfoInFile: NOASSERTIONFileCopyrightText: NOASSERTION
 
-FileName: /lib/src/spdx/sbom_spdx_tag.dartSPDXID: SPDXRef-sbom-spdx-tag-18FileType: SOURCEFileChecksum: SHA1: 56201833e6d79f7e105b7798ccebff45a5d2c40eLicenseConcluded: NOASSERTIONLicenseInfoInFile: NOASSERTIONFileCopyrightText: NOASSERTION
+FileName: /lib/src/spdx/sbom_spdx_tag.dartSPDXID: SPDXRef-sbom-spdx-tag-18FileType: SOURCEFileChecksum: SHA1: e2bda0622fa6e235208f341cfd7dbaf67ed0b88fLicenseConcluded: NOASSERTIONLicenseInfoInFile: NOASSERTIONFileCopyrightText: NOASSERTION
 
-FileName: /lib/src/spdx/sbom_spdx_tag_builder.dartSPDXID: SPDXRef-sbom-spdx-tag-builder-19FileType: SOURCEFileChecksum: SHA1: e2bda0622fa6e235208f341cfd7dbaf67ed0b88fLicenseConcluded: NOASSERTIONLicenseInfoInFile: NOASSERTIONFileCopyrightText: NOASSERTION
+FileName: /lib/src/spdx/sbom_spdx_tag_builder.dartSPDXID: SPDXRef-sbom-spdx-tag-builder-19FileType: SOURCEFileChecksum: SHA1: c3d898bd87811c24aa727b663807e92e5aeca422LicenseConcluded: NOASSERTIONLicenseInfoInFile: NOASSERTIONFileCopyrightText: NOASSERTION
 
-FileName: /lib/src/spdx/sbom_spdx_tag_names.dartSPDXID: SPDXRef-sbom-spdx-tag-names-20FileType: SOURCEFileChecksum: SHA1: c3d898bd87811c24aa727b663807e92e5aeca422LicenseConcluded: NOASSERTIONLicenseInfoInFile: NOASSERTIONFileCopyrightText: NOASSERTION
+FileName: /lib/src/spdx/sbom_spdx_tag_names.dartSPDXID: SPDXRef-sbom-spdx-tag-names-20FileType: SOURCEFileChecksum: SHA1: d4cb9668ba67e5e53e895d973bdb0e96b3185ef8LicenseConcluded: NOASSERTIONLicenseInfoInFile: NOASSERTIONFileCopyrightText: NOASSERTION
 
 FileName: /lib/src/spdx/sbom_spdx_tags.dartSPDXID: SPDXRef-sbom-spdx-tags-21FileType: SOURCEFileChecksum: SHA1: 794d65d8251487b66cf6e010aa702da007a5b089LicenseConcluded: NOASSERTIONLicenseInfoInFile: NOASSERTIONFileCopyrightText: NOASSERTION
 

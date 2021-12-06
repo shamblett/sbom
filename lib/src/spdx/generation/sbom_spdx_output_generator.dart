@@ -76,10 +76,10 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     }
     // Package name
     tags.tagByName(SbomSpdxTagNames.packageName).value =
-        configuration.packageName;
+        configuration.packageName.replaceAll('_', '-');
     // SPDXID
     tags.tagByName(SbomSpdxTagNames.packageIdentifier).value =
-        '${SbomSpdxConstants.idReference}Package-${configuration.packageName}';
+        '${SbomSpdxConstants.idReference}Package-${configuration.packageName.replaceAll('_', '-')}';
     // Version
     if (configuration.sbomPubspecContents
         .containsKey(SbomConstants.pubspecVersion)) {
