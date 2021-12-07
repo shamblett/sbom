@@ -20,6 +20,9 @@ this results in a minimal SPDX document that will pass validation. All section m
 from the package information or known constants, mandatory fields that are not deducible are defaulted, usually to the
 NOASSERTION tag value.
 
+Note that in certain fields the underscore character is not valid, in these fields any underscore characters are converted to hyphen,
+the package name and SPDXID tags in the package section are examples of this.
+
 The package verification code is generated from the SHA1 digests of a combination of all the Dart files in the 
 package with that of the pubspec.yaml file.  The algorithm used is from section 3.9.4 of the SPDX 2.2 specification.
 
