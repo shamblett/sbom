@@ -26,10 +26,10 @@ spdx:
       - 'Person: Steve Hamblett <steve.hamblett@linux.com'
 
     # Creator comment can be set
-    CreatorComment: 'Creator comment from configuration'
+    CreatorComment: '<text>Creator comment from configuration</text>'
 
     # Document comment can be set
-    DocumentComment: 'Document comment from configuration'
+    DocumentComment: '<text>Document comment from configuration</text>'
 
   # Package section
   package:
