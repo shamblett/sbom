@@ -3,7 +3,7 @@ dart:
   # Install the latest stable release
   - stable
 script:
-  - pub run test
+  - dart run test
 branches:
     only:
     - main
