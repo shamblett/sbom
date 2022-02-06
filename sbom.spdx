@@ -1,6 +1,6 @@
-SPDXVersion: SPDX-2.2DataLicense: CC0-1.0SPDXID: SPDXRef-DOCUMENTDocumentName: sbomDocumentNamespace: https://pub.dev/packages/sbomLicenseListVersion: 3.8Creator: Tool: https://pub.dev/packages/sbomCreated: 2022-01-16T10:59:46Z
+SPDXVersion: SPDX-2.2DataLicense: CC0-1.0SPDXID: SPDXRef-DOCUMENTDocumentName: sbomDocumentNamespace: https://pub.dev/packages/sbomLicenseListVersion: 3.8Creator: Tool: https://pub.dev/packages/sbomCreated: 2022-02-06T09:56:06Z
 
-PackageName: sbomSPDXID: SPDXRef-Package-sbomPackageVersion: 1.0.1PackageFileName: sbomPackageSupplier: NOASSERTIONPackageOriginator: NOASSERTIONPackageDownloadLocation: https://pub.dev/packages/sbomFilesAnalyzed: truePackageVerificationCode: b4dd6e3f90da914e2bbab217ccb2ec4930c8a082PackageHomePage: https://pub.dev/packages/sbomPackageLicenseConcluded: MITPackageLicenseInfoFromFiles: NOASSERTIONPackageLicenseDeclared: NOASSERTIONPackageCopyrightText: NOASSERTIONPackageSummary: <text>A Software Bill of Materials generator specifically for Dart packages.</text>
+PackageName: sbomSPDXID: SPDXRef-Package-sbomPackageVersion: 1.0.2PackageFileName: sbomPackageSupplier: NOASSERTIONPackageOriginator: NOASSERTIONPackageDownloadLocation: https://pub.dev/packages/sbomFilesAnalyzed: truePackageVerificationCode: b85e32053924b6b9720ff9f6f1edc510f3c58fccPackageHomePage: https://pub.dev/packages/sbomPackageLicenseConcluded: MITPackageLicenseInfoFromFiles: NOASSERTIONPackageLicenseDeclared: NOASSERTIONPackageCopyrightText: NOASSERTIONPackageSummary: <text>A Software Bill of Materials generator specifically for Dart packages.</text>
 
 FileName: /bin/sbom.dartSPDXID: SPDXRef-sbom-0FileType: SOURCEFileChecksum: SHA1: d60919a468d55d90d97ad9b04a107468a5e8a285LicenseConcluded: NOASSERTIONLicenseInfoInFile: NOASSERTIONFileCopyrightText: NOASSERTION
 
@@ -48,7 +48,7 @@ FileName: /lib/src/spdx/sbom_spdx_tags.dartSPDXID: SPDXRef-sbom-spdx-tags-21Fi
 
 FileName: /lib/src/spdx/sbom_spdx_utilities.dartSPDXID: SPDXRef-sbom-spdx-utilities-22FileType: SOURCEFileChecksum: SHA1: 49a6c51d3ad053b3eac1338cdaaa3a6d9f5ed511LicenseConcluded: NOASSERTIONLicenseInfoInFile: NOASSERTIONFileCopyrightText: NOASSERTION
 
-FileName: /pubspec.yamlSPDXID: SPDXRef-pubspec-23FileType: TEXTFileChecksum: SHA1: 16bfbeaa50876fb4a3018d5568b922f01d7450bbLicenseConcluded: NOASSERTIONLicenseInfoInFile: NOASSERTIONFileCopyrightText: NOASSERTION
+FileName: /pubspec.yamlSPDXID: SPDXRef-pubspec-23FileType: TEXTFileChecksum: SHA1: f45c8ed510c3c481c7455b9802f98fed92554e78LicenseConcluded: NOASSERTIONLicenseInfoInFile: NOASSERTIONFileCopyrightText: NOASSERTION
 
 Relationship: SPDXRef-pubspec-23 DEPENDENCY_MANIFEST_OF SPDXRef-Package-sbom
 
