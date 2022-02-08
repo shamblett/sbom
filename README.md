@@ -1,5 +1,5 @@
 # sbom
-[![Build Status](https://app.travis-ci.com/shamblett/sbom.svg?branch=main)](https://app.travis-ci.com/shamblett/sbom)
+[![Build Status](https://github.com/shamblett/sbom/actions/workflows/ci.yml/badge.svg)](https://github.com/shamblett/sbom/actions/workflows/ci.yml)
 
 A Software Bill Of Materials(SBOM) generator for Dart packages.
 

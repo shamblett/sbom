@@ -1,3 +1,6 @@
+#1.0.3
+Issue 2 - Badge update
+
 # 1.0.2
 Issue 2
 
