@@ -11,14 +11,12 @@ analyzer:
   plugins:
     - dart_code_metrics
 dart_code_metrics:
-  anti-patterns:
-    - long-method
-    - long-parameter-list
   metrics:
     cyclomatic-complexity: 20
     lines-of-executable-code: 50
-    number-of-parameters: 4
+    number-of-parameters: 5
     maximum-nesting-level: 5
+    source-lines-of-code: 60
   metrics-exclude:
     - test/**
   rules:
