@@ -5,7 +5,7 @@
  * Copyright :  S.Hamblett
  */
 
-@TestOn('VM')
+@TestOn('vm')
 
 import 'dart:io';
 

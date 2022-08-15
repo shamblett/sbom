@@ -5,7 +5,7 @@
  * Copyright :  S.Hamblett
  */
 
-@TestOn('VM')
+@TestOn('vm')
 
 import 'package:sbom/sbom.dart';
 import 'package:test/test.dart';
