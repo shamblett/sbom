@@ -2,7 +2,6 @@ name: sbom
 description: A Software Bill of Materials generator specifically for Dart packages.
 version: 1.0.3
 repository: https://github.com/shamblett/sbom
-homepage: https://pub.dev/packages/sbom
 
 environment:
  sdk: '>=2.15.0 <3.0.0'
