@@ -18,7 +18,7 @@ executables:
  sbom:
 
 dev_dependencies:
- dart_code_metrics: ^4.17.0
+ dart_code_metrics: '^4.17.0'
  lints: '^1.0.1'
  test: '^1.17.12'
 
