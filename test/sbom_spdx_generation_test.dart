@@ -101,23 +101,6 @@ void main() {
       final sbom = File(generator.sbomFilePath);
       expect(sbom.existsSync(), isTrue);
     });
-    test('Document Validation fail', () {
-      final config = SbomConfiguration([
-        '-p',
-        'test/sbom/spdx/generation/documentcreation/environmentinvalid',
-        '-L'
-      ]);
-      config.parseConfigurationFile();
-      config.parsePubspecFile();
-      expect(config.valid, isTrue);
-      expect(config.outputType, SbomType.spdx);
-      final generator = SbomGenerator(config);
-      generator.generate();
-      expect(generator.valid, isFalse);
-      expect(generator.tags.tagByName('DC-DocumentName').isSet(), isFalse);
-      expect(generator.tags.tagByName('DC-DocumentNamespace').isSet(), isFalse);
-      expect(generator.sbomFilePath.isEmpty, isTrue);
-    });
   });
   group('Package Section', () {
     test('Package Configuration', () {
