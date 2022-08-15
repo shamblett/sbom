@@ -68,6 +68,7 @@ class SbomFileSupport {
 
     // Sort the dart files
     _dartFiles.sort((a, b) => a.path.compareTo(b.path));
+
     return output;
   }
 
@@ -77,11 +78,13 @@ class SbomFileSupport {
     try {
       final file = File(path);
       final bytes = file.readAsBytesSync();
+
       return sha1.convert(bytes);
     } catch (e) {
       SbomUtilities.warning(
           'File Support - exception $e thrown generating sha1 digest for $path, the SBOM generation will be incorrect');
     }
+
     return null;
   }
 
@@ -89,6 +92,7 @@ class SbomFileSupport {
   /// Returns the digest or empty if it could not be calculated.
   String sha1DigestAsString(String path) {
     final digest = _sha1Digest(path);
+
     return digest == null ? '' : digest.toString();
   }
 
@@ -96,6 +100,7 @@ class SbomFileSupport {
   /// Returns the digest or empty if it could not be calculated.
   List<int> sha1DigestAsBytes(String path) {
     final digest = _sha1Digest(path);
+
     return digest == null ? <int>[] : digest.bytes;
   }
 
@@ -106,6 +111,7 @@ class SbomFileSupport {
     for (final digest in digests) {
       bytes.addAll(digest.bytes);
     }
+
     return sha1.convert(bytes).toString();
   }
 
@@ -135,6 +141,7 @@ class SbomFileSupport {
 
     // Sort the digests ascending
     packageFileDigests.sort((a, b) => a.toString().compareTo(b.toString()));
+
     return combinedDigest(packageFileDigests);
   }
 
@@ -156,6 +163,7 @@ class SbomFileSupport {
       SbomUtilities.warning(
           'File Support - error processing license file - license information cannot be extracted');
     }
+
     return contents;
   }
 }

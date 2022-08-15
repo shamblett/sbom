@@ -100,6 +100,7 @@ class SbomSpdxLicense {
     if (details.isNotEmpty) {
       output = licenses[details]!.licenseId;
     }
+
     return output;
   }
 }

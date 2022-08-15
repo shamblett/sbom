@@ -38,5 +38,6 @@ int main(List<String> args) {
 
   // Finish
   print('${SbomConstants.reset}SBOM generation complete');
+
   return 0;
 }

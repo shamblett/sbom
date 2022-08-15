@@ -17,6 +17,7 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
   List<SbomSpdxTag> build() {
     _documentCreation();
     _package();
+
     return _tags;
   }
 
