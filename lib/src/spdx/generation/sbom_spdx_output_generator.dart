@@ -88,6 +88,7 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     } else {
       SbomUtilities.error(
           'Version key not found in pubspec.yaml - cannot continue');
+
       return false;
     }
     // Package file name
@@ -127,6 +128,7 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
             '${SbomSpdxConstants.textStart}${configuration.sbomPubspecContents[SbomConstants.pubspecDescription]}${SbomSpdxConstants.textEnd}';
       }
     }
+
     return true;
   }
 
@@ -149,6 +151,7 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
       tags.tagByName(SbomSpdxTagNames.documentNamespace).value =
           '${SbomConstants.pubUrl}${configuration.packageName}';
     }
+
     return true;
   }
 
@@ -233,6 +236,7 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
         SbomSpdxTagNames.relationship, SbomSpdxSectionNames.relationship, 1));
     tags.tags[tags.tags.length - 1].value =
         '$pubspecRef ${SbomSpdxConstants.dependencyManifest} $packageRef';
+
     return true;
   }
 
@@ -244,6 +248,7 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
         .containsKey(SbomConstants.sbomSpdx)) {
       SbomUtilities.error(
           'Cannot build SPDX sections, no spdx tag in SBOM configuration file');
+
       return false;
     }
     // Build the tag list
@@ -251,23 +256,28 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     bool result = _buildDocumentCreation();
     if (!result) {
       SbomUtilities.error('Failed to build SPDX Document Creation section.');
+
       return false;
     }
     result = _buildPackage();
     if (!result) {
       SbomUtilities.error('Failed to build SPDX Package section.');
+
       return false;
     }
     result = _buildFile();
     if (!result) {
       SbomUtilities.error('Failed to build SPDX File section.');
+
       return false;
     }
     result = _buildRelationship();
     if (!result) {
       SbomUtilities.error('Failed to build SPDX Relationship section.');
+
       return false;
     }
+
     return true;
   }
 
@@ -278,6 +288,7 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     if (result.isNotEmpty) {
       SbomUtilities.error(
           'Failed to validate SPDX Document Creation section, failed tags are ${SbomUtilities.tagsToString(result)}');
+
       return false;
     }
     // Check for any potential specification violations, only warn these.
@@ -296,6 +307,7 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
       var tag = tags.tagByName(name);
       SbomSpdxUtilities.checkTagValueTextFields(tag, 'Document Creation');
     }
+
     return true;
   }
 
@@ -306,6 +318,7 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     if (result.isNotEmpty) {
       SbomUtilities.error(
           'Failed to validate SPDX Package section, failed tags are ${SbomUtilities.tagsToString(result)}');
+
       return false;
     }
     // Check for any potential specification violations, only warn these.
@@ -378,6 +391,7 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     if (!result) {
       return false;
     }
+
     return true;
   }
 
@@ -395,6 +409,7 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
       } on Exception {
         SbomUtilities.error(
             'SPDX SBOM generation - unable to delete existing sbom file at $outputFileName - aborting generation');
+
         return false;
       }
     }
@@ -403,6 +418,7 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     } on FileSystemException {
       SbomUtilities.error(
           'SPDX SBOM generation - unable to create output sbom file at $outputFileName - aborting generation');
+
       return false;
     }
 
@@ -425,6 +441,7 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     if (!result) {
       SbomUtilities.error(
           'SPDX SBOM generation - unable to generate a formatted SPDX file at $outputFileName - aborting generation');
+
       return false;
     }
     sbomFilePath = outputFileName;

@@ -43,6 +43,7 @@ class SbomGenerator {
         {
           SbomUtilities.error('SBOM Type is invalid or not set.');
           valid = false;
+
           return;
         }
     }
@@ -50,18 +51,21 @@ class SbomGenerator {
     if (!result) {
       SbomUtilities.error('Failed to build SBOM for type SPDX.');
       valid = false;
+
       return;
     }
     result = output.validate();
     if (!result) {
       SbomUtilities.error('Failed to validate SBOM for type SPDX.');
       valid = false;
+
       return;
     }
     result = output.generate();
     if (!result) {
       SbomUtilities.error('Failed to generate SBOM for type SPDX.');
       valid = false;
+
       return;
     }
     sbomFilePath = output.sbomFilePath;

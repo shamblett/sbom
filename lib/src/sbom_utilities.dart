@@ -51,6 +51,7 @@ class SbomUtilities {
     for (final tag in tags) {
       output += '${tag.name},';
     }
+
     return output.substring(0, output.length - 1);
   }
 }

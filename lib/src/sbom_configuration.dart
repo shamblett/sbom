@@ -67,6 +67,7 @@ class SbomConfiguration {
       results = argParser.parse(args);
     } on ArgParserException catch (e) {
       print(e.message);
+
       return;
     }
 
@@ -76,6 +77,7 @@ class SbomConfiguration {
       print('');
       print(argParser.usage);
       valid = false;
+
       return;
     }
 
@@ -115,6 +117,7 @@ class SbomConfiguration {
       valid = false;
       SbomUtilities.error(
           'Cannot read SBOM configuration file, path is $sbomFilepath,  cannot continue');
+
       return;
     }
     var contents = loadYaml(sbomConfiguration);
@@ -122,12 +125,14 @@ class SbomConfiguration {
       valid = false;
       SbomUtilities.error(
           'SBOM configuration file is empty, path is $sbomFilepath,  cannot continue');
+
       return;
     }
     if (!contents.containsKey(SbomConstants.sbomType)) {
       valid = false;
       SbomUtilities.error(
           'No type specified in SBOM configuration file, cannot continue');
+
       return;
     }
     _setType(contents[SbomConstants.sbomType]);
@@ -146,6 +151,7 @@ class SbomConfiguration {
       valid = false;
       SbomUtilities.error(
           'Cannot read package pubspec file, path is $pubspecFilepath,  cannot continue');
+
       return;
     }
 
@@ -154,6 +160,7 @@ class SbomConfiguration {
       valid = false;
       SbomUtilities.error(
           'Package pubspec file is empty, path is $pubspecFilepath,  cannot continue');
+
       return;
     }
     // Package name

@@ -32,6 +32,7 @@ class SbomSpdxUtilities {
   static String formatFilePath(String path) {
     path = path.replaceAll('\\\\', '/');
     path = path.replaceAll('\\', '/');
+
     return '/$path';
   }
 }

@@ -8,9 +8,26 @@ include: package:lints/recommended.yaml
 analyzer:
   exclude:
     - test/issues/**
-
+  plugins:
+    - dart_code_metrics
+dart_code_metrics:
+  metrics:
+    cyclomatic-complexity: 20
+    lines-of-executable-code: 50
+    number-of-parameters: 5
+    maximum-nesting-level: 5
+    source-lines-of-code: 60
+  metrics-exclude:
+    - test/**
+  rules:
+    - newline-before-return
+    - no-boolean-literal-compare
+    - no-empty-block
+    - prefer-conditional-expressions
+    - no-equal-then-else
 linter:
   rules:
     - always_declare_return_types
     - prefer_single_quotes
     - unawaited_futures
+    - require_trailing_commas: false

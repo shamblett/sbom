@@ -19,6 +19,7 @@ class SbomSpdxTags extends SbomTags<SbomSpdxTag, String, SbomSpdxTagBuilder> {
   List<SbomSpdxTag> sectionTags(String section) {
     var selection = tags.where((e) => e.section == section).toList();
     selection.sort((a, b) => a.position.compareTo(b.position));
+
     return selection;
   }
 
