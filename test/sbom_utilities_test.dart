@@ -5,10 +5,11 @@
  * Copyright :  S.Hamblett
  */
 
+@TestOn('VM')
+
 import 'package:sbom/sbom.dart';
 import 'package:test/test.dart';
 
-@TestOn('VM')
 void main() {
   group('Logging', () {
     test('Error', () {

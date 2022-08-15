@@ -4,10 +4,12 @@
  * Date   : 25/09/2021
  * Copyright :  S.Hamblett
  */
+
+@TestOn('VM')
+
 import 'package:sbom/sbom.dart';
 import 'package:test/test.dart';
 
-@TestOn('VM')
 void main() {
   test('Package Dart files - no files', () {
     final config = SbomConfiguration(['-p', 'test/sbom/filesupport/nofiles']);

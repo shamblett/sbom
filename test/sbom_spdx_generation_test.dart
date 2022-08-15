@@ -5,12 +5,13 @@
  * Copyright :  S.Hamblett
  */
 
+@TestOn('VM')
+
 import 'dart:io';
 
 import 'package:sbom/sbom.dart';
 import 'package:test/test.dart';
 
-@TestOn('VM')
 void main() {
   group('Document creation section', () {
     test('Document Configuration', () {

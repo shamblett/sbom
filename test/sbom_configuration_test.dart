@@ -4,11 +4,13 @@
  * Date   : 25/09/2021
  * Copyright :  S.Hamblett
  */
+
+@TestOn('VM')
+
 import 'package:sbom/sbom.dart';
 import 'package:test/test.dart';
 import 'package:path/path.dart' as path;
 
-@TestOn('VM')
 void main() {
   group('Arguments', () {
     test('None', () {
