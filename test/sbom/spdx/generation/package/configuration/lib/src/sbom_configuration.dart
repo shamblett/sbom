@@ -16,5 +16,4 @@ class SbomConfiguration {
   ///
   /// Arbitrary text
   ///
-
 }
