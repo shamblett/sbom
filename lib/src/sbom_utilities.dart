@@ -5,7 +5,7 @@
  * Copyright :  S.Hamblett
  */
 
-part of sbom;
+part of '../sbom.dart';
 
 /// Utility functions for the SBOM package.
 class SbomUtilities {

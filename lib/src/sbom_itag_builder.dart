@@ -5,7 +5,7 @@
  * Copyright :  S.Hamblett
  */
 
-part of sbom;
+part of '../sbom.dart';
 
 /// Tag builder interface class.
 abstract class SbomITagBuilder {

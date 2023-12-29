@@ -5,7 +5,7 @@
  * Copyright :  S.Hamblett
  */
 
-part of sbom;
+part of '../../../sbom.dart';
 
 /// The SBOM SPDX output formatter interface class.
 abstract class SbomSpdxIOutputFormatter {

@@ -5,7 +5,7 @@
  * Copyright :  S.Hamblett
  */
 
-part of sbom;
+part of '../../../sbom.dart';
 
 /// The SBOM SPDX output generator class.
 class SbomSpdxOutputGenerator extends SbomIOutputGenerator {

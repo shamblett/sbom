@@ -5,7 +5,7 @@
  * Copyright :  S.Hamblett
  */
 
-part of sbom;
+part of '../../sbom.dart';
 
 /// SPDX tag names as defined by the SPDX specification.
 /// A shortened version of the document section name is prepended to

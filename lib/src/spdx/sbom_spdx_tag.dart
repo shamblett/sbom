@@ -5,14 +5,15 @@
  * Copyright :  S.Hamblett
  */
 
-part of sbom;
+part of '../../sbom.dart';
 
 /// SPDX tag class.
 class SbomSpdxTag extends SbomTag<String> {
   /// Construction
-  SbomSpdxTag(name, section, position, [this.canBeOverridden = false])
-      : super(name, section, position);
+  SbomSpdxTag(super.name, super.section, super.position,
+      [this.canBeOverridden = false]);
 
+  // ignore: use_super_parameters
   SbomSpdxTag.mandatory(name, section, position, [this.canBeOverridden = false])
       : super.mandatory(name, section, position);
 

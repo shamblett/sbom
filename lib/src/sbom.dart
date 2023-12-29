@@ -5,7 +5,7 @@
  * Copyright :  S.Hamblett
  */
 
-part of sbom;
+part of '../sbom.dart';
 
 /// The main sbom class
 class Sbom {

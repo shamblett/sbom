@@ -7,7 +7,7 @@
 * Ported originally from https://github.com/adaptant-labs/spdx-licenses-dart
 */
 
-part of sbom;
+part of '../../sbom.dart';
 
 /// License details class
 class SbomSpdxLicenseDetails {
