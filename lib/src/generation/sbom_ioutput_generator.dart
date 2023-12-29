@@ -5,7 +5,7 @@
  * Copyright :  S.Hamblett
  */
 
-part of sbom;
+part of '../../sbom.dart';
 
 /// The SBOM output generator interface class.
 abstract class SbomIOutputGenerator {

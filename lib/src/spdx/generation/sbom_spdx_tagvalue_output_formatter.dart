@@ -5,12 +5,11 @@
  * Copyright :  S.Hamblett
  */
 
-part of sbom;
+part of '../../../sbom.dart';
 
 /// The SBOM SPDX output formatter class for tag/value formats.
 class SbomSpdxOutputTagvalueFormatter extends SbomSpdxIOutputFormatter {
-  SbomSpdxOutputTagvalueFormatter(File outputFile, SbomTags tags)
-      : super(outputFile, tags);
+  SbomSpdxOutputTagvalueFormatter(super.outputFile, super.tags);
 
   /// The formatting processor.
   @override

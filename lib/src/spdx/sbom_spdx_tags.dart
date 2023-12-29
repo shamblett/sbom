@@ -5,7 +5,7 @@
  * Copyright :  S.Hamblett
  */
 
-part of sbom;
+part of '../../sbom.dart';
 
 /// Main SPDX tag class
 class SbomSpdxTags extends SbomTags<SbomSpdxTag, String, SbomSpdxTagBuilder> {

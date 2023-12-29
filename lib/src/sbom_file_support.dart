@@ -5,7 +5,7 @@
  * Copyright :  S.Hamblett
  */
 
-part of sbom;
+part of '../sbom.dart';
 
 /// The SBOM file support class.
 /// Provides convenience methods for file listings, SHA1 generation of file contents etc.

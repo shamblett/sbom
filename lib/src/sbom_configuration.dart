@@ -5,7 +5,7 @@
  * Copyright :  S.Hamblett
  */
 
-part of sbom;
+part of '../sbom.dart';
 
 /// SBOM types.
 enum SbomType { none, spdx }
