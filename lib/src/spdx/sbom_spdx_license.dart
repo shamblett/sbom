@@ -103,4 +103,29 @@ class SbomSpdxLicense {
 
     return output;
   }
+
+  // Get the path to the latest SBOM package or return not found
+  String _getLatestVersionPath() {
+    try {
+      // Get the pub cache contents
+      final result = Process.runSync('dart pub cache', ['list']);
+      final jsonData = json.decode(result.stdout);
+
+      // Get the SBOM entries
+      if ((jsonData as Map<String, dynamic>).isNotEmpty) {
+        final sbomData = jsonData['packages'][SbomConstants.package];
+        final versionList = sbomData.keys.toList().sort();
+
+        // Latest version is first entry
+
+        return (versionList as List<String>).isNotEmpty
+            ? versionList.first
+            : SbomConstants.sbomNotFound;
+      } else {
+        return SbomConstants.sbomNotFound;
+      }
+    } on Exception {
+      return SbomConstants.sbomNotFound;
+    }
+  }
 }
