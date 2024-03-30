@@ -70,16 +70,14 @@ class SbomSpdxLicense {
   /// Build the license list
   void _licenseList() {
     // Get the path to the license file directory
-    // If we can't find the installed package use top level as a default
-    var licenseDirectoryPath =
-        path.join(path.current, SbomSpdxConstants.licenceDirectory);
-    final pubCache = PubCache();
-    final sbomPackageRef = pubCache.getLatestVersion(SbomConstants.package);
-    if (sbomPackageRef != null) {
-      final sbomPackage = sbomPackageRef.resolve();
-      licenseDirectoryPath = path.join(
-          sbomPackage!.location.path, SbomSpdxConstants.licenceDirectory);
+    // If we can't find the installed package bail.
+    var licenseDirectoryPath = _getLatestVersionPath();
+    if (licenseDirectoryPath == SbomConstants.sbomNotFound) {
+      return;
     }
+    licenseDirectoryPath =
+        path.join(licenseDirectoryPath, SbomSpdxConstants.licenceDirectory);
+
     // Read the license information
     final licenseDir = Directory(licenseDirectoryPath);
     final files = licenseDir.listSync();
@@ -107,23 +105,14 @@ class SbomSpdxLicense {
   // Get the path to the latest SBOM package or return not found
   String _getLatestVersionPath() {
     try {
-      // Get the pub cache contents
-      final result = Process.runSync('dart pub cache', ['list']);
-      final jsonData = json.decode(result.stdout);
-
-      // Get the SBOM entries
-      if ((jsonData as Map<String, dynamic>).isNotEmpty) {
-        final sbomData = jsonData['packages'][SbomConstants.package];
-        final versionList = sbomData.keys.toList().sort();
-
-        // Latest version is first entry
-
-        return (versionList as List<String>).isNotEmpty
-            ? versionList.first
-            : SbomConstants.sbomNotFound;
-      } else {
+      final licenseUri = Isolate.resolvePackageUriSync(
+        Uri.parse('package:sbom/src/spdx/licences'),
+      );
+      if (licenseUri == null) {
         return SbomConstants.sbomNotFound;
       }
+
+      return licenseUri.path;
     } on Exception {
       return SbomConstants.sbomNotFound;
     }

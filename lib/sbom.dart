@@ -9,12 +9,12 @@ library sbom;
 
 import 'dart:io';
 import 'dart:convert';
+import 'dart:isolate';
 
 import 'package:args/args.dart';
 import 'package:path/path.dart' as path;
 import 'package:yaml/yaml.dart';
 import 'package:crypto/crypto.dart';
-import 'package:pub_cache/pub_cache.dart';
 
 part 'src/sbom.dart';
 part 'src/sbom_constants.dart';
