@@ -75,8 +75,6 @@ class SbomSpdxLicense {
     if (licenseDirectoryPath == SbomConstants.sbomNotFound) {
       return;
     }
-    licenseDirectoryPath =
-        path.join(licenseDirectoryPath, SbomSpdxConstants.licenceDirectory);
 
     // Read the license information
     final licenseDir = Directory(licenseDirectoryPath);
@@ -106,7 +104,7 @@ class SbomSpdxLicense {
   String _getLatestVersionPath() {
     try {
       final licenseUri = Isolate.resolvePackageUriSync(
-        Uri.parse('package:sbom/src/spdx/licences'),
+        Uri.parse('package:${SbomSpdxConstants.licenceDirectory}'),
       );
       if (licenseUri == null) {
         return SbomConstants.sbomNotFound;
