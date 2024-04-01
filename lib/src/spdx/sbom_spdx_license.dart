@@ -103,15 +103,25 @@ class SbomSpdxLicense {
   // Get the path to the latest SBOM package or return not found
   String _getLatestVersionPath() {
     try {
-      final licenseUri = Isolate.resolvePackageUriSync(
-        Uri.parse('package:${SbomSpdxConstants.licenceDirectory}'),
-      );
-      if (licenseUri == null) {
+      // Get the pub cache contents
+      final result = Process.runSync('dart pub', ['cache list']);
+      final jsonData = json.decode(result.stdout);
+
+      // Get the SBOM entries
+      if ((jsonData as Map<String, dynamic>).isNotEmpty) {
+        final sbomData = jsonData['packages'][SbomConstants.package];
+        final versionList = sbomData.keys.toList().sort();
+
+        // Latest version is first entry
+
+        return (versionList as List<String>).isNotEmpty
+            ? versionList.first
+            : SbomConstants.sbomNotFound;
+      } else {
         return SbomConstants.sbomNotFound;
       }
-
-      return licenseUri.path;
-    } on Exception {
+    } on Exception catch (e) {
+      print(e);
       return SbomConstants.sbomNotFound;
     }
   }
