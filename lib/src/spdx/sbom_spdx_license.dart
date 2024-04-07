@@ -88,5 +88,4 @@ class SbomSpdxLicense {
       licenses[details.name] = details;
     }
   }
-
 }
