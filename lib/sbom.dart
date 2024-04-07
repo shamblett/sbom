@@ -8,7 +8,6 @@
 library sbom;
 
 import 'dart:io';
-import 'dart:convert';
 
 import 'package:args/args.dart';
 import 'package:path/path.dart' as path;
@@ -34,5 +33,6 @@ part 'src/spdx/sbom_spdx_constants.dart';
 part 'src/spdx/sbom_spdx_utilities.dart';
 part 'src/spdx/sbom_spdx_tag_builder.dart';
 part 'src/spdx/sbom_spdx_license.dart';
+part 'src/spdx/licences/all.dart';
 part 'src/spdx/generation/sbom_spdx_ioutput_formatter.dart';
 part 'src/spdx/generation/sbom_spdx_tagvalue_output_formatter.dart';
