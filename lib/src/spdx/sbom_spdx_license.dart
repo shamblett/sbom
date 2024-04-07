@@ -13,7 +13,7 @@ part of '../../sbom.dart';
 class SbomSpdxLicenseDetails {
   SbomSpdxLicenseDetails();
 
-  SbomSpdxLicenseDetails.fromJson(Map<String, dynamic> json) {
+  SbomSpdxLicenseDetails.fromJson(Map json) {
     isDeprecatedLicenseId =
         json.containsKey(SbomSpdxConstants.licenseIsDeprecatedId)
             ? json[SbomSpdxConstants.licenseIsDeprecatedId]
@@ -56,7 +56,9 @@ class SbomSpdxLicenseDetails {
 
 /// Main license class
 class SbomSpdxLicense {
-  SbomSpdxLicense();
+  SbomSpdxLicense() {
+    _buildLicenceList();
+  }
 
   /// Current version of the license list
   String licenseListVersion = SbomSpdxConstants.licenseListVersion;
@@ -77,6 +79,14 @@ class SbomSpdxLicense {
     }
 
     return output;
+  }
+
+  // Builds the licence list from the raw licence data
+  void _buildLicenceList() {
+    for (final entry in allLicences) {
+      final details = SbomSpdxLicenseDetails.fromJson(entry);
+      licenses[details.name] = details;
+    }
   }
 
 }
