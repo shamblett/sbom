@@ -56,9 +56,7 @@ class SbomSpdxLicenseDetails {
 
 /// Main license class
 class SbomSpdxLicense {
-  SbomSpdxLicense() {
-    _licenseList();
-  }
+  SbomSpdxLicense();
 
   /// Current version of the license list
   String licenseListVersion = SbomSpdxConstants.licenseListVersion;
@@ -66,25 +64,6 @@ class SbomSpdxLicense {
   /// Licence details
   late Map<String, SbomSpdxLicenseDetails> licenses =
       <String, SbomSpdxLicenseDetails>{};
-
-  /// Build the license list
-  void _licenseList() {
-    // Get the path to the license file directory
-    // If we can't find the installed package bail.
-    var licenseDirectoryPath = _getLatestVersionPath();
-    if (licenseDirectoryPath == SbomConstants.sbomNotFound) {
-      return;
-    }
-
-    // Read the license information
-    final licenseDir = Directory(licenseDirectoryPath);
-    final files = licenseDir.listSync();
-    for (final file in files) {
-      final contents = File(file.path).readAsStringSync();
-      final details = SbomSpdxLicenseDetails.fromJson(json.decode(contents));
-      licenses[details.name] = details;
-    }
-  }
 
   /// Get the license identifier of a package license.
   /// Returns the SPDX license id as defined in the SPDX Specification Appendix V
@@ -100,31 +79,4 @@ class SbomSpdxLicense {
     return output;
   }
 
-  // Get the path to the latest SBOM package or return not found
-  String _getLatestVersionPath() {
-    try {
-      // Get the path to the Dart executable
-      final dartPath = Platform.resolvedExecutable;
-
-      // Get the pub cache contents
-      final result = Process.runSync(dartPath, ['pub', 'cache', 'list']);
-      final jsonData = json.decode(result.stdout);
-
-      // Get the SBOM entries
-      if ((jsonData as Map<String, dynamic>).isNotEmpty) {
-        final sbomData = jsonData['packages'][SbomConstants.package];
-        final versionList = sbomData.keys.toList().sort().reverse;
-
-        // Latest version is first entry
-
-        return (versionList as List<String>).isNotEmpty
-            ? versionList.first
-            : SbomConstants.sbomNotFound;
-      } else {
-        return SbomConstants.sbomNotFound;
-      }
-    } on Exception catch (e) {
-      return SbomConstants.sbomNotFound;
-    }
-  }
 }
