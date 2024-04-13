@@ -8,13 +8,11 @@
 library sbom;
 
 import 'dart:io';
-import 'dart:convert';
 
 import 'package:args/args.dart';
 import 'package:path/path.dart' as path;
 import 'package:yaml/yaml.dart';
 import 'package:crypto/crypto.dart';
-import 'package:pub_cache/pub_cache.dart';
 
 part 'src/sbom.dart';
 part 'src/sbom_constants.dart';
@@ -35,5 +33,6 @@ part 'src/spdx/sbom_spdx_constants.dart';
 part 'src/spdx/sbom_spdx_utilities.dart';
 part 'src/spdx/sbom_spdx_tag_builder.dart';
 part 'src/spdx/sbom_spdx_license.dart';
+part 'src/spdx/licences/sbom_licenses.dart';
 part 'src/spdx/generation/sbom_spdx_ioutput_formatter.dart';
 part 'src/spdx/generation/sbom_spdx_tagvalue_output_formatter.dart';

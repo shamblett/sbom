@@ -13,7 +13,7 @@ part of '../../sbom.dart';
 class SbomSpdxLicenseDetails {
   SbomSpdxLicenseDetails();
 
-  SbomSpdxLicenseDetails.fromJson(Map<String, dynamic> json) {
+  SbomSpdxLicenseDetails.fromJson(Map json) {
     isDeprecatedLicenseId =
         json.containsKey(SbomSpdxConstants.licenseIsDeprecatedId)
             ? json[SbomSpdxConstants.licenseIsDeprecatedId]
@@ -57,7 +57,7 @@ class SbomSpdxLicenseDetails {
 /// Main license class
 class SbomSpdxLicense {
   SbomSpdxLicense() {
-    _licenseList();
+    _buildLicenceList();
   }
 
   /// Current version of the license list
@@ -66,29 +66,6 @@ class SbomSpdxLicense {
   /// Licence details
   late Map<String, SbomSpdxLicenseDetails> licenses =
       <String, SbomSpdxLicenseDetails>{};
-
-  /// Build the license list
-  void _licenseList() {
-    // Get the path to the license file directory
-    // If we can't find the installed package use top level as a default
-    var licenseDirectoryPath =
-        path.join(path.current, SbomSpdxConstants.licenceDirectory);
-    final pubCache = PubCache();
-    final sbomPackageRef = pubCache.getLatestVersion(SbomConstants.package);
-    if (sbomPackageRef != null) {
-      final sbomPackage = sbomPackageRef.resolve();
-      licenseDirectoryPath = path.join(
-          sbomPackage!.location.path, SbomSpdxConstants.licenceDirectory);
-    }
-    // Read the license information
-    final licenseDir = Directory(licenseDirectoryPath);
-    final files = licenseDir.listSync();
-    for (final file in files) {
-      final contents = File(file.path).readAsStringSync();
-      final details = SbomSpdxLicenseDetails.fromJson(json.decode(contents));
-      licenses[details.name] = details;
-    }
-  }
 
   /// Get the license identifier of a package license.
   /// Returns the SPDX license id as defined in the SPDX Specification Appendix V
@@ -102,5 +79,13 @@ class SbomSpdxLicense {
     }
 
     return output;
+  }
+
+  // Builds the licence list from the raw licence data
+  void _buildLicenceList() {
+    for (final entry in allLicences) {
+      final details = SbomSpdxLicenseDetails.fromJson(entry);
+      licenses[details.name] = details;
+    }
   }
 }

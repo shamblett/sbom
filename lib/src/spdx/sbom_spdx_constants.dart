@@ -67,7 +67,7 @@ class SbomSpdxConstants {
   static const String licenseSeeAlso = 'seeAlso';
   static const String licenseIsOsiApproved = 'isOsiApproved';
   static final String licenceDirectory =
-      path.join('lib', 'src', 'spdx', 'licences');
+      path.join('sbom', 'src', 'spdx', 'licences');
 
   /// Tag value Validation
   static const List<String> packageTextTags = [

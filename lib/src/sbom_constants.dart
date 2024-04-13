@@ -52,4 +52,7 @@ class SbomConstants {
 
   /// Default package name we are generating for.
   static const String defaultPackageName = 'ERROR - name not set';
+
+  /// The SBOM package cannot be found in the pub cache.
+  static const String sbomNotFound = 'NOT FOUND';
 }
