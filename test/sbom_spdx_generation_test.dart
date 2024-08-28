@@ -8,7 +8,6 @@
 @TestOn('vm')
 library;
 
-
 import 'dart:io';
 
 import 'package:sbom/sbom.dart';
