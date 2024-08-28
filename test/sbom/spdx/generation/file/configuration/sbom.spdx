@@ -1,18 +1,95 @@
-SPDXVersion: SPDX-2.2DataLicense: CC0-1.0SPDXID: SPDXRef-DOCUMENTDocumentName: Document name from configurationDocumentName: sbomDocumentNamespace: https://pub.dev/packages/sbomLicenseListVersion: 3.8Creator: Tool: https://pub.dev/packages/sbomCreator: Person: Steve Hamblett <steve.hamblett@linux.comCreated: 2024-04-13T10:07:56ZCreatorComment: Creator comment from configurationDocumentComment: Document comment from configuration
+SPDXVersion: SPDX-2.2
+DataLicense: CC0-1.0
+SPDXID: SPDXRef-DOCUMENT
+DocumentName: Document name from configuration
+DocumentName: sbom
+DocumentNamespace: https://pub.dev/packages/sbom
+LicenseListVersion: 3.8
+Creator: Tool: https://pub.dev/packages/sbom
+Creator: Person: Steve Hamblett <steve.hamblett@linux.com
+Created: 2024-08-28T15:59:17Z
+CreatorComment: Creator comment from configuration
+DocumentComment: Document comment from configuration
 
-PackageName: sbomSPDXID: SPDXRef-Package-sbomPackageVersion: 1.0.0PackageFileName: The package filenamePackageSupplier: Organization: The package supplierPackageOriginator: Person: The package originatorPackageDownloadLocation: https://pub.dev/packages/sbomFilesAnalyzed: truePackageVerificationCode: 078d612f29469505a5614b5436d1c2e4edeba512PackageHomePage: https://pub.dev/packages/sbomPackageSourceInfo: <text>The package source info</text>PackageLicenseConcluded: MITPackageLicenseInfoFromFiles: NOASSERTIONPackageLicenseDeclared: NOASSERTIONPackageLicenseComments: <text>The package license comments</text>PackageCopyrightText: NOASSERTIONPackageSummary: <text>A Software Bill of Materials generator for Dart packages.</text>PackageDescription: <text>The package description.</text>PackageComment: <text>The package comment</text>ExternalRef: SECURITY cpe23Type locatorExternalRefComment: <text>The package external ref comment</text>PackageAttributionText: <text>The package attribution text</text>
 
-FileName: /lib/sbom.dartSPDXID: SPDXRef-sbom-0FileType: SOURCEFileChecksum: SHA1: fc4b3c6ec9c2708401b1f8dd8a9b781ab016373bLicenseConcluded: NOASSERTIONLicenseInfoInFile: NOASSERTIONFileCopyrightText: NOASSERTION
+PackageName: sbom
+SPDXID: SPDXRef-Package-sbom
+PackageVersion: 1.0.0
+PackageFileName: The package filename
+PackageSupplier: Organization: The package supplier
+PackageOriginator: Person: The package originator
+PackageDownloadLocation: https://pub.dev/packages/sbom
+FilesAnalyzed: true
+PackageVerificationCode: 078d612f29469505a5614b5436d1c2e4edeba512
+PackageHomePage: https://pub.dev/packages/sbom
+PackageSourceInfo: <text>The package source info</text>
+PackageLicenseConcluded: MIT
+PackageLicenseInfoFromFiles: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageLicenseComments: <text>The package license comments</text>
+PackageCopyrightText: NOASSERTION
+PackageSummary: <text>A Software Bill of Materials generator for Dart packages.</text>
+PackageDescription: <text>The package description.</text>
+PackageComment: <text>The package comment</text>
+ExternalRef: SECURITY cpe23Type locator
+ExternalRefComment: <text>The package external ref comment</text>
+PackageAttributionText: <text>The package attribution text</text>
 
-FileName: /lib/src/generation/sbom_spdx_utilities.dartSPDXID: SPDXRef-sbom-spdx-utilities-1FileType: SOURCEFileChecksum: SHA1: 576ca4ddecae7e42d1ac584448b5b4ddf6f0c1adLicenseConcluded: NOASSERTIONLicenseInfoInFile: NOASSERTIONFileCopyrightText: NOASSERTION
 
-FileName: /lib/src/sbom.dartSPDXID: SPDXRef-sbom-2FileType: SOURCEFileChecksum: SHA1: 2281882324d5ae54dd2073e0a627402fa332a6c7LicenseConcluded: NOASSERTIONLicenseInfoInFile: NOASSERTIONFileCopyrightText: NOASSERTION
+FileName: lib/sbom.dart
+SPDXID: SPDXRef-sbom-0
+FileType: SOURCE
+FileChecksum: SHA1: fc4b3c6ec9c2708401b1f8dd8a9b781ab016373b
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
 
-FileName: /lib/src/sbom_configuration.dartSPDXID: SPDXRef-sbom-configuration-3FileType: SOURCEFileChecksum: SHA1: cd49ab8fed0a039c9adf2a2209fae94e3f843fd5LicenseConcluded: NOASSERTIONLicenseInfoInFile: NOASSERTIONFileCopyrightText: NOASSERTION
 
-FileName: /lib/src/sbom_constants.dartSPDXID: SPDXRef-sbom-constants-4FileType: SOURCEFileChecksum: SHA1: b728d19434e721b29b4f87d26a721047dad9db7eLicenseConcluded: NOASSERTIONLicenseInfoInFile: NOASSERTIONFileCopyrightText: NOASSERTION
+FileName: lib/src/generation/sbom_spdx_utilities.dart
+SPDXID: SPDXRef-sbom-spdx-utilities-1
+FileType: SOURCE
+FileChecksum: SHA1: 576ca4ddecae7e42d1ac584448b5b4ddf6f0c1ad
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
 
-FileName: /pubspec.yamlSPDXID: SPDXRef-pubspec-5FileType: TEXTFileChecksum: SHA1: de7b836dfc9aaec702d32367ee2c104d32d6e3fbLicenseConcluded: NOASSERTIONLicenseInfoInFile: NOASSERTIONFileCopyrightText: NOASSERTION
+
+FileName: lib/src/sbom.dart
+SPDXID: SPDXRef-sbom-2
+FileType: SOURCE
+FileChecksum: SHA1: 2281882324d5ae54dd2073e0a627402fa332a6c7
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
+
+
+FileName: lib/src/sbom_configuration.dart
+SPDXID: SPDXRef-sbom-configuration-3
+FileType: SOURCE
+FileChecksum: SHA1: cd49ab8fed0a039c9adf2a2209fae94e3f843fd5
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
+
+
+FileName: lib/src/sbom_constants.dart
+SPDXID: SPDXRef-sbom-constants-4
+FileType: SOURCE
+FileChecksum: SHA1: b728d19434e721b29b4f87d26a721047dad9db7e
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
+
+
+FileName: pubspec.yaml
+SPDXID: SPDXRef-pubspec-5
+FileType: TEXT
+FileChecksum: SHA1: de7b836dfc9aaec702d32367ee2c104d32d6e3fb
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
+
 
 Relationship: SPDXRef-pubspec-5 DEPENDENCY_MANIFEST_OF SPDXRef-Package-sbom
+
 

@@ -1,8 +1,44 @@
-SPDXVersion: SPDX-2.2DataLicense: CC0-1.0SPDXID: SPDXRef-DOCUMENTDocumentName: Document name from configurationDocumentName: sbomDocumentNamespace: https://pub.dev/packages/sbomLicenseListVersion: 3.8Creator: Tool: https://pub.dev/packages/sbomCreator: Person: Steve Hamblett <steve.hamblett@linux.comCreator: Not a real creator valueCreated: 2024-04-13T10:07:56ZCreatorComment: Creator comment from configurationDocumentComment: Document comment from configuration
+SPDXVersion: SPDX-2.2
+DataLicense: CC0-1.0
+SPDXID: SPDXRef-DOCUMENT
+DocumentName: Document name from configuration
+DocumentName: sbom
+DocumentNamespace: https://pub.dev/packages/sbom
+LicenseListVersion: 3.8
+Creator: Tool: https://pub.dev/packages/sbom
+Creator: Person: Steve Hamblett <steve.hamblett@linux.com
+Creator: Not a real creator value
+Created: 2024-08-28T15:59:17Z
+CreatorComment: Creator comment from configuration
+DocumentComment: Document comment from configuration
 
-PackageName: sbomSPDXID: SPDXRef-Package-sbomPackageVersion: 1.0.0PackageFileName: sbomPackageSupplier: NOASSERTIONPackageOriginator: NOASSERTIONPackageDownloadLocation: https://pub.dev/packages/sbomFilesAnalyzed: truePackageVerificationCode: fbc1274d1567d986ace78d139fdb65f99e8960fdPackageHomePage: https://pub.dev/packages/sbomPackageLicenseConcluded: NOASSERTIONPackageLicenseInfoFromFiles: NOASSERTIONPackageLicenseDeclared: NOASSERTIONPackageCopyrightText: NOASSERTIONPackageSummary: <text>A Software Bill of Materials generator for Dart packages.</text>
 
-FileName: /pubspec.yamlSPDXID: SPDXRef-pubspec-0FileType: TEXTFileChecksum: SHA1: de7b836dfc9aaec702d32367ee2c104d32d6e3fbLicenseConcluded: NOASSERTIONLicenseInfoInFile: NOASSERTIONFileCopyrightText: NOASSERTION
+PackageName: sbom
+SPDXID: SPDXRef-Package-sbom
+PackageVersion: 1.0.0
+PackageFileName: sbom
+PackageSupplier: NOASSERTION
+PackageOriginator: NOASSERTION
+PackageDownloadLocation: https://pub.dev/packages/sbom
+FilesAnalyzed: true
+PackageVerificationCode: fbc1274d1567d986ace78d139fdb65f99e8960fd
+PackageHomePage: https://pub.dev/packages/sbom
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseInfoFromFiles: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+PackageSummary: <text>A Software Bill of Materials generator for Dart packages.</text>
+
+
+FileName: pubspec.yaml
+SPDXID: SPDXRef-pubspec-0
+FileType: TEXT
+FileChecksum: SHA1: de7b836dfc9aaec702d32367ee2c104d32d6e3fb
+LicenseConcluded: NOASSERTION
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
+
 
 Relationship: SPDXRef-pubspec-0 DEPENDENCY_MANIFEST_OF SPDXRef-Package-sbom
+
 

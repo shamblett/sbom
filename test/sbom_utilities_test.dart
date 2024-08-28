@@ -6,6 +6,7 @@
  */
 
 @TestOn('vm')
+library;
 
 import 'package:sbom/sbom.dart';
 import 'package:test/test.dart';

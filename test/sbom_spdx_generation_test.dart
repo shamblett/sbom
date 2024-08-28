@@ -6,6 +6,7 @@
  */
 
 @TestOn('vm')
+library;
 
 import 'dart:io';
 
@@ -175,7 +176,7 @@ void main() {
       generator.generate();
       expect(generator.valid, isTrue);
       expect(
-          generator.tags.tagByName('F-FileName-0').values[0], '/lib/sbom.dart');
+          generator.tags.tagByName('F-FileName-0').values[0], 'lib/sbom.dart');
       expect(generator.tags.tagByName('F-FileName-0').position, 1);
       expect(
           generator.tags.tagByName('F-SPDXID-0').values[0], 'SPDXRef-sbom-0');
@@ -194,7 +195,7 @@ void main() {
       expect(generator.tags.tagByName('F-FileCopyrightText-0').values[0],
           'NOASSERTION');
       expect(generator.tags.tagByName('F-FileName-2').values[0],
-          '/lib/src/sbom.dart');
+          'lib/src/sbom.dart');
       expect(generator.tags.tagByName('F-FileName-2').position, 15);
       expect(
           generator.tags.tagByName('F-SPDXID-2').values[0], 'SPDXRef-sbom-2');
@@ -213,7 +214,7 @@ void main() {
       expect(generator.tags.tagByName('F-FileCopyrightText-2').values[0],
           'NOASSERTION');
       expect(generator.tags.tagByName('F-FileName-4').values[0],
-          '/lib/src/sbom_constants.dart');
+          'lib/src/sbom_constants.dart');
       expect(generator.tags.tagByName('F-FileName-4').position, 29);
       expect(generator.tags.tagByName('F-SPDXID-4').values[0],
           'SPDXRef-sbom-constants-4');
@@ -232,7 +233,7 @@ void main() {
       expect(generator.tags.tagByName('F-FileCopyrightText-4').values[0],
           'NOASSERTION');
       expect(
-          generator.tags.tagByName('F-FileName-5').values[0], '/pubspec.yaml');
+          generator.tags.tagByName('F-FileName-5').values[0], 'pubspec.yaml');
       expect(generator.tags.tagByName('F-FileName-5').position, 36);
       expect(generator.tags.tagByName('F-SPDXID-5').values[0],
           'SPDXRef-pubspec-5');

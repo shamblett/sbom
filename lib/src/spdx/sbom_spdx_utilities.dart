@@ -33,6 +33,6 @@ class SbomSpdxUtilities {
     path = path.replaceAll('\\\\', '/');
     path = path.replaceAll('\\', '/');
 
-    return '/$path';
+    return path;
   }
 }
