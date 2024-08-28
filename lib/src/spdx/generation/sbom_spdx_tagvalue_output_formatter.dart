@@ -57,7 +57,7 @@ class SbomSpdxOutputTagvalueFormatter extends SbomSpdxIOutputFormatter {
             // Remove the prepended section identifier from the tag name constant to get the tag
             // name
             final str =
-                '${SbomSpdxUtilities.getSpecTagName(tag.name)}${SbomSpdxConstants.tagValueSeparator}$value\r';
+                '${SbomSpdxUtilities.getSpecTagName(tag.name)}${SbomSpdxConstants.tagValueSeparator}$value${Platform.lineTerminator}';
             outputFile.writeAsStringSync(str, mode: FileMode.append);
             // If its the file section put a new line between each file
             if (section == SbomSpdxSectionNames.file) {
@@ -73,7 +73,9 @@ class SbomSpdxOutputTagvalueFormatter extends SbomSpdxIOutputFormatter {
     }
     // Blank line at the end of the section unless its the file section
     if (section != SbomSpdxSectionNames.file) {
-      outputFile.writeAsStringSync('\n\n', mode: FileMode.append);
+      outputFile.writeAsStringSync(
+          '${Platform.lineTerminator}${Platform.lineTerminator}',
+          mode: FileMode.append);
     }
 
     return true;
