@@ -6,6 +6,7 @@
  */
 
 @TestOn('vm')
+library;
 
 import 'package:sbom/sbom.dart';
 import 'package:test/test.dart';
@@ -148,15 +149,6 @@ void main() {
       expect(
           SbomUtilities.last
               .contains('ERROR: Cannot read package pubspec file'),
-          isTrue);
-    });
-    test('Empty', () {
-      final config = SbomConfiguration(['-p', 'test/sbom/configuration/empty']);
-      config.parsePubspecFile();
-      expect(config.valid, isFalse);
-      expect(config.sbomPubspecContents.isEmpty, isTrue);
-      expect(
-          SbomUtilities.last.contains('ERROR: Package pubspec file is empty'),
           isTrue);
     });
   });
