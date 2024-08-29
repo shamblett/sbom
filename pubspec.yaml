@@ -25,6 +25,14 @@ dev_dependencies:
  lints: '^4.0.0'
  test: '^1.25.8'
 
+topics:
+  - sbom
+  - spdx
+
+screenshots:
+  - description: 'SBOM generator for Dart packages'
+    path: example/screenshots/sbom.png
+
 
 
 
