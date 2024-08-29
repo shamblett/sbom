@@ -26,12 +26,12 @@ dev_dependencies:
  test: '^1.25.8'
 
  topics:
-  - sbom
-  - spdx
+   - sbom
+   - spdx
 
  screenshots:
-  - description: 'SBOM generator for Dart packages'
-    path: example/screenshots/sbom.png
+   - description: 'SBOM generator for Dart packages'
+     path: example/screenshots/sbom.png
 
 
 
