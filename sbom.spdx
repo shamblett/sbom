@@ -5,18 +5,18 @@ DocumentName: sbom
 DocumentNamespace: https://pub.dev/packages/sbom
 LicenseListVersion: 3.8
 Creator: Tool: https://pub.dev/packages/sbom
-Created: 2024-08-28T15:44:19Z
+Created: 2024-08-29T09:23:45Z
 
 
 PackageName: sbom
 SPDXID: SPDXRef-Package-sbom
-PackageVersion: 2.0.3
+PackageVersion: 2.1.0
 PackageFileName: sbom
 PackageSupplier: NOASSERTION
 PackageOriginator: NOASSERTION
 PackageDownloadLocation: https://pub.dev/packages/sbom
 FilesAnalyzed: true
-PackageVerificationCode: e9a88f315783e3be8efe1d3e2b8773bb01eacfd0
+PackageVerificationCode: 75c07b51ff1104e71da57da07c5b325982239b4f
 PackageHomePage: https://pub.dev/packages/sbom
 PackageLicenseConcluded: MIT
 PackageLicenseInfoFromFiles: NOASSERTION
@@ -100,7 +100,7 @@ FileCopyrightText: NOASSERTION
 FileName: lib/src/sbom_itag_builder.dart
 SPDXID: SPDXRef-sbom-itag-builder-8
 FileType: SOURCE
-FileChecksum: SHA1: 8eacaa56c8e7d6587707d07a90771d41c0635b93
+FileChecksum: SHA1: 5a317db96f09ee11b6f172d0d078570e9f3dfa79
 LicenseConcluded: NOASSERTION
 LicenseInfoInFile: NOASSERTION
 FileCopyrightText: NOASSERTION
@@ -109,7 +109,7 @@ FileCopyrightText: NOASSERTION
 FileName: lib/src/sbom_tag.dart
 SPDXID: SPDXRef-sbom-tag-9
 FileType: SOURCE
-FileChecksum: SHA1: 5a317db96f09ee11b6f172d0d078570e9f3dfa79
+FileChecksum: SHA1: 20cb864ea453b6a48d81d8967db3c7294f08461c
 LicenseConcluded: NOASSERTION
 LicenseInfoInFile: NOASSERTION
 FileCopyrightText: NOASSERTION
@@ -118,7 +118,7 @@ FileCopyrightText: NOASSERTION
 FileName: lib/src/sbom_tags.dart
 SPDXID: SPDXRef-sbom-tags-10
 FileType: SOURCE
-FileChecksum: SHA1: 20cb864ea453b6a48d81d8967db3c7294f08461c
+FileChecksum: SHA1: b4d5eb100c1fa23afcd1a79b782add086819aead
 LicenseConcluded: NOASSERTION
 LicenseInfoInFile: NOASSERTION
 FileCopyrightText: NOASSERTION
@@ -127,7 +127,7 @@ FileCopyrightText: NOASSERTION
 FileName: lib/src/sbom_utilities.dart
 SPDXID: SPDXRef-sbom-utilities-11
 FileType: SOURCE
-FileChecksum: SHA1: b4d5eb100c1fa23afcd1a79b782add086819aead
+FileChecksum: SHA1: 8eacaa56c8e7d6587707d07a90771d41c0635b93
 LicenseConcluded: NOASSERTION
 LicenseInfoInFile: NOASSERTION
 FileCopyrightText: NOASSERTION
@@ -244,7 +244,7 @@ FileCopyrightText: NOASSERTION
 FileName: pubspec.yaml
 SPDXID: SPDXRef-pubspec-24
 FileType: TEXT
-FileChecksum: SHA1: fd580d73b99b7fa9834870b837898b54d52e92c6
+FileChecksum: SHA1: e3251f70605e298c92a8b0dd78380b802bf543dd
 LicenseConcluded: NOASSERTION
 LicenseInfoInFile: NOASSERTION
 FileCopyrightText: NOASSERTION
