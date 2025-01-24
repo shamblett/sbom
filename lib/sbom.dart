@@ -5,7 +5,7 @@
  * Copyright :  S.Hamblett
  */
 
-library sbom;
+library;
 
 import 'dart:io';
 
