@@ -5,18 +5,18 @@ DocumentName: sbom
 DocumentNamespace: https://pub.dev/packages/sbom
 LicenseListVersion: 3.8
 Creator: Tool: https://pub.dev/packages/sbom
-Created: 2024-08-29T09:23:45Z
+Created: 2025-01-25T09:06:57Z
 
 
 PackageName: sbom
 SPDXID: SPDXRef-Package-sbom
-PackageVersion: 2.1.0
+PackageVersion: 2.1.1
 PackageFileName: sbom
 PackageSupplier: NOASSERTION
 PackageOriginator: NOASSERTION
 PackageDownloadLocation: https://pub.dev/packages/sbom
 FilesAnalyzed: true
-PackageVerificationCode: 75c07b51ff1104e71da57da07c5b325982239b4f
+PackageVerificationCode: 988e5fa240cea99afb6e89fd885375ef1aa90d76
 PackageHomePage: https://pub.dev/packages/sbom
 PackageLicenseConcluded: MIT
 PackageLicenseInfoFromFiles: NOASSERTION
@@ -226,7 +226,7 @@ FileCopyrightText: NOASSERTION
 FileName: lib/src/spdx/sbom_spdx_tags.dart
 SPDXID: SPDXRef-sbom-spdx-tags-22
 FileType: SOURCE
-FileChecksum: SHA1: 91b28feb0284ff6d30c93c5177cd739dbffac1a5
+FileChecksum: SHA1: cc157ada2862e9c2aab0bdd1b379707d909988c2
 LicenseConcluded: NOASSERTION
 LicenseInfoInFile: NOASSERTION
 FileCopyrightText: NOASSERTION
@@ -244,7 +244,7 @@ FileCopyrightText: NOASSERTION
 FileName: pubspec.yaml
 SPDXID: SPDXRef-pubspec-24
 FileType: TEXT
-FileChecksum: SHA1: e3251f70605e298c92a8b0dd78380b802bf543dd
+FileChecksum: SHA1: 2fd3c8622155a5d497b0fed46e0455985eaae8dd
 LicenseConcluded: NOASSERTION
 LicenseInfoInFile: NOASSERTION
 FileCopyrightText: NOASSERTION
