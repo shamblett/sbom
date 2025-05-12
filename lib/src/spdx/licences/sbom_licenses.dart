@@ -19,7 +19,7 @@ final allLicences = <Map>[
     'name': 'BSD Zero Clause License',
     'licenseId': '0BSD',
     'seeAlso': ['http://landley.net/toybox/license.html'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -32,7 +32,7 @@ final allLicences = <Map>[
         'This license was released: 2002 Originally written by Edwin A. Suominen for licensing his PRIVARIA secure networking software (see www.privaria.org). The author, who is not an attorney, places this license template into the public domain along with a complete disclaimer of any warranty or responsibility for its content or legal efficacy. You may use or modify the language freely, but entirely at your own risk.',
     'licenseId': 'AAL',
     'seeAlso': ['https://opensource.org/licenses/attribution'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -43,7 +43,7 @@ final allLicences = <Map>[
     'name': 'Abstyles License',
     'licenseId': 'Abstyles',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/Abstyles'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -54,7 +54,7 @@ final allLicences = <Map>[
     'name': 'Adobe Systems Incorporated Source Code License Agreement',
     'licenseId': 'Adobe-2006',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/AdobeLicense'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -65,7 +65,7 @@ final allLicences = <Map>[
     'name': 'Adobe Glyph List License',
     'licenseId': 'Adobe-Glyph',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/MIT#AdobeGlyph'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -76,9 +76,9 @@ final allLicences = <Map>[
     'name': 'Amazon Digital Services License',
     'licenseId': 'ADSL',
     'seeAlso': [
-      'https://fedoraproject.org/wiki/Licensing/AmazonDigitalServicesLicense'
+      'https://fedoraproject.org/wiki/Licensing/AmazonDigitalServicesLicense',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -96,9 +96,9 @@ final allLicences = <Map>[
         '" Licensed under the Academic Free License version 1.1. "',
     'seeAlso': [
       'http://opensource.linux-mirror.org/licenses/afl-1.1.txt',
-      'http://wayback.archive.org/web/20021004124254/http://www.opensource.org/licenses/academic.php'
+      'http://wayback.archive.org/web/20021004124254/http://www.opensource.org/licenses/academic.php',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -117,9 +117,9 @@ final allLicences = <Map>[
         'Licensed under the Academic Free License version 1.2',
     'seeAlso': [
       'http://opensource.linux-mirror.org/licenses/afl-1.2.txt',
-      'http://wayback.archive.org/web/20021204204652/http://www.opensource.org/licenses/academic.php'
+      'http://wayback.archive.org/web/20021204204652/http://www.opensource.org/licenses/academic.php',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -135,9 +135,9 @@ final allLicences = <Map>[
     'standardLicenseHeader':
         'Licensed under the Academic Free License version 2.0',
     'seeAlso': [
-      'http://wayback.archive.org/web/20060924134533/http://www.opensource.org/licenses/afl-2.0.txt'
+      'http://wayback.archive.org/web/20060924134533/http://www.opensource.org/licenses/afl-2.0.txt',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -153,7 +153,7 @@ final allLicences = <Map>[
     'standardLicenseHeader':
         'Licensed under the Academic Free License version 2.1',
     'seeAlso': ['http://opensource.linux-mirror.org/licenses/afl-2.1.txt'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -170,9 +170,9 @@ final allLicences = <Map>[
         'Licensed under the Academic Free License version 3.0',
     'seeAlso': [
       'http://www.rosenlaw.com/AFL3.0.htm',
-      'https://opensource.org/licenses/afl-3.0'
+      'https://opensource.org/licenses/afl-3.0',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -183,7 +183,7 @@ final allLicences = <Map>[
     'name': 'Afmparse License',
     'licenseId': 'Afmparse',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/Afmparse'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': true,
@@ -197,7 +197,7 @@ final allLicences = <Map>[
         'DEPRECATED: Use the license identifier AGPL-1.0-only instead of APL-1.0, and use AGPL-1.0-or-later instead of AGPL-1.0.',
     'licenseId': 'AGPL-1.0',
     'seeAlso': ['http://www.affero.org/oagpl.html'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -208,7 +208,7 @@ final allLicences = <Map>[
     'name': 'Affero General Public License v1.0 only',
     'licenseId': 'AGPL-1.0-only',
     'seeAlso': ['http://www.affero.org/oagpl.html'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -221,7 +221,7 @@ final allLicences = <Map>[
         'Section 9 of this license allows content under this "any later version" grant to be redistributed under the GPL-3.0-or-later. Affero Inc. also released an AGPL-2.0 (http://www.affero.org/agpl2.html) to allow AGPL-1.0-or-later work to be distributed under the AGPL-3.0-or-later.',
     'licenseId': 'AGPL-1.0-or-later',
     'seeAlso': ['http://www.affero.org/oagpl.html'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': true,
@@ -238,9 +238,9 @@ final allLicences = <Map>[
         'Copyright (C) [year] [name of author] This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, version 3. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details. You should have received a copy of the GNU Affero General Public License along with this program. If not, see <http s ://www.gnu.org/licenses/>',
     'seeAlso': [
       'https://www.gnu.org/licenses/agpl.txt',
-      'https://opensource.org/licenses/AGPL-3.0'
+      'https://opensource.org/licenses/AGPL-3.0',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -258,9 +258,9 @@ final allLicences = <Map>[
         'Copyright (C) [year] [name of author]\n\nThis program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, version 3.\n\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.\n\nYou should have received a copy of the GNU Affero General Public License along with this program. If not, see <http s ://www.gnu.org/licenses/>',
     'seeAlso': [
       'https://www.gnu.org/licenses/agpl.txt',
-      'https://opensource.org/licenses/AGPL-3.0'
+      'https://opensource.org/licenses/AGPL-3.0',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -278,9 +278,9 @@ final allLicences = <Map>[
         "<one line to give the program's name and a brief idea of what it does.>\n\nCopyright (C) <year> <name of author>\n\nThis program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.\n\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.\n\nYou should have received a copy of the GNU Affero General Public License along with this program. If not, see <http s ://www.gnu.org/licenses/>.",
     'seeAlso': [
       'https://www.gnu.org/licenses/agpl.txt',
-      'https://opensource.org/licenses/AGPL-3.0'
+      'https://opensource.org/licenses/AGPL-3.0',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -292,7 +292,7 @@ final allLicences = <Map>[
     'licenseComments': 'This license was released 18 Nov 1999',
     'licenseId': 'Aladdin',
     'seeAlso': ['http://pages.cs.wisc.edu/~ghost/doc/AFPL/6.01/Public.htm'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -303,9 +303,9 @@ final allLicences = <Map>[
     'name': "AMD's plpa_map.c License",
     'licenseId': 'AMDPLPA',
     'seeAlso': [
-      'https://fedoraproject.org/wiki/Licensing/AMD_plpa_map_License'
+      'https://fedoraproject.org/wiki/Licensing/AMD_plpa_map_License',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -316,7 +316,7 @@ final allLicences = <Map>[
     'name': 'Apple MIT License',
     'licenseId': 'AML',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/Apple_MIT_License'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -327,7 +327,7 @@ final allLicences = <Map>[
     'name': 'Academy of Motion Picture Arts and Sciences BSD',
     'licenseId': 'AMPAS',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/BSD#AMPASBSD'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -340,7 +340,7 @@ final allLicences = <Map>[
         'ANTLR used this public domain notice through version 2.7 and then switched to a BSD license for version 3.0 and later.',
     'licenseId': 'ANTLR-PD',
     'seeAlso': ['http://www.antlr2.org/license.html'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -352,7 +352,7 @@ final allLicences = <Map>[
     'name': 'Apache License 1.0',
     'licenseId': 'Apache-1.0',
     'seeAlso': ['http://www.apache.org/licenses/LICENSE-1.0'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -366,9 +366,9 @@ final allLicences = <Map>[
     'licenseId': 'Apache-1.1',
     'seeAlso': [
       'http://apache.org/licenses/LICENSE-1.1',
-      'https://opensource.org/licenses/Apache-1.1'
+      'https://opensource.org/licenses/Apache-1.1',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -386,9 +386,9 @@ final allLicences = <Map>[
         'Copyright [yyyy] [name of copyright owner]\n\nLicensed under the Apache License, Version 2.0 (the "License");\n\nyou may not use this file except in compliance with the License.\n\nYou may obtain a copy of the License at\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\n\ndistributed under the License is distributed on an "AS IS" BASIS,\n\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n\nSee the License for the specific language governing permissions and\n\nlimitations under the License.',
     'seeAlso': [
       'http://www.apache.org/licenses/LICENSE-2.0',
-      'https://opensource.org/licenses/Apache-2.0'
+      'https://opensource.org/licenses/Apache-2.0',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -399,7 +399,7 @@ final allLicences = <Map>[
     'name': 'Adobe Postscript AFM License',
     'licenseId': 'APAFML',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/AdobePostscriptAFM'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -410,7 +410,7 @@ final allLicences = <Map>[
     'name': 'Adaptive Public License 1.0',
     'licenseId': 'APL-1.0',
     'seeAlso': ['https://opensource.org/licenses/APL-1.0'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -422,9 +422,9 @@ final allLicences = <Map>[
     'licenseComments': 'This license was released 16 March 1999.',
     'licenseId': 'APSL-1.0',
     'seeAlso': [
-      'https://fedoraproject.org/wiki/Licensing/Apple_Public_Source_License_1.0'
+      'https://fedoraproject.org/wiki/Licensing/Apple_Public_Source_License_1.0',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -436,9 +436,9 @@ final allLicences = <Map>[
     'licenseComments': 'This license was released 19 April 1999.',
     'licenseId': 'APSL-1.1',
     'seeAlso': [
-      'http://www.opensource.apple.com/source/IOSerialFamily/IOSerialFamily-7/APPLE_LICENSE'
+      'http://www.opensource.apple.com/source/IOSerialFamily/IOSerialFamily-7/APPLE_LICENSE',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -450,9 +450,9 @@ final allLicences = <Map>[
     'licenseComments': 'This license was released 4 Jan 2001.',
     'licenseId': 'APSL-1.2',
     'seeAlso': [
-      'http://www.samurajdata.se/opensource/mirror/licenses/apsl.php'
+      'http://www.samurajdata.se/opensource/mirror/licenses/apsl.php',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -465,7 +465,7 @@ final allLicences = <Map>[
     'licenseComments': 'This license was released: 6 August 2003.',
     'licenseId': 'APSL-2.0',
     'seeAlso': ['http://www.opensource.apple.com/license/apsl/'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -478,7 +478,7 @@ final allLicences = <Map>[
         'This license was superseded by v2.0. This is Artistic License 1.0 as found on OSI site, including clause 8.',
     'licenseId': 'Artistic-1.0-cl8',
     'seeAlso': ['https://opensource.org/licenses/Artistic-1.0'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -491,7 +491,7 @@ final allLicences = <Map>[
         'This license was superseded by v2.0. This is Artistic License 1.0 as found on OSI site, excluding clause 8.',
     'licenseId': 'Artistic-1.0',
     'seeAlso': ['https://opensource.org/licenses/Artistic-1.0'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -504,7 +504,7 @@ final allLicences = <Map>[
         'This is the Artistic License 1.0 found on the Perl site, which is different (particularly, clauses 5, 6, 7 and 8) than the Artistic License 1.0 w/clause 8 found on the OSI site.',
     'licenseId': 'Artistic-1.0-Perl',
     'seeAlso': ['http://dev.perl.org/licenses/artistic.html'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -518,9 +518,9 @@ final allLicences = <Map>[
     'licenseId': 'Artistic-2.0',
     'seeAlso': [
       'http://www.perlfoundation.org/artistic_license_2_0',
-      'https://opensource.org/licenses/artistic-license-2.0'
+      'https://opensource.org/licenses/artistic-license-2.0',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -531,7 +531,7 @@ final allLicences = <Map>[
     'name': 'Bahyph License',
     'licenseId': 'Bahyph',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/Bahyph'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -542,7 +542,7 @@ final allLicences = <Map>[
     'name': 'Barr License',
     'licenseId': 'Barr',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/Barr'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -554,9 +554,9 @@ final allLicences = <Map>[
     'licenseId': 'Beerware',
     'seeAlso': [
       'https://fedoraproject.org/wiki/Licensing/Beerware',
-      'https://people.freebsd.org/~phk/'
+      'https://people.freebsd.org/~phk/',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -571,9 +571,9 @@ final allLicences = <Map>[
     'standardLicenseHeader':
         'The contents of this file are subject to the BitTorrent Open Source License Version 1.0 (the License). You may not copy or use this file, in either source code or executable form, except in compliance with the License. You may obtain a copy of the License at http://www.bittorrent.com/license/.\n\nSoftware distributed under the License is distributed on an AS IS basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language governing rights and limitations under the License.',
     'seeAlso': [
-      'http://sources.gentoo.org/cgi-bin/viewvc.cgi/gentoo-x86/licenses/BitTorrent?r1=1.1&r2=1.1.1.1&diff_format=s'
+      'http://sources.gentoo.org/cgi-bin/viewvc.cgi/gentoo-x86/licenses/BitTorrent?r1=1.1&r2=1.1.1.1&diff_format=s',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -591,7 +591,7 @@ final allLicences = <Map>[
     'standardLicenseHeader':
         'The contents of this file are subject to the BitTorrent Open Source License Version 1.1 (the License). You may not copy or use this file, in either source code or executable form, except in compliance with the License. You may obtain a copy of the License at http://www.bittorrent.com/license/.\n\nSoftware distributed under the License is distributed on an AS IS basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language governing rights and limitations under the License.',
     'seeAlso': ['http://directory.fsf.org/wiki/License:BitTorrentOSL1.1'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -602,7 +602,7 @@ final allLicences = <Map>[
     'name': 'Borceux license',
     'licenseId': 'Borceux',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/Borceux'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -613,9 +613,9 @@ final allLicences = <Map>[
     'name': 'BSD 1-Clause License',
     'licenseId': 'BSD-1-Clause',
     'seeAlso': [
-      'https://svnweb.freebsd.org/base/head/include/ifaddrs.h?revision=326823'
+      'https://svnweb.freebsd.org/base/head/include/ifaddrs.h?revision=326823',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -627,7 +627,7 @@ final allLicences = <Map>[
     'name': 'BSD 2-Clause FreeBSD License',
     'licenseId': 'BSD-2-Clause-FreeBSD',
     'seeAlso': ['http://www.freebsd.org/copyright/freebsd-license.html'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -638,7 +638,7 @@ final allLicences = <Map>[
     'name': 'BSD 2-Clause "Simplified" License',
     'licenseId': 'BSD-2-Clause',
     'seeAlso': ['https://opensource.org/licenses/BSD-2-Clause'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -651,7 +651,7 @@ final allLicences = <Map>[
         'NetBSD adopted this 2-clause license in 2008 for code contributed to NetBSD Foundation.',
     'licenseId': 'BSD-2-Clause-NetBSD',
     'seeAlso': ['http://www.netbsd.org/about/redistribution.html#default'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -664,7 +664,7 @@ final allLicences = <Map>[
         'Note: This license is designed to provide: a) a simple permissive license; b) that is compatible with the GNU General Public License (GPL), version 2; and c) which also has an express patent grant included.',
     'licenseId': 'BSD-2-Clause-Patent',
     'seeAlso': ['https://opensource.org/licenses/BSDplusPatent'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -675,9 +675,9 @@ final allLicences = <Map>[
     'name': 'BSD with attribution',
     'licenseId': 'BSD-3-Clause-Attribution',
     'seeAlso': [
-      'https://fedoraproject.org/wiki/Licensing/BSD_with_Attribution'
+      'https://fedoraproject.org/wiki/Licensing/BSD_with_Attribution',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -691,7 +691,7 @@ final allLicences = <Map>[
         'This is same as BSD-3-Clause but with explicit statement as to no patent rights granted in last paragraph.',
     'licenseId': 'BSD-3-Clause-Clear',
     'seeAlso': ['http://labs.metacarta.com/license-explanation.html#license'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -703,7 +703,7 @@ final allLicences = <Map>[
     'name': 'BSD 3-Clause "New" or "Revised" License',
     'licenseId': 'BSD-3-Clause',
     'seeAlso': ['https://opensource.org/licenses/BSD-3-Clause'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -716,7 +716,7 @@ final allLicences = <Map>[
         'This license is the same as BSD-3-Clause, but with an additional default contribution licensing clause',
     'licenseId': 'BSD-3-Clause-LBNL',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/LBNLBSD'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -729,9 +729,9 @@ final allLicences = <Map>[
         'This license has a Oracle copyright notice. It is the same license as BSD-3-Clause-No-Nuclear-License, except it has a different entire disclaimer clause that is the same as BSD-3-Clause.',
     'licenseId': 'BSD-3-Clause-No-Nuclear-License-2014',
     'seeAlso': [
-      'https://java.net/projects/javaeetutorial/pages/BerkeleyLicense'
+      'https://java.net/projects/javaeetutorial/pages/BerkeleyLicense',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -744,9 +744,9 @@ final allLicences = <Map>[
         'This license has an older Sun copyright notice and is the same license as BSD-3-Clause-No-Nuclear-Warranty, except it specifies that that software is "not licensed" for use in a nuclear facility, as opposed to a disclaimer for such use.',
     'licenseId': 'BSD-3-Clause-No-Nuclear-License',
     'seeAlso': [
-      'http://download.oracle.com/otn-pub/java/licenses/bsd.txt?AuthParam=1467140197_43d516ce1776bd08a58235a7785be1cc'
+      'http://download.oracle.com/otn-pub/java/licenses/bsd.txt?AuthParam=1467140197_43d516ce1776bd08a58235a7785be1cc',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -759,9 +759,9 @@ final allLicences = <Map>[
         'This license has a Sun copyright notice. It is the same license as BSD-3-Clause-No-Nuclear-License, except it has a disclaimer for nuclear factility use, instead of the software "not licensed" for such use.',
     'licenseId': 'BSD-3-Clause-No-Nuclear-Warranty',
     'seeAlso': [
-      'https://jogamp.org/git/?p=gluegen.git;a=blob_plain;f=LICENSE.txt'
+      'https://jogamp.org/git/?p=gluegen.git;a=blob_plain;f=LICENSE.txt',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -775,7 +775,7 @@ final allLicences = <Map>[
         'This license was rescinded by the author on 22 July 1999.',
     'licenseId': 'BSD-4-Clause',
     'seeAlso': ['http://directory.fsf.org/wiki/License:BSD_4Clause'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -788,7 +788,7 @@ final allLicences = <Map>[
         'This is the same license as the BSD-4-Clause, but with a copyright notice for the Regents of the University of California. Captures the retroactive deletion of the third (advertising) clause of the Original BSD license for BSD-licensed code developed by UC Berkeley and its contributors (see ftp://ftp.cs.berkeley.edu/pub/4bsd/README.Impt.License.Change)',
     'licenseId': 'BSD-4-Clause-UC',
     'seeAlso': ['http://www.freebsd.org/copyright/license.html'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -799,9 +799,9 @@ final allLicences = <Map>[
     'name': 'BSD Protection License',
     'licenseId': 'BSD-Protection',
     'seeAlso': [
-      'https://fedoraproject.org/wiki/Licensing/BSD_Protection_License'
+      'https://fedoraproject.org/wiki/Licensing/BSD_Protection_License',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -812,9 +812,9 @@ final allLicences = <Map>[
     'name': 'BSD Source Code Attribution',
     'licenseId': 'BSD-Source-Code',
     'seeAlso': [
-      'https://github.com/robbiehanson/CocoaHTTPServer/blob/master/LICENSE.txt'
+      'https://github.com/robbiehanson/CocoaHTTPServer/blob/master/LICENSE.txt',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -828,9 +828,9 @@ final allLicences = <Map>[
     'licenseId': 'BSL-1.0',
     'seeAlso': [
       'http://www.boost.org/LICENSE_1_0.txt',
-      'https://opensource.org/licenses/BSL-1.0'
+      'https://opensource.org/licenses/BSL-1.0',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -841,7 +841,7 @@ final allLicences = <Map>[
     'name': 'bzip2 and libbzip2 License v1.0.5',
     'licenseId': 'bzip2-1.0.5',
     'seeAlso': ['http://bzip.org/1.0.5/bzip2-manual-1.0.5.html'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -854,7 +854,7 @@ final allLicences = <Map>[
         'The bzip2.org website only shows version 1.0.5 of the license.',
     'licenseId': 'bzip2-1.0.6',
     'seeAlso': ['https://github.com/asimonov-im/bzip2/blob/master/LICENSE'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -865,7 +865,7 @@ final allLicences = <Map>[
     'name': 'Caldera License',
     'licenseId': 'Caldera',
     'seeAlso': ['http://www.lemis.com/grog/UNIX/ancient-source-all.pdf'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -876,7 +876,7 @@ final allLicences = <Map>[
     'name': 'Computer Associates Trusted Open Source License 1.1',
     'licenseId': 'CATOSL-1.1',
     'seeAlso': ['https://opensource.org/licenses/CATOSL-1.1'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -888,7 +888,7 @@ final allLicences = <Map>[
     'name': 'Creative Commons Zero v1.0 Universal',
     'licenseId': 'CC0-1.0',
     'seeAlso': ['https://creativecommons.org/publicdomain/zero/1.0/legalcode'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -899,7 +899,7 @@ final allLicences = <Map>[
     'name': 'Creative Commons Attribution 1.0 Generic',
     'licenseId': 'CC-BY-1.0',
     'seeAlso': ['https://creativecommons.org/licenses/by/1.0/legalcode'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -910,7 +910,7 @@ final allLicences = <Map>[
     'name': 'Creative Commons Attribution 2.0 Generic',
     'licenseId': 'CC-BY-2.0',
     'seeAlso': ['https://creativecommons.org/licenses/by/2.0/legalcode'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -921,7 +921,7 @@ final allLicences = <Map>[
     'name': 'Creative Commons Attribution 2.5 Generic',
     'licenseId': 'CC-BY-2.5',
     'seeAlso': ['https://creativecommons.org/licenses/by/2.5/legalcode'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -932,7 +932,7 @@ final allLicences = <Map>[
     'name': 'Creative Commons Attribution 3.0 Unported',
     'licenseId': 'CC-BY-3.0',
     'seeAlso': ['https://creativecommons.org/licenses/by/3.0/legalcode'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -944,7 +944,7 @@ final allLicences = <Map>[
     'name': 'Creative Commons Attribution 4.0 International',
     'licenseId': 'CC-BY-4.0',
     'seeAlso': ['https://creativecommons.org/licenses/by/4.0/legalcode'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -955,7 +955,7 @@ final allLicences = <Map>[
     'name': 'Creative Commons Attribution Non Commercial 1.0 Generic',
     'licenseId': 'CC-BY-NC-1.0',
     'seeAlso': ['https://creativecommons.org/licenses/by-nc/1.0/legalcode'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -966,7 +966,7 @@ final allLicences = <Map>[
     'name': 'Creative Commons Attribution Non Commercial 2.0 Generic',
     'licenseId': 'CC-BY-NC-2.0',
     'seeAlso': ['https://creativecommons.org/licenses/by-nc/2.0/legalcode'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -977,7 +977,7 @@ final allLicences = <Map>[
     'name': 'Creative Commons Attribution Non Commercial 2.5 Generic',
     'licenseId': 'CC-BY-NC-2.5',
     'seeAlso': ['https://creativecommons.org/licenses/by-nc/2.5/legalcode'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -988,7 +988,7 @@ final allLicences = <Map>[
     'name': 'Creative Commons Attribution Non Commercial 3.0 Unported',
     'licenseId': 'CC-BY-NC-3.0',
     'seeAlso': ['https://creativecommons.org/licenses/by-nc/3.0/legalcode'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -999,7 +999,7 @@ final allLicences = <Map>[
     'name': 'Creative Commons Attribution Non Commercial 4.0 International',
     'licenseId': 'CC-BY-NC-4.0',
     'seeAlso': ['https://creativecommons.org/licenses/by-nc/4.0/legalcode'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1011,7 +1011,7 @@ final allLicences = <Map>[
         'Creative Commons Attribution Non Commercial No Derivatives 1.0 Generic',
     'licenseId': 'CC-BY-NC-ND-1.0',
     'seeAlso': ['https://creativecommons.org/licenses/by-nd-nc/1.0/legalcode'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1023,7 +1023,7 @@ final allLicences = <Map>[
         'Creative Commons Attribution Non Commercial No Derivatives 2.0 Generic',
     'licenseId': 'CC-BY-NC-ND-2.0',
     'seeAlso': ['https://creativecommons.org/licenses/by-nc-nd/2.0/legalcode'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1035,7 +1035,7 @@ final allLicences = <Map>[
         'Creative Commons Attribution Non Commercial No Derivatives 2.5 Generic',
     'licenseId': 'CC-BY-NC-ND-2.5',
     'seeAlso': ['https://creativecommons.org/licenses/by-nc-nd/2.5/legalcode'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1047,7 +1047,7 @@ final allLicences = <Map>[
         'Creative Commons Attribution Non Commercial No Derivatives 3.0 Unported',
     'licenseId': 'CC-BY-NC-ND-3.0',
     'seeAlso': ['https://creativecommons.org/licenses/by-nc-nd/3.0/legalcode'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1059,7 +1059,7 @@ final allLicences = <Map>[
         'Creative Commons Attribution Non Commercial No Derivatives 4.0 International',
     'licenseId': 'CC-BY-NC-ND-4.0',
     'seeAlso': ['https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1071,7 +1071,7 @@ final allLicences = <Map>[
         'Creative Commons Attribution Non Commercial Share Alike 1.0 Generic',
     'licenseId': 'CC-BY-NC-SA-1.0',
     'seeAlso': ['https://creativecommons.org/licenses/by-nc-sa/1.0/legalcode'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1083,7 +1083,7 @@ final allLicences = <Map>[
         'Creative Commons Attribution Non Commercial Share Alike 2.0 Generic',
     'licenseId': 'CC-BY-NC-SA-2.0',
     'seeAlso': ['https://creativecommons.org/licenses/by-nc-sa/2.0/legalcode'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1095,7 +1095,7 @@ final allLicences = <Map>[
         'Creative Commons Attribution Non Commercial Share Alike 2.5 Generic',
     'licenseId': 'CC-BY-NC-SA-2.5',
     'seeAlso': ['https://creativecommons.org/licenses/by-nc-sa/2.5/legalcode'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1107,7 +1107,7 @@ final allLicences = <Map>[
         'Creative Commons Attribution Non Commercial Share Alike 3.0 Unported',
     'licenseId': 'CC-BY-NC-SA-3.0',
     'seeAlso': ['https://creativecommons.org/licenses/by-nc-sa/3.0/legalcode'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1119,7 +1119,7 @@ final allLicences = <Map>[
         'Creative Commons Attribution Non Commercial Share Alike 4.0 International',
     'licenseId': 'CC-BY-NC-SA-4.0',
     'seeAlso': ['https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1130,7 +1130,7 @@ final allLicences = <Map>[
     'name': 'Creative Commons Attribution No Derivatives 1.0 Generic',
     'licenseId': 'CC-BY-ND-1.0',
     'seeAlso': ['https://creativecommons.org/licenses/by-nd/1.0/legalcode'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1141,7 +1141,7 @@ final allLicences = <Map>[
     'name': 'Creative Commons Attribution No Derivatives 2.0 Generic',
     'licenseId': 'CC-BY-ND-2.0',
     'seeAlso': ['https://creativecommons.org/licenses/by-nd/2.0/legalcode'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1152,7 +1152,7 @@ final allLicences = <Map>[
     'name': 'Creative Commons Attribution No Derivatives 2.5 Generic',
     'licenseId': 'CC-BY-ND-2.5',
     'seeAlso': ['https://creativecommons.org/licenses/by-nd/2.5/legalcode'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1163,7 +1163,7 @@ final allLicences = <Map>[
     'name': 'Creative Commons Attribution No Derivatives 3.0 Unported',
     'licenseId': 'CC-BY-ND-3.0',
     'seeAlso': ['https://creativecommons.org/licenses/by-nd/3.0/legalcode'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1174,7 +1174,7 @@ final allLicences = <Map>[
     'name': 'Creative Commons Attribution No Derivatives 4.0 International',
     'licenseId': 'CC-BY-ND-4.0',
     'seeAlso': ['https://creativecommons.org/licenses/by-nd/4.0/legalcode'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1185,7 +1185,7 @@ final allLicences = <Map>[
     'name': 'Creative Commons Attribution Share Alike 1.0 Generic',
     'licenseId': 'CC-BY-SA-1.0',
     'seeAlso': ['https://creativecommons.org/licenses/by-sa/1.0/legalcode'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1196,7 +1196,7 @@ final allLicences = <Map>[
     'name': 'Creative Commons Attribution Share Alike 2.0 Generic',
     'licenseId': 'CC-BY-SA-2.0',
     'seeAlso': ['https://creativecommons.org/licenses/by-sa/2.0/legalcode'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1207,7 +1207,7 @@ final allLicences = <Map>[
     'name': 'Creative Commons Attribution Share Alike 2.5 Generic',
     'licenseId': 'CC-BY-SA-2.5',
     'seeAlso': ['https://creativecommons.org/licenses/by-sa/2.5/legalcode'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1218,7 +1218,7 @@ final allLicences = <Map>[
     'name': 'Creative Commons Attribution Share Alike 3.0 Unported',
     'licenseId': 'CC-BY-SA-3.0',
     'seeAlso': ['https://creativecommons.org/licenses/by-sa/3.0/legalcode'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1230,7 +1230,7 @@ final allLicences = <Map>[
     'name': 'Creative Commons Attribution Share Alike 4.0 International',
     'licenseId': 'CC-BY-SA-4.0',
     'seeAlso': ['https://creativecommons.org/licenses/by-sa/4.0/legalcode'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1243,7 +1243,7 @@ final allLicences = <Map>[
     'licenseComments': 'This license was released: 24 January 2004.',
     'licenseId': 'CDDL-1.0',
     'seeAlso': ['https://opensource.org/licenses/cddl1'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1257,9 +1257,9 @@ final allLicences = <Map>[
     'licenseId': 'CDDL-1.1',
     'seeAlso': [
       'http://glassfish.java.net/public/CDDL+GPL_1_1.html',
-      'https://javaee.github.io/glassfish/LICENSE'
+      'https://javaee.github.io/glassfish/LICENSE',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1270,7 +1270,7 @@ final allLicences = <Map>[
     'name': 'Community Data License Agreement Permissive 1.0',
     'licenseId': 'CDLA-Permissive-1.0',
     'seeAlso': ['https://cdla.io/permissive-1-0'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1281,7 +1281,7 @@ final allLicences = <Map>[
     'name': 'Community Data License Agreement Sharing 1.0',
     'licenseId': 'CDLA-Sharing-1.0',
     'seeAlso': ['https://cdla.io/sharing-1-0'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1294,7 +1294,7 @@ final allLicences = <Map>[
         'English translation can be found here: http://www.cecill.info/licences/Licence_CeCILL_V1-US.html',
     'licenseId': 'CECILL-1.0',
     'seeAlso': ['http://www.cecill.info/licences/Licence_CeCILL_V1-fr.html'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1307,7 +1307,7 @@ final allLicences = <Map>[
         'There is only an English version for 1.1, which includes some wording changes from v1.0',
     'licenseId': 'CECILL-1.1',
     'seeAlso': ['http://www.cecill.info/licences/Licence_CeCILL_V1.1-US.html'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1321,7 +1321,7 @@ final allLicences = <Map>[
         'French version can be found here: http://www.cecill.info/licences/Licence_CeCILL_V2-fr.html',
     'licenseId': 'CECILL-2.0',
     'seeAlso': ['http://www.cecill.info/licences/Licence_CeCILL_V2-en.html'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1334,7 +1334,7 @@ final allLicences = <Map>[
         'French version can be found here: http://www.cecill.info/licences/Licence_CeCILL_V2.1-fr.html',
     'licenseId': 'CECILL-2.1',
     'seeAlso': ['http://www.cecill.info/licences/Licence_CeCILL_V2.1-en.html'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1348,7 +1348,7 @@ final allLicences = <Map>[
         'French version can be found here: http://www.cecill.info/licences/Licence_CeCILL-B_V1-fr.html',
     'licenseId': 'CECILL-B',
     'seeAlso': ['http://www.cecill.info/licences/Licence_CeCILL-B_V1-en.html'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1362,9 +1362,9 @@ final allLicences = <Map>[
         'French version can be found here: http://www.cecill.info/licences/Licence_CeCILL-C_V1-fr.html',
     'licenseId': 'CECILL-C',
     'seeAlso': [
-      'http://www.cecill.info/licences/Licence_CeCILL-C_V1-en.html\n    '
+      'http://www.cecill.info/licences/Licence_CeCILL-C_V1-en.html\n    ',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1377,9 +1377,9 @@ final allLicences = <Map>[
     'licenseId': 'ClArtistic',
     'seeAlso': [
       'http://gianluca.dellavedova.org/2011/01/03/clarified-artistic-license/',
-      'http://www.ncftp.com/ncftp/doc/LICENSE.txt'
+      'http://www.ncftp.com/ncftp/doc/LICENSE.txt',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1392,7 +1392,7 @@ final allLicences = <Map>[
         'This is very similar to CNRI-Python (also on this list), but for an extra clause covering restrictions on trademark and use of the name.',
     'licenseId': 'CNRI-Jython',
     'seeAlso': ['http://www.jython.org/license.html'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1403,7 +1403,7 @@ final allLicences = <Map>[
     'name': 'CNRI Python Open Source GPL Compatible License Agreement',
     'licenseId': 'CNRI-Python-GPL-Compatible',
     'seeAlso': ['http://www.python.org/download/releases/1.6.1/download_win/'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1416,7 +1416,7 @@ final allLicences = <Map>[
         'CNRI portion of the multi-part Python License (Python-2.0)',
     'licenseId': 'CNRI-Python',
     'seeAlso': ['https://opensource.org/licenses/CNRI-Python'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1430,9 +1430,9 @@ final allLicences = <Map>[
     'licenseId': 'Condor-1.1',
     'seeAlso': [
       'http://research.cs.wisc.edu/condor/license.html#condor',
-      'http://web.archive.org/web/20111123062036/http://research.cs.wisc.edu/condor/license.html#condor'
+      'http://web.archive.org/web/20111123062036/http://research.cs.wisc.edu/condor/license.html#condor',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1443,9 +1443,9 @@ final allLicences = <Map>[
     'name': 'copyleft-next 0.3.0',
     'licenseId': 'copyleft-next-0.3.0',
     'seeAlso': [
-      'https://github.com/copyleft-next/copyleft-next/blob/master/Releases/copyleft-next-0.3.0'
+      'https://github.com/copyleft-next/copyleft-next/blob/master/Releases/copyleft-next-0.3.0',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1456,9 +1456,9 @@ final allLicences = <Map>[
     'name': 'copyleft-next 0.3.1',
     'licenseId': 'copyleft-next-0.3.1',
     'seeAlso': [
-      'https://github.com/copyleft-next/copyleft-next/blob/master/Releases/copyleft-next-0.3.1'
+      'https://github.com/copyleft-next/copyleft-next/blob/master/Releases/copyleft-next-0.3.1',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1474,7 +1474,7 @@ final allLicences = <Map>[
     'standardLicenseHeader':
         '"The contents of this file are subject to the Common Public Attribution License Version 1.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at _____________ . The License is based on the Mozilla Public License Version 1.1 but Sections 14 and 15 have been added to cover use of software over a computer network and provide for limited attribution for the Original Developer. In addition, Exhibit A has been modified to be consistent with Exhibit B.\n\nSoftware distributed under the License is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language governing rights and limitations under the License.\n\nThe Original Code is ______________________ .\n\nThe Original Developer is not the Initial Developer and is __________ . If left blank, the Original Developer is the Initial Developer.\n\nThe Initial Developer of the Original Code is ____________ . All portions of the code written by ___________ are Copyright (c) _____ . All Rights Reserved.\n\nContributor ______________________ .\n\nAlternatively, the contents of this file may be used under the terms of the _____ license (the [___] License), in which case the provisions of [______] License are applicable instead of those above.\n\nIf you wish to allow use of your version of this file only under the terms of the [____] License and not to allow others to use your version of this file under the CPAL, indicate your decision by deleting the provisions above and replace them with the notice and other provisions required by the [___] License. If you do not delete the provisions above, a recipient may use your version of this file under either the CPAL or the [___] License."',
     'seeAlso': ['https://opensource.org/licenses/CPAL-1.0'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1487,7 +1487,7 @@ final allLicences = <Map>[
     'licenseComments': 'This license was superseded by Eclipse Public License',
     'licenseId': 'CPL-1.0',
     'seeAlso': ['https://opensource.org/licenses/CPL-1.0'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1498,7 +1498,7 @@ final allLicences = <Map>[
     'name': 'Code Project Open License 1.02',
     'licenseId': 'CPOL-1.02',
     'seeAlso': ['http://www.codeproject.com/info/cpol10.aspx'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1509,7 +1509,7 @@ final allLicences = <Map>[
     'name': 'Crossword License',
     'licenseId': 'Crossword',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/Crossword'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1520,9 +1520,9 @@ final allLicences = <Map>[
     'name': 'CrystalStacker License',
     'licenseId': 'CrystalStacker',
     'seeAlso': [
-      'https://fedoraproject.org/wiki/Licensing:CrystalStacker?rd=Licensing/CrystalStacker'
+      'https://fedoraproject.org/wiki/Licensing:CrystalStacker?rd=Licensing/CrystalStacker',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1539,7 +1539,7 @@ final allLicences = <Map>[
     'standardLicenseHeader':
         '" The contents of this file are subject to the CUA Office Public License Version 1.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://cuaoffice.sourceforge.net/\n\nSoftware distributed under the License is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language governing rights and limitations under the License.\n\nThe Original Code is ______________________________________ .\n\nThe Initial Developer of the Original Code is ________________________ . Portions created by ______________________ are Copyright (C) ______ _______________________ . All Rights Reserved.\n\nContributor(s): ______________________________________ .\n\nAlternatively, the contents of this file may be used under the terms of the _____ license (the " [___] License"), in which case the provisions of [______] License are applicable instead of those above. If you wish to allow use of your version of this file only under the terms of the [____] License and not to allow others to use your version of this file under the CUAPL, indicate your decision by deleting the provisions above and replace them with the notice and other provisions required by the [___] License. If you do not delete the provisions above, a recipient may use your version of this file under either the CUAPL or the [___] License. "',
     'seeAlso': ['https://opensource.org/licenses/CUA-OPL-1.0'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1550,7 +1550,7 @@ final allLicences = <Map>[
     'name': 'Cube License',
     'licenseId': 'Cube',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/Cube'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1561,7 +1561,7 @@ final allLicences = <Map>[
     'name': 'curl License',
     'licenseId': 'curl',
     'seeAlso': ['https://github.com/bagder/curl/blob/master/COPYING'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1581,9 +1581,9 @@ final allLicences = <Map>[
       'https://www.hbz-nrw.de/produkte/open-access/lizenzen/dfsl/deutsche-freie-software-lizenz',
       'https://www.hbz-nrw.de/produkte/open-access/lizenzen/dfsl/german-free-software-license',
       'https://www.hbz-nrw.de/produkte/open-access/lizenzen/dfsl/D-FSL-1_0_de.txt/at_download/file',
-      'https://www.hbz-nrw.de/produkte/open-access/lizenzen/dfsl/D-FSL-1_0_en.txt/at_download/file'
+      'https://www.hbz-nrw.de/produkte/open-access/lizenzen/dfsl/D-FSL-1_0_en.txt/at_download/file',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1594,7 +1594,7 @@ final allLicences = <Map>[
     'name': 'diffmark license',
     'licenseId': 'diffmark',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/diffmark'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1605,7 +1605,7 @@ final allLicences = <Map>[
     'name': 'DOC License',
     'licenseId': 'DOC',
     'seeAlso': ['http://www.cs.wustl.edu/~schmidt/ACE-copying.html'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1616,7 +1616,7 @@ final allLicences = <Map>[
     'name': 'Dotseqn License',
     'licenseId': 'Dotseqn',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/Dotseqn'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1627,7 +1627,7 @@ final allLicences = <Map>[
     'name': 'DSDP License',
     'licenseId': 'DSDP',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/DSDP'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1638,7 +1638,7 @@ final allLicences = <Map>[
     'name': 'dvipdfm License',
     'licenseId': 'dvipdfm',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/dvipdfm'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1653,7 +1653,7 @@ final allLicences = <Map>[
     'standardLicenseHeader':
         'Copyright (c) <year> <copyright holders>\n\nLicensed under the Educational Community License version 1.0',
     'seeAlso': ['https://opensource.org/licenses/ECL-1.0'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1671,7 +1671,7 @@ final allLicences = <Map>[
     'standardLicenseHeader':
         'Copyright [yyyy] [name of copyright owner] Licensed under the\n\nEducational Community License, Version 2.0 (the "License"); you may\n\nnot use this file except in compliance with the License. You may\n\nobtain a copy of the License at\n\nhttp://www.osedu.org/licenses/ECL-2.0\n\nUnless required by applicable law or agreed to in writing,\n\nsoftware distributed under the License is distributed on an "AS IS"\n\nBASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express\n\nor implied. See the License for the specific language governing\n\npermissions and limitations under the License.',
     'seeAlso': ['https://opensource.org/licenses/ECL-2.0'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': true,
@@ -1683,7 +1683,7 @@ final allLicences = <Map>[
     'name': 'eCos license version 2.0',
     'licenseId': 'eCos-2.0',
     'seeAlso': ['https://www.gnu.org/licenses/ecos-license.html'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1696,9 +1696,9 @@ final allLicences = <Map>[
     'licenseId': 'EFL-1.0',
     'seeAlso': [
       'http://www.eiffel-nice.org/license/forum.txt',
-      'https://opensource.org/licenses/EFL-1.0'
+      'https://opensource.org/licenses/EFL-1.0',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1711,9 +1711,9 @@ final allLicences = <Map>[
     'licenseId': 'EFL-2.0',
     'seeAlso': [
       'http://www.eiffel-nice.org/license/eiffel-forum-license-2.html',
-      'https://opensource.org/licenses/EFL-2.0'
+      'https://opensource.org/licenses/EFL-2.0',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1725,9 +1725,9 @@ final allLicences = <Map>[
     'licenseId': 'eGenix',
     'seeAlso': [
       'http://www.egenix.com/products/eGenix.com-Public-License-1.1.0.pdf',
-      'https://fedoraproject.org/wiki/Licensing/eGenix.com_Public_License_1.1.0'
+      'https://fedoraproject.org/wiki/Licensing/eGenix.com_Public_License_1.1.0',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1738,7 +1738,7 @@ final allLicences = <Map>[
     'name': 'Entessa Public License v1.0',
     'licenseId': 'Entessa',
     'seeAlso': ['https://opensource.org/licenses/Entessa'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1752,9 +1752,9 @@ final allLicences = <Map>[
     'licenseId': 'EPL-1.0',
     'seeAlso': [
       'http://www.eclipse.org/legal/epl-v10.html',
-      'https://opensource.org/licenses/EPL-1.0'
+      'https://opensource.org/licenses/EPL-1.0',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1769,9 +1769,9 @@ final allLicences = <Map>[
     'licenseId': 'EPL-2.0',
     'seeAlso': [
       'https://www.eclipse.org/legal/epl-2.0',
-      'https://www.opensource.org/licenses/EPL-2.0'
+      'https://www.opensource.org/licenses/EPL-2.0',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1784,7 +1784,7 @@ final allLicences = <Map>[
         'This Erlang License is a derivative work of the Mozilla Public License, Version 1.0. It contains terms which differ from the Mozilla Public License, Version 1.0.',
     'licenseId': 'ErlPL-1.1',
     'seeAlso': ['http://www.erlang.org/EPLICENSE'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1797,9 +1797,9 @@ final allLicences = <Map>[
     'licenseId': 'EUDatagrid',
     'seeAlso': [
       'http://eu-datagrid.web.cern.ch/eu-datagrid/license.html',
-      'https://opensource.org/licenses/EUDatagrid'
+      'https://opensource.org/licenses/EUDatagrid',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1813,9 +1813,9 @@ final allLicences = <Map>[
     'licenseId': 'EUPL-1.0',
     'seeAlso': [
       'http://ec.europa.eu/idabc/en/document/7330.html',
-      'http://ec.europa.eu/idabc/servlets/Doc027f.pdf?id=31096'
+      'http://ec.europa.eu/idabc/servlets/Doc027f.pdf?id=31096',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1831,9 +1831,9 @@ final allLicences = <Map>[
     'seeAlso': [
       'https://joinup.ec.europa.eu/software/page/eupl/licence-eupl',
       'https://joinup.ec.europa.eu/sites/default/files/custom-page/attachment/eupl1.1.-licence-en_0.pdf',
-      'https://opensource.org/licenses/EUPL-1.1'
+      'https://opensource.org/licenses/EUPL-1.1',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1851,9 +1851,9 @@ final allLicences = <Map>[
       'https://joinup.ec.europa.eu/sites/default/files/custom-page/attachment/eupl_v1.2_en.pdf',
       'https://joinup.ec.europa.eu/sites/default/files/inline-files/EUPL%20v1_2%20EN(1).txt',
       'http://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32017D0863',
-      'https://opensource.org/licenses/EUPL-1.1'
+      'https://opensource.org/licenses/EUPL-1.1',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1864,7 +1864,7 @@ final allLicences = <Map>[
     'name': 'Eurosym License',
     'licenseId': 'Eurosym',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/Eurosym'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1876,9 +1876,9 @@ final allLicences = <Map>[
     'licenseId': 'Fair',
     'seeAlso': [
       'http://fairlicense.org/',
-      'https://opensource.org/licenses/Fair'
+      'https://opensource.org/licenses/Fair',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1891,7 +1891,7 @@ final allLicences = <Map>[
         'The url included in the license does not work. (15/10/10)',
     'licenseId': 'Frameworx-1.0',
     'seeAlso': ['https://opensource.org/licenses/Frameworx-1.0'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1904,7 +1904,7 @@ final allLicences = <Map>[
         'This is similar to MPL-1.0, but for the names, choice of law, and jurisdiction',
     'licenseId': 'FreeImage',
     'seeAlso': ['http://freeimage.sourceforge.net/freeimage-license.txt'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1916,9 +1916,9 @@ final allLicences = <Map>[
     'name': 'FSF All Permissive License',
     'licenseId': 'FSFAP',
     'seeAlso': [
-      'https://www.gnu.org/prep/maintain/html_node/License-Notices-for-Other-Files.html'
+      'https://www.gnu.org/prep/maintain/html_node/License-Notices-for-Other-Files.html',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1929,9 +1929,9 @@ final allLicences = <Map>[
     'name': 'FSF Unlimited License',
     'licenseId': 'FSFUL',
     'seeAlso': [
-      'https://fedoraproject.org/wiki/Licensing/FSF_Unlimited_License'
+      'https://fedoraproject.org/wiki/Licensing/FSF_Unlimited_License',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1942,9 +1942,9 @@ final allLicences = <Map>[
     'name': 'FSF Unlimited License (with License Retention)',
     'licenseId': 'FSFULLR',
     'seeAlso': [
-      'https://fedoraproject.org/wiki/Licensing/FSF_Unlimited_License#License_Retention_Variant'
+      'https://fedoraproject.org/wiki/Licensing/FSF_Unlimited_License#License_Retention_Variant',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1958,9 +1958,9 @@ final allLicences = <Map>[
     'licenseId': 'FTL',
     'seeAlso': [
       'http://freetype.fis.uniroma2.it/FTL.TXT',
-      'http://git.savannah.gnu.org/cgit/freetype/freetype2.git/tree/docs/FTL.TXT'
+      'http://git.savannah.gnu.org/cgit/freetype/freetype2.git/tree/docs/FTL.TXT',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': true,
@@ -1976,7 +1976,7 @@ final allLicences = <Map>[
     'standardLicenseHeader':
         'Copyright (c) YEAR YOUR NAME . Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.1 or any later version published by the Free Software Foundation; with the Invariant Sections being LIST THEIR TITLES, with the Front-Cover Texts being LIST, and with the Back-Cover Texts being LIST. A copy of the license is included in the section entitled "GNU Free Documentation License".',
     'seeAlso': ['https://www.gnu.org/licenses/old-licenses/fdl-1.1.txt'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -1993,7 +1993,7 @@ final allLicences = <Map>[
     'standardLicenseHeader':
         'Copyright (c) YEAR YOUR NAME Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.1; with the Invariant Sections being LIST THEIR TITLES, with the Front-Cover Texts being LIST, and with the Back-Cover Texts being LIST. A copy of the license is included in the section entitled "GNU Free Documentation License".',
     'seeAlso': ['https://www.gnu.org/licenses/old-licenses/fdl-1.1.txt'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2010,7 +2010,7 @@ final allLicences = <Map>[
     'standardLicenseHeader':
         'Copyright (c) YEAR YOUR NAME. Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.1 or any later version published by the Free Software Foundation; with the Invariant Sections being LIST THEIR TITLES , with the Front-Cover Texts being LIST , and with the Back-Cover Texts being LIST . A copy of the license is included in the section entitled "GNU Free Documentation License".',
     'seeAlso': ['https://www.gnu.org/licenses/old-licenses/fdl-1.1.txt'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': true,
@@ -2026,7 +2026,7 @@ final allLicences = <Map>[
     'standardLicenseHeader':
         'Copyright (c) YEAR YOUR NAME . Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. A copy of the license is included in the section entitled "GNU Free Documentation License".',
     'seeAlso': ['https://www.gnu.org/licenses/old-licenses/fdl-1.2.txt'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2043,7 +2043,7 @@ final allLicences = <Map>[
     'standardLicenseHeader':
         'Copyright (c) YEAR YOUR NAME . Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.2; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. A copy of the license is included in the section entitled "GNU Free Documentation License".',
     'seeAlso': ['https://www.gnu.org/licenses/old-licenses/fdl-1.2.txt'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2060,7 +2060,7 @@ final allLicences = <Map>[
     'standardLicenseHeader':
         'Copyright (c) YEAR YOUR NAME . Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation; with no Invariant Sections , no Front-Cover Texts , and no Back-Cover Texts . A copy of the license is included in the section entitled "GNU Free Documentation License".',
     'seeAlso': ['https://www.gnu.org/licenses/old-licenses/fdl-1.2.txt'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': true,
@@ -2076,7 +2076,7 @@ final allLicences = <Map>[
     'standardLicenseHeader':
         'Copyright (c) YEAR YOUR NAME Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. A copy of the license is included in the section entitled "GNU Free Documentation License".',
     'seeAlso': ['https://www.gnu.org/licenses/fdl-1.3.txt'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2093,7 +2093,7 @@ final allLicences = <Map>[
     'standardLicenseHeader':
         'Copyright (c) YEAR YOUR NAME Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. A copy of the license is included in the section entitled "GNU Free Documentation License".',
     'seeAlso': ['https://www.gnu.org/licenses/fdl-1.3.txt'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2110,7 +2110,7 @@ final allLicences = <Map>[
     'standardLicenseHeader':
         'Copyright (c) YEAR YOUR NAME . Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections , no Front-Cover Texts , and no Back-Cover Texts . A copy of the license is included in the section entitled "GNU Free Documentation License".',
     'seeAlso': ['https://www.gnu.org/licenses/fdl-1.3.txt'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2123,9 +2123,9 @@ final allLicences = <Map>[
         'This license may also be known as Allegro 4. The Allegro 5 license shown at the alleg.sourceforge.net URL is the same as zlib',
     'licenseId': 'Giftware',
     'seeAlso': [
-      'http://liballeg.org/license.html#allegro-4-the-giftware-license'
+      'http://liballeg.org/license.html#allegro-4-the-giftware-license',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2136,7 +2136,7 @@ final allLicences = <Map>[
     'name': 'GL2PS License',
     'licenseId': 'GL2PS',
     'seeAlso': ['http://www.geuz.org/gl2ps/COPYING.GL2PS'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2147,7 +2147,7 @@ final allLicences = <Map>[
     'name': '3dfx Glide License',
     'licenseId': 'Glide',
     'seeAlso': ['http://www.users.on.net/~triforce/glidexp/COPYING.txt'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2158,7 +2158,7 @@ final allLicences = <Map>[
     'name': 'Glulxe License',
     'licenseId': 'Glulxe',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/Glulxe'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2170,7 +2170,7 @@ final allLicences = <Map>[
     'name': 'gnuplot License',
     'licenseId': 'gnuplot',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/Gnuplot'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': true,
@@ -2185,9 +2185,9 @@ final allLicences = <Map>[
     'standardLicenseHeader':
         'Copyright (C) 19xx name of author\n\nThis program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; version 1.\n\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.',
     'seeAlso': [
-      'https://www.gnu.org/licenses/old-licenses/gpl-1.0-standalone.html'
+      'https://www.gnu.org/licenses/old-licenses/gpl-1.0-standalone.html',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': true,
@@ -2202,9 +2202,9 @@ final allLicences = <Map>[
     'standardLicenseHeader':
         "<one line to give the program's name and a brief idea of what it does.>\n\nCopyright (C) 19yy <name of author>\n\nThis program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 1, or (at your option) any later version.\n\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.",
     'seeAlso': [
-      'https://www.gnu.org/licenses/old-licenses/gpl-1.0-standalone.html'
+      'https://www.gnu.org/licenses/old-licenses/gpl-1.0-standalone.html',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2221,9 +2221,9 @@ final allLicences = <Map>[
     'standardLicenseHeader':
         'Copyright (C) 19xx name of author\n\nThis program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; version 1.\n\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.',
     'seeAlso': [
-      'https://www.gnu.org/licenses/old-licenses/gpl-1.0-standalone.html'
+      'https://www.gnu.org/licenses/old-licenses/gpl-1.0-standalone.html',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2240,9 +2240,9 @@ final allLicences = <Map>[
     'standardLicenseHeader':
         "<one line to give the program's name and a brief idea of what it does.>\n\nCopyright (C) 19yy <name of author>\n\nThis program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 1, or (at your option) any later version.\n\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.",
     'seeAlso': [
-      'https://www.gnu.org/licenses/old-licenses/gpl-1.0-standalone.html'
+      'https://www.gnu.org/licenses/old-licenses/gpl-1.0-standalone.html',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': true,
@@ -2259,9 +2259,9 @@ final allLicences = <Map>[
         'Copyright (C) yyyy name of author\n\nThis program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; version 2.\n\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 , USA.',
     'seeAlso': [
       'https://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html',
-      'https://opensource.org/licenses/GPL-2.0'
+      'https://opensource.org/licenses/GPL-2.0',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': true,
@@ -2278,9 +2278,9 @@ final allLicences = <Map>[
         "<one line to give the program's name and an idea of what it does.>\n\nCopyright (C) <yyyy> <name of author>\n\nThis program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\n\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 , USA.",
     'seeAlso': [
       'https://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html',
-      'https://opensource.org/licenses/GPL-2.0'
+      'https://opensource.org/licenses/GPL-2.0',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2299,9 +2299,9 @@ final allLicences = <Map>[
         'Copyright (C) yyyy name of author\n\nThis program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; version 2.\n\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 , USA.',
     'seeAlso': [
       'https://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html',
-      'https://opensource.org/licenses/GPL-2.0'
+      'https://opensource.org/licenses/GPL-2.0',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2319,9 +2319,9 @@ final allLicences = <Map>[
         "<one line to give the program's name and an idea of what it does.>\n\nCopyright (C) <yyyy> <name of author>\n\nThis program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\n\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 , USA.",
     'seeAlso': [
       'https://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html',
-      'https://opensource.org/licenses/GPL-2.0'
+      'https://opensource.org/licenses/GPL-2.0',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': true,
@@ -2332,7 +2332,7 @@ final allLicences = <Map>[
     'name': 'GNU General Public License v2.0 w/Autoconf exception',
     'licenseId': 'GPL-2.0-with-autoconf-exception',
     'seeAlso': ['http://ac-archive.sourceforge.net/doc/copyright.html'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': true,
@@ -2343,9 +2343,9 @@ final allLicences = <Map>[
     'name': 'GNU General Public License v2.0 w/Bison exception',
     'licenseId': 'GPL-2.0-with-bison-exception',
     'seeAlso': [
-      'http://git.savannah.gnu.org/cgit/bison.git/tree/data/yacc.c?id=193d7c7054ba7197b0789e14965b739162319b5e#n141'
+      'http://git.savannah.gnu.org/cgit/bison.git/tree/data/yacc.c?id=193d7c7054ba7197b0789e14965b739162319b5e#n141',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': true,
@@ -2356,7 +2356,7 @@ final allLicences = <Map>[
     'name': 'GNU General Public License v2.0 w/Classpath exception',
     'licenseId': 'GPL-2.0-with-classpath-exception',
     'seeAlso': ['https://www.gnu.org/software/classpath/license.html'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': true,
@@ -2367,7 +2367,7 @@ final allLicences = <Map>[
     'name': 'GNU General Public License v2.0 w/Font exception',
     'licenseId': 'GPL-2.0-with-font-exception',
     'seeAlso': ['https://www.gnu.org/licenses/gpl-faq.html#FontException'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': true,
@@ -2378,9 +2378,9 @@ final allLicences = <Map>[
     'name': 'GNU General Public License v2.0 w/GCC Runtime Library exception',
     'licenseId': 'GPL-2.0-with-GCC-exception',
     'seeAlso': [
-      'https://gcc.gnu.org/git/?p=gcc.git;a=blob;f=gcc/libgcc1.c;h=762f5143fc6eed57b6797c82710f3538aa52b40b;hb=cb143a3ce4fb417c68f5fa2691a1b1b1053dfba9#l10'
+      'https://gcc.gnu.org/git/?p=gcc.git;a=blob;f=gcc/libgcc1.c;h=762f5143fc6eed57b6797c82710f3538aa52b40b;hb=cb143a3ce4fb417c68f5fa2691a1b1b1053dfba9#l10',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': true,
@@ -2397,9 +2397,9 @@ final allLicences = <Map>[
         'Copyright (C) <year> <name of author>\n\nThis program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 3.\n\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License along with this program. If not, see <http s ://www.gnu.org/licenses/>.',
     'seeAlso': [
       'https://www.gnu.org/licenses/gpl-3.0-standalone.html',
-      'https://opensource.org/licenses/GPL-3.0'
+      'https://opensource.org/licenses/GPL-3.0',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': true,
@@ -2416,9 +2416,9 @@ final allLicences = <Map>[
         "<one line to give the program's name and a brief idea of what it does.>\n\nCopyright (C) <year> <name of author>\n\nThis program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.\n\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License along with this program. If not, see <http s ://www.gnu.org/licenses/>.",
     'seeAlso': [
       'https://www.gnu.org/licenses/gpl-3.0-standalone.html',
-      'https://opensource.org/licenses/GPL-3.0'
+      'https://opensource.org/licenses/GPL-3.0',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2437,9 +2437,9 @@ final allLicences = <Map>[
         'Copyright (C) <year> <name of author>\n\nThis program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 3.\n\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License along with this program. If not, see <http s ://www.gnu.org/licenses/>.',
     'seeAlso': [
       'https://www.gnu.org/licenses/gpl-3.0-standalone.html',
-      'https://opensource.org/licenses/GPL-3.0'
+      'https://opensource.org/licenses/GPL-3.0',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2457,9 +2457,9 @@ final allLicences = <Map>[
         "<one line to give the program's name and a brief idea of what it does.>\n\nCopyright (C) <year> <name of author>\n\nThis program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.\n\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License along with this program. If not, see <http s ://www.gnu.org/licenses/>.",
     'seeAlso': [
       'https://www.gnu.org/licenses/gpl-3.0-standalone.html',
-      'https://opensource.org/licenses/GPL-3.0'
+      'https://opensource.org/licenses/GPL-3.0',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': true,
@@ -2470,7 +2470,7 @@ final allLicences = <Map>[
     'name': 'GNU General Public License v3.0 w/Autoconf exception',
     'licenseId': 'GPL-3.0-with-autoconf-exception',
     'seeAlso': ['https://www.gnu.org/licenses/autoconf-exception-3.0.html'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': true,
@@ -2481,7 +2481,7 @@ final allLicences = <Map>[
     'name': 'GNU General Public License v3.0 w/GCC Runtime Library exception',
     'licenseId': 'GPL-3.0-with-GCC-exception',
     'seeAlso': ['https://www.gnu.org/licenses/gcc-exception-3.1.html'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2492,7 +2492,7 @@ final allLicences = <Map>[
     'name': 'gSOAP Public License v1.3b',
     'licenseId': 'gSOAP-1.3b',
     'seeAlso': ['http://www.cs.fsu.edu/~engelen/license.html'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2503,9 +2503,9 @@ final allLicences = <Map>[
     'name': 'Haskell Language Report License',
     'licenseId': 'HaskellReport',
     'seeAlso': [
-      'https://fedoraproject.org/wiki/Licensing/Haskell_Language_Report_License'
+      'https://fedoraproject.org/wiki/Licensing/Haskell_Language_Report_License',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2519,7 +2519,7 @@ final allLicences = <Map>[
         'This license has been voluntarily deprecated by its author. Per the copy of this license at http://www.opensource.org/licenses/HPND Explanation: * Angle brackets hold "fields", e.g. <copyright holder>. * Square brackets hold optional text, e.g. [or <related entities>]. * A license can have variations in capitalization and whitespace, and still be considered an instance of this template. It may be possible to construct a grammatically incorrect license from this template, or one that lacks a disclaimer, or one that includes a double-disclaimer. That is acceptable, as long as it remains impossible to construct a non-OSD-compliant license that matches the pattern.',
     'licenseId': 'HPND',
     'seeAlso': ['https://opensource.org/licenses/HPND'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2532,9 +2532,9 @@ final allLicences = <Map>[
         'This license is a variant of HPND (https://spdx.org/licenses/HPND.html). This variant explicitly includes the permission to "sell" the software, which is not explicitly referenced in the HPND template, and makes a few other minor changes. It otherwise retains the optional templated formatting from HPND.',
     'licenseId': 'HPND-sell-variant',
     'seeAlso': [
-      'https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/net/sunrpc/auth_gss/gss_generic_token.c?h=v4.19'
+      'https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/net/sunrpc/auth_gss/gss_generic_token.c?h=v4.19',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2545,9 +2545,9 @@ final allLicences = <Map>[
     'name': 'IBM PowerPC Initialization and Boot Software',
     'licenseId': 'IBM-pibs',
     'seeAlso': [
-      'http://git.denx.de/?p=u-boot.git;a=blob;f=arch/powerpc/cpu/ppc4xx/miiphy.c;h=297155fdafa064b955e53e9832de93bfb0cfb85b;hb=9fab4bf4cc077c21e43941866f3f2c196f28670d'
+      'http://git.denx.de/?p=u-boot.git;a=blob;f=arch/powerpc/cpu/ppc4xx/miiphy.c;h=297155fdafa064b955e53e9832de93bfb0cfb85b;hb=9fab4bf4cc077c21e43941866f3f2c196f28670d',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2558,9 +2558,9 @@ final allLicences = <Map>[
     'name': 'ICU License',
     'licenseId': 'ICU',
     'seeAlso': [
-      'http://source.icu-project.org/repos/icu/icu/trunk/license.html'
+      'http://source.icu-project.org/repos/icu/icu/trunk/license.html',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2572,7 +2572,7 @@ final allLicences = <Map>[
     'name': 'Independent JPEG Group License',
     'licenseId': 'IJG',
     'seeAlso': ['http://dev.w3.org/cvsweb/Amaya/libjpeg/Attic/README?rev=1.2'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2585,7 +2585,7 @@ final allLicences = <Map>[
         'Copyright [yyyy] [name of copyright owner] Licensed under the ImageMagick License (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.imagemagick.org/script/license.php Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.',
     'licenseId': 'ImageMagick',
     'seeAlso': ['http://www.imagemagick.org/script/license.php'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2597,7 +2597,7 @@ final allLicences = <Map>[
     'name': 'iMatix Standard Function Library Agreement',
     'licenseId': 'iMatix',
     'seeAlso': ['http://legacy.imatix.com/html/sfl/sfl4.htm#license'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2610,9 +2610,9 @@ final allLicences = <Map>[
     'licenseId': 'Imlib2',
     'seeAlso': [
       'http://trac.enlightenment.org/e/browser/trunk/imlib2/COPYING',
-      'https://git.enlightenment.org/legacy/imlib2.git/tree/COPYING'
+      'https://git.enlightenment.org/legacy/imlib2.git/tree/COPYING',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2623,7 +2623,7 @@ final allLicences = <Map>[
     'name': 'Info-ZIP License',
     'licenseId': 'Info-ZIP',
     'seeAlso': ['http://www.info-zip.org/license.html'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2634,9 +2634,9 @@ final allLicences = <Map>[
     'name': 'Intel ACPI Software License Agreement',
     'licenseId': 'Intel-ACPI',
     'seeAlso': [
-      'https://fedoraproject.org/wiki/Licensing/Intel_ACPI_Software_License_Agreement'
+      'https://fedoraproject.org/wiki/Licensing/Intel_ACPI_Software_License_Agreement',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2650,7 +2650,7 @@ final allLicences = <Map>[
         'This license has been deprecated. A note at the top of the OSI license page states, "The Intel Open Source License for CDSA/CSSM Implementation (BSD License with Export Notice) (Intel has ceased to use or recommend this license)"',
     'licenseId': 'Intel',
     'seeAlso': ['https://opensource.org/licenses/Intel'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2665,9 +2665,9 @@ final allLicences = <Map>[
     'standardLicenseHeader':
         '" The contents of this file are subject to the Interbase Public License Version 1.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.Interbase.com/IPL.html\n\nSoftware distributed under the License is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language governing rights and limitations under the License.\n\nThe Original Code was created by InterBase Software Corp and its successors.\n\nPortions created by Borland/Inprise are Copyright (C) Borland/Inprise. All Rights Reserved.\n\nContributor(s): ______________________________________ .',
     'seeAlso': [
-      'https://web.archive.org/web/20060319014854/http://info.borland.com/devsupport/interbase/opensource/IPL.html'
+      'https://web.archive.org/web/20060319014854/http://info.borland.com/devsupport/interbase/opensource/IPL.html',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2679,7 +2679,7 @@ final allLicences = <Map>[
     'name': 'IPA Font License',
     'licenseId': 'IPA',
     'seeAlso': ['https://opensource.org/licenses/IPA'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2692,7 +2692,7 @@ final allLicences = <Map>[
     'licenseComments': 'This license was superseded by CPL.',
     'licenseId': 'IPL-1.0',
     'seeAlso': ['https://opensource.org/licenses/IPL-1.0'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2705,9 +2705,9 @@ final allLicences = <Map>[
     'licenseId': 'ISC',
     'seeAlso': [
       'https://www.isc.org/downloads/software-support-policy/isc-license/',
-      'https://opensource.org/licenses/ISC'
+      'https://opensource.org/licenses/ISC',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2718,7 +2718,7 @@ final allLicences = <Map>[
     'name': 'JasPer License',
     'licenseId': 'JasPer-2.0',
     'seeAlso': ['http://www.ece.uvic.ca/~mdadams/jasper/LICENSE'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2729,7 +2729,7 @@ final allLicences = <Map>[
     'name': 'JSON License',
     'licenseId': 'JSON',
     'seeAlso': ['http://www.json.org/license.html'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2742,7 +2742,7 @@ final allLicences = <Map>[
         'French is the canonical language for this license. Translations are available in: English: http://artlibre.org/licence/lal/licence-art-libre-12/ Italian: http://artlibre.org/licence/lal/it/ Spanish: http://artlibre.org/licence/lal/es/',
     'licenseId': 'LAL-1.2',
     'seeAlso': ['http://artlibre.org/licence/lal/licence-art-libre-12/'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2755,7 +2755,7 @@ final allLicences = <Map>[
         'French is the canonical language for this license. Translations are available in: English: http://artlibre.org/licence/lal/en/ Portuguese: http://artlibre.org/licence/lal/pt/ Polish: http://artlibre.org/licence/lal/pl/',
     'licenseId': 'LAL-1.3',
     'seeAlso': ['http://artlibre.org/'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2766,7 +2766,7 @@ final allLicences = <Map>[
     'name': 'Latex2e License',
     'licenseId': 'Latex2e',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/Latex2e'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2779,7 +2779,7 @@ final allLicences = <Map>[
         'This is an older license for Leptonica. Currently, it uses BSD-2-Clause (see http://www.leptonica.com/about-the-license.html)',
     'licenseId': 'Leptonica',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/Leptonica'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': true,
@@ -2794,9 +2794,9 @@ final allLicences = <Map>[
     'standardLicenseHeader':
         'Copyright (C) year name of author This library is free software; you can redistribute it and/or modify it under the terms of the GNU Library General Public License as published by the Free Software Foundation; version 2. This library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Library General Public License for more details. You should have received a copy of the GNU Library General Public License along with this library; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.',
     'seeAlso': [
-      'https://www.gnu.org/licenses/old-licenses/lgpl-2.0-standalone.html'
+      'https://www.gnu.org/licenses/old-licenses/lgpl-2.0-standalone.html',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': true,
@@ -2811,9 +2811,9 @@ final allLicences = <Map>[
     'standardLicenseHeader':
         "one line to give the library's name and an idea of what it does.\n\nCopyright (C) year name of author\n\nThis library is free software; you can redistribute it and/or modify it under the terms of the GNU Library General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\n\nThis library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Library General Public License for more details.\n\nYou should have received a copy of the GNU Library General Public License along with this library; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.",
     'seeAlso': [
-      'https://www.gnu.org/licenses/old-licenses/lgpl-2.0-standalone.html'
+      'https://www.gnu.org/licenses/old-licenses/lgpl-2.0-standalone.html',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2830,9 +2830,9 @@ final allLicences = <Map>[
     'standardLicenseHeader':
         'Copyright (C) year name of author\n\nThis library is free software; you can redistribute it and/or modify it under the terms of the GNU Library General Public License as published by the Free Software Foundation; version 2.\n\nThis library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Library General Public License for more details.\n\nYou should have received a copy of the GNU Library General Public License along with this library; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.',
     'seeAlso': [
-      'https://www.gnu.org/licenses/old-licenses/lgpl-2.0-standalone.html'
+      'https://www.gnu.org/licenses/old-licenses/lgpl-2.0-standalone.html',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2849,9 +2849,9 @@ final allLicences = <Map>[
     'standardLicenseHeader':
         "one line to give the library's name and an idea of what it does.\n\nCopyright (C) year name of author\n\nThis library is free software; you can redistribute it and/or modify it under the terms of the GNU Library General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\n\nThis library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Library General Public License for more details.\n\nYou should have received a copy of the GNU Library General Public License along with this library; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.",
     'seeAlso': [
-      'https://www.gnu.org/licenses/old-licenses/lgpl-2.0-standalone.html'
+      'https://www.gnu.org/licenses/old-licenses/lgpl-2.0-standalone.html',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': true,
@@ -2868,9 +2868,9 @@ final allLicences = <Map>[
         'Copyright (C) year name of author\n\nThis library is free software; you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation; version 2.1.\n\nThis library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.\n\nYou should have received a copy of the GNU Lesser General Public License along with this library; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA',
     'seeAlso': [
       'https://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html',
-      'https://opensource.org/licenses/LGPL-2.1'
+      'https://opensource.org/licenses/LGPL-2.1',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': true,
@@ -2887,9 +2887,9 @@ final allLicences = <Map>[
         "<one line to give the library's name and an idea of what it does.>\n\nCopyright (C) <year> <name of author>\n\nThis library is free software; you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation; either version 2.1 of the License, or (at your option) any later version.\n\nThis library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.\n\nYou should have received a copy of the GNU Lesser General Public License along with this library; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA",
     'seeAlso': [
       'https://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html',
-      'https://opensource.org/licenses/LGPL-2.1'
+      'https://opensource.org/licenses/LGPL-2.1',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2908,9 +2908,9 @@ final allLicences = <Map>[
         'Copyright (C) year name of author\n\nThis library is free software; you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation; version 2.1.\n\nThis library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.\n\nYou should have received a copy of the GNU Lesser General Public License along with this library; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA',
     'seeAlso': [
       'https://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html',
-      'https://opensource.org/licenses/LGPL-2.1'
+      'https://opensource.org/licenses/LGPL-2.1',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2928,9 +2928,9 @@ final allLicences = <Map>[
         "<one line to give the library's name and an idea of what it does.>\n\nCopyright (C) <year> <name of author>\n\nThis library is free software; you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation; either version 2.1 of the License, or (at your option) any later version.\n\nThis library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.\n\nYou should have received a copy of the GNU Lesser General Public License along with this library; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA",
     'seeAlso': [
       'https://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html',
-      'https://opensource.org/licenses/LGPL-2.1'
+      'https://opensource.org/licenses/LGPL-2.1',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': true,
@@ -2943,9 +2943,9 @@ final allLicences = <Map>[
     'licenseId': 'LGPL-3.0',
     'seeAlso': [
       'https://www.gnu.org/licenses/lgpl-3.0-standalone.html',
-      'https://opensource.org/licenses/LGPL-3.0'
+      'https://opensource.org/licenses/LGPL-3.0',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': true,
@@ -2958,9 +2958,9 @@ final allLicences = <Map>[
     'licenseId': 'LGPL-3.0+',
     'seeAlso': [
       'https://www.gnu.org/licenses/lgpl-3.0-standalone.html',
-      'https://opensource.org/licenses/LGPL-3.0'
+      'https://opensource.org/licenses/LGPL-3.0',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2975,9 +2975,9 @@ final allLicences = <Map>[
     'licenseId': 'LGPL-3.0-only',
     'seeAlso': [
       'https://www.gnu.org/licenses/lgpl-3.0-standalone.html',
-      'https://opensource.org/licenses/LGPL-3.0'
+      'https://opensource.org/licenses/LGPL-3.0',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -2991,9 +2991,9 @@ final allLicences = <Map>[
     'licenseId': 'LGPL-3.0-or-later',
     'seeAlso': [
       'https://www.gnu.org/licenses/lgpl-3.0-standalone.html',
-      'https://opensource.org/licenses/LGPL-3.0'
+      'https://opensource.org/licenses/LGPL-3.0',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3006,7 +3006,7 @@ final allLicences = <Map>[
         'Appears to have borrowed some language from the LGPL-2.1.',
     'licenseId': 'LGPLLR',
     'seeAlso': ['http://www-igm.univ-mlv.fr/~unitex/lgpllr.html'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3017,7 +3017,7 @@ final allLicences = <Map>[
     'name': 'libpng License',
     'licenseId': 'Libpng',
     'seeAlso': ['http://www.libpng.org/pub/png/src/libpng-LICENSE.txt'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3028,7 +3028,7 @@ final allLicences = <Map>[
     'name': 'libtiff License',
     'licenseId': 'libtiff',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/libtiff'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3042,9 +3042,9 @@ final allLicences = <Map>[
     'licenseId': 'LiLiQ-P-1.1',
     'seeAlso': [
       'https://forge.gouv.qc.ca/licence/fr/liliq-v1-1/',
-      'http://opensource.org/licenses/LiLiQ-P-1.1'
+      'http://opensource.org/licenses/LiLiQ-P-1.1',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3058,9 +3058,9 @@ final allLicences = <Map>[
     'licenseId': 'LiLiQ-R-1.1',
     'seeAlso': [
       'https://www.forge.gouv.qc.ca/participez/licence-logicielle/licence-libre-du-quebec-liliq-en-francais/licence-libre-du-quebec-reciprocite-liliq-r-v1-1/',
-      'http://opensource.org/licenses/LiLiQ-R-1.1'
+      'http://opensource.org/licenses/LiLiQ-R-1.1',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3074,9 +3074,9 @@ final allLicences = <Map>[
     'licenseId': 'LiLiQ-Rplus-1.1',
     'seeAlso': [
       'https://www.forge.gouv.qc.ca/participez/licence-logicielle/licence-libre-du-quebec-liliq-en-francais/licence-libre-du-quebec-reciprocite-forte-liliq-r-v1-1/',
-      'http://opensource.org/licenses/LiLiQ-Rplus-1.1'
+      'http://opensource.org/licenses/LiLiQ-Rplus-1.1',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3089,9 +3089,9 @@ final allLicences = <Map>[
         'This license is BSD-2-Clause with the MIT disclaimer. The linux kernel uses this license extensively throughout the driver subsystem since 2005. Note that the OpenIB.org license is a true match to BSD-2-Clause.',
     'licenseId': 'Linux-OpenIB',
     'seeAlso': [
-      'https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/infiniband/core/sa.h'
+      'https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/infiniband/core/sa.h',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3104,9 +3104,9 @@ final allLicences = <Map>[
     'licenseId': 'LPL-1.02',
     'seeAlso': [
       'http://plan9.bell-labs.com/plan9/license.html',
-      'https://opensource.org/licenses/LPL-1.02'
+      'https://opensource.org/licenses/LPL-1.02',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3117,7 +3117,7 @@ final allLicences = <Map>[
     'name': 'Lucent Public License Version 1.0',
     'licenseId': 'LPL-1.0',
     'seeAlso': ['https://opensource.org/licenses/LPL-1.0'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3133,7 +3133,7 @@ final allLicences = <Map>[
     'standardLicenseHeader':
         '%% pig.sty\n\n%% Copyright 2001 M. Y. Name\n\n% This program can redistributed and/or modified under the terms\n\n% of the LaTeX Project Public License Distributed from CTAN\n\n% archives in directory macros/latex/base/lppl.txt; either\n\n% version 1 of the License, or (at your option) any later version.',
     'seeAlso': ['http://www.latex-project.org/lppl/lppl-1-0.txt'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3149,7 +3149,7 @@ final allLicences = <Map>[
     'standardLicenseHeader':
         '%% pig.dtx\n\n%% Copyright 2001 M. Y. Name\n\n%\n\n% This program may be distributed and/or modified under the\n\n% conditions of the LaTeX Project Public License, either version 1.1\n\n% of this license or (at your option) any later version.\n\n% The latest version of this license is in\n\n% http://www.latex-project.org/lppl.txt\n\n% and version 1.1 or later is part of all distributions of LaTeX\n\n% version 1999/06/01 or later.\n\n%\n\n% This program consists of the files pig.dtx and pig.ins',
     'seeAlso': ['http://www.latex-project.org/lppl/lppl-1-1.txt'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3166,7 +3166,7 @@ final allLicences = <Map>[
     'standardLicenseHeader':
         '%% pig.dtx\n\n%% Copyright 2001 M. Y. Name\n\n%\n\n% This program may be distributed and/or modified under the\n\n% conditions of the LaTeX Project Public License, either version 1.2\n\n% of this license or (at your option) any later version.\n\n% The latest version of this license is in\n\n% http://www.latex-project.org/lppl.txt\n\n% and version 1.2 or later is part of all distributions of LaTeX\n\n% version 1999/12/01 or later.\n\n%\n\n% This program consists of the files pig.dtx and pig.ins',
     'seeAlso': ['http://www.latex-project.org/lppl/lppl-1-2.txt'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3183,7 +3183,7 @@ final allLicences = <Map>[
     'standardLicenseHeader':
         '%% pig.dtx\n\n%% Copyright 2003 M. Y. Name\n\n%\n\n% This work may be distributed and/or modified under the\n\n% conditions of the LaTeX Project Public License, either version 1.3\n\n% of this license or (at your option) any later version.\n\n% The latest version of this license is in\n\n% http://www.latex-project.org/lppl.txt\n\n% and version 1.3 or later is part of all distributions of LaTeX\n\n% version 2003/12/01 or later.\n\n%\n\n% This work has the LPPL maintenance status " maintained ".\n\n%\n\n% This Current Maintainer of this work is M. Y. Name .\n\n%\n\n% This work consists of the files pig.dtx and pig.ins\n\n% and the derived file pig.sty .',
     'seeAlso': ['http://www.latex-project.org/lppl/lppl-1-3a.txt'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3200,9 +3200,9 @@ final allLicences = <Map>[
         '%% pig.dtx\n\n%% Copyright 2005 M. Y. Name\n\n%\n\n% This work may be distributed and/or modified under the\n\n% conditions of the LaTeX Project Public License, either version 1.3\n\n% of this license or (at your option) any later version.\n\n% The latest version of this license is in\n\n% http://www.latex-project.org/lppl.txt\n\n% and version 1.3 or later is part of all distributions of LaTeX\n\n% version 2005/12/01 or later.\n\n%\n\n% This work has the LPPL maintenance status " maintained ".\n\n%\n\n% The Current Maintainer of this work is M. Y. Name .\n\n%\n\n% This work consists of the files pig.dtx and pig.ins\n\n% and the derived file pig.sty .',
     'seeAlso': [
       'http://www.latex-project.org/lppl/lppl-1-3c.txt',
-      'https://opensource.org/licenses/LPPL-1.3c'
+      'https://opensource.org/licenses/LPPL-1.3c',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3213,7 +3213,7 @@ final allLicences = <Map>[
     'name': 'MakeIndex License',
     'licenseId': 'MakeIndex',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/MakeIndex'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3224,7 +3224,7 @@ final allLicences = <Map>[
     'name': 'MirOS License',
     'licenseId': 'MirOS',
     'seeAlso': ['https://opensource.org/licenses/MirOS'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3239,9 +3239,9 @@ final allLicences = <Map>[
     'seeAlso': [
       'https://github.com/aws/mit-0',
       'https://romanrm.net/mit-zero',
-      'https://github.com/awsdocs/aws-cloud9-user-guide/blob/master/LICENSE-SAMPLECODE'
+      'https://github.com/awsdocs/aws-cloud9-user-guide/blob/master/LICENSE-SAMPLECODE',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3254,9 +3254,9 @@ final allLicences = <Map>[
         'This license is a modified version of the common MIT license, with an additional advertising clause',
     'licenseId': 'MIT-advertising',
     'seeAlso': [
-      'https://fedoraproject.org/wiki/Licensing/MIT_With_Advertising'
+      'https://fedoraproject.org/wiki/Licensing/MIT_With_Advertising',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3267,9 +3267,9 @@ final allLicences = <Map>[
     'name': 'CMU License',
     'licenseId': 'MIT-CMU',
     'seeAlso': [
-      'https://fedoraproject.org/wiki/Licensing:MIT?rd=Licensing/MIT#CMU_Style'
+      'https://fedoraproject.org/wiki/Licensing:MIT?rd=Licensing/MIT#CMU_Style',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3280,7 +3280,7 @@ final allLicences = <Map>[
     'name': 'enna License',
     'licenseId': 'MIT-enna',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/MIT#enna'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3291,7 +3291,7 @@ final allLicences = <Map>[
     'name': 'feh License',
     'licenseId': 'MIT-feh',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/MIT#feh'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3303,7 +3303,7 @@ final allLicences = <Map>[
     'name': 'MIT License',
     'licenseId': 'MIT',
     'seeAlso': ['https://opensource.org/licenses/MIT'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3314,7 +3314,7 @@ final allLicences = <Map>[
     'name': 'MIT +no-false-attribs license',
     'licenseId': 'MITNFA',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/MITNFA'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3325,7 +3325,7 @@ final allLicences = <Map>[
     'name': 'Motosoto License',
     'licenseId': 'Motosoto',
     'seeAlso': ['https://opensource.org/licenses/Motosoto'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3336,7 +3336,7 @@ final allLicences = <Map>[
     'name': 'mpich2 License',
     'licenseId': 'mpich2',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/MIT'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3353,9 +3353,9 @@ final allLicences = <Map>[
         '" The contents of this file are subject to the Mozilla Public License Version 1.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.mozilla.org/MPL/\n\nSoftware distributed under the License is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language governing rights and limitations under the License.\n\nThe Original Code is _____ . The Initial Developer of the Original Code is _____ . Portions created by _____ are Copyright (C) _____ . All Rights Reserved. Contributor(s): _____ . "',
     'seeAlso': [
       'http://www.mozilla.org/MPL/MPL-1.0.html',
-      'https://opensource.org/licenses/MPL-1.0'
+      'https://opensource.org/licenses/MPL-1.0',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3373,9 +3373,9 @@ final allLicences = <Map>[
         '" The contents of this file are subject to the Mozilla Public License Version 1.1 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.mozilla.org/MPL/\n\nSoftware distributed under the License is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language governing rights and limitations under the License.\n\nThe Original Code is ______________________________________ .\n\nThe Initial Developer of the Original Code is ________________________ .\n\nPortions created by ______________________ are Copyright (C) ______ . All Rights Reserved.\n\nContributor(s): ______________________________________ .\n\nAlternatively, the contents of this file may be used under the terms of the _____ license (the " [___] License"), in which case the provisions of [______] License are applicable instead of those above. If you wish to allow use of your version of this file only under the terms of the [____] License and not to allow others to use your version of this file under the MPL, indicate your decision by deleting the provisions above and replace them with the notice and other provisions required by the [___] License. If you do not delete the provisions above, a recipient may use your version of this file under either the MPL or the [___] License. "',
     'seeAlso': [
       'http://www.mozilla.org/MPL/MPL-1.1.html',
-      'https://opensource.org/licenses/MPL-1.1'
+      'https://opensource.org/licenses/MPL-1.1',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3390,9 +3390,9 @@ final allLicences = <Map>[
     'licenseId': 'MPL-2.0',
     'seeAlso': [
       'http://www.mozilla.org/MPL/2.0/',
-      'https://opensource.org/licenses/MPL-2.0'
+      'https://opensource.org/licenses/MPL-2.0',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3406,9 +3406,9 @@ final allLicences = <Map>[
     'licenseId': 'MPL-2.0-no-copyleft-exception',
     'seeAlso': [
       'http://www.mozilla.org/MPL/2.0/',
-      'https://opensource.org/licenses/MPL-2.0'
+      'https://opensource.org/licenses/MPL-2.0',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3421,9 +3421,9 @@ final allLicences = <Map>[
     'licenseId': 'MS-PL',
     'seeAlso': [
       'http://www.microsoft.com/opensource/licenses.mspx',
-      'https://opensource.org/licenses/MS-PL'
+      'https://opensource.org/licenses/MS-PL',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3436,9 +3436,9 @@ final allLicences = <Map>[
     'licenseId': 'MS-RL',
     'seeAlso': [
       'http://www.microsoft.com/opensource/licenses.mspx',
-      'https://opensource.org/licenses/MS-RL'
+      'https://opensource.org/licenses/MS-RL',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3449,9 +3449,9 @@ final allLicences = <Map>[
     'name': 'Matrix Template Library License',
     'licenseId': 'MTLL',
     'seeAlso': [
-      'https://fedoraproject.org/wiki/Licensing/Matrix_Template_Library_License'
+      'https://fedoraproject.org/wiki/Licensing/Matrix_Template_Library_License',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3462,7 +3462,7 @@ final allLicences = <Map>[
     'name': 'Multics License',
     'licenseId': 'Multics',
     'seeAlso': ['https://opensource.org/licenses/Multics'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3473,7 +3473,7 @@ final allLicences = <Map>[
     'name': 'Mup License',
     'licenseId': 'Mup',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/Mup'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3485,9 +3485,9 @@ final allLicences = <Map>[
     'licenseId': 'NASA-1.3',
     'seeAlso': [
       'http://ti.arc.nasa.gov/opensource/nosa/',
-      'https://opensource.org/licenses/NASA-1.3'
+      'https://opensource.org/licenses/NASA-1.3',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3498,7 +3498,7 @@ final allLicences = <Map>[
     'name': 'Naumen Public License',
     'licenseId': 'Naumen',
     'seeAlso': ['https://opensource.org/licenses/Naumen'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3511,9 +3511,9 @@ final allLicences = <Map>[
         'This license was released 22 August 1998. This license was issued twice, but only with formatting differences.',
     'licenseId': 'NBPL-1.0',
     'seeAlso': [
-      'http://www.openldap.org/devel/gitweb.cgi?p=openldap.git;a=blob;f=LICENSE;hb=37b4b3f6cc4bf34e1d3dec61e69914b9819d8894'
+      'http://www.openldap.org/devel/gitweb.cgi?p=openldap.git;a=blob;f=LICENSE;hb=37b4b3f6cc4bf34e1d3dec61e69914b9819d8894',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3526,9 +3526,9 @@ final allLicences = <Map>[
     'licenseId': 'NCSA',
     'seeAlso': [
       'http://otm.illinois.edu/uiuc_openSource',
-      'https://opensource.org/licenses/NCSA'
+      'https://opensource.org/licenses/NCSA',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3539,7 +3539,7 @@ final allLicences = <Map>[
     'name': 'NetCDF license',
     'licenseId': 'NetCDF',
     'seeAlso': ['http://www.unidata.ucar.edu/software/netcdf/copyright.html'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3552,7 +3552,7 @@ final allLicences = <Map>[
         'This is the overall Net-SNMP license, which is comprised of several licenses which are referred to in totality by the notices in the source files.',
     'licenseId': 'Net-SNMP',
     'seeAlso': ['http://net-snmp.sourceforge.net/about/license.html'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3563,7 +3563,7 @@ final allLicences = <Map>[
     'name': 'Newsletr License',
     'licenseId': 'Newsletr',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/Newsletr'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3574,7 +3574,7 @@ final allLicences = <Map>[
     'name': 'Nethack General Public License',
     'licenseId': 'NGPL',
     'seeAlso': ['https://opensource.org/licenses/NGPL'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3587,7 +3587,7 @@ final allLicences = <Map>[
         'Norwegian translation available here: http://data.norge.no/nlod/no/1.0',
     'licenseId': 'NLOD-1.0',
     'seeAlso': ['http://data.norge.no/nlod/en/1.0'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3598,7 +3598,7 @@ final allLicences = <Map>[
     'name': 'No Limit Public License',
     'licenseId': 'NLPL',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/NLPL'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3610,7 +3610,7 @@ final allLicences = <Map>[
     'name': 'Nokia Open Source License',
     'licenseId': 'Nokia',
     'seeAlso': ['https://opensource.org/licenses/nokia'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3622,7 +3622,7 @@ final allLicences = <Map>[
     'name': 'Netizen Open Source License',
     'licenseId': 'NOSL',
     'seeAlso': ['http://bits.netizen.com.au/licenses/NOSL/nosl.txt'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3633,7 +3633,7 @@ final allLicences = <Map>[
     'name': 'Noweb License',
     'licenseId': 'Noweb',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/Noweb'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3645,7 +3645,7 @@ final allLicences = <Map>[
     'name': 'Netscape Public License v1.0',
     'licenseId': 'NPL-1.0',
     'seeAlso': ['http://www.mozilla.org/MPL/NPL/1.0/'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3657,7 +3657,7 @@ final allLicences = <Map>[
     'name': 'Netscape Public License v1.1',
     'licenseId': 'NPL-1.1',
     'seeAlso': ['http://www.mozilla.org/MPL/NPL/1.1/'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3668,7 +3668,7 @@ final allLicences = <Map>[
     'name': 'Non-Profit Open Software License 3.0',
     'licenseId': 'NPOSL-3.0',
     'seeAlso': ['https://opensource.org/licenses/NOSL3.0'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3679,7 +3679,7 @@ final allLicences = <Map>[
     'name': 'NRL License',
     'licenseId': 'NRL',
     'seeAlso': ['http://web.mit.edu/network/isakmp/nrllicense.html'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3690,7 +3690,7 @@ final allLicences = <Map>[
     'name': 'NTP License',
     'licenseId': 'NTP',
     'seeAlso': ['https://opensource.org/licenses/NTP'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': true,
@@ -3702,7 +3702,7 @@ final allLicences = <Map>[
     'name': 'Nunit License',
     'licenseId': 'Nunit',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/Nunit'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3713,7 +3713,7 @@ final allLicences = <Map>[
     'name': 'Open CASCADE Technology Public License',
     'licenseId': 'OCCT-PL',
     'seeAlso': ['http://www.opencascade.com/content/occt-public-license'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3730,9 +3730,9 @@ final allLicences = <Map>[
         '" Copyright (c) 2000- (insert then current year) OCLC Online Computer Library Center, Inc. and other contributors . All rights reserved. The contents of this file, as updated from time to time by the OCLC Office of Research, are subject to OCLC Research Public License Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a current copy of the License at http://purl.oclc.org/oclc/research/ORPL/. Software distributed under the License is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language governing rights and limitations under the License. This software consists of voluntary contributions made by many individuals on behalf of OCLC Research. For more information on OCLC Research, please see http://www.oclc.org/research/. The Original Code is ______________________________ . The Initial Developer of the Original Code is ________________________ . Portions created by ______________________ are Copyright (C) ____________________________ . All Rights Reserved. Contributor(s): ______________________________________ . "',
     'seeAlso': [
       'http://www.oclc.org/research/activities/software/license/v2final.htm',
-      'https://opensource.org/licenses/OCLC-2.0'
+      'https://opensource.org/licenses/OCLC-2.0',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3744,7 +3744,7 @@ final allLicences = <Map>[
     'name': 'ODC Open Database License v1.0',
     'licenseId': 'ODbL-1.0',
     'seeAlso': ['http://www.opendatacommons.org/licenses/odbl/1.0/'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3755,7 +3755,7 @@ final allLicences = <Map>[
     'name': 'Open Data Commons Attribution License v1.0',
     'licenseId': 'ODC-By-1.0',
     'seeAlso': ['https://opendatacommons.org/licenses/by/1.0/'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3769,9 +3769,9 @@ final allLicences = <Map>[
         'This license has been superseded. This license was released in November 2005.',
     'licenseId': 'OFL-1.0',
     'seeAlso': [
-      'http://scripts.sil.org/cms/scripts/page.php?item_id=OFL10_web'
+      'http://scripts.sil.org/cms/scripts/page.php?item_id=OFL10_web',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3785,9 +3785,9 @@ final allLicences = <Map>[
     'licenseId': 'OFL-1.1',
     'seeAlso': [
       'http://scripts.sil.org/cms/scripts/page.php?item_id=OFL_web',
-      'https://opensource.org/licenses/OFL-1.1'
+      'https://opensource.org/licenses/OFL-1.1',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3798,9 +3798,9 @@ final allLicences = <Map>[
     'name': 'Open Government Licence v1.0',
     'licenseId': 'OGL-UK-1.0',
     'seeAlso': [
-      'http://www.nationalarchives.gov.uk/doc/open-government-licence/version/1/'
+      'http://www.nationalarchives.gov.uk/doc/open-government-licence/version/1/',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3811,9 +3811,9 @@ final allLicences = <Map>[
     'name': 'Open Government Licence v2.0',
     'licenseId': 'OGL-UK-2.0',
     'seeAlso': [
-      'http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/'
+      'http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3826,9 +3826,9 @@ final allLicences = <Map>[
         'A Welsh translation of this license is available: http://www.nationalarchives.gov.uk/doc/open-government-licence-cymraeg/version/3/',
     'licenseId': 'OGL-UK-3.0',
     'seeAlso': [
-      'http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/'
+      'http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3840,9 +3840,9 @@ final allLicences = <Map>[
     'licenseId': 'OGTSL',
     'seeAlso': [
       'http://www.opengroup.org/testing/downloads/The_Open_Group_TSL.txt',
-      'https://opensource.org/licenses/OGTSL'
+      'https://opensource.org/licenses/OGTSL',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3854,9 +3854,9 @@ final allLicences = <Map>[
     'licenseComments': 'This license was released 25 August 1998.',
     'licenseId': 'OLDAP-1.1',
     'seeAlso': [
-      'http://www.openldap.org/devel/gitweb.cgi?p=openldap.git;a=blob;f=LICENSE;hb=806557a5ad59804ef3a44d5abfbe91d706b0791f'
+      'http://www.openldap.org/devel/gitweb.cgi?p=openldap.git;a=blob;f=LICENSE;hb=806557a5ad59804ef3a44d5abfbe91d706b0791f',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3869,9 +3869,9 @@ final allLicences = <Map>[
         'This license was released 1 September 1998. This license was issued four time, but only with formatting differences.',
     'licenseId': 'OLDAP-1.2',
     'seeAlso': [
-      'http://www.openldap.org/devel/gitweb.cgi?p=openldap.git;a=blob;f=LICENSE;hb=42b0383c50c299977b5893ee695cf4e486fb0dc7'
+      'http://www.openldap.org/devel/gitweb.cgi?p=openldap.git;a=blob;f=LICENSE;hb=42b0383c50c299977b5893ee695cf4e486fb0dc7',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3884,9 +3884,9 @@ final allLicences = <Map>[
         'This license was released 17 January 1999. This license was issued twice in the same day with a minor correction. This is the corrected (second) version.',
     'licenseId': 'OLDAP-1.3',
     'seeAlso': [
-      'http://www.openldap.org/devel/gitweb.cgi?p=openldap.git;a=blob;f=LICENSE;hb=e5f8117f0ce088d0bd7a8e18ddf37eaa40eb09b1'
+      'http://www.openldap.org/devel/gitweb.cgi?p=openldap.git;a=blob;f=LICENSE;hb=e5f8117f0ce088d0bd7a8e18ddf37eaa40eb09b1',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3898,9 +3898,9 @@ final allLicences = <Map>[
     'licenseComments': 'This license was released 18 January 1999.',
     'licenseId': 'OLDAP-1.4',
     'seeAlso': [
-      'http://www.openldap.org/devel/gitweb.cgi?p=openldap.git;a=blob;f=LICENSE;hb=c9f95c2f3f2ffb5e0ae55fe7388af75547660941'
+      'http://www.openldap.org/devel/gitweb.cgi?p=openldap.git;a=blob;f=LICENSE;hb=c9f95c2f3f2ffb5e0ae55fe7388af75547660941',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3913,9 +3913,9 @@ final allLicences = <Map>[
         'This license was released 21 December 1999. This license is the same as 2.0 with the word "registered" removed from in front of "trademark."',
     'licenseId': 'OLDAP-2.0.1',
     'seeAlso': [
-      'http://www.openldap.org/devel/gitweb.cgi?p=openldap.git;a=blob;f=LICENSE;hb=b6d68acd14e51ca3aab4428bf26522aa74873f0e'
+      'http://www.openldap.org/devel/gitweb.cgi?p=openldap.git;a=blob;f=LICENSE;hb=b6d68acd14e51ca3aab4428bf26522aa74873f0e',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3927,9 +3927,9 @@ final allLicences = <Map>[
     'licenseComments': 'This license was released 7 June 1999.',
     'licenseId': 'OLDAP-2.0',
     'seeAlso': [
-      'http://www.openldap.org/devel/gitweb.cgi?p=openldap.git;a=blob;f=LICENSE;hb=cbf50f4e1185a21abd4c0a54d3f4341fe28f36ea'
+      'http://www.openldap.org/devel/gitweb.cgi?p=openldap.git;a=blob;f=LICENSE;hb=cbf50f4e1185a21abd4c0a54d3f4341fe28f36ea',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3941,9 +3941,9 @@ final allLicences = <Map>[
     'licenseComments': 'This license was released 29 February 2000.',
     'licenseId': 'OLDAP-2.1',
     'seeAlso': [
-      'http://www.openldap.org/devel/gitweb.cgi?p=openldap.git;a=blob;f=LICENSE;hb=b0d176738e96a0d3b9f85cb51e140a86f21be715'
+      'http://www.openldap.org/devel/gitweb.cgi?p=openldap.git;a=blob;f=LICENSE;hb=b0d176738e96a0d3b9f85cb51e140a86f21be715',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3955,9 +3955,9 @@ final allLicences = <Map>[
     'licenseComments': 'This license was released 1 March 2000.',
     'licenseId': 'OLDAP-2.2.1',
     'seeAlso': [
-      'http://www.openldap.org/devel/gitweb.cgi?p=openldap.git;a=blob;f=LICENSE;hb=4bc786f34b50aa301be6f5600f58a980070f481e'
+      'http://www.openldap.org/devel/gitweb.cgi?p=openldap.git;a=blob;f=LICENSE;hb=4bc786f34b50aa301be6f5600f58a980070f481e',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3969,9 +3969,9 @@ final allLicences = <Map>[
     'licenseComments': 'This license was released 28 July 2000.',
     'licenseId': 'OLDAP-2.2.2',
     'seeAlso': [
-      'http://www.openldap.org/devel/gitweb.cgi?p=openldap.git;a=blob;f=LICENSE;hb=df2cc1e21eb7c160695f5b7cffd6296c151ba188'
+      'http://www.openldap.org/devel/gitweb.cgi?p=openldap.git;a=blob;f=LICENSE;hb=df2cc1e21eb7c160695f5b7cffd6296c151ba188',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3983,9 +3983,9 @@ final allLicences = <Map>[
     'licenseComments': 'This license was released 1 March 2000.',
     'licenseId': 'OLDAP-2.2',
     'seeAlso': [
-      'http://www.openldap.org/devel/gitweb.cgi?p=openldap.git;a=blob;f=LICENSE;hb=470b0c18ec67621c85881b2733057fecf4a1acc3'
+      'http://www.openldap.org/devel/gitweb.cgi?p=openldap.git;a=blob;f=LICENSE;hb=470b0c18ec67621c85881b2733057fecf4a1acc3',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -3998,9 +3998,9 @@ final allLicences = <Map>[
     'licenseComments': 'This license was released 28 July 2000.',
     'licenseId': 'OLDAP-2.3',
     'seeAlso': [
-      'http://www.openldap.org/devel/gitweb.cgi?p=openldap.git;a=blob;f=LICENSE;hb=d32cf54a32d581ab475d23c810b0a7fbaf8d63c3'
+      'http://www.openldap.org/devel/gitweb.cgi?p=openldap.git;a=blob;f=LICENSE;hb=d32cf54a32d581ab475d23c810b0a7fbaf8d63c3',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4012,9 +4012,9 @@ final allLicences = <Map>[
     'licenseComments': 'This license was released 8 December 2000.',
     'licenseId': 'OLDAP-2.4',
     'seeAlso': [
-      'http://www.openldap.org/devel/gitweb.cgi?p=openldap.git;a=blob;f=LICENSE;hb=cd1284c4a91a8a380d904eee68d1583f989ed386'
+      'http://www.openldap.org/devel/gitweb.cgi?p=openldap.git;a=blob;f=LICENSE;hb=cd1284c4a91a8a380d904eee68d1583f989ed386',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4026,9 +4026,9 @@ final allLicences = <Map>[
     'licenseComments': 'This license was released 11 May 2001.',
     'licenseId': 'OLDAP-2.5',
     'seeAlso': [
-      'http://www.openldap.org/devel/gitweb.cgi?p=openldap.git;a=blob;f=LICENSE;hb=6852b9d90022e8593c98205413380536b1b5a7cf'
+      'http://www.openldap.org/devel/gitweb.cgi?p=openldap.git;a=blob;f=LICENSE;hb=6852b9d90022e8593c98205413380536b1b5a7cf',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4040,9 +4040,9 @@ final allLicences = <Map>[
     'licenseComments': 'This license was released 14 June 2001.',
     'licenseId': 'OLDAP-2.6',
     'seeAlso': [
-      'http://www.openldap.org/devel/gitweb.cgi?p=openldap.git;a=blob;f=LICENSE;hb=1cae062821881f41b73012ba816434897abf4205'
+      'http://www.openldap.org/devel/gitweb.cgi?p=openldap.git;a=blob;f=LICENSE;hb=1cae062821881f41b73012ba816434897abf4205',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4055,9 +4055,9 @@ final allLicences = <Map>[
     'licenseComments': 'This license was released 7 September 2001.',
     'licenseId': 'OLDAP-2.7',
     'seeAlso': [
-      'http://www.openldap.org/devel/gitweb.cgi?p=openldap.git;a=blob;f=LICENSE;hb=47c2415c1df81556eeb39be6cad458ef87c534a2'
+      'http://www.openldap.org/devel/gitweb.cgi?p=openldap.git;a=blob;f=LICENSE;hb=47c2415c1df81556eeb39be6cad458ef87c534a2',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4068,7 +4068,7 @@ final allLicences = <Map>[
     'name': 'Open LDAP Public License v2.8',
     'licenseId': 'OLDAP-2.8',
     'seeAlso': ['http://www.openldap.org/software/release/license.html'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4079,7 +4079,7 @@ final allLicences = <Map>[
     'name': 'Open Market License',
     'licenseId': 'OML',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/Open_Market_License'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4093,7 +4093,7 @@ final allLicences = <Map>[
         'The OpenSSL toolkit stays under a dual license, i.e. both the conditions of the OpenSSL License and the original SSLeay license apply to the toolkit.',
     'licenseId': 'OpenSSL',
     'seeAlso': ['http://www.openssl.org/source/license.html'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4105,9 +4105,9 @@ final allLicences = <Map>[
     'licenseId': 'OPL-1.0',
     'seeAlso': [
       'http://old.koalateam.com/jackaroo/OPL_1_0.TXT',
-      'https://fedoraproject.org/wiki/Licensing/Open_Public_License'
+      'https://fedoraproject.org/wiki/Licensing/Open_Public_License',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4119,9 +4119,9 @@ final allLicences = <Map>[
     'licenseId': 'OSET-PL-2.1',
     'seeAlso': [
       'http://www.osetfoundation.org/public-license',
-      'https://opensource.org/licenses/OPL-2.1'
+      'https://opensource.org/licenses/OPL-2.1',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4138,7 +4138,7 @@ final allLicences = <Map>[
     'standardLicenseHeader':
         '" Licensed under the Open Software License version 1.0 "',
     'seeAlso': ['https://opensource.org/licenses/OSL-1.0'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4154,7 +4154,7 @@ final allLicences = <Map>[
     'standardLicenseHeader':
         'Licensed under the Open Software License version 1.1',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/OSL1.1'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4170,9 +4170,9 @@ final allLicences = <Map>[
     'standardLicenseHeader':
         'Licensed under the Open Software License version 2.0',
     'seeAlso': [
-      'http://web.archive.org/web/20041020171434/http://www.rosenlaw.com/osl2.0.html'
+      'http://web.archive.org/web/20041020171434/http://www.rosenlaw.com/osl2.0.html',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4191,9 +4191,9 @@ final allLicences = <Map>[
         'Licensed under the Open Software License version 2.1',
     'seeAlso': [
       'http://web.archive.org/web/20050212003940/http://www.rosenlaw.com/osl21.htm',
-      'https://opensource.org/licenses/OSL-2.1'
+      'https://opensource.org/licenses/OSL-2.1',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4210,9 +4210,9 @@ final allLicences = <Map>[
         'Licensed under the Open Software License version 3.0',
     'seeAlso': [
       'https://web.archive.org/web/20120101081418/http://rosenlaw.com:80/OSL3.0.htm',
-      'https://opensource.org/licenses/OSL-3.0'
+      'https://opensource.org/licenses/OSL-3.0',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4223,7 +4223,7 @@ final allLicences = <Map>[
     'name': 'ODC Public Domain Dedication & License 1.0',
     'licenseId': 'PDDL-1.0',
     'seeAlso': ['http://opendatacommons.org/licenses/pddl/1.0/'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4237,7 +4237,7 @@ final allLicences = <Map>[
         'The PHP License v3.01 is essentially the same as v3.0, with the exception of a couple word differences and updated url in section 6.',
     'licenseId': 'PHP-3.01',
     'seeAlso': ['http://www.php.net/license/3_01.txt'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4249,9 +4249,9 @@ final allLicences = <Map>[
     'licenseId': 'PHP-3.0',
     'seeAlso': [
       'http://www.php.net/license/3_0.txt',
-      'https://opensource.org/licenses/PHP-3.0'
+      'https://opensource.org/licenses/PHP-3.0',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4263,9 +4263,9 @@ final allLicences = <Map>[
     'licenseComments': 'dom4j uses this same license.',
     'licenseId': 'Plexus',
     'seeAlso': [
-      'https://fedoraproject.org/wiki/Licensing/Plexus_Classworlds_License'
+      'https://fedoraproject.org/wiki/Licensing/Plexus_Classworlds_License',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4277,9 +4277,9 @@ final allLicences = <Map>[
     'licenseId': 'PostgreSQL',
     'seeAlso': [
       'http://www.postgresql.org/about/licence',
-      'https://opensource.org/licenses/PostgreSQL'
+      'https://opensource.org/licenses/PostgreSQL',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4290,7 +4290,7 @@ final allLicences = <Map>[
     'name': 'psfrag License',
     'licenseId': 'psfrag',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/psfrag'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4301,7 +4301,7 @@ final allLicences = <Map>[
     'name': 'psutils License',
     'licenseId': 'psutils',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/psutils'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4315,7 +4315,7 @@ final allLicences = <Map>[
         'This is the overall Python license, which is comprised of several licenses.',
     'licenseId': 'Python-2.0',
     'seeAlso': ['https://opensource.org/licenses/Python-2.0'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4326,7 +4326,7 @@ final allLicences = <Map>[
     'name': 'Qhull License',
     'licenseId': 'Qhull',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/Qhull'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4339,9 +4339,9 @@ final allLicences = <Map>[
     'licenseId': 'QPL-1.0',
     'seeAlso': [
       'http://doc.qt.nokia.com/3.3/license.html',
-      'https://opensource.org/licenses/QPL-1.0'
+      'https://opensource.org/licenses/QPL-1.0',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4352,7 +4352,7 @@ final allLicences = <Map>[
     'name': 'Rdisc License',
     'licenseId': 'Rdisc',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/Rdisc_License'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4363,7 +4363,7 @@ final allLicences = <Map>[
     'name': 'Red Hat eCos Public License v1.1',
     'licenseId': 'RHeCos-1.1',
     'seeAlso': ['http://ecos.sourceware.org/old-license.html'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4376,7 +4376,7 @@ final allLicences = <Map>[
         'This license has been superseded by the Reciprocal Public License, version 1.5',
     'licenseId': 'RPL-1.1',
     'seeAlso': ['https://opensource.org/licenses/RPL-1.1'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4388,7 +4388,7 @@ final allLicences = <Map>[
     'licenseComments': 'This license was released: 15 July 2007',
     'licenseId': 'RPL-1.5',
     'seeAlso': ['https://opensource.org/licenses/RPL-1.5'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4405,9 +4405,9 @@ final allLicences = <Map>[
         "\" Copyright (c) 1995-2002 RealNetworks, Inc. and/or its licensors. All Rights Reserved.\n\nThe contents of this file, and the files included with this file, are subject to the current version of the RealNetworks Public Source License Version 1.0 (the \"RPSL\") available at https://www.helixcommunity.org/content/rpsl unless you have licensed the file under the RealNetworks Community Source License Version 1.0 (the \"RCSL\") available at https://www.helixcommunity.org/content/rcsl, in which case the RCSL will apply. You may also obtain the license terms directly from RealNetworks. You may not use this file except in compliance with the RPSL or, if you have a valid RCSL with RealNetworks applicable to this file, the RCSL. Please see the applicable RPSL or RCSL for the rights, obligations and limitations governing use of the contents of the file.\n\nThis file is part of the Helix DNA Technology. RealNetworks is the developer of the Original code and owns the copyrights in the portions it created.\n\nThis file, and the files included with this file, is distributed and made available on an 'AS IS' basis, WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, AND REALNETWORKS HEREBY DISCLAIMS ALL SUCH WARRANTIES, INCLUDING WITHOUT LIMITATION, ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, QUIET ENJOYMENT OR NON-INFRINGEMENT.\n\nContributor(s): ____________________________________\n\nTechnology Compatibility Kit Test Suite(s) Location (if licensed under the RCSL): _____ \"",
     'seeAlso': [
       'https://helixcommunity.org/content/rpsl',
-      'https://opensource.org/licenses/RPSL-1.0'
+      'https://opensource.org/licenses/RPSL-1.0',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4418,7 +4418,7 @@ final allLicences = <Map>[
     'name': 'RSA Message-Digest License ',
     'licenseId': 'RSA-MD',
     'seeAlso': ['http://www.faqs.org/rfcs/rfc1321.html'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4430,9 +4430,9 @@ final allLicences = <Map>[
     'licenseId': 'RSCPL',
     'seeAlso': [
       'http://wayback.archive.org/web/20060715140826/http://www.risource.org/RPL/RPL-1.0A.shtml',
-      'https://opensource.org/licenses/RSCPL'
+      'https://opensource.org/licenses/RSCPL',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4446,7 +4446,7 @@ final allLicences = <Map>[
         'Ruby is disjunctively licensed project that allows the choice of this license and another. The other license choice has changed over time (from GPL originally, to BSD-2-Clause currently), so one needs to be aware of that change. The Ruby License itself is un-versioned, but has varied a bit over the years, the last substantive variation being in 2002.',
     'licenseId': 'Ruby',
     'seeAlso': ['http://www.ruby-lang.org/en/LICENSE.txt'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4457,7 +4457,7 @@ final allLicences = <Map>[
     'name': 'Saxpath License',
     'licenseId': 'Saxpath',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/Saxpath_License'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4468,7 +4468,7 @@ final allLicences = <Map>[
     'name': 'Sax Public Domain Notice',
     'licenseId': 'SAX-PD',
     'seeAlso': ['http://www.saxproject.org/copying.html'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4483,7 +4483,7 @@ final allLicences = <Map>[
     'standardLicenseHeader':
         'Copyright 2005 Sony Computer Entertainment Inc.\n\nLicensed under the SCEA Shared Source License, Version 1.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at:\n\nhttp://research.scea.com/scea_shared_source_license.html\n\nUnless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.',
     'seeAlso': ['http://research.scea.com/scea_shared_source_license.html'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4495,9 +4495,9 @@ final allLicences = <Map>[
     'licenseId': 'Sendmail-8.23',
     'seeAlso': [
       'https://www.proofpoint.com/sites/default/files/sendmail-license.pdf',
-      'https://web.archive.org/web/20181003101040/https://www.proofpoint.com/sites/default/files/sendmail-license.pdf'
+      'https://web.archive.org/web/20181003101040/https://www.proofpoint.com/sites/default/files/sendmail-license.pdf',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4509,9 +4509,9 @@ final allLicences = <Map>[
     'licenseId': 'Sendmail',
     'seeAlso': [
       'http://www.sendmail.com/pdfs/open_source/sendmail_license.pdf',
-      'https://web.archive.org/web/20160322142305/https://www.sendmail.com/pdfs/open_source/sendmail_license.pdf'
+      'https://web.archive.org/web/20160322142305/https://www.sendmail.com/pdfs/open_source/sendmail_license.pdf',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4527,7 +4527,7 @@ final allLicences = <Map>[
     'standardLicenseHeader':
         'License Applicability. Except to the extent portions of this file are made subject to an alternative license as permitted in the SGI Free Software License B, Version 1.0 (the "License"), the contents of this file are subject only to the provisions of the License. You may not use this file except in compliance with the License. You may obtain a copy of the License at Silicon Graphics, Inc., attn: Legal Services, 1600 Ampitheatre Parkway, Mountain View, CA 94043-1351, or at:\n\nhttp://oss.sgi.com/projects/FreeB\n\nNote that, as provided in the License, the Software is distributed on an "AS IS" basis, with ALL EXPRESS AND IMPLIED WARRANTIES AND CONDITIONS DISCLAIMED, INCLUDING, WITHOUT LIMITATION, ANY IMPLIED WARRANTIES AND CONDITIONS OF MERCHANTABILITY, SATISFACTORY QUALITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.\n\nOriginal Code. The Original Code is: [ name of software , version number , and release date ] , developed by Silicon Graphics, Inc. The Original Code is Copyright (c) [ dates of first publication, as appearing in the Notice in the Original Code ] Silicon Graphics, Inc. Copyright in any portions created by third parties is as indicated elsewhere herein. All Rights Reserved.\n\nAdditional Notice Provisions: [ such additional provisions, if any, as appear in the Notice in the Original Code under the heading "Additional Notice Provisions" ]',
     'seeAlso': ['http://oss.sgi.com/projects/FreeB/SGIFreeSWLicB.1.0.html'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4543,7 +4543,7 @@ final allLicences = <Map>[
     'standardLicenseHeader':
         'License Applicability. Except to the extent portions of this file are made subject to an alternative license as permitted in the SGI Free Software License B, Version 1.1 (the "License"), the contents of this file are subject only to the provisions of the License. You may not use this file except in compliance with the License. You may obtain a copy of the License at Silicon Graphics, Inc., attn: Legal Services, 1600 Amphitheatre Parkway, Mountain View, CA 94043-1351, or at:\n\nhttp://oss.sgi.com/projects/FreeB\n\nNote that, as provided in the License, the Software is distributed on an "AS IS" basis, with ALL EXPRESS AND IMPLIED WARRANTIES AND CONDITIONS DISCLAIMED, INCLUDING, WITHOUT LIMITATION, ANY IMPLIED WARRANTIES AND CONDITIONS OF MERCHANTABILITY, SATISFACTORY QUALITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.\n\nOriginal Code. The Original Code is: [ name of software , version number , and release date ] , developed by Silicon Graphics, Inc. The Original Code is Copyright (c) [ dates of first publication, as appearing in the Notice in the Original Code ] Silicon Graphics, Inc. Copyright in any portions created by third parties is as indicated elsewhere herein. All Rights Reserved. Additional Notice Provisions: [ such additional provisions, if any, as appear in the Notice in the Original Code under the heading "Additional Notice Provisions" ]',
     'seeAlso': ['http://oss.sgi.com/projects/FreeB/'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4556,7 +4556,7 @@ final allLicences = <Map>[
     'licenseComments': 'This license was released 18 Sept 2008',
     'licenseId': 'SGI-B-2.0',
     'seeAlso': ['http://oss.sgi.com/projects/FreeB/SGIFreeSWLicB.2.0.pdf'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4567,7 +4567,7 @@ final allLicences = <Map>[
     'name': 'Simple Public License 2.0',
     'licenseId': 'SimPL-2.0',
     'seeAlso': ['https://opensource.org/licenses/SimPL-2.0'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4582,9 +4582,9 @@ final allLicences = <Map>[
     'standardLicenseHeader':
         '" The contents of this file are subject to the Sun Industry Standards Source License Version 1.2 (the License); You\n\nmay not use this file except in compliance with the License. "\n\n" You may obtain a copy of the License at gridengine.sunsource.net/license.html "\n\n" Software distributed under the License is distributed on an AS IS basis, WITHOUT WARRANTY OF ANY KIND, either express or\n\nimplied. See the License for the specific language governing rights and limitations under the License. "\n\n" The Original Code is Grid Engine. "\n\n" The Initial Developer of the Original Code is:\n\nSun Microsystems, Inc. "\n\n" Portions created by: Sun Microsystems, Inc. are Copyright (C) 2001 Sun Microsystems, Inc. "\n\n" All Rights Reserved. "\n\n" Contributor(s): __________________________________"',
     'seeAlso': [
-      'http://gridscheduler.sourceforge.net/Gridengine_SISSL_license.html'
+      'http://gridscheduler.sourceforge.net/Gridengine_SISSL_license.html',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4601,9 +4601,9 @@ final allLicences = <Map>[
         '" The contents of this file are subject to the Sun Standards License Version 1.1 (the "License"); You may not use this file except in compliance with the License. You may obtain a copy of the License at _______________________________ .\n\nSoftware distributed under the License is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY KIND, either\n\nexpress or implied. See the License for the specific language governing rights and limitations under the License.\n\nThe Original Code is ______________________________________ .\n\nThe Initial Developer of the Original Code is: Sun Microsystems, Inc. .\n\nPortions created by: _______________________________________\n\nare Copyright (C): _______________________________________\n\nAll Rights Reserved.\n\nContributor(s): _______________________________________',
     'seeAlso': [
       'http://www.openoffice.org/licenses/sissl_license.html',
-      'https://opensource.org/licenses/SISSL'
+      'https://opensource.org/licenses/SISSL',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4615,7 +4615,7 @@ final allLicences = <Map>[
     'name': 'Sleepycat License',
     'licenseId': 'Sleepycat',
     'seeAlso': ['https://opensource.org/licenses/Sleepycat'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4627,7 +4627,7 @@ final allLicences = <Map>[
     'name': 'Standard ML of New Jersey License',
     'licenseId': 'SMLNJ',
     'seeAlso': ['https://www.smlnj.org/license.html'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4638,9 +4638,9 @@ final allLicences = <Map>[
     'name': 'Secure Messaging Protocol Public License',
     'licenseId': 'SMPPL',
     'seeAlso': [
-      'https://github.com/dcblake/SMP/blob/master/Documentation/License.txt'
+      'https://github.com/dcblake/SMP/blob/master/Documentation/License.txt',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4652,7 +4652,7 @@ final allLicences = <Map>[
     'licenseComments': 'This is MPL-1.1 with some edits.',
     'licenseId': 'SNIA',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/SNIA_Public_License'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4663,9 +4663,9 @@ final allLicences = <Map>[
     'name': 'Spencer License 86',
     'licenseId': 'Spencer-86',
     'seeAlso': [
-      'https://fedoraproject.org/wiki/Licensing/Henry_Spencer_Reg-Ex_Library_License'
+      'https://fedoraproject.org/wiki/Licensing/Henry_Spencer_Reg-Ex_Library_License',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4676,9 +4676,9 @@ final allLicences = <Map>[
     'name': 'Spencer License 94',
     'licenseId': 'Spencer-94',
     'seeAlso': [
-      'https://fedoraproject.org/wiki/Licensing/Henry_Spencer_Reg-Ex_Library_License'
+      'https://fedoraproject.org/wiki/Licensing/Henry_Spencer_Reg-Ex_Library_License',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4689,9 +4689,9 @@ final allLicences = <Map>[
     'name': 'Spencer License 99',
     'licenseId': 'Spencer-99',
     'seeAlso': [
-      'http://www.opensource.apple.com/source/tcl/tcl-5/tcl/generic/regfronts.c'
+      'http://www.opensource.apple.com/source/tcl/tcl-5/tcl/generic/regfronts.c',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4707,7 +4707,7 @@ final allLicences = <Map>[
     'standardLicenseHeader':
         'The contents of this file are subject to the Sun Public License Version 1.0 (the License); you may not use this file except in compliance with the License. A copy of the License is available at http://www.sun.com/\n\nThe Original Code is _________________ . The Initial Developer of the Original Code is ___________ . Portions created by ______ are Copyright (C) _________ . All Rights Reserved.\n\nContributor(s): ______________________________________ .\n\nAlternatively, the contents of this file may be used under the terms of the _____ license (the ?[___] License? ), in which case the provisions of [______] License are applicable instead of those above. If you wish to allow use of your version of this file only under the terms of the [____] License and not to allow others to use your version of this file under the SPL, indicate your decision by deleting the provisions above and replace them with the notice and other provisions required by the [___] License. If you do not delete the provisions above, a recipient may use your version of this file under either the SPL or the [___] License.',
     'seeAlso': ['https://opensource.org/licenses/SPL-1.0'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': true,
@@ -4719,7 +4719,7 @@ final allLicences = <Map>[
     'name': 'Standard ML of New Jersey License',
     'licenseId': 'StandardML-NJ',
     'seeAlso': ['http://www.smlnj.org//license.html'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4730,7 +4730,7 @@ final allLicences = <Map>[
     'name': 'SugarCRM Public License v1.1.3',
     'licenseId': 'SugarCRM-1.1.3',
     'seeAlso': ['http://www.sugarcrm.com/crm/SPL'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4741,7 +4741,7 @@ final allLicences = <Map>[
     'name': 'Scheme Widget Library (SWL) Software License Agreement',
     'licenseId': 'SWL',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/SWL'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4753,9 +4753,9 @@ final allLicences = <Map>[
     'licenseId': 'TCL',
     'seeAlso': [
       'http://www.tcl.tk/software/tcltk/license.html',
-      'https://fedoraproject.org/wiki/Licensing/TCL'
+      'https://fedoraproject.org/wiki/Licensing/TCL',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4766,7 +4766,7 @@ final allLicences = <Map>[
     'name': 'TCP Wrappers License',
     'licenseId': 'TCP-wrappers',
     'seeAlso': ['http://rc.quest.com/topics/openssh/license.php#tcpwrappers'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4777,7 +4777,7 @@ final allLicences = <Map>[
     'name': 'TMate Open Source License',
     'licenseId': 'TMate',
     'seeAlso': ['http://svnkit.com/license.html'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4788,7 +4788,7 @@ final allLicences = <Map>[
     'name': 'TORQUE v2.5+ Software License v1.1',
     'licenseId': 'TORQUE-1.1',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/TORQUEv1.1'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4799,7 +4799,7 @@ final allLicences = <Map>[
     'name': 'Trusster Open Source License',
     'licenseId': 'TOSL',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/TOSL'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4810,9 +4810,9 @@ final allLicences = <Map>[
     'name': 'Technische Universitaet Berlin License 1.0',
     'licenseId': 'TU-Berlin-1.0',
     'seeAlso': [
-      'https://github.com/swh/ladspa/blob/7bf6f3799fdba70fda297c2d8fd9f526803d9680/gsm/COPYRIGHT'
+      'https://github.com/swh/ladspa/blob/7bf6f3799fdba70fda297c2d8fd9f526803d9680/gsm/COPYRIGHT',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4823,9 +4823,9 @@ final allLicences = <Map>[
     'name': 'Technische Universitaet Berlin License 2.0',
     'licenseId': 'TU-Berlin-2.0',
     'seeAlso': [
-      'https://github.com/CorsixTH/deps/blob/fd339a9f526d1d9c9f01ccf39e438a015da50035/licences/libgsm.txt'
+      'https://github.com/CorsixTH/deps/blob/fd339a9f526d1d9c9f01ccf39e438a015da50035/licences/libgsm.txt',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4836,9 +4836,9 @@ final allLicences = <Map>[
     'name': 'Unicode License Agreement - Data Files and Software (2015)',
     'licenseId': 'Unicode-DFS-2015',
     'seeAlso': [
-      'https://web.archive.org/web/20151224134844/http://unicode.org/copyright.html'
+      'https://web.archive.org/web/20151224134844/http://unicode.org/copyright.html',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4849,7 +4849,7 @@ final allLicences = <Map>[
     'name': 'Unicode License Agreement - Data Files and Software (2016)',
     'licenseId': 'Unicode-DFS-2016',
     'seeAlso': ['http://www.unicode.org/copyright.html'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4860,7 +4860,7 @@ final allLicences = <Map>[
     'name': 'Unicode Terms of Use',
     'licenseId': 'Unicode-TOU',
     'seeAlso': ['http://www.unicode.org/copyright.html'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4873,7 +4873,7 @@ final allLicences = <Map>[
     'licenseComments': 'This is a public domain dedication',
     'licenseId': 'Unlicense',
     'seeAlso': ['http://unlicense.org/'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4885,7 +4885,7 @@ final allLicences = <Map>[
     'name': 'Universal Permissive License v1.0',
     'licenseId': 'UPL-1.0',
     'seeAlso': ['https://opensource.org/licenses/UPL'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4897,7 +4897,7 @@ final allLicences = <Map>[
     'name': 'Vim License',
     'licenseId': 'Vim',
     'seeAlso': ['http://vimdoc.sourceforge.net/htmldoc/uganda.html'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4908,7 +4908,7 @@ final allLicences = <Map>[
     'name': 'VOSTROM Public License for Open Source',
     'licenseId': 'VOSTROM',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/VOSTROM'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4919,7 +4919,7 @@ final allLicences = <Map>[
     'name': 'Vovida Software License v1.0',
     'licenseId': 'VSL-1.0',
     'seeAlso': ['https://opensource.org/licenses/VSL-1.0'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4930,9 +4930,9 @@ final allLicences = <Map>[
     'name': 'W3C Software Notice and License (1998-07-20)',
     'licenseId': 'W3C-19980720',
     'seeAlso': [
-      'http://www.w3.org/Consortium/Legal/copyright-software-19980720.html'
+      'http://www.w3.org/Consortium/Legal/copyright-software-19980720.html',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4949,9 +4949,9 @@ final allLicences = <Map>[
     'standardLicenseHeader':
         '[\$name_of_software: \$distribution_URI] Copyright (c) [\$date-of-software] World Wide Web Consortium, (Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University, Beihang). All Rights Reserved. This work is distributed under the W3C® Software License [1] in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. [1] http://www.w3.org/Consortium/Legal/copyright-software',
     'seeAlso': [
-      'https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document'
+      'https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4970,9 +4970,9 @@ final allLicences = <Map>[
         'Copyright (C) [\$date-of-software] World Wide Web Consortium, (Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University). All Rights Reserved.\n\nThis work is distributed under the W3C® Software License in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.',
     'seeAlso': [
       'http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231.html',
-      'https://opensource.org/licenses/W3C'
+      'https://opensource.org/licenses/W3C',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4983,7 +4983,7 @@ final allLicences = <Map>[
     'name': 'Sybase Open Watcom Public License 1.0',
     'licenseId': 'Watcom-1.0',
     'seeAlso': ['https://opensource.org/licenses/Watcom-1.0'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -4994,7 +4994,7 @@ final allLicences = <Map>[
     'name': 'Wsuipa License',
     'licenseId': 'Wsuipa',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/Wsuipa'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -5006,7 +5006,7 @@ final allLicences = <Map>[
     'name': 'Do What The F*ck You Want To Public License',
     'licenseId': 'WTFPL',
     'seeAlso': ['http://sam.zoy.org/wtfpl/COPYING'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': true,
@@ -5017,7 +5017,7 @@ final allLicences = <Map>[
     'name': 'wxWindows Library License',
     'licenseId': 'wxWindows',
     'seeAlso': ['https://opensource.org/licenses/WXwindows'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -5031,7 +5031,7 @@ final allLicences = <Map>[
         'This is same as MIT, but with no advertising clause added.',
     'licenseId': 'X11',
     'seeAlso': ['http://www.xfree86.org/3.3.6/COPYRIGHT2.html#3'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -5042,7 +5042,7 @@ final allLicences = <Map>[
     'name': 'Xerox License',
     'licenseId': 'Xerox',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/Xerox'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -5054,7 +5054,7 @@ final allLicences = <Map>[
     'name': 'XFree86 License 1.1',
     'licenseId': 'XFree86-1.1',
     'seeAlso': ['http://www.xfree86.org/current/LICENSE4.html'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -5066,7 +5066,7 @@ final allLicences = <Map>[
     'name': 'xinetd License',
     'licenseId': 'xinetd',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/Xinetd_License'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -5079,7 +5079,7 @@ final allLicences = <Map>[
         'This license is the same as MIT, but with a choice of law clause. This License has been voluntarily deprecated by its author.',
     'licenseId': 'Xnet',
     'seeAlso': ['https://opensource.org/licenses/Xnet'],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -5090,7 +5090,7 @@ final allLicences = <Map>[
     'name': 'XPP License',
     'licenseId': 'xpp',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/xpp'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -5101,7 +5101,7 @@ final allLicences = <Map>[
     'name': 'XSkat License',
     'licenseId': 'XSkat',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/XSkat_License'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -5112,7 +5112,7 @@ final allLicences = <Map>[
     'name': 'Yahoo! Public License v1.0',
     'licenseId': 'YPL-1.0',
     'seeAlso': ['http://www.zimbra.com/license/yahoo_public_license_1.0.html'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -5124,7 +5124,7 @@ final allLicences = <Map>[
     'name': 'Yahoo! Public License v1.1',
     'licenseId': 'YPL-1.1',
     'seeAlso': ['http://www.zimbra.com/license/yahoo_public_license_1.1.html'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -5135,7 +5135,7 @@ final allLicences = <Map>[
     'name': 'Zed License',
     'licenseId': 'Zed',
     'seeAlso': ['https://fedoraproject.org/wiki/Licensing/Zed'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -5147,9 +5147,9 @@ final allLicences = <Map>[
     'name': 'Zend License v2.0',
     'licenseId': 'Zend-2.0',
     'seeAlso': [
-      'https://web.archive.org/web/20130517195954/http://www.zend.com/license/2_00.txt'
+      'https://web.archive.org/web/20130517195954/http://www.zend.com/license/2_00.txt',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -5161,9 +5161,9 @@ final allLicences = <Map>[
     'name': 'Zimbra Public License v1.3',
     'licenseId': 'Zimbra-1.3',
     'seeAlso': [
-      'http://web.archive.org/web/20100302225219/http://www.zimbra.com/license/zimbra-public-license-1-3.html'
+      'http://web.archive.org/web/20100302225219/http://www.zimbra.com/license/zimbra-public-license-1-3.html',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -5174,7 +5174,7 @@ final allLicences = <Map>[
     'name': 'Zimbra Public License v1.4',
     'licenseId': 'Zimbra-1.4',
     'seeAlso': ['http://www.zimbra.com/legal/zimbra-public-license-1-4'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -5185,9 +5185,9 @@ final allLicences = <Map>[
     'name': 'zlib/libpng License with Acknowledgement',
     'licenseId': 'zlib-acknowledgement',
     'seeAlso': [
-      'https://fedoraproject.org/wiki/Licensing/ZlibWithAcknowledgement'
+      'https://fedoraproject.org/wiki/Licensing/ZlibWithAcknowledgement',
     ],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -5200,9 +5200,9 @@ final allLicences = <Map>[
     'licenseId': 'Zlib',
     'seeAlso': [
       'http://www.zlib.net/zlib_license.html',
-      'https://opensource.org/licenses/Zlib'
+      'https://opensource.org/licenses/Zlib',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -5213,7 +5213,7 @@ final allLicences = <Map>[
     'name': 'Zope Public License 1.1',
     'licenseId': 'ZPL-1.1',
     'seeAlso': ['http://old.zope.org/Resources/License/ZPL-1.1'],
-    'isOsiApproved': false
+    'isOsiApproved': false,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -5226,9 +5226,9 @@ final allLicences = <Map>[
     'licenseId': 'ZPL-2.0',
     'seeAlso': [
       'http://old.zope.org/Resources/License/ZPL-2.0',
-      'https://opensource.org/licenses/ZPL-2.0'
+      'https://opensource.org/licenses/ZPL-2.0',
     ],
-    'isOsiApproved': true
+    'isOsiApproved': true,
   },
   {
     'isDeprecatedLicenseId': false,
@@ -5241,6 +5241,6 @@ final allLicences = <Map>[
     'licenseComments': 'This is a generic version of the ZPL 2.0 license',
     'licenseId': 'ZPL-2.1',
     'seeAlso': ['http://old.zope.org/Resources/ZPL/'],
-    'isOsiApproved': false
-  }
+    'isOsiApproved': false,
+  },
 ];

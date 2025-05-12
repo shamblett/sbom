@@ -18,9 +18,10 @@ class SbomSpdxLicenseDetails {
         json.containsKey(SbomSpdxConstants.licenseIsDeprecatedId)
             ? json[SbomSpdxConstants.licenseIsDeprecatedId]
             : false;
-    isFsfLibre = json.containsKey(SbomSpdxConstants.licenseIsFsfLibre)
-        ? json[SbomSpdxConstants.licenseIsFsfLibre]
-        : false;
+    isFsfLibre =
+        json.containsKey(SbomSpdxConstants.licenseIsFsfLibre)
+            ? json[SbomSpdxConstants.licenseIsFsfLibre]
+            : false;
     licenseText = json[SbomSpdxConstants.licenseText];
     standardLicenseHeaderTemplate =
         json.containsKey(SbomSpdxConstants.licenseStandardHeaderTemplate)
@@ -28,9 +29,10 @@ class SbomSpdxLicenseDetails {
             : '';
     standardLicenseTemplate = json[SbomSpdxConstants.licenseStandardTemplate];
     name = json[SbomSpdxConstants.licenseName];
-    licenseComments = json.containsKey(SbomSpdxConstants.licenseComments)
-        ? json[SbomSpdxConstants.licenseComments]
-        : '';
+    licenseComments =
+        json.containsKey(SbomSpdxConstants.licenseComments)
+            ? json[SbomSpdxConstants.licenseComments]
+            : '';
     licenseId = json[SbomSpdxConstants.licenseId];
     standardLicenseHeader =
         json.containsKey(SbomSpdxConstants.licenseStandardHeader)
@@ -72,8 +74,10 @@ class SbomSpdxLicense {
   /// or NOASSERTION if the license cannot be determined.
   String licenseId(String text) {
     var output = SbomSpdxConstants.noAssertion;
-    final details =
-        licenses.keys.firstWhere((e) => text.contains(e), orElse: () => '');
+    final details = licenses.keys.firstWhere(
+      (e) => text.contains(e),
+      orElse: () => '',
+    );
     if (details.isNotEmpty) {
       output = licenses[details]!.licenseId;
     }

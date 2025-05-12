@@ -45,12 +45,18 @@ class SbomConfiguration {
     // Parse the arguments
     final argParser = ArgParser();
     argParser.addFlag('help', abbr: 'h', negatable: false);
-    argParser.addFlag('loud',
-        abbr: 'l', help: 'Loud: section processing output', negatable: false);
-    argParser.addFlag('louder',
-        abbr: 'L',
-        help: 'Louder: detailed section processing output',
-        negatable: false);
+    argParser.addFlag(
+      'loud',
+      abbr: 'l',
+      help: 'Loud: section processing output',
+      negatable: false,
+    );
+    argParser.addFlag(
+      'louder',
+      abbr: 'L',
+      help: 'Louder: detailed section processing output',
+      negatable: false,
+    );
     argParser.addOption(
       'abspath',
       abbr: 'P',
@@ -108,15 +114,18 @@ class SbomConfiguration {
 
   /// Parse the SBOM configuration file.
   void parseConfigurationFile() {
-    final sbomFilepath =
-        path.join(packageTopLevel, SbomConstants.sbomConfigurationFile);
+    final sbomFilepath = path.join(
+      packageTopLevel,
+      SbomConstants.sbomConfigurationFile,
+    );
     var sbomConfiguration = '';
     try {
       sbomConfiguration = File(sbomFilepath).readAsStringSync();
     } on FileSystemException {
       valid = false;
       SbomUtilities.error(
-          'Cannot read SBOM configuration file, path is $sbomFilepath,  cannot continue');
+        'Cannot read SBOM configuration file, path is $sbomFilepath,  cannot continue',
+      );
 
       return;
     }
@@ -124,14 +133,16 @@ class SbomConfiguration {
     if (contents == null || contents.isEmpty) {
       valid = false;
       SbomUtilities.error(
-          'SBOM configuration file is empty, path is $sbomFilepath,  cannot continue');
+        'SBOM configuration file is empty, path is $sbomFilepath,  cannot continue',
+      );
 
       return;
     }
     if (!contents.containsKey(SbomConstants.sbomType)) {
       valid = false;
       SbomUtilities.error(
-          'No type specified in SBOM configuration file, cannot continue');
+        'No type specified in SBOM configuration file, cannot continue',
+      );
 
       return;
     }
@@ -142,15 +153,18 @@ class SbomConfiguration {
   /// Parse the package pubspec file.
   void parsePubspecFile() {
     // Parse the package pubspec file
-    final pubspecFilepath =
-        path.join(packageTopLevel, SbomConstants.sbomPubspecFile);
+    final pubspecFilepath = path.join(
+      packageTopLevel,
+      SbomConstants.sbomPubspecFile,
+    );
     var sbomPubspec = '';
     try {
       sbomPubspec = File(pubspecFilepath).readAsStringSync();
     } on FileSystemException {
       valid = false;
       SbomUtilities.error(
-          'Cannot read package pubspec file, path is $pubspecFilepath,  cannot continue');
+        'Cannot read package pubspec file, path is $pubspecFilepath,  cannot continue',
+      );
 
       return;
     }
@@ -159,7 +173,8 @@ class SbomConfiguration {
     if (contents == null || contents.isEmpty) {
       valid = false;
       SbomUtilities.error(
-          'Package pubspec file is empty, path is $pubspecFilepath,  cannot continue');
+        'Package pubspec file is empty, path is $pubspecFilepath,  cannot continue',
+      );
 
       return;
     }
@@ -168,7 +183,8 @@ class SbomConfiguration {
       packageName = contents[SbomConstants.pubspecName];
     } else {
       SbomUtilities.warning(
-          'Package name not found in pubspec.yaml file, using default - your SBOM will not validate correctly');
+        'Package name not found in pubspec.yaml file, using default - your SBOM will not validate correctly',
+      );
     }
     sbomPubspecContents = contents;
   }
@@ -191,7 +207,8 @@ class SbomConfiguration {
         {
           valid = false;
           SbomUtilities.error(
-              'Invalid type specified in SBOM configuration file, $type - cannot continue');
+            'Invalid type specified in SBOM configuration file, $type - cannot continue',
+          );
         }
     }
   }

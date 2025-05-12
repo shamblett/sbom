@@ -22,8 +22,9 @@ class SbomSpdxUtilities {
       if ((!value.startsWith(SbomSpdxConstants.textStart)) &&
           (!value.endsWith(SbomSpdxConstants.textEnd))) {
         SbomUtilities.warning(
-            'Invalid tag value found in configuration for the $section section, tag name '
-            '${SbomSpdxUtilities.getSpecTagName(tag.name)} - SBOM may not pass validation');
+          'Invalid tag value found in configuration for the $section section, tag name '
+          '${SbomSpdxUtilities.getSpecTagName(tag.name)} - SBOM may not pass validation',
+        );
       }
     }
   }

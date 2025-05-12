@@ -36,7 +36,8 @@ class SbomSpdxTags extends SbomTags<SbomSpdxTag, String, SbomSpdxTagBuilder> {
   /// Returns a list of mandatory tags that do not have values, empty
   /// indicating the section is valid.
   @override
-  List<SbomSpdxTag> sectionValid(String section) => sectionTags(section)
-      .where((e) => e.mandatory && e.values.isEmpty)
-      .toList();
+  List<SbomSpdxTag> sectionValid(String section) =>
+      sectionTags(
+        section,
+      ).where((e) => e.mandatory && e.values.isEmpty).toList();
 }

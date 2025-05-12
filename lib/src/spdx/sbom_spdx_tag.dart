@@ -10,12 +10,16 @@ part of '../../sbom.dart';
 /// SPDX tag class.
 class SbomSpdxTag extends SbomTag<String> {
   /// Construction
-  SbomSpdxTag(super.name, super.section, super.position,
-      [this.canBeOverridden = false]);
+  SbomSpdxTag(
+    super.name,
+    super.section,
+    super.position, [
+    this.canBeOverridden = false,
+  ]);
 
   // ignore: use_super_parameters
   SbomSpdxTag.mandatory(name, section, position, [this.canBeOverridden = false])
-      : super.mandatory(name, section, position);
+    : super.mandatory(name, section, position);
 
   /// Indicates the tag can be overridden by configuration.
   bool canBeOverridden = false;

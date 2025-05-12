@@ -25,7 +25,10 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
 
   /// Update a tags value from a list.
   void _updateTagListValue(
-      YamlMap section, String sectionKey, String sectionId) {
+    YamlMap section,
+    String sectionKey,
+    String sectionId,
+  ) {
     for (final val in section[sectionKey]) {
       tags.tagByName('$sectionId$sectionKey').value = val;
     }
@@ -47,7 +50,8 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
         // unless this option is specified
         if (!tags.tagByName(key).canBeOverridden) {
           SbomUtilities.warning(
-              'SPDX tag $key cannot be overridden by configuration');
+            'SPDX tag $key cannot be overridden by configuration',
+          );
         } else {
           // Update the tag value from configuration, checking for list values
           if (section[sectionKey] is YamlList) {
@@ -58,7 +62,8 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
         }
       } else {
         SbomUtilities.warning(
-            'SPDX $sectionId tag "${SbomSpdxUtilities.getSpecTagName(key)}" is not a valid SPDX tag name - not processing');
+          'SPDX $sectionId tag "${SbomSpdxUtilities.getSpecTagName(key)}" is not a valid SPDX tag name - not processing',
+        );
       }
     }
   }
@@ -70,24 +75,27 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     if (configuration.sbomConfigurationContents[SbomConstants.sbomSpdx]
         .containsKey(SbomSpdxSectionNames.package)) {
       final section =
-          configuration.sbomConfigurationContents[SbomConstants.sbomSpdx]
-              [SbomSpdxSectionNames.package];
+          configuration.sbomConfigurationContents[SbomConstants
+              .sbomSpdx][SbomSpdxSectionNames.package];
       _processSectionTags(section, SbomSpdxTagNames.packageSectionId);
     }
     // Package name
-    tags.tagByName(SbomSpdxTagNames.packageName).value =
-        configuration.packageName.replaceAll('_', '-');
+    tags.tagByName(SbomSpdxTagNames.packageName).value = configuration
+        .packageName
+        .replaceAll('_', '-');
     // SPDXID
     tags.tagByName(SbomSpdxTagNames.packageIdentifier).value =
         '${SbomSpdxConstants.idReference}Package-${configuration.packageName.replaceAll('_', '-')}';
     // Version
-    if (configuration.sbomPubspecContents
-        .containsKey(SbomConstants.pubspecVersion)) {
+    if (configuration.sbomPubspecContents.containsKey(
+      SbomConstants.pubspecVersion,
+    )) {
       tags.tagByName(SbomSpdxTagNames.packageVersion).value =
           configuration.sbomPubspecContents[SbomConstants.pubspecVersion];
     } else {
       SbomUtilities.error(
-          'Version key not found in pubspec.yaml - cannot continue');
+        'Version key not found in pubspec.yaml - cannot continue',
+      );
 
       return false;
     }
@@ -117,13 +125,15 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
         '${SbomConstants.pubUrl}${configuration.packageName}';
     // Concluded license
     final license = fileSupport.licenceFileContents();
-    tags.tagByName(SbomSpdxTagNames.packageLicenseConcluded).value =
-        SbomSpdxLicense().licenseId(license);
+    tags
+        .tagByName(SbomSpdxTagNames.packageLicenseConcluded)
+        .value = SbomSpdxLicense().licenseId(license);
     // Summary description
     if (!tags.tagByName(SbomSpdxTagNames.packageSummary).isSet()) {
       // Get the package description from the pubspec if present
-      if (configuration.sbomPubspecContents
-          .containsKey(SbomConstants.pubspecDescription)) {
+      if (configuration.sbomPubspecContents.containsKey(
+        SbomConstants.pubspecDescription,
+      )) {
         tags.tagByName(SbomSpdxTagNames.packageSummary).value =
             '${SbomSpdxConstants.textStart}${configuration.sbomPubspecContents[SbomConstants.pubspecDescription]}${SbomSpdxConstants.textEnd}';
       }
@@ -139,8 +149,8 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     if (configuration.sbomConfigurationContents[SbomConstants.sbomSpdx]
         .containsKey(SbomSpdxSectionNames.documentCreation)) {
       final section =
-          configuration.sbomConfigurationContents[SbomConstants.sbomSpdx]
-              [SbomSpdxSectionNames.documentCreation];
+          configuration.sbomConfigurationContents[SbomConstants
+              .sbomSpdx][SbomSpdxSectionNames.documentCreation];
       _processSectionTags(section, SbomSpdxTagNames.documentCreationSectionId);
     }
     // Build the environment tags
@@ -163,11 +173,14 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     var files = fileSupport.dartFiles;
     if (files.isEmpty) {
       SbomUtilities.warning(
-          'No package Dart files available - SBOM will contain only the pubspec.yaml');
+        'No package Dart files available - SBOM will contain only the pubspec.yaml',
+      );
     }
     // Add the pubspec.yaml
-    final pubspecPath =
-        path.join(configuration.packageTopLevel, SbomConstants.sbomPubspecFile);
+    final pubspecPath = path.join(
+      configuration.packageTopLevel,
+      SbomConstants.sbomPubspecFile,
+    );
     files.add(File(pubspecPath));
 
     var digests = fileSupport.digests;
@@ -179,46 +192,73 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     // Create the tags for the Dart files.
     for (var i = 0; i < fileCount; i++) {
       // Name
-      tags.tags.add(SbomSpdxTag.mandatory('${SbomSpdxTagNames.fileFileName}-$i',
-          SbomSpdxSectionNames.file, position++));
-      final name = path.relative(path.normalize(files[i].path),
-          from: configuration.packageTopLevel);
+      tags.tags.add(
+        SbomSpdxTag.mandatory(
+          '${SbomSpdxTagNames.fileFileName}-$i',
+          SbomSpdxSectionNames.file,
+          position++,
+        ),
+      );
+      final name = path.relative(
+        path.normalize(files[i].path),
+        from: configuration.packageTopLevel,
+      );
       tags.tags[tagCount++].value = SbomSpdxUtilities.formatFilePath(name);
-      tags.tags.add(SbomSpdxTag.mandatory(
+      tags.tags.add(
+        SbomSpdxTag.mandatory(
           '${SbomSpdxTagNames.filePackageIdentifier}-$i',
           SbomSpdxSectionNames.file,
-          position++));
+          position++,
+        ),
+      );
       tags.tags[tagCount++].value =
           '${SbomSpdxConstants.idReference}${path.basenameWithoutExtension(name)}-$i'
               .replaceAll('_', '-');
-      tags.tags.add(SbomSpdxTag('${SbomSpdxTagNames.fileFileType}-$i',
-          SbomSpdxSectionNames.file, position++));
+      tags.tags.add(
+        SbomSpdxTag(
+          '${SbomSpdxTagNames.fileFileType}-$i',
+          SbomSpdxSectionNames.file,
+          position++,
+        ),
+      );
       // Last file is the pubspec which is a text file
       if (i == fileCount - 1) {
         tags.tags[tagCount++].value = SbomSpdxConstants.fileTextType;
       } else {
         tags.tags[tagCount++].value = SbomSpdxConstants.fileSourceType;
       }
-      tags.tags.add(SbomSpdxTag.mandatory(
+      tags.tags.add(
+        SbomSpdxTag.mandatory(
           '${SbomSpdxTagNames.fileFileChecksum}-$i',
           SbomSpdxSectionNames.file,
-          position++));
+          position++,
+        ),
+      );
       tags.tags[tagCount++].value =
           '${SbomSpdxConstants.sha1Tag}: ${digests[i].toString()}';
-      tags.tags.add(SbomSpdxTag.mandatory(
+      tags.tags.add(
+        SbomSpdxTag.mandatory(
           '${SbomSpdxTagNames.fileLicenceConcluded}-$i',
           SbomSpdxSectionNames.file,
-          position++));
+          position++,
+        ),
+      );
       tags.tags[tagCount++].value = SbomSpdxConstants.noAssertion;
-      tags.tags.add(SbomSpdxTag.mandatory(
+      tags.tags.add(
+        SbomSpdxTag.mandatory(
           '${SbomSpdxTagNames.fileLicenseInfoInFile}-$i',
           SbomSpdxSectionNames.file,
-          position++));
+          position++,
+        ),
+      );
       tags.tags[tagCount++].value = SbomSpdxConstants.noAssertion;
-      tags.tags.add(SbomSpdxTag.mandatory(
+      tags.tags.add(
+        SbomSpdxTag.mandatory(
           '${SbomSpdxTagNames.fileCopyrightText}-$i',
           SbomSpdxSectionNames.file,
-          position++));
+          position++,
+        ),
+      );
       tags.tags[tagCount++].value = SbomSpdxConstants.noAssertion;
     }
 
@@ -232,8 +272,13 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     final packageRef =
         tags.tagByName(SbomSpdxTagNames.packageIdentifier).values[0];
     final pubspecRef = tags.tags[tags.tags.length - 6].values[0];
-    tags.tags.add(SbomSpdxTag(
-        SbomSpdxTagNames.relationship, SbomSpdxSectionNames.relationship, 1));
+    tags.tags.add(
+      SbomSpdxTag(
+        SbomSpdxTagNames.relationship,
+        SbomSpdxSectionNames.relationship,
+        1,
+      ),
+    );
     tags.tags[tags.tags.length - 1].value =
         '$pubspecRef ${SbomSpdxConstants.dependencyManifest} $packageRef';
 
@@ -244,10 +289,12 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
   @override
   bool build() {
     SbomUtilities.loud('Building SPDX sections');
-    if (!configuration.sbomConfigurationContents
-        .containsKey(SbomConstants.sbomSpdx)) {
+    if (!configuration.sbomConfigurationContents.containsKey(
+      SbomConstants.sbomSpdx,
+    )) {
       SbomUtilities.error(
-          'Cannot build SPDX sections, no spdx tag in SBOM configuration file');
+        'Cannot build SPDX sections, no spdx tag in SBOM configuration file',
+      );
 
       return false;
     }
@@ -287,7 +334,8 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     final result = tags.sectionValid(SbomSpdxSectionNames.documentCreation);
     if (result.isNotEmpty) {
       SbomUtilities.error(
-          'Failed to validate SPDX Document Creation section, failed tags are ${SbomUtilities.tagsToString(result)}');
+        'Failed to validate SPDX Document Creation section, failed tags are ${SbomUtilities.tagsToString(result)}',
+      );
 
       return false;
     }
@@ -299,7 +347,8 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
           !value.contains(SbomSpdxConstants.creatorPerson) &&
           !value.contains(SbomSpdxConstants.creatorOrganisation)) {
         SbomUtilities.warning(
-            'SPDX document creation section has invalid creator tag values - "$value"');
+          'SPDX document creation section has invalid creator tag values - "$value"',
+        );
       }
     }
     // Tag value field text validation
@@ -317,7 +366,8 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     final result = tags.sectionValid(SbomSpdxSectionNames.package);
     if (result.isNotEmpty) {
       SbomUtilities.error(
-          'Failed to validate SPDX Package section, failed tags are ${SbomUtilities.tagsToString(result)}');
+        'Failed to validate SPDX Package section, failed tags are ${SbomUtilities.tagsToString(result)}',
+      );
 
       return false;
     }
@@ -329,8 +379,9 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
           (!value.contains(SbomSpdxConstants.creatorPerson)) &&
           (value as String != SbomSpdxConstants.noAssertion)) {
         SbomUtilities.warning(
-            'Invalid tag value found in configuration for Package section, tag name '
-            '${SbomSpdxUtilities.getSpecTagName(SbomSpdxTagNames.packageSupplier)} - SBOM may not pass validation');
+          'Invalid tag value found in configuration for Package section, tag name '
+          '${SbomSpdxUtilities.getSpecTagName(SbomSpdxTagNames.packageSupplier)} - SBOM may not pass validation',
+        );
       }
     }
     // Package originator
@@ -340,8 +391,9 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
           (!value.contains(SbomSpdxConstants.creatorPerson)) &&
           (value as String != SbomSpdxConstants.noAssertion)) {
         SbomUtilities.warning(
-            'Invalid tag value found in configuration for Package section, tag name '
-            '${SbomSpdxUtilities.getSpecTagName(SbomSpdxTagNames.packageOriginator)} - SBOM may not pass validation');
+          'Invalid tag value found in configuration for Package section, tag name '
+          '${SbomSpdxUtilities.getSpecTagName(SbomSpdxTagNames.packageOriginator)} - SBOM may not pass validation',
+        );
       }
     }
 
@@ -370,8 +422,9 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     }
     if (!ok) {
       SbomUtilities.warning(
-          'Invalid tag value found in configuration for Package section, tag name '
-          '${SbomSpdxUtilities.getSpecTagName(SbomSpdxTagNames.packageExternalRef)} - SBOM may not pass validation');
+        'Invalid tag value found in configuration for Package section, tag name '
+        '${SbomSpdxUtilities.getSpecTagName(SbomSpdxTagNames.packageExternalRef)} - SBOM may not pass validation',
+      );
     }
 
     return true;
@@ -401,14 +454,17 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     SbomUtilities.loud('Generating SPDX SBOM');
     // Create the sbom output file
     final outputFileName = path.join(
-        configuration.packageTopLevel, SbomSpdxConstants.outputFileName);
+      configuration.packageTopLevel,
+      SbomSpdxConstants.outputFileName,
+    );
     final outputFile = File(outputFileName);
     if (outputFile.existsSync()) {
       try {
         outputFile.deleteSync();
       } on Exception {
         SbomUtilities.error(
-            'SPDX SBOM generation - unable to delete existing sbom file at $outputFileName - aborting generation');
+          'SPDX SBOM generation - unable to delete existing sbom file at $outputFileName - aborting generation',
+        );
 
         return false;
       }
@@ -417,15 +473,17 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
       outputFile.createSync();
     } on FileSystemException {
       SbomUtilities.error(
-          'SPDX SBOM generation - unable to create output sbom file at $outputFileName - aborting generation');
+        'SPDX SBOM generation - unable to create output sbom file at $outputFileName - aborting generation',
+      );
 
       return false;
     }
 
     // Create the formatter
     late SbomSpdxIOutputFormatter formatter;
-    formatType = configuration.sbomConfigurationContents[SbomConstants.sbomSpdx]
-        [SbomSpdxConstants.spdxOutputFormatDirective];
+    formatType =
+        configuration.sbomConfigurationContents[SbomConstants
+            .sbomSpdx][SbomSpdxConstants.spdxOutputFormatDirective];
     SbomUtilities.loud('SPDX format type is tag/value');
     switch (formatType) {
       case SbomSpdxConstants.spdxOutputTagValue:
@@ -440,7 +498,8 @@ class SbomSpdxOutputGenerator extends SbomIOutputGenerator {
     var result = formatter.format();
     if (!result) {
       SbomUtilities.error(
-          'SPDX SBOM generation - unable to generate a formatted SPDX file at $outputFileName - aborting generation');
+        'SPDX SBOM generation - unable to generate a formatted SPDX file at $outputFileName - aborting generation',
+      );
 
       return false;
     }

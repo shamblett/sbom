@@ -63,7 +63,8 @@ class SbomFileSupport {
       }
     } catch (e) {
       SbomUtilities.error(
-          'File Support - exception $e thrown getting package files, the SBOM generation will be incorrect');
+        'File Support - exception $e thrown getting package files, the SBOM generation will be incorrect',
+      );
     }
 
     // Sort the dart files
@@ -82,7 +83,8 @@ class SbomFileSupport {
       return sha1.convert(bytes);
     } catch (e) {
       SbomUtilities.warning(
-          'File Support - exception $e thrown generating sha1 digest for $path, the SBOM generation will be incorrect');
+        'File Support - exception $e thrown generating sha1 digest for $path, the SBOM generation will be incorrect',
+      );
     }
 
     return null;
@@ -151,17 +153,20 @@ class SbomFileSupport {
   String licenceFileContents() {
     var contents = '';
     try {
-      final file =
-          File(path.join(_topLevelPath, SbomConstants.sbomLicenseFile));
+      final file = File(
+        path.join(_topLevelPath, SbomConstants.sbomLicenseFile),
+      );
       if (file.existsSync()) {
         contents = file.readAsStringSync();
       } else {
         SbomUtilities.warning(
-            'File Support - license file not found - license information cannot be extracted');
+          'File Support - license file not found - license information cannot be extracted',
+        );
       }
     } catch (e) {
       SbomUtilities.warning(
-          'File Support - error processing license file - license information cannot be extracted');
+        'File Support - error processing license file - license information cannot be extracted',
+      );
     }
 
     return contents;
