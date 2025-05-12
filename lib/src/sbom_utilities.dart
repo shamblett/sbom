@@ -1,3 +1,5 @@
+// ignore_for_file: avoid-global-state
+
 /*
  * Package : sbom
  * Author : S. Hamblett <steve.hamblett@linux.com>
@@ -10,7 +12,10 @@ part of '../sbom.dart';
 /// Utility functions for the SBOM package.
 class SbomUtilities {
   /// Verbosity(Loudness)
-  static int verbosity = SbomConstants.off;
+  static var verbosity = SbomConstants.off;
+
+  /// Last output, for testing.
+  static var last = '';
 
   /// Loud verbosity logging.
   static void loud(String text) {
@@ -42,9 +47,6 @@ class SbomUtilities {
     last = out;
   }
 
-  /// Last output, for testing.
-  static String last = '';
-
   /// Tag names to string for logging.
   static String tagsToString(List tags) {
     var output = '';
@@ -52,6 +54,6 @@ class SbomUtilities {
       output += '${tag.name},';
     }
 
-    return output.substring(0, output.length - 1);
+    return '${output.characters.getRange(0, output.length - 1)}';
   }
 }

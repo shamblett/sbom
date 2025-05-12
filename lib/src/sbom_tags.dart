@@ -12,14 +12,14 @@ part of '../sbom.dart';
 /// S, tag section
 /// B, tag builder.
 abstract class SbomTags<T, S, B> {
-  /// Construction
-  SbomTags(this.builder);
-
   /// The tag database.
   List<T> tags = <T>[];
 
   /// The tag builder.
   B builder;
+
+  /// Construction
+  SbomTags(this.builder);
 
   /// Get all tags for a specified section in section position order.
   List<T> sectionTags(S section);
