@@ -9,7 +9,6 @@ part of '../../../sbom.dart';
 
 /// The SBOM SPDX output formatter interface class.
 abstract class SbomSpdxIOutputFormatter {
-
   /// The file to output to
   File outputFile;
 
