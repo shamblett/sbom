@@ -10,6 +10,44 @@ part of '../../sbom.dart';
 /// SPDX tag builder.
 /// Builds the SPDX tags as per the specification.
 class SbomSpdxTagBuilder extends SbomITagBuilder {
+  /// Tag positions
+
+  static const version = 1;
+  static const dataLicence = 2;
+  static const identifier = 3;
+  static const documentName = 4;
+  static const documentNamespace = 5;
+  static const externalDocumentRefs = 6;
+  static const licenseListVersion = 7;
+  static const creator = 8;
+  static const created = 9;
+  static const creatorComment = 10;
+  static const documentComment = 11;
+
+  static const packageName = 1;
+  static const packageIdentifier = 2;
+  static const packageVersion = 3;
+  static const packageFileName = 4;
+  static const packageSupplier = 5;
+  static const packageOriginator = 6;
+  static const packageDownloadLocation = 7;
+  static const packageFilesAnalyzed = 8;
+  static const packageVerificationCode = 9;
+  static const packageChecksum = 10;
+  static const packageHomePage = 11;
+  static const packageSourceInfo = 12;
+  static const packageLicenseConcluded = 13;
+  static const packageLicenseInfoFromFiles = 14;
+  static const packageLicenseDeclared = 15;
+  static const packageLicenseComments = 16;
+  static const packageCopyrightText = 17;
+  static const packageSummary = 18;
+  static const packageDescription = 19;
+  static const packageComment = 20;
+  static const packageExternalRef = 21;
+  static const packageExternalRefComment = 22;
+  static const packageAttributionText = 23;
+
   final List<SbomSpdxTag> _tags = <SbomSpdxTag>[];
 
   /// Build the database.
@@ -27,34 +65,34 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
       SbomSpdxTag.mandatory(
         SbomSpdxTagNames.version,
         SbomSpdxSectionNames.documentCreation,
-        1,
+        version,
       ),
     );
-    // Version is pre defined.
-    _tags[0].value = SbomSpdxConstants.version;
+    // Version is predefined.
+    _tags.first.value = SbomSpdxConstants.version;
     _add(
       SbomSpdxTag.mandatory(
         SbomSpdxTagNames.dataLicense,
         SbomSpdxSectionNames.documentCreation,
-        2,
+        dataLicence,
       ),
     );
-    // License is predefined
+    // License is predefined.
     _tags[1].value = SbomSpdxConstants.license;
     _add(
       SbomSpdxTag.mandatory(
         SbomSpdxTagNames.identifier,
         SbomSpdxSectionNames.documentCreation,
-        3,
+        identifier,
       ),
     );
-    // Identifier is predefined
+    // Identifier is predefined.
     _tags[2].value = '${SbomSpdxConstants.idReference}DOCUMENT';
     _add(
       SbomSpdxTag.mandatory(
         SbomSpdxTagNames.documentName,
         SbomSpdxSectionNames.documentCreation,
-        4,
+        documentName,
         true,
       ),
     );
@@ -62,7 +100,7 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
       SbomSpdxTag.mandatory(
         SbomSpdxTagNames.documentNamespace,
         SbomSpdxSectionNames.documentCreation,
-        5,
+        documentNamespace,
         false,
       ),
     );
@@ -70,23 +108,23 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
       SbomSpdxTag(
         SbomSpdxTagNames.externalDocumentRefs,
         SbomSpdxSectionNames.documentCreation,
-        6,
+        externalDocumentRefs,
       ),
     );
     _add(
       SbomSpdxTag(
         SbomSpdxTagNames.licenseListVersion,
         SbomSpdxSectionNames.documentCreation,
-        7,
+        licenseListVersion,
       ),
     );
-    // License list version is predefined
+    // License list version is predefined.
     _tags[6].value = SbomSpdxConstants.licenseListVersion;
     _add(
       SbomSpdxTag.mandatory(
         SbomSpdxTagNames.creator,
         SbomSpdxSectionNames.documentCreation,
-        8,
+        creator,
         true,
       ),
     );
@@ -97,7 +135,7 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
       SbomSpdxTag.mandatory(
         SbomSpdxTagNames.created,
         SbomSpdxSectionNames.documentCreation,
-        9,
+        created,
       ),
     );
     // Created time is predefined
@@ -106,7 +144,7 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
       SbomSpdxTag(
         SbomSpdxTagNames.creatorComment,
         SbomSpdxSectionNames.documentCreation,
-        10,
+        creatorComment,
         true,
       ),
     );
@@ -114,7 +152,7 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
       SbomSpdxTag(
         SbomSpdxTagNames.documentComment,
         SbomSpdxSectionNames.documentCreation,
-        11,
+        documentComment,
         true,
       ),
     );
@@ -126,28 +164,28 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
       SbomSpdxTag.mandatory(
         SbomSpdxTagNames.packageName,
         SbomSpdxSectionNames.package,
-        1,
+        packageName,
       ),
     );
     _add(
       SbomSpdxTag.mandatory(
         SbomSpdxTagNames.packageIdentifier,
         SbomSpdxSectionNames.package,
-        2,
+        packageIdentifier,
       ),
     );
     _add(
       SbomSpdxTag.mandatory(
         SbomSpdxTagNames.packageVersion,
         SbomSpdxSectionNames.package,
-        3,
+        packageVersion,
       ),
     );
     _add(
       SbomSpdxTag(
         SbomSpdxTagNames.packageFileName,
         SbomSpdxSectionNames.package,
-        4,
+        packageFileName,
         true,
       ),
     );
@@ -155,7 +193,7 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
       SbomSpdxTag(
         SbomSpdxTagNames.packageSupplier,
         SbomSpdxSectionNames.package,
-        5,
+        packageSupplier,
         true,
       ),
     );
@@ -163,7 +201,7 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
       SbomSpdxTag(
         SbomSpdxTagNames.packageOriginator,
         SbomSpdxSectionNames.package,
-        6,
+        packageOriginator,
         true,
       ),
     );
@@ -171,14 +209,14 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
       SbomSpdxTag.mandatory(
         SbomSpdxTagNames.packageDownloadLocation,
         SbomSpdxSectionNames.package,
-        7,
+        packageDownloadLocation,
       ),
     );
     _add(
       SbomSpdxTag(
         SbomSpdxTagNames.packageFilesAnalyzed,
         SbomSpdxSectionNames.package,
-        8,
+        packageFilesAnalyzed,
       ),
     );
     // Files are always analyzed
@@ -187,28 +225,28 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
       SbomSpdxTag.mandatory(
         SbomSpdxTagNames.packageVerificationCode,
         SbomSpdxSectionNames.package,
-        9,
+        packageVerificationCode,
       ),
     );
     _add(
       SbomSpdxTag(
         SbomSpdxTagNames.packageChecksum,
         SbomSpdxSectionNames.package,
-        10,
+        packageChecksum,
       ),
     );
     _add(
       SbomSpdxTag(
         SbomSpdxTagNames.packageHomePage,
         SbomSpdxSectionNames.package,
-        11,
+        packageHomePage,
       ),
     );
     _add(
       SbomSpdxTag(
         SbomSpdxTagNames.packageSourceInfo,
         SbomSpdxSectionNames.package,
-        12,
+        packageSourceInfo,
         true,
       ),
     );
@@ -216,14 +254,14 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
       SbomSpdxTag.mandatory(
         SbomSpdxTagNames.packageLicenseConcluded,
         SbomSpdxSectionNames.package,
-        13,
+        packageLicenseConcluded,
       ),
     );
     _add(
       SbomSpdxTag.mandatory(
         SbomSpdxTagNames.packageLicenseInfoFromFiles,
         SbomSpdxSectionNames.package,
-        14,
+        packageLicenseInfoFromFiles,
       ),
     );
     // Package license Info from files is always NOASSERTION
@@ -232,7 +270,7 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
       SbomSpdxTag.mandatory(
         SbomSpdxTagNames.packageLicenseDeclared,
         SbomSpdxSectionNames.package,
-        15,
+        packageLicenseDeclared,
       ),
     );
     // Package license declared is always NOASSERTION
@@ -241,7 +279,7 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
       SbomSpdxTag(
         SbomSpdxTagNames.packageLicenseComments,
         SbomSpdxSectionNames.package,
-        16,
+        packageLicenseComments,
         true,
       ),
     );
@@ -249,7 +287,7 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
       SbomSpdxTag.mandatory(
         SbomSpdxTagNames.packageCopyrightText,
         SbomSpdxSectionNames.package,
-        17,
+        packageCopyrightText,
       ),
     );
     // Package copyright text is always NOASSERTION
@@ -258,7 +296,7 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
       SbomSpdxTag(
         SbomSpdxTagNames.packageSummary,
         SbomSpdxSectionNames.package,
-        18,
+        packageSummary,
         true,
       ),
     );
@@ -266,7 +304,7 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
       SbomSpdxTag(
         SbomSpdxTagNames.packageDescription,
         SbomSpdxSectionNames.package,
-        19,
+        packageDescription,
         true,
       ),
     );
@@ -274,7 +312,7 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
       SbomSpdxTag(
         SbomSpdxTagNames.packageComment,
         SbomSpdxSectionNames.package,
-        20,
+        packageComment,
         true,
       ),
     );
@@ -282,7 +320,7 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
       SbomSpdxTag(
         SbomSpdxTagNames.packageExternalRef,
         SbomSpdxSectionNames.package,
-        21,
+        packageExternalRef,
         true,
       ),
     );
@@ -290,7 +328,7 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
       SbomSpdxTag(
         SbomSpdxTagNames.packageExternalRefComment,
         SbomSpdxSectionNames.package,
-        22,
+        packageExternalRefComment,
         true,
       ),
     );
@@ -298,7 +336,7 @@ class SbomSpdxTagBuilder extends SbomITagBuilder {
       SbomSpdxTag(
         SbomSpdxTagNames.packageAttributionText,
         SbomSpdxSectionNames.package,
-        23,
+        packageAttributionText,
         true,
       ),
     );
