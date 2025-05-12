@@ -1,3 +1,6 @@
+# 2.1.2
+- [Issue 21](https://github.com/shamblett/sbom/issues/21)
+
 # 2.1.1
 - [PR 20](https://github.com/shamblett/sbom/pull/20)
 
