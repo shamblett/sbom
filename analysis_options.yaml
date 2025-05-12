@@ -8,6 +8,7 @@ include: package:lints/recommended.yaml
 analyzer:
   exclude:
     - test/issues/**
+    - test/sbom/**
 
 dart_code_metrics:
   exclude:
