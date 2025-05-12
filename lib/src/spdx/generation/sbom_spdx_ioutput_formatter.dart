@@ -9,14 +9,14 @@ part of '../../../sbom.dart';
 
 /// The SBOM SPDX output formatter interface class.
 abstract class SbomSpdxIOutputFormatter {
-  /// Construction
-  SbomSpdxIOutputFormatter(this.outputFile, this.tags);
-
   /// The file to output to
   File outputFile;
 
   /// The tags to output
   SbomTags tags;
+
+  /// Construction
+  SbomSpdxIOutputFormatter(this.outputFile, this.tags);
 
   /// The formatting processor.
   bool format();

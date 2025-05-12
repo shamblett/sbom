@@ -10,6 +10,27 @@ part of '../sbom.dart';
 /// SBOM tag class.
 /// S Section
 abstract class SbomTag<S> {
+  /// Name.
+  final String name;
+
+  /// Document section.
+  final S section;
+
+  /// Thr position in the document section.
+  final int position;
+
+  bool _mandatory = false;
+
+  final List<String> _value = <String>[];
+
+  /// Mandatory, true indicates mandatory.
+  bool get mandatory => _mandatory;
+
+  /// Value.
+  List<String> get values => _value;
+
+  set value(String text) => _value.add(text);
+
   /// Construction
   SbomTag(this.name, this.section, this.position);
 
@@ -17,24 +38,6 @@ abstract class SbomTag<S> {
     _mandatory = true;
   }
 
-  /// Name.
-  final String name;
-
-  /// Mandatory, true indicates mandatory.
-  bool _mandatory = false;
-  bool get mandatory => _mandatory;
-
-  /// Value.
-  final List<String> _value = <String>[];
-  List<String> get values => _value;
-  set value(String text) => _value.add(text);
-
   /// Value is set.
   bool isSet() => _value.isNotEmpty;
-
-  /// Document section.
-  final S section;
-
-  /// Thr position in the document section.
-  final int position;
 }

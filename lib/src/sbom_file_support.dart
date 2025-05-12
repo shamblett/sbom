@@ -10,21 +10,23 @@ part of '../sbom.dart';
 /// The SBOM file support class.
 /// Provides convenience methods for file listings, SHA1 generation of file contents etc.
 class SbomFileSupport {
-  /// Construction
-  SbomFileSupport(this._topLevelPath);
-
-  /// Package top level
+  // Package top level
   final String _topLevelPath;
 
-  /// The package Dart files.
+  final _digests = <Digest>[];
+
   final _dartFiles = <File>[];
+
+  /// The package Dart files.
   List<File> get dartFiles => _dartFiles;
 
   /// The package file digests.
   /// These are the Dart file digests in order from [dartFiles] plus
   /// the digest of the pubspec.yaml file at the end.
-  final _digests = <Digest>[];
   List<Digest> get digests => _digests;
+
+  /// Construction
+  SbomFileSupport(this._topLevelPath);
 
   /// Gets a list of Dart files in a package directory from the lib and
   /// bin directories.
@@ -63,29 +65,14 @@ class SbomFileSupport {
       }
     } catch (e) {
       SbomUtilities.error(
-          'File Support - exception $e thrown getting package files, the SBOM generation will be incorrect');
+        'File Support - exception $e thrown getting package files, the SBOM generation will be incorrect',
+      );
     }
 
     // Sort the dart files
     _dartFiles.sort((a, b) => a.path.compareTo(b.path));
 
     return output;
-  }
-
-  /// SHA1 digest helper.
-  /// Returns a valid Digest or null if t cannot be calculated.
-  Digest? _sha1Digest(String path) {
-    try {
-      final file = File(path);
-      final bytes = file.readAsBytesSync();
-
-      return sha1.convert(bytes);
-    } catch (e) {
-      SbomUtilities.warning(
-          'File Support - exception $e thrown generating sha1 digest for $path, the SBOM generation will be incorrect');
-    }
-
-    return null;
   }
 
   /// Get the SHA1 digest of a supplied absolute file path as a string.
@@ -151,19 +138,39 @@ class SbomFileSupport {
   String licenceFileContents() {
     var contents = '';
     try {
-      final file =
-          File(path.join(_topLevelPath, SbomConstants.sbomLicenseFile));
+      final file = File(
+        path.join(_topLevelPath, SbomConstants.sbomLicenseFile),
+      );
       if (file.existsSync()) {
         contents = file.readAsStringSync();
       } else {
         SbomUtilities.warning(
-            'File Support - license file not found - license information cannot be extracted');
+          'File Support - license file not found - license information cannot be extracted',
+        );
       }
     } catch (e) {
       SbomUtilities.warning(
-          'File Support - error processing license file - license information cannot be extracted');
+        'File Support - error processing license file - license information cannot be extracted',
+      );
     }
 
     return contents;
+  }
+
+  // SHA1 digest helper.
+  // Returns a valid Digest or null if t cannot be calculated.
+  Digest? _sha1Digest(String path) {
+    try {
+      final file = File(path);
+      final bytes = file.readAsBytesSync();
+
+      return sha1.convert(bytes);
+    } catch (e) {
+      SbomUtilities.warning(
+        'File Support - exception $e thrown generating sha1 digest for $path, the SBOM generation will be incorrect',
+      );
+    }
+
+    return null;
   }
 }

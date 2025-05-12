@@ -17,28 +17,32 @@ class SbomSpdxOutputTagvalueFormatter extends SbomSpdxIOutputFormatter {
     bool result = _generateSection(SbomSpdxSectionNames.documentCreation);
     if (!result) {
       SbomUtilities.error(
-          'SPDX SBOM Formatting - unable to generate a formatted SPDX document creation section in file $outputFile');
+        'SPDX SBOM Formatting - unable to generate a formatted SPDX document creation section in file $outputFile',
+      );
 
       return false;
     }
     result = _generateSection(SbomSpdxSectionNames.package);
     if (!result) {
       SbomUtilities.error(
-          'SPDX SBOM Formatting - unable to generate a formatted SPDX package section in file $outputFile');
+        'SPDX SBOM Formatting - unable to generate a formatted SPDX package section in file $outputFile',
+      );
 
       return false;
     }
     result = _generateSection(SbomSpdxSectionNames.file);
     if (!result) {
       SbomUtilities.error(
-          'SPDX SBOM Formatting - unable to generate a formatted SPDX file section in file $outputFile');
+        'SPDX SBOM Formatting - unable to generate a formatted SPDX file section in file $outputFile',
+      );
 
       return false;
     }
     result = _generateSection(SbomSpdxSectionNames.relationship);
     if (!result) {
       SbomUtilities.error(
-          'SPDX SBOM Formatting - unable to generate a formatted SPDX relationship section in file $outputFile');
+        'SPDX SBOM Formatting - unable to generate a formatted SPDX relationship section in file $outputFile',
+      );
 
       return false;
     }
@@ -74,8 +78,9 @@ class SbomSpdxOutputTagvalueFormatter extends SbomSpdxIOutputFormatter {
     // Blank line at the end of the section unless its the file section
     if (section != SbomSpdxSectionNames.file) {
       outputFile.writeAsStringSync(
-          '${Platform.lineTerminator}${Platform.lineTerminator}',
-          mode: FileMode.append);
+        '${Platform.lineTerminator}${Platform.lineTerminator}',
+        mode: FileMode.append,
+      );
     }
 
     return true;

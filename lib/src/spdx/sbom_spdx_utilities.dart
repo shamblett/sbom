@@ -11,7 +11,7 @@ part of '../../sbom.dart';
 class SbomSpdxUtilities {
   /// Created time in SPDX format.
   static String createdAt() =>
-      '${DateTime.now().toIso8601String().split('.')[0]}Z';
+      '${DateTime.now().toIso8601String().split('.').first}Z';
 
   /// Gets the real(specification defined) tag name.
   static String getSpecTagName(String name) => name.split('-')[1];
@@ -22,8 +22,9 @@ class SbomSpdxUtilities {
       if ((!value.startsWith(SbomSpdxConstants.textStart)) &&
           (!value.endsWith(SbomSpdxConstants.textEnd))) {
         SbomUtilities.warning(
-            'Invalid tag value found in configuration for the $section section, tag name '
-            '${SbomSpdxUtilities.getSpecTagName(tag.name)} - SBOM may not pass validation');
+          'Invalid tag value found in configuration for the $section section, tag name '
+          '${SbomSpdxUtilities.getSpecTagName(tag.name)} - SBOM may not pass validation',
+        );
       }
     }
   }

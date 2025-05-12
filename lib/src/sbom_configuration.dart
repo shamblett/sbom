@@ -12,11 +12,6 @@ enum SbomType { none, spdx }
 
 /// The main sbom configuration class
 class SbomConfiguration {
-  /// Construction
-  SbomConfiguration(List<String> args) {
-    _buildConfiguration(args);
-  }
-
   /// Configuration valid
   bool valid = false;
 
@@ -41,16 +36,128 @@ class SbomConfiguration {
   /// The name of the package being analysed from the pubspec.
   String packageName = SbomConstants.defaultPackageName;
 
+  /// Construction
+  SbomConfiguration(List<String> args) {
+    _buildConfiguration(args);
+  }
+
+  /// Parse the SBOM configuration file.
+  void parseConfigurationFile() {
+    final sbomFilepath = path.join(
+      packageTopLevel,
+      SbomConstants.sbomConfigurationFile,
+    );
+    var sbomConfiguration = '';
+    try {
+      sbomConfiguration = File(sbomFilepath).readAsStringSync();
+    } on FileSystemException {
+      valid = false;
+      SbomUtilities.error(
+        'Cannot read SBOM configuration file, path is $sbomFilepath,  cannot continue',
+      );
+
+      return;
+    }
+    var contents = loadYaml(sbomConfiguration);
+    if (contents == null || contents.isEmpty) {
+      valid = false;
+      SbomUtilities.error(
+        'SBOM configuration file is empty, path is $sbomFilepath,  cannot continue',
+      );
+
+      return;
+    }
+    if (!contents.containsKey(SbomConstants.sbomType)) {
+      valid = false;
+      SbomUtilities.error(
+        'No type specified in SBOM configuration file, cannot continue',
+      );
+
+      return;
+    }
+    _setType(contents[SbomConstants.sbomType]);
+    sbomConfigurationContents = contents;
+  }
+
+  /// Parse the package pubspec file.
+  void parsePubspecFile() {
+    // Parse the package pubspec file
+    final pubspecFilepath = path.join(
+      packageTopLevel,
+      SbomConstants.sbomPubspecFile,
+    );
+    var sbomPubspec = '';
+    try {
+      sbomPubspec = File(pubspecFilepath).readAsStringSync();
+    } on FileSystemException {
+      valid = false;
+      SbomUtilities.error(
+        'Cannot read package pubspec file, path is $pubspecFilepath,  cannot continue',
+      );
+
+      return;
+    }
+
+    var contents = loadYaml(sbomPubspec);
+    if (contents == null || contents.isEmpty) {
+      valid = false;
+      SbomUtilities.error(
+        'Package pubspec file is empty, path is $pubspecFilepath,  cannot continue',
+      );
+
+      return;
+    }
+    // Package name
+    if (contents.containsKey(SbomConstants.pubspecName)) {
+      packageName = contents[SbomConstants.pubspecName];
+    } else {
+      SbomUtilities.warning(
+        'Package name not found in pubspec.yaml file, using default - your SBOM will not validate correctly',
+      );
+    }
+    sbomPubspecContents = contents;
+  }
+
+  /// Parse the SBOM configuration file and the package pubspec file.
+  void parseSbomFiles() {
+    parseConfigurationFile();
+    parsePubspecFile();
+  }
+
+  /// Set the SBOM type.
+  void _setType(String type) {
+    switch (type) {
+      case SbomConstants.sbomSpdx:
+        {
+          outputType = SbomType.spdx;
+        }
+        break;
+      default:
+        {
+          valid = false;
+          SbomUtilities.error(
+            'Invalid type specified in SBOM configuration file, $type - cannot continue',
+          );
+        }
+    }
+  }
+
   void _buildConfiguration(args) {
     // Parse the arguments
     final argParser = ArgParser();
     argParser.addFlag('help', abbr: 'h', negatable: false);
-    argParser.addFlag('loud',
-        abbr: 'l', help: 'Loud: section processing output', negatable: false);
-    argParser.addFlag('louder',
-        abbr: 'L',
-        help: 'Louder: detailed section processing output',
-        negatable: false);
+    argParser.addFlag(
+      'loud',
+      abbr: 'l',
+      help: 'Loud: section processing output',
+      negatable: false,
+    );
+    argParser.addFlag(
+      'louder',
+      abbr: 'L',
+      help: 'Louder: detailed section processing output',
+      negatable: false,
+    );
     argParser.addOption(
       'abspath',
       abbr: 'P',
@@ -102,97 +209,7 @@ class SbomConfiguration {
     valid = true;
   }
 
-  /// Get the absolute path to the package top level if a relative one is supplied.
+  // Get the absolute path to the package top level if a relative one is supplied.
   String _getAbsolutePath(String relativePath) =>
       path.join(path.current, relativePath);
-
-  /// Parse the SBOM configuration file.
-  void parseConfigurationFile() {
-    final sbomFilepath =
-        path.join(packageTopLevel, SbomConstants.sbomConfigurationFile);
-    var sbomConfiguration = '';
-    try {
-      sbomConfiguration = File(sbomFilepath).readAsStringSync();
-    } on FileSystemException {
-      valid = false;
-      SbomUtilities.error(
-          'Cannot read SBOM configuration file, path is $sbomFilepath,  cannot continue');
-
-      return;
-    }
-    var contents = loadYaml(sbomConfiguration);
-    if (contents == null || contents.isEmpty) {
-      valid = false;
-      SbomUtilities.error(
-          'SBOM configuration file is empty, path is $sbomFilepath,  cannot continue');
-
-      return;
-    }
-    if (!contents.containsKey(SbomConstants.sbomType)) {
-      valid = false;
-      SbomUtilities.error(
-          'No type specified in SBOM configuration file, cannot continue');
-
-      return;
-    }
-    _setType(contents[SbomConstants.sbomType]);
-    sbomConfigurationContents = contents;
-  }
-
-  /// Parse the package pubspec file.
-  void parsePubspecFile() {
-    // Parse the package pubspec file
-    final pubspecFilepath =
-        path.join(packageTopLevel, SbomConstants.sbomPubspecFile);
-    var sbomPubspec = '';
-    try {
-      sbomPubspec = File(pubspecFilepath).readAsStringSync();
-    } on FileSystemException {
-      valid = false;
-      SbomUtilities.error(
-          'Cannot read package pubspec file, path is $pubspecFilepath,  cannot continue');
-
-      return;
-    }
-
-    var contents = loadYaml(sbomPubspec);
-    if (contents == null || contents.isEmpty) {
-      valid = false;
-      SbomUtilities.error(
-          'Package pubspec file is empty, path is $pubspecFilepath,  cannot continue');
-
-      return;
-    }
-    // Package name
-    if (contents.containsKey(SbomConstants.pubspecName)) {
-      packageName = contents[SbomConstants.pubspecName];
-    } else {
-      SbomUtilities.warning(
-          'Package name not found in pubspec.yaml file, using default - your SBOM will not validate correctly');
-    }
-    sbomPubspecContents = contents;
-  }
-
-  /// Parse the SBOM configuration file and the package pubspec file.
-  void parseSbomFiles() {
-    parseConfigurationFile();
-    parsePubspecFile();
-  }
-
-  /// Set the SBOM type.
-  void _setType(String type) {
-    switch (type) {
-      case SbomConstants.sbomSpdx:
-        {
-          outputType = SbomType.spdx;
-        }
-        break;
-      default:
-        {
-          valid = false;
-          SbomUtilities.error(
-              'Invalid type specified in SBOM configuration file, $type - cannot continue');
-        }
-    }
-  }
 }

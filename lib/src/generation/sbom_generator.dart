@@ -9,9 +9,6 @@ part of '../../sbom.dart';
 
 /// The main SBOM output generator class.
 class SbomGenerator {
-  /// Construction.
-  SbomGenerator(this.configuration);
-
   /// The valid SBOM configuration.
   final SbomConfiguration configuration;
 
@@ -21,12 +18,15 @@ class SbomGenerator {
   /// Output generator
   late SbomIOutputGenerator output;
 
-  /// The generated tags.
-  SbomTags get tags => output.tags;
-
   /// Path(absolute) to the generated SBOM file.
   /// Set on successful generation.
   String sbomFilePath = '';
+
+  /// The generated tags.
+  SbomTags get tags => output.tags;
+
+  /// Construction.
+  SbomGenerator(this.configuration);
 
   /// Generate.
   void generate() {

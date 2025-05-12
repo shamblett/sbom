@@ -66,8 +66,12 @@ class SbomSpdxConstants {
   static const String licenseStandardHeader = 'standardLicenseHeader';
   static const String licenseSeeAlso = 'seeAlso';
   static const String licenseIsOsiApproved = 'isOsiApproved';
-  static final String licenceDirectory =
-      path.join('sbom', 'src', 'spdx', 'licences');
+  static final String licenceDirectory = path.join(
+    'sbom',
+    'src',
+    'spdx',
+    'licences',
+  );
 
   /// Tag value Validation
   static const List<String> packageTextTags = [
@@ -77,12 +81,12 @@ class SbomSpdxConstants {
     SbomSpdxTagNames.packageComment,
     SbomSpdxTagNames.packageSourceInfo,
     SbomSpdxTagNames.packageExternalRefComment,
-    SbomSpdxTagNames.packageAttributionText
+    SbomSpdxTagNames.packageAttributionText,
   ];
 
   static const List<String> documentTextTags = [
     SbomSpdxTagNames.creatorComment,
-    SbomSpdxTagNames.documentComment
+    SbomSpdxTagNames.documentComment,
   ];
 
   static const Map<String, List<String>> packageExternalRefTag = {
@@ -92,9 +96,9 @@ class SbomSpdxConstants {
       externalRefTypeNpm,
       externalRefTypeNuget,
       externalRefTypeBower,
-      externalRefTypePurl
+      externalRefTypePurl,
     ],
     externalRefCategoryPersistent: [externalRefTypeSwh],
-    externalRefCategoryOther: []
+    externalRefCategoryOther: [],
   };
 }
