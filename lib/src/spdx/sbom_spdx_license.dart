@@ -11,6 +11,18 @@ part of '../../sbom.dart';
 
 /// License details class
 class SbomSpdxLicenseDetails {
+  /// License description fields
+  bool isDeprecatedLicenseId = false;
+  bool isFsfLibre = false;
+  String licenseText = '';
+  String standardLicenseHeaderTemplate = '';
+  String standardLicenseTemplate = '';
+  String name = '';
+  String licenseComments = '';
+  String licenseId = '';
+  String standardLicenseHeader = '';
+  List<String> seeAlso = <String>[];
+  bool isOsiApproved = false;
   SbomSpdxLicenseDetails();
 
   SbomSpdxLicenseDetails.fromJson(Map json) {
@@ -41,33 +53,20 @@ class SbomSpdxLicenseDetails {
     seeAlso = json[SbomSpdxConstants.licenseSeeAlso].cast<String>();
     isOsiApproved = json[SbomSpdxConstants.licenseIsOsiApproved];
   }
-
-  /// License description fields
-  bool isDeprecatedLicenseId = false;
-  bool isFsfLibre = false;
-  String licenseText = '';
-  String standardLicenseHeaderTemplate = '';
-  String standardLicenseTemplate = '';
-  String name = '';
-  String licenseComments = '';
-  String licenseId = '';
-  String standardLicenseHeader = '';
-  List<String> seeAlso = <String>[];
-  bool isOsiApproved = false;
 }
 
 /// Main license class
 class SbomSpdxLicense {
-  SbomSpdxLicense() {
-    _buildLicenceList();
-  }
-
   /// Current version of the license list
   String licenseListVersion = SbomSpdxConstants.licenseListVersion;
 
   /// Licence details
   late Map<String, SbomSpdxLicenseDetails> licenses =
       <String, SbomSpdxLicenseDetails>{};
+
+  SbomSpdxLicense() {
+    _buildLicenceList();
+  }
 
   /// Get the license identifier of a package license.
   /// Returns the SPDX license id as defined in the SPDX Specification Appendix V
